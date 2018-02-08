@@ -1,93 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>AlphaConsole Concept</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-     
-    <style>
-        body{
-          height:860px;
-          background: linear-gradient(#393939, #222222);
-        }
-    </style>
+<html
+<head>
+  <meta charset="UTF-8">
+  <title>AlphaConsole Concept</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      height: 860px;
+      background: linear-gradient(#393939, #222222);
+    }
+  </style>
 </head>
-  <body style="min-height: 100%; ">
-    <div class="main inner-fill">
-      <div class="container-fluid">
-        <div class="row">
-           <div class="col">
-              <p class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE</p>
-           </div>
+<body style="min-height: 100%; ">
+  <div class="main inner-fill">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <p class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE</p>
         </div>
-        
-        
-        <div class="row">
-          <div class="col">
-              <main>
-  
-                  <input id="tab1" type="radio" name="tabs" checked>
-                  <label for="tab1">ITEMS</label>
-                    
-                  <input id="tab2" type="radio" name="tabs">
-                  <label for="tab2">EXTRAS</label>
-                    
-                  <input id="tab3" type="radio" name="tabs">
-                  <label for="tab3">SETTINGS</label>
-                
-                  <section id="content1">
-                    <p class="p-2 text-white">
-                        Items Tab <br><br>
-                      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-                      Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-                    </p>
-                  
-                  </section>
-                    
-                  <section id="content2">
-                      <p class="p-2 text-white">
-                          Extras Tab <br><br>
-                          Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-                          Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-                        </p>
-                      
-                  </section>
-                    
-                  <section id="content3">
-                      <p class="p-2 text-white">
-                        Settings Tab <br>  <br>
-                        Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-                          Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-                        </p>
-                      
-                  </section>
-                    
-               
-                    
-                </main>
+      </div>
+      <div class="row">
+        <div class="col">
+          <main>
+            
+            <!-- TAB1 -->
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">ITEMS</label>
 
-                <div class="row">
-                    <div class="col">
-                      <button style="font-size:20px; border-radius:0px;" class="ml-2 font-bourgL btn btn-success ">SAVE & APPLY</button>
-                    </div>
-                  </div>
+            <!-- TAB2 -->
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">EXTRAS</label>
+
+            <!-- TAB3 -->
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">SETTINGS</label>
+
+            <section id="content1">
+              <div class="row">
+                <div class="col">
+                  <p class="p-2 text-white font-bourgM">
+                    Begin by adding an item, choose the type, select the item you want and then the item you are replacing
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <!-- INSERT TABLE HERE -->
+                </div>
+              </div>
+            </section>
+            <section id="content2">
+              <p class="p-2 text-white">
+                Extras Tab
+                <br>
+                <br> Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder
+                bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs. Brisket meatball
+                turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter
+                corned beef beef tenderloin short loin meatloaf swine ground round venison.
+              </p>
+            </section>
+            <section id="content3">
+              <p class="p-2 text-white">
+                Settings Tab
+                <br>
+                <br> Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder
+                bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs. Brisket meatball
+                turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter
+                corned beef beef tenderloin short loin meatloaf swine ground round venison.
+              </p>
+            </section>
+          </main>
+          <div class="row">
+            <div class="col">
+              <button style="font-size:20px; border-radius:0px;" class="ml-2 font-bourgL btn btn-success ">SAVE & APPLY</button>
+            </div>
           </div>
-        
-        
-        
-        
-        
-        
         </div>
-      </div> 
+      </div>
     </div>
+  </div>
+</body>
 
-  
- 
-   
- </body>
 </html>
