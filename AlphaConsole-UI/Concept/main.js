@@ -13,7 +13,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({titleBarStyle: 'customButtonsOnHover', frame: false, width: 720, height: 880, titleBarStyle: 'hidden'}  )
+  mainWindow = new BrowserWindow({titleBarStyle: 'hidden', resizable: false, frame: false, width: 720, height: 880}  )
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
