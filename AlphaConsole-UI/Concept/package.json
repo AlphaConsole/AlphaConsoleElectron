@@ -17,9 +17,12 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "grunt": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0"
   },
   "dependencies": {
-    "electron-titlebar": "0.0.3"
+    "electron-titlebar": "0.0.3",
+    "jquery": "^3.3.1"
   }
 }

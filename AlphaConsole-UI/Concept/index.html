@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html
-<head>
-  <meta charset="UTF-8">
-  <title>AlphaConsole Concept</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-    crossorigin="anonymous"></script>
-  <style>
-    body {
-      height: 860px;
-      background: linear-gradient(#393939, #222222);
-    }
-  </style>
+<html <head>
+<meta charset="UTF-8">
+<title>AlphaConsole Concept</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/styles.scss">
+
+<style>
+  body {
+    height: 860px;
+    color: #fff;
+    background: linear-gradient(#393939, #222222);
+  }
+
+  /* width */
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+
+  ::-webkit-scrollbar-track {
+    background: #3F3F3F;
+  }
+
+  /* Handle */
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+</style>
 </head>
 <div style=" height:30px;" id="electron-titlebar" class="no-maximize drag">
 </div>
+
 <body style="min-height: 100%;   ">
-   
+
 
   <div class="main inner-fill">
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <p  class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE</p>
+          <p class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE</p>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <main>
-     
+
             <!-- TAB1 -->
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1">ITEMS</label>
@@ -48,7 +70,7 @@
             <section id="content1">
               <div class="row">
                 <div class="col">
-                  <p class="p-2 text-white font-bourgM">
+                  <p class="p-2 mb-0 text-white font-bourgM">
                     Begin by adding an item, choose the type, select the item you want and then the item you are replacing
                   </p>
                 </div>
@@ -58,31 +80,131 @@
                   <!-- INSERT TABLE HERE -->
                 </div>
               </div>
+
             </section>
-            <section id="content2">
-              <p class="p-2 text-white">
-                Extras Tab
-                <br>
-                <br> Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder
-                bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs. Brisket meatball
-                turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter
-                corned beef beef tenderloin short loin meatloaf swine ground round venison.
-              </p>
+            <section style="overflow-y:scroll;" id="content2">
+              <div class="row">
+                <div class="col">
+                  <p class="p-2 mb-0 text-white font-bourgM">
+                    Select an extra below (Click to expand a section)
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="accordion ">CUSTOM PAINT COLOR</button>
+                  <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.</p>
+                  </div>
+
+                  <button class="accordion ">CUSTOM TITLE OPTIONS</button>
+                  <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.</p>
+                  </div>
+
+                  <button id="CustomPaint" class="accordion ">RANKING OPTIONS</button>
+                  <div class="panel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                      aliquip ex ea commodo consequat.</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+
             </section>
             <section id="content3">
-              <p class="p-2 text-white">
-                Settings Tab
-                <br>
-                <br> Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder
-                bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs. Brisket meatball
-                turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter
-                corned beef beef tenderloin short loin meatloaf swine ground round venison.
-              </p>
+              <div class="row">
+                <div class="col">
+                  <p class="p-2 mb-0 text-white font-bourgM">
+                    Toggle various settings below to adapt AlphaConsole to your play style
+                  </p>
+                </div>
+              </div>
+              <!-- GENERAL SETTIGNS -->
+              <div class="row">
+                <div class="col">
+                  <div id="CustomPaint" class="section-header">GENERAL</div>
+                  <!-- APPLY ON STARTUP -->
+                  <div class="row p-2">
+                    <div class="col-11 font-bourgL">
+                      Apply items when Rocket League starts.
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="applyonstart" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- MINIMIZE TO TRAY -->
+                  <div class="row p-2 alt-row">
+                    <div class="col-11 font-bourgL">
+                      Minimize to tray.
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="minimizetotray" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- RUN ON WINDOWS STARTUP -->
+                  <div class="row p-2">
+                      <div class="col-11 font-bourgL">
+                        Run on Windows startup.
+                      </div>
+                      <div class="col-1">
+                        <label class="tick-container">
+                          <input id="runonstartup" type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
             </section>
+
+
           </main>
+          <div id="itemcontrols" class="row">
+            <div class="col">
+              <butto class="ml-3 mt-2 font-bourgL btn btn-acc w-100">NEW</button>
+            </div>
+            <div class="col">
+              <button class=" mt-2 font-bourgL btn btn-acc  w-100">DELETE</button>
+            </div>
+            <div class="col">
+              <button class=" mt-2 font-bourgL btn btn-acc  w-100">ENABLE ALL</button>
+            </div>
+            <div class="col">
+              <button class=" mt-2 font-bourgL btn btn-acc  w-100">DISABLE ALL</button>
+            </div>
+          </div>
+          <div id="extracontrols" class="row">
+            <div class="col">
+              <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</a>
+              <a href="https://www.paypal.me/AlphaConsole" style="color:#fff; width: 25%!important; " class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</a>
+            </div>
+
+          </div>
+          <div id="settingcontrols" class="row">
+            <div class="col">
+              <button style="width: 25%!important;" class="ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</button>
+              <button style="width: 25%!important;" class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</button>
+            </div>
+          </div>
           <div class="row">
             <div class="col">
-              <button style="font-size:20px; border-radius:0px;" class="ml-3 mt-2 font-bourgL btn btn-success ">SAVE & APPLY</button>
+              <button style="font-size:20px; border-radius:0px;" class="ml-3 mt-3 font-bourgL btn btn-success w-25">SAVE & APPLY</button>
             </div>
           </div>
         </div>
@@ -90,8 +212,79 @@
     </div>
   </div>
 
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
   <script>
     require('electron-titlebar')
+
+    let shell = require('electron').shell
+
+    document.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+        event.preventDefault()
+        shell.openExternal(event.target.href)
+      }
+    })
+
+
+  </script>
+
+  <script>
+    //TAB CONTROL TOGGLES
+    $(document).ready(function () {
+      $('#itemcontrols').show();
+      $('#extracontrols').hide();
+      $('#settingcontrols').hide();
+
+      $('input[type="radio"]').click(function () {
+        //ITEMS TAB CONTROLS
+        if ($(this).attr('id') == 'tab1') {
+          $('#itemcontrols').show();
+        }
+        else {
+          $('#itemcontrols').hide();
+        }
+        //EXTRAS TAB CONTROLS
+        if ($(this).attr('id') == 'tab2') {
+          $('#extracontrols').show();
+        }
+        else {
+          $('#extracontrols').hide();
+        }
+        //SETTIGNS TAB CONTROLS
+        if ($(this).attr('id') == 'tab3') {
+          $('#settingcontrols').show();
+        }
+        else {
+          $('#settingcontrols').hide();
+        }
+      });
+
+
+
+    });
+  </script>
+
+  <script>
+
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
   </script>
 </body>
 

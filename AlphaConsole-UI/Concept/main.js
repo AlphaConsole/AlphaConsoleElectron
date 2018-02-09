@@ -1,4 +1,5 @@
 const electron = require('electron')
+
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -13,7 +14,13 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({titleBarStyle: 'hidden', resizable: false, frame: false, width: 720, height: 880}  )
+    mainWindow = new BrowserWindow({
+    titleBarStyle: 'hidden', 
+    resizable: false, 
+    frame: false, 
+    width: 720,
+    height: 920
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
