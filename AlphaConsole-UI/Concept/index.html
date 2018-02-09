@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/styles.scss">
-
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <style>
   body {
     height: 860px;
@@ -67,7 +67,7 @@
             <input id="tab3" type="radio" name="tabs">
             <label for="tab3">SETTINGS</label>
 
-            <section id="content1">
+            <section style="overflow-y:scroll;" id="content1">
               <div class="row">
                 <div class="col">
                   <p class="p-2 mb-0 text-white font-bourgM">
@@ -77,11 +77,38 @@
               </div>
               <div class="row">
                 <div class="col">
-                  <!-- INSERT TABLE HERE -->
+                  <table class="table">
+                    <thead style="border:1px solid #393939;">
+                      <tr style="border:1px solid #393939;">
+                        <th class="alt-row-h">TYPE</th>
+                        <th class="alt-row-strong-h">I HAVE</th>
+                        <th class="alt-row-h">I WNAT</th>
+                        <th class="alt-row-strong-h">ENABLE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr style="border:1px solid #393939;">
+                        <th class="alt-row" scope="row">
+                          
+                        </th>
+                        <td class="alt-row-strong"></td>
+                        <td class="alt-row"></td>
+                        <td class="alt-row-strong">
+                          <label style="border:none; padding:0px;" class="tick-container">
+                            <input id="runonstartup" type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
             </section>
+
+
             <section style="overflow-y:scroll;" id="content2">
               <div class="row">
                 <div class="col">
@@ -89,36 +116,175 @@
                     Select an extra below (Click to expand a section)
                   </p>
                 </div>
+
+
+
+
+
               </div>
-              <div class="row">
-                <div class="col">
-                  <button class="accordion ">CUSTOM PAINT COLOR</button>
-                  <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat.</p>
-                  </div>
 
-                  <button class="accordion ">CUSTOM TITLE OPTIONS</button>
-                  <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat.</p>
-                  </div>
 
-                  <button id="CustomPaint" class="accordion ">RANKING OPTIONS</button>
-                  <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                      aliquip ex ea commodo consequat.</p>
+
+              <button class="accordion">CUSTOM PAINT COLOR</button>
+              <div class="panel">
+                <div class="row p-2">
+                  <div class="col-11 font-bourgL b-team">
+                    Blue Team
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row alt-row p-2">
+                  <div class="col-6 fs-26 font-bourgL">
+                    Primary
+                  </div>
+                  <div class="col-6 font-bourgL">
+                    Accent
+                  </div>
+                </div>
+                <div class="row alt-row p-2">
+
+                  <div class="col-6 font-bourgL">
+                    <input type="color" style="height:40px; padding:2px;" class="acc-input">
+                  </div>
+                  <div class="col-6 font-bourgL">
+                    <input type="color" style="height:40px; padding:2px;" class="acc-input">
+                  </div>
+                </div>
+                <div class="row alt-row p-2">
+
+                  <div class="col-6 font-bourgL">
+                    <input id="flashrate" class="acc-input" type="number" value="1.00" />
+                  </div>
+                  <div class="col-6 font-bourgL">
+                    <input id="flashrate" class="acc-input" type="number" value="1.00" />
+                  </div>
+                </div>
+
+                <div class="row p-2">
+                  <div class="col-11 font-bourgL o-team">
+                    Orange Team
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row alt-row p-2">
+                  <div class="col-6 fs-26 font-bourgL">
+                    Primary
+                  </div>
+                  <div class="col-6 font-bourgL">
+                    Accent
+                  </div>
+                </div>
+                <div class="row alt-row p-2">
+
+                  <div class="col-6 font-bourgL">
+                    <input type="color" style="height:40px; padding:2px;" class="acc-input">
+                  </div>
+                  <div class="col-6 font-bourgL">
+                    <input type="color" style="height:40px; padding:2px;" class="acc-input">
+                  </div>
+                </div>
+                <div class="row alt-row p-2">
+
+                  <div class="col-6 font-bourgL">
+                    <input id="flashrate" class="acc-input" type="number" value="1.00" />
+                  </div>
+                  <div class="col-6 font-bourgL">
+                    <input id="flashrate" class="acc-input" type="number" value="1.00" />
+                  </div>
+                </div>
+
+
+
+              </div>
+
+              <button class="accordion ">CUSTOM TITLE OPTIONS</button>
+              <div class="panel">
+                <div class="row p-2">
+                  <div class="col-11 font-bourgL">
+                    Enable custom title
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row p-2 alt-row">
+                  <div class="col-11 font-bourgL">
+                    Use static titles
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row p-2">
+                  <div class="col-9 font-bourgL">
+                    Title flash rate
+                  </div>
+                  <div class="col-3">
+                    <input id="flashrate" class="acc-input" type="number" value="1.00" />
                   </div>
                 </div>
               </div>
 
 
 
+              <button id="CustomPaint" class="accordion ">RANKING OPTIONS</button>
+              <div class="panel">
+                <div class="row p-2">
+                  <div class="col-11 font-bourgL">
+                    Display MMR and MMR updates ingame
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row p-2 alt-row">
+                  <div class="col-11 font-bourgL">
+                    Enable MMR on unranked matches
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row p-2">
+                  <div class="col-11 font-bourgL">
+                    Upload match data to
+                    <a class="" href="https://rltracker.pro/" style="color:#fff;">RLTracker.pro</a>
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="runonstartup" type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
 
             </section>
+
+
+
+
             <section id="content3">
               <div class="row">
                 <div class="col">
@@ -156,19 +322,35 @@
                       </label>
                     </div>
                   </div>
-                  
+
                   <!-- RUN ON WINDOWS STARTUP -->
                   <div class="row p-2">
-                      <div class="col-11 font-bourgL">
-                        Run on Windows startup.
-                      </div>
-                      <div class="col-1">
-                        <label class="tick-container">
-                          <input id="runonstartup" type="checkbox" checked="checked">
-                          <span class="checkmark"></span>
-                        </label>
-                      </div>
+                    <div class="col-11 font-bourgL">
+                      Run on Windows startup.
                     </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="runonstartup" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- GENERAL SETTIGNS -->
+              <div class="row">
+                <div class="col">
+                  <div id="CustomPaint" class="section-header">INFO</div>
+                  <!-- APPLY ON STARTUP -->
+                  <div class="row p-2">
+                    <div style="font-size:20px;" class="col-12 font-bourgL">
+                      Developed by:
+                      <strong> Barbosicks, Carsillas, Arxarius & @root </strong>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </section>
@@ -194,98 +376,159 @@
               <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</a>
               <a href="https://www.paypal.me/AlphaConsole" style="color:#fff; width: 25%!important; " class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</a>
             </div>
-
           </div>
           <div id="settingcontrols" class="row">
             <div class="col">
-              <button style="width: 25%!important;" class="ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</button>
-              <button style="width: 25%!important;" class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</button>
+              <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</a>
+              <a href="https://www.paypal.me/AlphaConsole" style="color:#fff; width: 25%!important; " class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</a>
             </div>
           </div>
           <div class="row">
-            <div class="col">
-              <button style="font-size:20px; border-radius:0px;" class="ml-3 mt-3 font-bourgL btn btn-success w-25">SAVE & APPLY</button>
+            <div class="col-4">
+              <button style="border-radius:0px;" class="ml-3 mt-3 font-bourgL btn btn-success  w-100">SAVE & APPLY</button>
+
             </div>
+            <div class="col-8">
+              <p style="margin-top:35px; color:rgb(90, 90, 90);" class="">8.5.1.0 (public_build)</p>
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-  <script>
-    require('electron-titlebar')
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script>
+      require('electron-titlebar')
 
-    let shell = require('electron').shell
+      let shell = require('electron').shell
 
-    document.addEventListener('click', function (event) {
-      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
-        event.preventDefault()
-        shell.openExternal(event.target.href)
+      document.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+          event.preventDefault()
+          shell.openExternal(event.target.href)
+        }
+      })
+
+
+    </script>
+
+    <script>
+      //TAB CONTROL TOGGLES
+      $(document).ready(function () {
+        $('#itemcontrols').show();
+        $('#extracontrols').hide();
+        $('#settingcontrols').hide();
+
+        $('input[type="radio"]').click(function () {
+          //ITEMS TAB CONTROLS
+          if ($(this).attr('id') == 'tab1') {
+            $('#itemcontrols').show();
+          }
+          else {
+            $('#itemcontrols').hide();
+          }
+          //EXTRAS TAB CONTROLS
+          if ($(this).attr('id') == 'tab2') {
+            $('#extracontrols').show();
+          }
+          else {
+            $('#extracontrols').hide();
+          }
+          //SETTIGNS TAB CONTROLS
+          if ($(this).attr('id') == 'tab3') {
+            $('#settingcontrols').show();
+          }
+          else {
+            $('#settingcontrols').hide();
+          }
+        });
+
+
+
+      });
+    </script>
+
+    <script>
+
+
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
       }
-    })
-
-
-  </script>
-
-  <script>
-    //TAB CONTROL TOGGLES
-    $(document).ready(function () {
-      $('#itemcontrols').show();
-      $('#extracontrols').hide();
-      $('#settingcontrols').hide();
-
-      $('input[type="radio"]').click(function () {
-        //ITEMS TAB CONTROLS
-        if ($(this).attr('id') == 'tab1') {
-          $('#itemcontrols').show();
-        }
-        else {
-          $('#itemcontrols').hide();
-        }
-        //EXTRAS TAB CONTROLS
-        if ($(this).attr('id') == 'tab2') {
-          $('#extracontrols').show();
-        }
-        else {
-          $('#extracontrols').hide();
-        }
-        //SETTIGNS TAB CONTROLS
-        if ($(this).attr('id') == 'tab3') {
-          $('#settingcontrols').show();
-        }
-        else {
-          $('#settingcontrols').hide();
-        }
-      });
-
-
-
-    });
-  </script>
-
-  <script>
-
-
-
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-  </script>
+    </script>
 </body>
 
 </html>
+
+
+<!-- 
+<li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Antena.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Banner.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Boost.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/ChangeColor.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Decal.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/EngineAudio.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/GoalExplosion.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/PaintFinish.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Topper.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Trail.png">
+    </a>
+  </li>
+  <li>
+    <a href="#" title="Select this card">
+      <img src="assets/img/icons/Wheel.png">
+    </a>
+  </li> -->
