@@ -19,7 +19,8 @@ function createWindow () {
     resizable: false, 
     frame: false, 
     width: 720,
-    height: 920
+    height: 950,
+    icon: path.join(__dirname, '/assets/img/logo_normal.png')
   })
 
   // and load the index.html of the app.

@@ -8,9 +8,10 @@
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <style>
   body {
-    height: 860px;
+    height: 840px;
     color: #fff;
     background: linear-gradient(#393939, #222222);
+    overflow:hidden;
   }
 
   /* width */
@@ -36,19 +37,65 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+            #title-bar {
+
+                -webkit-app-region: drag;
+                height: 40px;
+                text-align: left;
+                line-height: 40px;
+                vertical-align: middle;
+                background-color: #393939;
+         
+                margin: 0px;
+                width:720px;
+                position: fixed;
+            }
+
+#title{
+  position: relative;
+  float: left;
+  width:600px;
+}
+
+            #title-bar-btns {
+              text-align: right;
+              float: left;
+              position: absolute;
+                -webkit-app-region: no-drag;
+                width:auto;
+                top: 0px;
+                right: 0px;
+                z-index: 99999;
+            }
+
+
+            #title-bar-btns a:hover {
+              background-color: #616161;
+            }
+
+            #title-bar-btns #close-btn:hover {
+              background-color:red;
+            }
 </style>
 </head>
-<div style=" height:30px;" id="electron-titlebar" class="no-maximize drag">
-</div>
-
-<body style="min-height: 100%;   ">
 
 
-  <div class="main inner-fill">
+<body style="min-height: 100%;">
+    <div class="mb-3" id="title-bar"></div>
+    <div id="title-bar-btns">
+        <a style="width:35px;height:35px; float:left; padding: 5px;" id="min-btn"><i style="    margin-left: -2px;" class="fas fa-minus pl-2 pr-2"></i></a>
+        <a style="display:none;" id="max-btn"></a>
+        <a style="width:35px;height:35px; float:left; padding: 5px;"id="close-btn"><i class="fas fa-times pl-2 pr-2 text-center"></i></a>
+   </div>
+  <div style="margin-top: 20px;   margin-left: 10px;  position: absolute;"  class="main  inner-fill">
     <div class="container-fluid">
-      <div class="row">
+      <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 24px;" class="row">
         <div class="col">
-          <p class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE</p>
+          <p class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE  <br>
+             
+          </p>
+          <small style="position:absolute; margin-top:-20px; margin-left:25px; color:#555" class="text-center">8.5.1.0 (public_build)</small>
         </div>
       </div>
       <div class="row">
@@ -68,45 +115,31 @@
             <label for="tab3">SETTINGS</label>
 
             <section style="overflow-y:scroll;" id="content1">
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col">
                   <p class="p-2 mb-0 text-white font-bourgM">
                     Begin by adding an item, choose the type, select the item you want and then the item you are replacing
                   </p>
                 </div>
-              </div>
+              </div> -->
               <div class="row">
                 <div class="col">
-                  <table class="table">
-                    <thead style="border:1px solid #393939;">
-                      <tr style="border:1px solid #393939;">
-                        <th class="alt-row-h">TYPE</th>
-                        <th class="alt-row-strong-h">I HAVE</th>
-                        <th class="alt-row-h">I WNAT</th>
-                        <th class="alt-row-strong-h">ENABLE</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr style="border:1px solid #393939;">
-                        <th class="alt-row" scope="row">
-                          
-                        </th>
-                        <td class="alt-row-strong"></td>
-                        <td class="alt-row"></td>
-                        <td class="alt-row-strong">
-                          <label style="border:none; padding:0px;" class="tick-container">
-                            <input id="runonstartup" type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                      </tr>
+                  
+              
 
-                    </tbody>
-                  </table>
+
                 </div>
               </div>
 
             </section>
+
+
+
+
+
+
+
+
 
 
             <section style="overflow-y:scroll;" id="content2">
@@ -116,15 +149,7 @@
                     Select an extra below (Click to expand a section)
                   </p>
                 </div>
-
-
-
-
-
               </div>
-
-
-
               <button class="accordion">CUSTOM PAINT COLOR</button>
               <div class="panel">
                 <div class="row p-2">
@@ -282,9 +307,6 @@
 
             </section>
 
-
-
-
             <section id="content3">
               <div class="row">
                 <div class="col">
@@ -355,11 +377,11 @@
               </div>
             </section>
 
-
           </main>
-          <div id="itemcontrols" class="row">
+
+          <div id="itemcontrols" class="row ">
             <div class="col">
-              <butto class="ml-3 mt-2 font-bourgL btn btn-acc w-100">NEW</button>
+              <butto class="ml-1 mt-2 font-bourgL btn btn-acc w-100">NEW</button>
             </div>
             <div class="col">
               <button class=" mt-2 font-bourgL btn btn-acc  w-100">DELETE</button>
@@ -373,23 +395,24 @@
           </div>
           <div id="extracontrols" class="row">
             <div class="col">
-              <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</a>
+              <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-1 mt-2 font-bourgL btn btn-acc">DISCORD</a>
               <a href="https://www.paypal.me/AlphaConsole" style="color:#fff; width: 25%!important; " class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</a>
             </div>
           </div>
           <div id="settingcontrols" class="row">
             <div class="col">
-              <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-3 mt-2 font-bourgL btn btn-acc">DISCORD</a>
+              <a href="http://discord.gg/alphaconsole" style="color:#fff; width: 25%!important;" class="open-in-browser ml-1 mt-2 font-bourgL btn btn-acc">DISCORD</a>
               <a href="https://www.paypal.me/AlphaConsole" style="color:#fff; width: 25%!important; " class="ml-2 mt-2 font-bourgL btn btn-acc">DONATE</a>
             </div>
           </div>
+         
           <div class="row">
             <div class="col-4">
-              <button style="border-radius:0px;" class="ml-3 mt-3 font-bourgL btn btn-success  w-100">SAVE & APPLY</button>
-
+              <button style="border-radius:0px;" class="ml-1 mt-3 font-bourgL btn btn-success  w-100">SAVE & APPLY</button>
             </div>
+
             <div class="col-8">
-              <p style="margin-top:35px; color:rgb(90, 90, 90);" class="">8.5.1.0 (public_build)</p>
+              <p style="margin-top:15px; font-size:28px;" class="text-uppercase font-bourgL ac-status">ROCKET LEAGUE HOOKED</p>
             </div>
           </div>
           </div>
@@ -416,9 +439,47 @@
 
     </script>
 
+<script>
+  
+  (function () {
+        // Retrieve remote BrowserWindow
+        const {BrowserWindow} = require('electron').remote
+
+        function init() {
+            // Minimize task
+            document.getElementById("min-btn").addEventListener("click", (e) => {
+                var window = BrowserWindow.getFocusedWindow();
+                window.minimize();
+            });
+
+            // Maximize window
+            document.getElementById("max-btn").addEventListener("click", (e) => {
+                var window = BrowserWindow.getFocusedWindow();
+                if(window.isMaximized()){
+                    window.unmaximize();
+                }else{
+                    window.maximize();
+                }
+            });
+
+            // Close app
+            document.getElementById("close-btn").addEventListener("click", (e) => {
+                var window = BrowserWindow.getFocusedWindow();
+                window.close();
+            });
+        };
+
+        document.onreadystatechange =  () => {
+            if (document.readyState == "complete") {
+                init();
+            }
+        };
+    })();
+</script>
+
     <script>
-      //TAB CONTROL TOGGLES
-      $(document).ready(function () {
+ //TAB CONTROL TOGGLES
+ $(document).ready(function () {
         $('#itemcontrols').show();
         $('#extracontrols').hide();
         $('#settingcontrols').hide();
@@ -427,34 +488,23 @@
           //ITEMS TAB CONTROLS
           if ($(this).attr('id') == 'tab1') {
             $('#itemcontrols').show();
-          }
-          else {
+          } else {
             $('#itemcontrols').hide();
           }
           //EXTRAS TAB CONTROLS
           if ($(this).attr('id') == 'tab2') {
             $('#extracontrols').show();
-          }
-          else {
+          } else {
             $('#extracontrols').hide();
           }
           //SETTIGNS TAB CONTROLS
           if ($(this).attr('id') == 'tab3') {
             $('#settingcontrols').show();
-          }
-          else {
+          } else {
             $('#settingcontrols').hide();
           }
         });
-
-
-
       });
-    </script>
-
-    <script>
-
-
 
       var acc = document.getElementsByClassName("accordion");
       var i;
@@ -474,61 +524,3 @@
 </body>
 
 </html>
-
-
-<!-- 
-<li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Antena.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Banner.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Boost.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/ChangeColor.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Decal.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/EngineAudio.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/GoalExplosion.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/PaintFinish.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Topper.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Trail.png">
-    </a>
-  </li>
-  <li>
-    <a href="#" title="Select this card">
-      <img src="assets/img/icons/Wheel.png">
-    </a>
-  </li> -->
