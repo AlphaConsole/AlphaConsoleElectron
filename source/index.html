@@ -3,84 +3,35 @@
 <meta charset="UTF-8">
 <title>AlphaConsole Concept</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/styles.scss">
+
+
+<link rel="stylesheet" href="assets/styles/css/framework.css">
+<link rel="stylesheet" href="assets/styles/css/alphaconsole.css">
 
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
 <style>
-  body {
-    height: 840px;
-    color: #fff;
-    background: linear-gradient(#393939, #222222);
-    overflow: hidden;
-  }
+  @font-face {
+    font-family: BourgeoisLight;
+    src: url(assets/fonts/BourgeoisLight.otf);
+}
 
-  /* width */
+@font-face {
+    font-family: BourgeoisMedium;
+    src: url(assets/fonts/BourgeoisMedium.otf);
+}
 
-  ::-webkit-scrollbar {
-    width: 4px;
-  }
+.font-bourgL {
+    font-size: 22px;
+    font-family: BourgeoisLight;
+}
 
-  /* Track */
-
-  ::-webkit-scrollbar-track {
-    background: #3F3F3F;
-  }
-
-  /* Handle */
-
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-
-  /* Handle on hover */
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
-  #title-bar {
-
-    -webkit-app-region: drag;
-    height: 40px;
-    text-align: left;
-    line-height: 40px;
-    vertical-align: middle;
-    background-color: #393939;
-
-    margin: 0px;
-    width: 720px;
-    position: fixed;
-  }
-
-  #title {
-    position: relative;
-    float: left;
-    width: 600px;
-  }
-
-  #title-bar-btns {
-    text-align: right;
-    float: left;
-    position: absolute;
-    -webkit-app-region: no-drag;
-    width: auto;
-    top: 0px;
-    right: 0px;
-    z-index: 99999;
-  }
-
-
-  #title-bar-btns a:hover {
-    background-color: #616161;
-  }
-
-  #title-bar-btns #close-btn:hover {
-    background-color: red;
-  }
+.font-bourgM {
+    font-size: 16px;
+    font-family: BourgeoisMedium;
+}
 </style>
 </head>
 
@@ -103,7 +54,7 @@
         <div class="col">
           <p class="font-bourgL text-white p-4 heading-title">ALPHACONSOLE
             <br> </p>
-          <small style="position:absolute; margin-top:-20px; margin-left:25px; color:#555" class="text-center">8.5.1.0 (public_build)</small>
+          <small class="build-number text-center">8.5.1.0 (public_build)</small>
         </div>
       </div>
       <div class="row">
@@ -403,7 +354,7 @@
 
           <div id="itemcontrols" class="row ">
             <div class="col">
-              <butto class="ml-1 mt-2 font-bourgL btn btn-acc w-100">NEW</button>
+              <button class="ml-1 mt-2 font-bourgL btn btn-acc  w-100">NEW</button>
             </div>
             <div class="col">
               <button class=" mt-2 font-bourgL btn btn-acc  w-100">DELETE</button>
@@ -447,9 +398,7 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
     <script>
-      require('electron-titlebar')
-
-      let shell = require('electron').shell
+       let shell = require('electron').shell
 
       document.addEventListener('click', function (event) {
         if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {

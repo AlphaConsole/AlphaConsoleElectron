@@ -1,0 +1,51 @@
+// Positioning
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex-fixed;
+}
+
+
+
+@each $bp in map-keys($grid-breakpoints) {
+  .stickytop-#{$bp}-up {
+    @include media-breakpoint-up($bp) {
+      position: sticky !important;
+		top: 20px !important;
+
+    }
+  }
+  .stickytop-#{$bp}-down {
+     position: sticky !important;
+		top: 20px !important;
+		
+    }
+  }
+
+  @each $bp in map-keys($grid-breakpoints) {
+  .solidtop-#{$bp}-up {
+    @include media-breakpoint-up($bp) {
+      position: relative;
+		top: 0;
+		
+    }
+  }
+  .solidtop-#{$bp}-down {
+     position: relative;
+		top: 0;
+
+    }
+  }
+
+

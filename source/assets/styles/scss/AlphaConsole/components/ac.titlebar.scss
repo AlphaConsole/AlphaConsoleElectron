@@ -1,0 +1,39 @@
+#title-bar {
+
+    -webkit-app-region: drag;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    vertical-align: middle;
+    background-color: #393939;
+
+    margin: 0px;
+    width: 720px;
+    position: fixed;
+  }
+
+  #title {
+    position: relative;
+    float: left;
+    width: 600px;
+  }
+
+  #title-bar-btns {
+    text-align: right;
+    float: left;
+    position: absolute;
+    -webkit-app-region: no-drag;
+    width: auto;
+    top: 0px;
+    right: 0px;
+    z-index: 99999;
+  }
+
+
+  #title-bar-btns a:hover {
+    background-color: $ac-gray;
+  }
+
+  #title-bar-btns #close-btn:hover {
+    background-color: $red;
+  }

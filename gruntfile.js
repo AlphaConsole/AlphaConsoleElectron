@@ -10,7 +10,8 @@ module.exports = function(grunt) {
         },
         files: {                         // Dictionary of files
           // 'destination': 'source'
-          'source/assets/css/styles.css': 'source/assets/css/styles.scss',       
+          'source/assets/styles/css/alphaconsole.css': 'source/assets/styles/scss/AlphaConsole/compile/ac.compile.scss', 
+          'source/assets/styles/css/framework.css': 'source/assets/styles/scss/AlphaConsole/compile/framework_compile.scss',      
         }
       }
     }

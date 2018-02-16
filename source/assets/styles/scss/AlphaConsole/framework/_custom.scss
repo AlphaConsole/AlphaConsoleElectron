@@ -1,0 +1,13 @@
+// Bootstrap overrides // // Copy variables from `_variables.scss` to this file to override default values // without modifying source files. 
+
+hr {
+    border-top: $hr-height solid $hr-colour;
+}
+
+.required-field{ 
+	color:$red;
+	font-size:22px;
+	margin-left:5px;
+	margin-right:5px;
+	font-weight:900;
+}

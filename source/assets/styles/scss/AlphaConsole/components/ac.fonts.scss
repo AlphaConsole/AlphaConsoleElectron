@@ -1,0 +1,19 @@
+@font-face {
+    font-family: BourgeoisLight;
+    src: url(../fonts/BourgeoisLight.otf);
+}
+
+@font-face {
+    font-family: BourgeoisMedium;
+    src: url(../fonts/BourgeoisMedium.otf);
+}
+
+.font-bourgL {
+    font-size: 22px;
+    font-family: BourgeoisLight;
+}
+
+.font-bourgM {
+    font-size: 16px;
+    font-family: BourgeoisMedium;
+}

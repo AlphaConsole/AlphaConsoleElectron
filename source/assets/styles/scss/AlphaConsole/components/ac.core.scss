@@ -1,0 +1,139 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+h1 {
+    padding: 50px 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+main {
+    width: 671px;
+    max-width: 800px;
+    padding: 7px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+.main{
+    height: 100%;
+}
+
+section {
+    margin-left: -1px;
+    overflow-x: hidden;
+    display: none;
+    height: 601px;
+    border-top: 5px solid #454545;
+}
+
+.inner-fill {
+    height: 100%;
+    background: url('../../img/inner-fill.png')  center;
+    background-position-y: 0px;
+}
+
+.panel {
+    padding: 0 10px;
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    color: #fff;
+    transition: max-height 0.2s ease-out;
+}
+
+.alt-row-h {
+    background-color: rgba(57, 57, 57, 0.5) !important;
+}
+
+.alt-row-strong-h {
+    background-color: rgba(57, 57, 57, 0.8) !important;
+}
+
+.alt-row {
+    background-color: rgba(57, 57, 57, 0.3) !important;
+}
+
+.alt-row-strong {
+    background-color: rgba(57, 57, 57, 0.6) !important;
+}
+
+.b-team {
+    color: #5698EB !important;
+}
+
+.o-team {
+    color: #D09B4F !important;
+}
+
+.build-number{
+    position:absolute !important; 
+    margin-top:-15px !important; 
+    margin-left:18px !important; 
+    color: $ac-gray !important;
+}
+
+// =====================================
+
+.tabssac {
+    max-width: 100%;
+    margin-top:-20px;
+  }
+  .tabs-nav li {
+    float: left;
+    width: 50%;
+    list-style: none;
+    background: #313131;
+    text-decoration: none;
+  
+  }
+  .tabs-nav li:first-child a {
+  
+    float:left;
+    width:100%;
+  padding:10px;
+  text-align: center;
+  font-size: 28px;
+  font-family: BourgeoisLight;
+  text-decoration: none;
+  border: 1px solid #454545;
+  }
+
+  .tabs-nav li:last-child a {
+    float:left;
+    width:100%;
+  padding:10px;
+  text-align: center;
+  font-size: 28px;
+  font-family: BourgeoisLight;
+  text-decoration: none;
+  border: 1px solid #454545;
+  }
+
+  .tab-active a {
+   
+      background: #414141;
+    border: 1px solid #454545;
+    color: #fff;
+    cursor: cursor;
+    text-decoration: none;
+  }
+  .tabs-stage {
+   color:#fff;
+    border-top: 0;
+    clear: both;
+    padding: 24px 30px;
+    position: relative;
+    top: -1px;
+  }
+  
