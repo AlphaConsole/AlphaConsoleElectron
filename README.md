@@ -1,5 +1,13 @@
 # AlphaConsoleElectron
 
+## Initial setup
+
+Installing the dependencies. Navigate to the root of the project using a terminal (GitBash).
+
+```
+npm install
+```
+
 ## Run the app
 
 Running a simple dev version of the app. Navigate to the root of the project using a terminal (GitBash).
