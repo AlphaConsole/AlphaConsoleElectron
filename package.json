@@ -1,0 +1,19 @@
+{
+  "name": "alphaconsoleelectron",
+  "version": "1.0.0",
+  "description": "Electron version of AlphaConsole",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron source/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaydenMeloche/AlphaConsoleElectron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaydenMeloche/AlphaConsoleElectron/issues"
+  },
+  "homepage": "https://github.com/HaydenMeloche/AlphaConsoleElectron#readme"
+}
