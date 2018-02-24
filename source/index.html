@@ -1,55 +1,57 @@
 <!DOCTYPE html>
-<html> <!-- Not sure if this was on purpose or not but this was missing the closing > I'm not too familiar with html so /shrug -->
+<html>
+<!-- Not sure if this was on purpose or not but this was missing the closing > I'm not too familiar with html so /shrug -->
+
 <head>
-<meta charset="UTF-8">
-<title>AlphaConsole</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <title>AlphaConsole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-<link rel="stylesheet" href="assets/styles/css/framework.css">
-<link rel="stylesheet" href="assets/styles/css/alphaconsole.css">
+  <link rel="stylesheet" href="assets/styles/css/framework.css">
+  <link rel="stylesheet" href="assets/styles/css/alphaconsole.css">
 
-<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
-<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
-<style>
-  @font-face {
-    font-family: BourgeoisLight;
-    src: url(assets/fonts/BourgeoisLight.otf);
-  }
+  <style>
+    @font-face {
+      font-family: BourgeoisLight;
+      src: url(assets/fonts/BourgeoisLight.otf);
+    }
 
-  @font-face {
-    font-family: BourgeoisMedium;
-    src: url(assets/fonts/BourgeoisMedium.otf);
-  }
+    @font-face {
+      font-family: BourgeoisMedium;
+      src: url(assets/fonts/BourgeoisMedium.otf);
+    }
 
-  @font-face {
-    font-family: QuarcaExtLight;
-    src: url(assets/fonts/QuarcaExtLightModified.otf);
-  }
+    @font-face {
+      font-family: QuarcaExtLight;
+      src: url(assets/fonts/QuarcaExtLightModified.otf);
+    }
 
 
-  .font-bourgL {
-    font-size: 22px;
-    font-family: BourgeoisLight;
-  }
+    .font-bourgL {
+      font-size: 22px;
+      font-family: BourgeoisLight;
+    }
 
-  .font-bourgM {
-    font-size: 16px;
-    font-family: BourgeoisMedium;
-  }
+    .font-bourgM {
+      font-size: 16px;
+      font-family: BourgeoisMedium;
+    }
 
-  .font-quarcaL {
-    font-size: 22px;
-    font-family: QuarcaExtLight;
-  }
+    .font-quarcaL {
+      font-size: 22px;
+      font-family: QuarcaExtLight;
+    }
 
-  .font-quarcaM {
-    font-size: 16px;
-    font-family: QuarcaExtLight;
-  }
-</style>
+    .font-quarcaM {
+      font-size: 16px;
+      font-family: QuarcaExtLight;
+    }
+  </style>
 </head>
 
 
@@ -112,7 +114,98 @@
                     </ul>
                     <div class="tabs-stage">
                       <div id="tab-12">
-                        <section>asdasds</section>
+
+
+                        <div class="row">
+                          <div class="col">
+                            <p class="p-2 mb-0 text-white font-quarcaM">
+                              Select an extra below (Click to expand a section)
+                            </p>
+                          </div>
+                        </div>
+
+                        <button class="accordion">ITEMS</button>
+                        <div class="panel">
+                          <div class="row p-2">
+                            <div class="col-11 font-quarcaL b-team">
+                              Blue Team
+                            </div>
+                            <div class="col-1">
+                              <label class="tick-container">
+                                <input id="custom-color-enabled-blue" type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="row alt-row p-2">
+                            <div class="col-6 fs-26 font-quarcaL">
+                              Primary
+                            </div>
+                            <div class="col-6 font-quarcaL">
+                              Accent
+                            </div>
+                          </div>
+                          <div class="row alt-row p-2">
+
+                            <div class="col-6 font-quarcaL">
+                              <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
+                            </div>
+                            <div class="col-6 font-quarcaL">
+                              <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
+                            </div>
+                          </div>
+                          <div class="row alt-row p-2">
+
+                            <div class="col-6 font-quarcaL">
+                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+                            </div>
+                            <div class="col-6 font-quarcaL">
+                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <button class="accordion">COLORS</button>
+                        <div class="panel">
+                          <div class="row p-2">
+                            <div class="col-11 font-quarcaL b-team">
+                              Blue Team
+                            </div>
+                            <div class="col-1">
+                              <label class="tick-container">
+                                <input id="custom-color-enabled-blue" type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="row alt-row p-2">
+                            <div class="col-6 fs-26 font-quarcaL">
+                              Primary
+                            </div>
+                            <div class="col-6 font-quarcaL">
+                              Accent
+                            </div>
+                          </div>
+                          <div class="row alt-row p-2">
+
+                            <div class="col-6 font-quarcaL">
+                              <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
+                            </div>
+                            <div class="col-6 font-quarcaL">
+                              <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
+                            </div>
+                          </div>
+                          <div class="row alt-row p-2">
+
+                            <div class="col-6 font-quarcaL">
+                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+                            </div>
+                            <div class="col-6 font-quarcaL">
+                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
                       <div id="tab-2">
                         <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
@@ -380,6 +473,8 @@
               </div>
             </section>
 
+
+
           </main>
 
           <div id="itemcontrols" class="row ">
@@ -445,7 +540,7 @@
           throw error;
         });
       }
-      
+
       function LoadItems() {
         var fs = require("fs");
         var contents = fs.readFileSync("./source/items.json");
@@ -464,20 +559,20 @@
           document.getElementById("install-location").value = "C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/";
         } else {
           //failed, prompt for directory
-          
+
           //should notify user that we could not detect the rl installation
 
-          const {dialog} = require('electron').remote
+          const { dialog } = require('electron').remote
           dialog.showOpenDialog(
             {
               defaultPath: "C:\\",
               title: "Choose your Rocket League executable",
               filters: [
-                  { name: 'Executables', extensions: ['exe'] }
-                ],
+                { name: 'Executables', extensions: ['exe'] }
+              ],
               properties: ['openFile']
             }, (fileName) => {
-              if (fileName === undefined){
+              if (fileName === undefined) {
                 document.getElementById("install-location").value = "No install location selected";
                 return;
               } else {
@@ -486,7 +581,7 @@
             })
         }
       }
-      
+
       function PlaceFiles() {
         var fs = require('fs');
 
