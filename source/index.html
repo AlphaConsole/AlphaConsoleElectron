@@ -51,6 +51,47 @@
       font-size: 16px;
       font-family: QuarcaExtLight;
     }
+
+
+
+    /* Style tab links */
+
+    .tablink {
+      background-color: #555;
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      width: 50%;
+    }
+
+    .tablink:hover {
+      background-color: #777;
+    }
+
+    /* Style the tab content (and add height:100% for full page content) */
+
+    .tabcontent {
+      color: white;
+      display: none;
+      height: 100%;
+    }
+
+    .table th,
+    .table td {
+
+      border-top: none;
+    }
+
+
+    select {
+
+      padding: 5px !important;
+
+    }
   </style>
 </head>
 
@@ -78,7 +119,6 @@
       <div class="row">
         <div class="col">
           <main>
-
             <!-- TAB1 -->
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1">ITEMS</label>
@@ -91,127 +131,580 @@
             <input id="tab3" type="radio" name="tabs">
             <label for="tab3">SETTINGS</label>
 
+
+            <!-- ITEMS TAB -->
             <section style="overflow-y:scroll;" id="content1">
-              <!-- <div class="row">
+              <div class="row">
                 <div class="col">
                   <p class="p-2 mb-0 text-white font-quarcaM">
-                    Begin by adding an item, choose the type, select the item you want and then the item you are replacing
+                    Begin by selecting the item(s) you want and then the color you desire for each team.
                   </p>
                 </div>
-              </div> -->
+              </div>
+
+
+
               <div class="row">
                 <div class="col">
 
 
-                  <div class="tabssac">
-                    <ul class="tabs-nav">
-                      <li>
-                        <a href="#tab-12" class="b-team text-uppercase">BLUE TEAM</a>
-                      </li>
-                      <li>
-                        <a href="#tab-2" class="o-team text-uppercase">ORANGE TEAM</a>
-                      </li>
-                    </ul>
-                    <div class="tabs-stage">
-                      <div id="tab-12">
+
+                  <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
+                  <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
 
 
-                        <div class="row">
-                          <div class="col">
-                            <p class="p-2 mb-0 text-white font-quarcaM">
-                              Select an extra below (Click to expand a section)
-                            </p>
-                          </div>
-                        </div>
+                  <div id="blueteamitems" class="tabcontent">
+                    <div class="table w-100">
+                      <table class="w-100">
+                        <thead>
+                          <tr class="alt-row">
+                            <td class="alt-row">Type</td>
+                            <td class="alt-row-strong">Item</td>
+                            <td class="alt-row">Color</td>
+                            <td class="alt-row-strong"></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- BODY -->
+                          <tr>
+                            <td class="alt-row">Body</td>
+                            <td class="alt-row-strong">
 
-                        <button class="accordion">ITEMS</button>
-                        <div class="panel">
-                          <div class="row p-2">
-                            <div class="col-11 font-quarcaL b-team">
-                              Blue Team
-                            </div>
-                            <div class="col-1">
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
                               <label class="tick-container">
-                                <input id="custom-color-enabled-blue" type="checkbox">
+                                <input id="" type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                               </label>
-                            </div>
-                          </div>
-                          <div class="row alt-row p-2">
-                            <div class="col-6 fs-26 font-quarcaL">
-                              Primary
-                            </div>
-                            <div class="col-6 font-quarcaL">
-                              Accent
-                            </div>
-                          </div>
-                          <div class="row alt-row p-2">
+                            </td>
+                          </tr>
 
-                            <div class="col-6 font-quarcaL">
-                              <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                            </div>
-                            <div class="col-6 font-quarcaL">
-                              <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                            </div>
-                          </div>
-                          <div class="row alt-row p-2">
-
-                            <div class="col-6 font-quarcaL">
-                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                            </div>
-                            <div class="col-6 font-quarcaL">
-                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <button class="accordion">COLORS</button>
-                        <div class="panel">
-                          <div class="row p-2">
-                            <div class="col-11 font-quarcaL b-team">
-                              Blue Team
-                            </div>
-                            <div class="col-1">
+                          <!-- DECAL -->
+                          <tr>
+                            <td class="alt-row">Decal</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
                               <label class="tick-container">
-                                <input id="custom-color-enabled-blue" type="checkbox">
+                                <input id="" type="checkbox" checked="checked">
                                 <span class="checkmark"></span>
                               </label>
-                            </div>
-                          </div>
-                          <div class="row alt-row p-2">
-                            <div class="col-6 fs-26 font-quarcaL">
-                              Primary
-                            </div>
-                            <div class="col-6 font-quarcaL">
-                              Accent
-                            </div>
-                          </div>
-                          <div class="row alt-row p-2">
+                            </td>
+                          </tr>
 
-                            <div class="col-6 font-quarcaL">
-                              <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                            </div>
-                            <div class="col-6 font-quarcaL">
-                              <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                            </div>
-                          </div>
-                          <div class="row alt-row p-2">
+                          <!-- WHEELS -->
+                          <tr>
+                            <td class="alt-row">Wheels</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
 
-                            <div class="col-6 font-quarcaL">
-                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                            </div>
-                            <div class="col-6 font-quarcaL">
-                              <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                            </div>
-                          </div>
-                        </div>
+                          <!-- BOOST -->
+                          <tr>
+                            <td class="alt-row">Boost</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
 
-                      </div>
-                      <div id="tab-2">
-                        <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
-                      </div>
+                          <!-- ANTENNA -->
+                          <tr>
+                            <td class="alt-row">Antenna</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- TOPPER -->
+                          <tr>
+                            <td class="alt-row">Topper</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- PAINT FINISH -->
+                          <tr>
+                            <td class="alt-row">Paint Finish</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- ENGINE AUDIO -->
+                          <tr>
+                            <td class="alt-row">Engine</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- TRAIL -->
+                          <tr>
+                            <td class="alt-row">Trail</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- GOAL EXPLOSION -->
+                          <tr>
+                            <td class="alt-row">Goal Explosion</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- BANNER -->
+                          <tr>
+                            <td class="alt-row">Banner</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
                     </div>
                   </div>
+
+                  <div id="orangeteamitems" class="tabcontent">
+                    <div class="table w-100">
+                      <table class="w-100">
+                        <thead>
+                          <tr class="alt-row">
+                            <td class="alt-row">Type</td>
+                            <td class="alt-row-strong">Item</td>
+                            <td class="alt-row">Color</td>
+                            <td class="alt-row-strong"></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- BODY -->
+                          <tr>
+                            <td class="alt-row">Body</td>
+                            <td class="alt-row-strong">
+
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- DECAL -->
+                          <tr>
+                            <td class="alt-row">Decal</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- WHEELS -->
+                          <tr>
+                            <td class="alt-row">Wheels</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- BOOST -->
+                          <tr>
+                            <td class="alt-row">Boost</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- ANTENNA -->
+                          <tr>
+                            <td class="alt-row">Antenna</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- TOPPER -->
+                          <tr>
+                            <td class="alt-row">Topper</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- PAINT FINISH -->
+                          <tr>
+                            <td class="alt-row">Paint Finish</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- ENGINE AUDIO -->
+                          <tr>
+                            <td class="alt-row">Engine</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- TRAIL -->
+                          <tr>
+                            <td class="alt-row">Trail</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+                          <!-- GOAL EXPLOSION -->
+                          <tr>
+                            <td class="alt-row">Goal Explosion</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                          <!-- BANNER -->
+                          <tr>
+                            <td class="alt-row">Banner</td>
+                            <td class="alt-row-strong">
+                              <select class="acc-input">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                              </select>
+                            </td>
+                            <td class="alt-row">
+
+                            </td>
+                            <td class="alt-row-strong">
+                              <label class="tick-container">
+                                <input id="" type="checkbox" checked="checked">
+                                <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
 
 
                 </div>
@@ -382,7 +875,7 @@
                     </label>
                   </div>
                 </div>
-
+              </div>
             </section>
 
             <section id="content3">
@@ -513,230 +1006,247 @@
               <p style="margin-top:15px; font-size:28px;" class="text-uppercase font-quarcaL ac-status">ROCKET LEAGUE HOOKED</p>
             </div>
           </div>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 
-    <script>
+  <script>
+    function CopyFile(source, target) {
+      var fs = require('fs');
+      var rd = fs.createReadStream(source);
+      var wr = fs.createWriteStream(target);
+      return new Promise(function (resolve, reject) {
+        rd.on('error', reject);
+        wr.on('error', reject);
+        wr.on('finish', resolve);
+        rd.pipe(wr);
+      }).catch(function (error) {
+        rd.destroy();
+        wr.end();
+        throw error;
+      });
+    }
 
-      function CopyFile(source, target) {
-        var fs = require('fs');
-        var rd = fs.createReadStream(source);
-        var wr = fs.createWriteStream(target);
-        return new Promise(function (resolve, reject) {
-          rd.on('error', reject);
-          wr.on('error', reject);
-          wr.on('finish', resolve);
-          rd.pipe(wr);
-        }).catch(function (error) {
-          rd.destroy();
-          wr.end();
-          throw error;
+    function LoadItems() {
+      var fs = require("fs");
+      var contents = fs.readFileSync("./source/items.json");
+      return JSON.parse(contents);
+    }
+
+    function FileExists(path) {
+      var fs = require('fs');
+      return fs.existsSync(path);
+    }
+
+
+    //Todo add a browse for directory thing idk help pls
+    function DetectInstallLocation() {
+      if (FileExists("C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/RocketLeague.exe")) {
+        document.getElementById("install-location").value =
+          "C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/";
+      } else {
+        //failed, prompt for directory
+
+        //should notify user that we could not detect the rl installation
+
+        const {
+          dialog
+        } = require('electron').remote
+        dialog.showOpenDialog({
+          defaultPath: "C:\\",
+          title: "Choose your Rocket League executable",
+          filters: [{
+            name: 'Executables',
+            extensions: ['exe']
+          }],
+          properties: ['openFile']
+        }, (fileName) => {
+          if (fileName === undefined) {
+            document.getElementById("install-location").value = "No install location selected";
+            return;
+          } else {
+            document.getElementById("install-location").value = fileName;
+          }
+        })
+      }
+    }
+
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+
+    function PlaceFiles() {
+      var fs = require('fs');
+
+      if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
+        CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+      }
+      if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
+        CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+      }
+      CopyFile("xapofx1_5.dll", document.getElementById("install-location").value + "/config.ini");
+
+    }
+
+    //Todo make config string 
+    function GetConfigurationString() {
+      return "Wow!";
+    }
+
+    function SaveConfiguration() {
+
+      console.log(LoadItems());
+
+      var fs = require('fs');
+      try {
+        fs.writeFileSync('config.ini', GetConfigurationString(), 'utf-8');
+
+        //Add a copy to Win32 so that you can load prefs from local one? idk
+        PlaceFiles();
+      } catch (e) {
+        alert(e);
+        alert('Failed to save the configuration!');
+      }
+
+    }
+  </script>
+
+  <script>
+    let shell = require('electron').shell
+
+    document.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+        event.preventDefault()
+        shell.openExternal(event.target.href)
+      }
+    })
+  </script>
+
+  <script>
+    (function () {
+      // Retrieve remote BrowserWindow
+      const {
+        BrowserWindow
+      } = require('electron').remote
+
+      function init() {
+        // Minimize task
+        document.getElementById("min-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.minimize();
         });
-      }
 
-      function LoadItems() {
-        var fs = require("fs");
-        var contents = fs.readFileSync("./source/items.json");
-        return JSON.parse(contents);
-      }
+        // Maximize window
+        document.getElementById("max-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          if (window.isMaximized()) {
+            window.unmaximize();
+          } else {
+            window.maximize();
+          }
+        });
 
-      function FileExists(path) {
-        var fs = require('fs');
-        return fs.existsSync(path);
-      }
+        // Close app
+        document.getElementById("close-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.close();
+        });
 
+        document.getElementById("detectInstall").addEventListener("click", (e) => {
+          console.log("dialog");
+        });
+      };
 
-      //Todo add a browse for directory thing idk help pls
-      function DetectInstallLocation() {
-        if (FileExists("C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/RocketLeague.exe")) {
-          document.getElementById("install-location").value = "C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/";
-        } else {
-          //failed, prompt for directory
-
-          //should notify user that we could not detect the rl installation
-
-          const { dialog } = require('electron').remote
-          dialog.showOpenDialog(
-            {
-              defaultPath: "C:\\",
-              title: "Choose your Rocket League executable",
-              filters: [
-                { name: 'Executables', extensions: ['exe'] }
-              ],
-              properties: ['openFile']
-            }, (fileName) => {
-              if (fileName === undefined) {
-                document.getElementById("install-location").value = "No install location selected";
-                return;
-              } else {
-                document.getElementById("install-location").value = fileName;
-              }
-            })
+      document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+          init();
         }
-      }
-
-      function PlaceFiles() {
-        var fs = require('fs');
-
-        if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
-          CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
-        }
-        if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
-          CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
-        }
-        CopyFile("xapofx1_5.dll", document.getElementById("install-location").value + "/config.ini");
-
-      }
-
-      //Todo make config string 
-      function GetConfigurationString() {
-        return "Wow!";
-      }
-
-      function SaveConfiguration() {
-
-        console.log(LoadItems());
-
-        var fs = require('fs');
-        try {
-          fs.writeFileSync('config.ini', GetConfigurationString(), 'utf-8');
-
-          //Add a copy to Win32 so that you can load prefs from local one? idk
-          PlaceFiles();
-        }
-        catch (e) {
-          alert(e);
-          alert('Failed to save the configuration!');
-        }
-
-      }
-
-    </script>
-
-    <script>
-      let shell = require('electron').shell
-
-      document.addEventListener('click', function (event) {
-        if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
-          event.preventDefault()
-          shell.openExternal(event.target.href)
-        }
-      })
-    </script>
-
-    <script>
-        (function () {
-          // Retrieve remote BrowserWindow
-          const {
-            BrowserWindow
-          } = require('electron').remote
-
-          function init() {
-            // Minimize task
-            document.getElementById("min-btn").addEventListener("click", (e) => {
-              var window = BrowserWindow.getFocusedWindow();
-              window.minimize();
-            });
-
-            // Maximize window
-            document.getElementById("max-btn").addEventListener("click", (e) => {
-              var window = BrowserWindow.getFocusedWindow();
-              if (window.isMaximized()) {
-                window.unmaximize();
-              } else {
-                window.maximize();
-              }
-            });
-
-            // Close app
-            document.getElementById("close-btn").addEventListener("click", (e) => {
-              var window = BrowserWindow.getFocusedWindow();
-              window.close();
-            });
-
-            document.getElementById("detectInstall").addEventListener("click", (e) => {
-              console.log("dialog");
-            });
-          };
-
-          document.onreadystatechange = () => {
-            if (document.readyState == "complete") {
-              init();
-            }
-          };
+      };
 
 
 
-        })();
-    </script>
+    })();
+  </script>
 
-    <script>
-      //TAB CONTROL TOGGLES
-      $(document).ready(function () {
-        $('#itemcontrols').show();
-        $('#extracontrols').hide();
-        $('#settingcontrols').hide();
+  <script>
+    //TAB CONTROL TOGGLES
+    $(document).ready(function () {
+      $('#itemcontrols').show();
+      $('#extracontrols').hide();
+      $('#settingcontrols').hide();
 
 
-        // Show the first tab by default
+      // Show the first tab by default
+      $('.tabs-stage div').hide();
+      $('.tabs-stage div:first').show();
+      $('.tabs-nav li:first').addClass('tab-active');
+
+      // Change tab class and display content
+      $('.tabs-nav a').on('click', function (event) {
+        event.preventDefault();
+        $('.tabs-nav li').removeClass('tab-active');
+        $(this).parent().addClass('tab-active');
         $('.tabs-stage div').hide();
-        $('.tabs-stage div:first').show();
-        $('.tabs-nav li:first').addClass('tab-active');
-
-        // Change tab class and display content
-        $('.tabs-nav a').on('click', function (event) {
-          event.preventDefault();
-          $('.tabs-nav li').removeClass('tab-active');
-          $(this).parent().addClass('tab-active');
-          $('.tabs-stage div').hide();
-          $($(this).attr('href')).show();
-        });
-
-
-        $('input[type="radio"]').click(function () {
-          //ITEMS TAB CONTROLS
-          if ($(this).attr('id') == 'tab1') {
-            $('#itemcontrols').show();
-          } else {
-            $('#itemcontrols').hide();
-          }
-          //EXTRAS TAB CONTROLS
-          if ($(this).attr('id') == 'tab2') {
-            $('#extracontrols').show();
-          } else {
-            $('#extracontrols').hide();
-          }
-          //SETTIGNS TAB CONTROLS
-          if ($(this).attr('id') == 'tab3') {
-            $('#settingcontrols').show();
-          } else {
-            $('#settingcontrols').hide();
-          }
-        });
+        $($(this).attr('href')).show();
       });
 
-      var acc = document.getElementsByClassName("accordion");
-      var i;
 
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
+      $('input[type="radio"]').click(function () {
+        //ITEMS TAB CONTROLS
+        if ($(this).attr('id') == 'tab1') {
+          $('#itemcontrols').show();
+        } else {
+          $('#itemcontrols').hide();
+        }
+        //EXTRAS TAB CONTROLS
+        if ($(this).attr('id') == 'tab2') {
+          $('#extracontrols').show();
+        } else {
+          $('#extracontrols').hide();
+        }
+        //SETTIGNS TAB CONTROLS
+        if ($(this).attr('id') == 'tab3') {
+          $('#settingcontrols').show();
+        } else {
+          $('#settingcontrols').hide();
+        }
+      });
+    });
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
