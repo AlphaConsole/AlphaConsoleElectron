@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron');
   const path = require('path')
   const url = require('url')
   
@@ -14,6 +14,9 @@ const {app, BrowserWindow} = require('electron')
       frame: false, 
       width: 720,
       height: 950,
+      webPreferences: {
+        devTools: false
+      },
       icon: path.join(__dirname, '/assets/img/logo_normal.png')
     })
   
