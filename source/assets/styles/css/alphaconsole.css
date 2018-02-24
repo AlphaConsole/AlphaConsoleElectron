@@ -145,7 +145,7 @@ section {
   padding: 10px;
   text-align: center;
   font-size: 28px;
-  font-family: BourgeoisLight;
+  font-family: QuarcaExtLight;
   text-decoration: none;
   border: 1px solid #454545;
 }
@@ -156,7 +156,7 @@ section {
   padding: 10px;
   text-align: center;
   font-size: 28px;
-  font-family: BourgeoisLight;
+  font-family: QuarcaExtLight;
   text-decoration: none;
   border: 1px solid #454545;
 }
@@ -187,7 +187,7 @@ section {
 }
 
 .section-header {
-  font-family: BourgeoisLight;
+  font-family: QuarcaExtLight;
   font-size: 20px;
   background-color: #393939;
   color: #fff;
@@ -235,7 +235,7 @@ input {
 }
 
 label {
-  font-family: BourgeoisLight;
+  font-family: QuarcaExtLight;
   display: inline-block;
   margin: -4px -4px -4px -1px;
   padding: 5px 5px;
@@ -253,7 +253,7 @@ label:hover {
 }
 
 input:checked + label {
-  font-family: BourgeoisLight;
+  font-family: QuarcaExtLight;
   color: #fff;
   background: #414141;
   border: 1px solid #454545;
@@ -358,7 +358,7 @@ input:checked + label {
 }
 
 .accordion {
-  font-family: BourgeoisLight;
+  font-family: QuarcaExtLight;
   font-size: 20px;
   background-color: #393939;
   color: #fff;
