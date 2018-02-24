@@ -1,5 +1,79 @@
 [
     {
+     "Colors": [
+        {
+            "Name":"Crimson",
+            "ID":1
+        },        
+        {
+            "Name":"Lime",
+            "ID":2
+        },       
+        {
+            "Name":"Black",
+            "ID":3
+        },        
+        {
+            "Name":"Sky Blue",
+            "ID":4
+        },        
+        {
+            "Name":"Cobalt",
+            "ID":5
+        },        
+        {
+            "Name":"Burnt Sienna",
+            "ID":6
+        },        
+        {
+            "Name":"Forest Green",
+            "ID":7
+        },        
+        {
+            "Name":"Purple",
+            "ID":8
+        },       
+        {
+            "Name":"Pink",
+            "ID":9
+        },        
+        {
+            "Name":"Orange",
+            "ID":10
+        },
+        {
+            "Name":"Grey",
+            "ID":11
+        },        
+        {
+            "Name":"Titanium White",
+            "ID":12
+        },        
+        {
+            "Name":"Saffron",
+            "ID":13
+        },        
+        {
+            "Name":"Gold",
+            "ID":14
+        },       
+        {
+            "Name":"Rose Gold",
+            "ID":15
+        },        
+        {
+            "Name":"White Gold",
+            "ID":16
+        },        
+        {
+            "Name":"Onyx",
+            "ID":17
+        },       
+        {
+            "Name":"Platinum",
+            "ID":18
+        }
+     ],
      "Items": [
       {
        "Name": "Backfire",
