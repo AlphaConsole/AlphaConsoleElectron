@@ -819,7 +819,7 @@
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="applyonstart" type="checkbox" checked="checked">
+                        <input id="apply-on-start" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                       </label>
                     </div>
@@ -832,7 +832,7 @@
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="minimizetotray" type="checkbox" checked="checked">
+                        <input id="minimize-to-tray" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                       </label>
                     </div>
@@ -845,7 +845,7 @@
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="runonstartup" type="checkbox" checked="checked">
+                        <input id="run-on-startup" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                       </label>
                     </div>
@@ -1036,33 +1036,73 @@
     //Todo make config string 
     function GetConfigurationString() {
 
-      var config = {};
+      var Config = {};
 
       var Products = LoadItems();
       var colors = Products.Colors;
       var slots = Products.Slots;
 
+      //Custom item options
+      var Items = {};
       for (var i = 0; i < slots.length; i++) {
-
         if (slots[i] != null) {
-          config[slots[i].Name] = {};
+          Items[slots[i].Name] = {};
           var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
-
           for (var j = 0; j < selects.length; j++) {
             var team = $(selects[j]).closest('tbody').attr("team");
-            config[slots[i].Name][team] = {};
-            config[slots[i].Name][team].ItemID = $(selects[j]).val();
-            config[slots[i].Name][team].PackageID = 0;
-            config[slots[i].Name][team].PackageSubID = 0;
-            
-            config[slots[i].Name][team].Color = $(selects[j]).parent().next("td").find("select").val() || -1;
-
+            Items[slots[i].Name][team] = {};
+            Items[slots[i].Name][team].ItemID = parseInt($(selects[j]).val());
+            Items[slots[i].Name][team].PackageID = 0;
+            Items[slots[i].Name][team].PackageSubID = 0;
+            Items[slots[i].Name][team].Color = parseInt($(selects[j]).parent().next("td").find("select").val()) || -1;
           }
-
         }
-
       }
-      return JSON.stringify(config);
+      Config.Items = Items;
+
+
+      //Custom color options
+      var CustomColors = {};
+      CustomColors.Blue = {};
+      CustomColors.Orange = {};
+      CustomColors.Blue.PrimaryColor = $("#primary-color-blue").val();
+      CustomColors.Blue.AccentColor = $("#accent-color-blue").val();
+      CustomColors.Orange.PrimaryColor = $("#primary-color-orange").val();
+      CustomColors.Orange.AccentColor = $("#accent-color-orange").val();
+      CustomColors.Blue.PrimaryIntensity = $("#primary-intensity-blue").val();
+      CustomColors.Blue.AccentIntensity = $("#primary-intensity-blue").val();
+      CustomColors.Orange.PrimaryIntensity = $("#primary-intensity-orange").val();
+      CustomColors.Orange.AccentIntensity = $("#primary-intensity-orange").val();
+      CustomColors.Blue.Enabled = $("#custom-color-enabled-blue").prop('checked');
+      CustomColors.Orange.Enabled = $("#custom-color-enabled-orange").prop('checked');
+      Config.CustomColors = CustomColors;
+
+
+
+      //Custom title options
+      var CustomTitles = {};
+      CustomTitles.EnableCustomTitles = $("#enable-custom-titles").prop('checked');
+      CustomTitles.UseStaticTitles = $("#use-static-titles").prop('checked');
+      CustomTitles.TitleFlashRate = $("#title-flash-rate").val();
+      Config.CustomTitles = CustomTitles;
+
+
+      //Custom rank options
+      var RankOptions = {};
+      RankOptions.DisplayMMR = $("#display-mmr").prop('checked');
+      RankOptions.UnrankedMMR = $("#enable-unranked-mmr").prop('checked');
+      RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
+      Config.RankOptions = RankOptions;
+      
+      //General options
+      var GeneralOptions = {};
+      GeneralOptions.ApplyOnStart = $("#apply-on-start").prop('checked');
+      GeneralOptions.MinimizeToTray = $("#minimize-to-tray").prop('checked');
+      GeneralOptions.RunOnStartup = $("#run-on-startup").prop('checked');
+      GeneralOptions.InstallLocation = $("#install-location").val();
+      Config.GeneralOptions = GeneralOptions;
+
+      return JSON.stringify(Config);
     }
 
     function SaveConfiguration() {
