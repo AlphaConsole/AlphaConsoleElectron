@@ -147,11 +147,8 @@
               <div class="row">
                 <div class="col">
 
-
-
                   <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
                   <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
-
 
                   <div id="blueteamitems" class="tabcontent">
                     <div class="table w-100">
@@ -172,7 +169,7 @@
 
                             </td>
                             <td class="alt-row">
-                              <select class="acc-input" name="color-select">
+                              <select class="acc-input" name="color-select" special="body">
                               </select>
                             </td>
                             <td class="alt-row-strong">
@@ -403,7 +400,7 @@
 
                             </td>
                             <td class="alt-row">
-                              <select class="acc-input" name="color-select">
+                              <select class="acc-input" name="color-select" special="body">
                               </select>
                             </td>
                             <td class="alt-row-strong">
@@ -611,14 +608,6 @@
                       </table>
                     </div>
                   </div>
-
-
-
-
-
-
-
-
 
                 </div>
               </div>
@@ -894,16 +883,16 @@
 
           <div id="itemcontrols" class="row ">
             <div class="col">
-              <button class="ml-1 mt-2 font-quarcaL btn btn-acc  w-100">NEW</button>
+              <button class="ml-1 mt-2 font-quarcaL btn btn-acc  w-100">NEED</button>
             </div>
             <div class="col">
-              <button class=" mt-2 font-quarcaL btn btn-acc  w-100">DELETE</button>
+              <button class=" mt-2 font-quarcaL btn btn-acc  w-100">SOMETHING</button>
             </div>
             <div class="col">
-              <button class=" mt-2 font-quarcaL btn btn-acc  w-100">ENABLE ALL</button>
+              <button class=" mt-2 font-quarcaL btn btn-acc  w-100">TO PUT</button>
             </div>
             <div class="col">
-              <button class=" mt-2 font-quarcaL btn btn-acc  w-100">DISABLE ALL</button>
+              <button class=" mt-2 font-quarcaL btn btn-acc  w-100">HERE</button>
             </div>
           </div>
           <div id="extracontrols" class="row">
@@ -1021,6 +1010,7 @@
       elmnt.style.backgroundColor = color;
 
     }
+
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
 
@@ -1042,22 +1032,31 @@
 
       var Config = JSON.parse(LoadFile("config.json"));
 
+      var Products = LoadItems();
+      var colors = Products.Colors;
+      var slots = Products.Slots;
+
       //Custom item options
-      /*var Items = {};
       for (var i = 0; i < slots.length; i++) {
         if (slots[i] != null) {
-          Items[slots[i].Name] = {};
+
+          if(slots[i].Name == "Body"){
+            $("select[name='color-select']").each((index, value) => {
+              var team = $(value).closest('tbody').attr("team");
+              $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']").val(Config.Items[slots[i].Name][team].Color);
+            })
+          }
+
           var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
           for (var j = 0; j < selects.length; j++) {
             var team = $(selects[j]).closest('tbody').attr("team");
-            Items[slots[i].Name][team] = {};
-            Items[slots[i].Name][team].ItemID = parseInt($(selects[j]).val());
-            Items[slots[i].Name][team].PackageID = 0;
-            Items[slots[i].Name][team].PackageSubID = 0;
-            Items[slots[i].Name][team].Color = parseInt($(selects[j]).parent().next("td").find("select").val()) || -1;
+            $(selects[j]).val(Config.Items[slots[i].Name][team].ItemID);
+            //Items[slots[i].Name][team].PackageID = 0; //No way to save this yet so nowhere to place it
+            //Items[slots[i].Name][team].PackageSubID = 0; //No way to save this yet so nowhere to place it
+            $(selects[j]).parent().next("td").find("select").val(Config.Items[slots[i].Name][team].Color);
           }
         }
-      }*/
+      }
 
       //Custom color options
       $("#primary-color-blue").val(Config.CustomColors.Blue.PrimaryColor);
@@ -1105,6 +1104,18 @@
       for (var i = 0; i < slots.length; i++) {
         if (slots[i] != null) {
           Items[slots[i].Name] = {};
+
+          if(slots[i].Name == "Body"){
+            $("select[name='color-select'][special='body']").each((index, value) => {
+              var team = $(value).closest('tbody').attr("team");
+              Items[slots[i].Name][team] = {};
+              Items[slots[i].Name][team].ItemID = -1
+              Items[slots[i].Name][team].PackageID = -1;
+              Items[slots[i].Name][team].PackageSubID = -1;
+              Items[slots[i].Name][team].Color = parseInt($(value).val()) || -1;
+            })
+          }
+
           var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
           for (var j = 0; j < selects.length; j++) {
             var team = $(selects[j]).closest('tbody').attr("team");
@@ -1141,7 +1152,7 @@
       var CustomTitles = {};
       CustomTitles.EnableCustomTitles = $("#enable-custom-titles").prop('checked');
       CustomTitles.UseStaticTitles = $("#use-static-titles").prop('checked');
-      CustomTitles.TitleFlashRate = $("#title-flash-rate").val();
+      CustomTitles.TitleFlashRate = parseFloat($("#title-flash-rate").val());
       Config.CustomTitles = CustomTitles;
 
 
