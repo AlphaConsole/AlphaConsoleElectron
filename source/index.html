@@ -164,7 +164,7 @@
                             <td class="alt-row-strong"></td>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody team="Blue">
                           <!-- BODY -->
                           <tr>
                             <td class="alt-row">Body</td>
@@ -395,7 +395,7 @@
                             <td class="alt-row-strong"></td>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody team="Orange">
                           <!-- BODY -->
                           <tr>
                             <td class="alt-row">Body</td>
@@ -423,9 +423,6 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-
-
-
                               </select>
                             </td>
                             <td class="alt-row-strong">
@@ -1048,17 +1045,23 @@
       for (var i = 0; i < slots.length; i++) {
 
         if (slots[i] != null) {
-
           config[slots[i].Name] = {};
-          config[slots[i].Name].ItemID = $('select[name="' + slots[i].Name + '"]').val();
-          config[slots[i].Name].PackageID = 0;
-          config[slots[i].Name].PackageSubID = 0;
-          
+          var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
+
+          for (var j = 0; j < selects.length; j++) {
+            var team = $(selects[j]).closest('tbody').attr("team");
+            config[slots[i].Name][team] = {};
+            config[slots[i].Name][team].ItemID = $(selects[j]).val();
+            config[slots[i].Name][team].PackageID = 0;
+            config[slots[i].Name][team].PackageSubID = 0;
+            
+            config[slots[i].Name][team].Color = $(selects[j]).parent().next("td").find("select").val() || -1;
+
+          }
+
         }
 
       }
-      
-      console.log(config);
       return JSON.stringify(config);
     }
 
@@ -1199,8 +1202,37 @@
 
   <script>
 
+
     var Products = LoadItems();
+
+    // function for dynamic sorting
+    function compareValues(key, order = 'asc') {
+      return function (a, b) {
+        if (!a.hasOwnProperty(key) || !b.hasOwnProperty(key)) {
+          // property doesn't exist on either object
+          return 0;
+        }
+
+        const varA = (typeof a[key] === 'string') ?
+          a[key].toUpperCase() : a[key];
+        const varB = (typeof b[key] === 'string') ?
+          b[key].toUpperCase() : b[key];
+
+        let comparison = 0;
+        if (varA > varB) {
+          comparison = 1;
+        } else if (varA < varB) {
+          comparison = -1;
+        }
+        return (
+          (order == 'desc') ? (comparison * -1) : comparison
+        );
+      };
+    }
+
+
     var colors = Products.Colors;
+    colors.sort(compareValues('Name'));
     $("select[name='color-select']").each(function (index, value) {
 
       for (var i = 0; i < colors.length; i++) {
@@ -1220,22 +1252,20 @@
       if (slots[i] != null) {
 
         var items = slots[i].Items;
+        items.sort(compareValues('Name'));
 
         for (var j = 0; j < items.length; j++) {
-
-          var selects = $('select[name="' + slots[i].Name + '"]');
-
-          for (var k = 0; k < selects.length; k++) {
+          //Will .each fuck this up because of async?
+          $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
             var newOp = $('<option>');
             newOp.attr('value', items[j].ItemID);
             newOp.text(items[j].Name);
-            $(selects[k]).append(newOp);
-          }
+            $(this).append(newOp);
+          });
         }
       }
 
     }
-
   </script>
 
 
