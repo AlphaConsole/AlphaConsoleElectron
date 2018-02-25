@@ -797,7 +797,7 @@
               <div class="panel">
                 <div class="row p-2">
                   <div class="col-12 font-quarcaL">
-                   <!-- KERMALIS -->
+                    <!-- KERMALIS -->
                   </div>
                 </div>
               </div>
@@ -961,7 +961,11 @@
     function LoadItems() {
       var fs = require("fs");
       var contents = fs.readFileSync("./source/items.json");
-      return JSON.parse(contents);
+      var contents2 = fs.readFileSync("./source/slotDictionary.json");
+      var products = JSON.parse(contents);
+      var lookup = JSON.parse(contents2);
+      products.Lookup = lookup;
+      return products;
     }
 
     function FileExists(path) {
@@ -1034,7 +1038,28 @@
 
     //Todo make config string 
     function GetConfigurationString() {
-      return "Wow!";
+
+      var config = {};
+
+      var Products = LoadItems();
+      var colors = Products.Colors;
+      var slots = Products.Slots;
+
+      for (var i = 0; i < slots.length; i++) {
+
+        if (slots[i] != null) {
+
+          config[slots[i].Name] = {};
+          config[slots[i].Name].ItemID = $('select[name="' + slots[i].Name + '"]').val();
+          config[slots[i].Name].PackageID = 0;
+          config[slots[i].Name].PackageSubID = 0;
+          
+        }
+
+      }
+      
+      console.log(config);
+      return JSON.stringify(config);
     }
 
     function SaveConfiguration() {
@@ -1190,20 +1215,22 @@
     });
 
     var slots = Products.Slots;
-    for(var i = 0; i < slots.length; i++){
-      
-      if(slots[i] != null){
-        var items = slots[i].Items;
-        
-        for(var j = 0; j < items.length; j++){
-          console.log($('select[name="' + slots[i].Name + '"]'));
+    for (var i = 0; i < slots.length; i++) {
 
-          $('select[name="' + slots[i].Name + '"]').each(function(index, value) {
+      if (slots[i] != null) {
+
+        var items = slots[i].Items;
+
+        for (var j = 0; j < items.length; j++) {
+
+          var selects = $('select[name="' + slots[i].Name + '"]');
+
+          for (var k = 0; k < selects.length; k++) {
             var newOp = $('<option>');
             newOp.attr('value', items[j].ItemID);
             newOp.text(items[j].Name);
-            $(this).append(newOp);
-          });
+            $(selects[k]).append(newOp);
+          }
         }
       }
 

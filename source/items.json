@@ -254,7 +254,7 @@
                 }
             ],
             "SlotID": "0",
-            "Name": "body-select"
+            "Name": "Body"
         },
         {
             "Items": [
@@ -1784,7 +1784,7 @@
                 }
             ],
             "SlotID": "1",
-            "Name": "decal-select"
+            "Name": "Decal"
         },
         {
             "Items": [
@@ -2234,7 +2234,7 @@
                 }
             ],
             "SlotID": "2",
-            "Name": "wheel-select"
+            "Name": "Wheel"
         },
         {
             "Items": [
@@ -2596,7 +2596,7 @@
                 }
             ],
             "SlotID": "3",
-            "Name": "boost-select"
+            "Name": "Boost"
         },
         {
             "Items": [
@@ -4382,7 +4382,7 @@
                 }
             ],
             "SlotID": "4",
-            "Name": "antenna-select"
+            "Name": "Antenna"
         },
         {
             "Items": [
@@ -4944,7 +4944,7 @@
                 }
             ],
             "SlotID": "5",
-            "Name": "topper-select"
+            "Name": "Topper"
         },
         null,
         {
@@ -5059,7 +5059,7 @@
                 }
             ],
             "SlotID": "7",
-            "Name": "paint-select"
+            "Name": "Paint"
         },
         {
             "Items": [
@@ -5281,7 +5281,7 @@
                 }
             ],
             "SlotID": "8",
-            "Name": "bot-select"
+            "Name": "Bot"
         },
         {
             "Items": [
@@ -5371,7 +5371,7 @@
                 }
             ],
             "SlotID": "9",
-            "Name": "logo-select"
+            "Name": "Logo"
         },
         null,
         {
@@ -5454,7 +5454,7 @@
                 }
             ],
             "SlotID": "11",
-            "Name": "premium-select"
+            "Name": "Premium"
         },
         null,
         {
@@ -5677,7 +5677,7 @@
                 }
             ],
             "SlotID": "13",
-            "Name": "engine-select"
+            "Name": "Engine"
         },
         {
             "Items": [
@@ -5767,7 +5767,7 @@
                 }
             ],
             "SlotID": "14",
-            "Name": "trail-select"
+            "Name": "Trail"
         },
         {
             "Items": [
@@ -5849,7 +5849,7 @@
                 }
             ],
             "SlotID": "15",
-            "Name": "explosion-select"
+            "Name": "Explosion"
         },
         {
             "Items": [
@@ -6111,7 +6111,7 @@
                 }
             ],
             "SlotID": "16",
-            "Name": "banner-select"
+            "Name": "Banner"
         }
     ]
 }
