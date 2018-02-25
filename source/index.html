@@ -797,7 +797,7 @@
               <div class="panel">
                 <div class="row p-2">
                   <div class="col-12 font-quarcaL">
-                   <!-- KERMALIS -->
+                    <!-- KERMALIS -->
                   </div>
                 </div>
               </div>
@@ -1065,49 +1065,49 @@
   </script>
 
   <script>
-      (function () {
-        // Retrieve remote BrowserWindow
-        const {
-          BrowserWindow
-        } = require('electron').remote
+    (function () {
+      // Retrieve remote BrowserWindow
+      const {
+        BrowserWindow
+      } = require('electron').remote
 
-        function init() {
-          // Minimize task
-          document.getElementById("min-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.minimize();
-          });
+      function init() {
+        // Minimize task
+        document.getElementById("min-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.minimize();
+        });
 
-          // Maximize window
-          document.getElementById("max-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            if (window.isMaximized()) {
-              window.unmaximize();
-            } else {
-              window.maximize();
-            }
-          });
-
-          // Close app
-          document.getElementById("close-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.close();
-          });
-
-          document.getElementById("detectInstall").addEventListener("click", (e) => {
-            console.log("dialog");
-          });
-        };
-
-        document.onreadystatechange = () => {
-          if (document.readyState == "complete") {
-            init();
+        // Maximize window
+        document.getElementById("max-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          if (window.isMaximized()) {
+            window.unmaximize();
+          } else {
+            window.maximize();
           }
-        };
+        });
+
+        // Close app
+        document.getElementById("close-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.close();
+        });
+
+        document.getElementById("detectInstall").addEventListener("click", (e) => {
+          console.log("dialog");
+        });
+      };
+
+      document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+          init();
+        }
+      };
 
 
 
-      })();
+    })();
   </script>
 
   <script>
@@ -1173,7 +1173,6 @@
 
 
   <script>
-
     var Products = LoadItems();
     var colors = Products.Colors;
     $("select[name='color-select']").each(function (index, value) {
@@ -1190,15 +1189,31 @@
     });
 
     var slots = Products.Slots;
-    for(var i = 0; i < slots.length; i++){
-      
-      if(slots[i] != null){
-        var items = slots[i].Items;
+    for (var i = 0; i < slots.length; i++) {
+
+      if (slots[i] != null) {
         
-        for(var j = 0; j < items.length; j++){
+        var items = slots[i].Items;
+
+        function compare(a, b) {
+          const tA = a.Name.toUpperCase();
+          const tB = b.Name.toUpperCase();
+
+          let comparison = 0;
+          if (tA > tB) {
+            comparison = 1;
+          } else if (tA < tB) {
+            comparison = -1;
+          }
+          return comparison;
+        }
+
+        items.sort(compare);
+
+        for (var j = 0; j < items.length; j++) {
           console.log($('select[name="' + slots[i].Name + '"]'));
 
-          $('select[name="' + slots[i].Name + '"]').each(function(index, value) {
+          $('select[name="' + slots[i].Name + '"]').each(function (index, value) {
             var newOp = $('<option>');
             newOp.attr('value', items[j].ItemID);
             newOp.text(items[j].Name);
@@ -1208,7 +1223,6 @@
       }
 
     }
-
   </script>
 
 
