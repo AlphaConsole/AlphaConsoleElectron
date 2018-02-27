@@ -2,3 +2,4 @@
 build/dev/
 .vscode
 .sass-cache
+config.json
