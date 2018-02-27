@@ -878,7 +878,7 @@
             document.getElementById("install-location").value = "No install location selected";
             return;
           } else {
-            document.getElementById("install-location").value = fileName;
+            document.getElementById("install-location").value = path.dirname(fileName);
           }
         })
       }
