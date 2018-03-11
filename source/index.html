@@ -911,15 +911,15 @@
 
     function GetBasePath(){
       if(FileExists("node.dll")) {
-        return "/resources/app/";
+        return __dirname + "/../";
       } else {
         return "";
       }
     }
 
     function LoadItems() {
-      var contents = LoadFile(GetBasePath() + "./source/items.json");
-      var contents2 = LoadFile(GetBasePath() + "./source/slotDictionary.json");
+      var contents = LoadFile(GetBasePath() + "/source/items.json");
+      var contents2 = LoadFile(GetBasePath() + "/source/slotDictionary.json");
       var products = JSON.parse(contents);
       var lookup = JSON.parse(contents2);
       products.Lookup = lookup;
@@ -1186,7 +1186,7 @@
       Config.GeneralOptions = GeneralOptions;
 
       //Miscellaneous
-      Config.ACPath = __dirname;
+      Config.ACPath = require("path").resolve(__dirname + "\\..\\");
 
 
       return JSON.stringify(Config);
