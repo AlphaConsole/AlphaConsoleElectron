@@ -909,9 +909,17 @@
       return fs.readFileSync(path);
     }
 
+    function GetBasePath(){
+      if(FileExists("node.dll")) {
+        return "/resources/app/";
+      } else {
+        return "";
+      }
+    }
+
     function LoadItems() {
-      var contents = LoadFile("./source/items.json");
-      var contents2 = LoadFile("./source/slotDictionary.json");
+      var contents = LoadFile(GetBasePath() + "./source/items.json");
+      var contents2 = LoadFile(GetBasePath() + "./source/slotDictionary.json");
       var products = JSON.parse(contents);
       var lookup = JSON.parse(contents2);
       products.Lookup = lookup;
@@ -980,29 +988,29 @@
       if (FileExists(document.getElementById("install-location").value + "RocketLeague.exe")) {
 
         if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
-          CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+          CopyFile(GetBasePath() + "discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
         } else {
           var stats = fs.statSync(document.getElementById("install-location").value + "/discord-rpc.dll");
           var mtime = new Date(stats.mtime).getTime();
-          var stats2 = fs.statSync("discord-rpc.dll");
+          var stats2 = fs.statSync(GetBasePath() + "discord-rpc.dll");
           var mtime2 = new Date(stats2.mtime).getTime();
           if (mtime2 > mtime) {
-            CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+            CopyFile(GetBasePath() + "discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
           }
         }
         if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
-          CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+          CopyFile(GetBasePath() + "AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
         } else {
           var stats = fs.statSync(document.getElementById("install-location").value + "/xapofx1_5.dll");
           var mtime = new Date(stats.mtime).getTime();
-          var stats2 = fs.statSync("AlphaConsole.dll");
+          var stats2 = fs.statSync(GetBasePath() + "AlphaConsole.dll");
           var mtime2 = new Date(stats2.mtime).getTime();
           if (mtime2 > mtime) {
-            CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+            CopyFile(GetBasePath() + "AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
           }
         }
 
-        CopyFile("config.json", document.getElementById("install-location").value + "/config.json");
+        CopyFile(GetBasePath() + "config.json", document.getElementById("install-location").value + "/config.json");
       } else {
         alert("Rocket League path not set or incorrect! Set it in General settings.");
       }
@@ -1010,7 +1018,7 @@
 
     function LoadConfiguration() {
 
-      var Config = JSON.parse(LoadFile("config.json"));
+      var Config = JSON.parse(LoadFile(GetBasePath() + "config.json"));
 
       var Products = LoadItems();
       var colors = Products.Colors;
@@ -1188,7 +1196,7 @@
 
       var fs = require('fs');
       try {
-        fs.writeFileSync('config.json', GetConfigurationString(), 'utf-8');
+        fs.writeFileSync(GetBasePath() + 'config.json', GetConfigurationString(), 'utf-8');
 
         //Add a copy to Win32 so that you can load prefs from local one? idk
         PlaceFiles();
@@ -1342,7 +1350,7 @@
         return filelist;
       }
 
-      return walkSync("textures/", []);
+      return walkSync(GetBasePath() + "textures/", []);
     }
 
     function GetTexturePackages() {
@@ -1381,7 +1389,7 @@
     function SaveMasterPackages(packages) {
       var fs = require('fs');
       try {
-        fs.writeFileSync('textures/packages.json', JSON.stringify(packages), 'utf-8');
+        fs.writeFileSync(GetBasePath() + 'textures/packages.json', JSON.stringify(packages), 'utf-8');
       } catch (e) {
         alert(e);
         alert('Failed to save the packages!');
