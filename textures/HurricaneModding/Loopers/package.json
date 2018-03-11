@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "name": "Firework",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "looperfirework.png"
+        }
+      ]
+    },
+	{
+      "id": 1,
+      "name": "Flower",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "looperflower.png"
+        }
+      ]
+    },
+	{
+      "id": 2,
+      "name": "Web",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "looperweb.png"
+        }
+      ]
+    },
+	{
+      "id": 3,
+      "name": "Star",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "looperstar.png"
+        }
+      ]
+    },
+	{
+      "id": 4,
+      "name": "Trinity",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "loopertrinity.png"
+        }
+      ]
+    }
+  ]
+}

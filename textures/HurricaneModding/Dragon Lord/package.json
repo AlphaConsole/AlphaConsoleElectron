@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "name": "Color Fade",
+      "slot": 1,
+      "item": 1059,
+      "parameters": [
+        {
+          "name": "FX*Noise1",
+          "image": "dragonlord_colorfade2.png"
+        },
+        {
+          "name": "FX*Noise2",
+          "image": "dragonlord_colorfade1.png"
+        }
+      ]
+    }
+  ]
+}
