@@ -538,6 +538,17 @@
 
               <button class="accordion">CUSTOM PAINT COLOR</button>
               <div class="panel">
+                  <div class="row alt-row p-2">
+                      <div class="col-11 font-quarcaL">
+                        Color all cars
+                      </div>
+                      <div class="col-1">
+                        <label class="tick-container">
+                          <input id="color-all-cars" type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
                 <div class="row p-2">
                   <div class="col-11 font-quarcaL b-team">
                     Blue Team
@@ -1017,6 +1028,7 @@
       $("#accent-intensity-orange").val(Config.CustomColors.Orange.AccentIntensity);
       $("#custom-color-enabled-blue").prop('checked', Config.CustomColors.Blue.Enabled);
       $("#custom-color-enabled-orange").prop('checked', Config.CustomColors.Orange.Enabled);
+      $("#color-all-cars").prop("checked", Config.CustomColors.ColorAllCars);
 
       //Custom title options
       $("#enable-custom-titles").prop('checked', Config.CustomTitles.EnableCustomTitles);
@@ -1107,6 +1119,7 @@
       CustomColors.Orange.AccentIntensity = parseFloat($("#accent-intensity-orange").val());
       CustomColors.Blue.Enabled = $("#custom-color-enabled-blue").prop('checked');
       CustomColors.Orange.Enabled = $("#custom-color-enabled-orange").prop('checked');
+      CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
       Config.CustomColors = CustomColors;
 
 
