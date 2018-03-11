@@ -253,7 +253,7 @@
                     "ItemID": "2269"
                 }
             ],
-            "SlotID": "0",
+            "SlotID": 0,
             "Name": "Body"
         },
         {
@@ -1783,7 +1783,7 @@
                     "ItemID": "2736"
                 }
             ],
-            "SlotID": "1",
+            "SlotID": 1,
             "Name": "Decal"
         },
         {
@@ -2233,7 +2233,7 @@
                     "ItemID": "2796"
                 }
             ],
-            "SlotID": "2",
+            "SlotID": 2,
             "Name": "Wheel"
         },
         {
@@ -2595,8 +2595,369 @@
                     "ItemID": "2727"
                 }
             ],
-            "SlotID": "3",
+            "SlotID": 3,
             "Name": "Boost"
+        }, {
+            "Items": [
+                {
+                    "Name": "(Alpha Reward) Gold Rush",
+                    "ItemID": "32"
+                },
+                {
+                    "Name": "Bubbles",
+                    "ItemID": "33"
+                },
+                {
+                    "Name": "Confetti",
+                    "ItemID": "34"
+                },
+                {
+                    "Name": "Datastream",
+                    "ItemID": "35"
+                },
+                {
+                    "Name": "Flamethrower",
+                    "ItemID": "36"
+                },
+                {
+                    "Name": "Flamethrower Blue",
+                    "ItemID": "37"
+                },
+                {
+                    "Name": "Flamethrower Green",
+                    "ItemID": "38"
+                },
+                {
+                    "Name": "Flamethrower Pink",
+                    "ItemID": "39"
+                },
+                {
+                    "Name": "Flamethrower Purple",
+                    "ItemID": "40"
+                },
+                {
+                    "Name": "Flamethrower Red",
+                    "ItemID": "41"
+                },
+                {
+                    "Name": "Flowers",
+                    "ItemID": "42"
+                },
+                {
+                    "Name": "Grass",
+                    "ItemID": "43"
+                },
+                {
+                    "Name": "Sacred",
+                    "ItemID": "44"
+                },
+                {
+                    "Name": "Ion",
+                    "ItemID": "45"
+                },
+                {
+                    "Name": "Ion Green",
+                    "ItemID": "46"
+                },
+                {
+                    "Name": "Ion Pink",
+                    "ItemID": "47"
+                },
+                {
+                    "Name": "Ion Purple",
+                    "ItemID": "48"
+                },
+                {
+                    "Name": "Ion Red",
+                    "ItemID": "49"
+                },
+                {
+                    "Name": "Ion Yellow",
+                    "ItemID": "50"
+                },
+                {
+                    "Name": "Money",
+                    "ItemID": "51"
+                },
+                {
+                    "Name": "Plasma",
+                    "ItemID": "52"
+                },
+                {
+                    "Name": "Thermal",
+                    "ItemID": "53"
+                },
+                {
+                    "Name": "Thermal Blue",
+                    "ItemID": "54"
+                },
+                {
+                    "Name": "Thermal Green",
+                    "ItemID": "55"
+                },
+                {
+                    "Name": "Thermal Pink",
+                    "ItemID": "56"
+                },
+                {
+                    "Name": "Thermal Purple",
+                    "ItemID": "57"
+                },
+                {
+                    "Name": "Thermal Yellow",
+                    "ItemID": "58"
+                },
+                {
+                    "Name": "Rainbow",
+                    "ItemID": "59"
+                },
+                {
+                    "Name": "Slime",
+                    "ItemID": "60"
+                },
+                {
+                    "Name": "Snowflakes",
+                    "ItemID": "61"
+                },
+                {
+                    "Name": "Sparkles",
+                    "ItemID": "62"
+                },
+                {
+                    "Name": "Standard",
+                    "ItemID": "63"
+                },
+                {
+                    "Name": "Standard Blue",
+                    "ItemID": "64"
+                },
+                {
+                    "Name": "Standard Pink",
+                    "ItemID": "65"
+                },
+                {
+                    "Name": "Standard Purple",
+                    "ItemID": "66"
+                },
+                {
+                    "Name": "Standard Yellow",
+                    "ItemID": "67"
+                },
+                {
+                    "Name": "Hydro",
+                    "ItemID": "69"
+                },
+                {
+                    "Name": "Nitrous",
+                    "ItemID": "384"
+                },
+                {
+                    "Name": "Burnout",
+                    "ItemID": "387"
+                },
+                {
+                    "Name": "Lightning",
+                    "ItemID": "405"
+                },
+                {
+                    "Name": "Accelerato",
+                    "ItemID": "524"
+                },
+                {
+                    "Name": "Nuts Bolts",
+                    "ItemID": "544"
+                },
+                {
+                    "Name": "Battle-Stars",
+                    "ItemID": "545"
+                },
+                {
+                    "Name": "Candy Corn",
+                    "ItemID": "578"
+                },
+                {
+                    "Name": "OutaTime",
+                    "ItemID": "626"
+                },
+                {
+                    "Name": "Xmas",
+                    "ItemID": "635"
+                },
+                {
+                    "Name": "Portal - Conversion Gel",
+                    "ItemID": "651"
+                },
+                {
+                    "Name": "Portal - Propulsion Gel",
+                    "ItemID": "652"
+                },
+                {
+                    "Name": "Portal - Repulsion Gel",
+                    "ItemID": "653"
+                },
+                {
+                    "Name": "Sandstorm",
+                    "ItemID": "664"
+                },
+                {
+                    "Name": "Batmobile",
+                    "ItemID": "868"
+                },
+                {
+                    "Name": "Feather",
+                    "ItemID": "1090"
+                },
+                {
+                    "Name": "Hearts",
+                    "ItemID": "1091"
+                },
+                {
+                    "Name": "Pixel Fire",
+                    "ItemID": "1092"
+                },
+                {
+                    "Name": "Polygonal",
+                    "ItemID": "1093"
+                },
+                {
+                    "Name": "Toon Smoke",
+                    "ItemID": "1094"
+                },
+                {
+                    "Name": "Trinity",
+                    "ItemID": "1158"
+                },
+                {
+                    "Name": "Frostbite",
+                    "ItemID": "1166"
+                },
+                {
+                    "Name": "Flamethrower Yellow",
+                    "ItemID": "1318"
+                },
+                {
+                    "Name": "Standard Green",
+                    "ItemID": "1319"
+                },
+                {
+                    "Name": "Magmus",
+                    "ItemID": "1327"
+                },
+                {
+                    "Name": "Season 2 - Challenger",
+                    "ItemID": "1334"
+                },
+                {
+                    "Name": "Season 2 - Champion",
+                    "ItemID": "1335"
+                },
+                {
+                    "Name": "Season 2 - Prospect",
+                    "ItemID": "1336"
+                },
+                {
+                    "Name": "Season 2 - Star",
+                    "ItemID": "1337"
+                },
+                {
+                    "Name": "Ink",
+                    "ItemID": "1452"
+                },
+                {
+                    "Name": "Treasure",
+                    "ItemID": "1459"
+                },
+                {
+                    "Name": "Cold Fusion",
+                    "ItemID": "1469"
+                },
+                {
+                    "Name": "Lightning Yellow",
+                    "ItemID": "1473"
+                },
+                {
+                    "Name": "Netherworld",
+                    "ItemID": "1498"
+                },
+                {
+                    "Name": "Hypernova",
+                    "ItemID": "1542"
+                },
+                {
+                    "Name": "Xenosplash",
+                    "ItemID": "1550"
+                },
+                {
+                    "Name": "Dark Matter",
+                    "ItemID": "1551"
+                },
+                {
+                    "Name": "Tachyon",
+                    "ItemID": "1552"
+                },
+                {
+                    "Name": "Proton",
+                    "ItemID": "1584"
+                },
+                {
+                    "Name": "Magic Missile",
+                    "ItemID": "1638"
+                },
+                {
+                    "Name": "Taco",
+                    "ItemID": "1680"
+                },
+                {
+                    "Name": "Hexphase",
+                    "ItemID": "1694"
+                },
+                {
+                    "Name": "Helios",
+                    "ItemID": "1695"
+                },
+                {
+                    "Name": "Neo-Thermal",
+                    "ItemID": "1736"
+                },
+                {
+                    "Name": "Interdimensional GB",
+                    "ItemID": "1957"
+                },
+                {
+                    "Name": "Power-Shot",
+                    "ItemID": "2054"
+                },
+                {
+                    "Name": "Scary Pumpkin",
+                    "ItemID": "2328"
+                },
+                {
+                    "Name": "Fractal Fire",
+                    "ItemID": "2394"
+                },
+                {
+                    "Name": "Winter Storm",
+                    "ItemID": "2442"
+                },
+                {
+                    "Name": "Yuletide",
+                    "ItemID": "2478"
+                },
+                {
+                    "Name": "Tsunami Beam",
+                    "ItemID": "2645"
+                },
+                {
+                    "Name": "Toon Sketch",
+                    "ItemID": "2654"
+                },
+                {
+                    "Name": "Blast Ray",
+                    "ItemID": "2727"
+                }
+            ],
+            "SlotID": -1,
+            "Name": "BoostSound"
         },
         {
             "Items": [
@@ -4381,7 +4742,7 @@
                     "ItemID": "2673"
                 }
             ],
-            "SlotID": "4",
+            "SlotID": 4,
             "Name": "Antenna"
         },
         {
@@ -4943,7 +5304,7 @@
                     "ItemID": "2740"
                 }
             ],
-            "SlotID": "5",
+            "SlotID": 5,
             "Name": "Topper"
         },
         null,
@@ -5058,7 +5419,7 @@
                     "ItemID": "2275"
                 }
             ],
-            "SlotID": "7",
+            "SlotID": 7,
             "Name": "Paint"
         },
         {
@@ -5280,7 +5641,7 @@
                     "ItemID": "123"
                 }
             ],
-            "SlotID": "8",
+            "SlotID": 8,
             "Name": "Bot"
         },
         {
@@ -5370,7 +5731,7 @@
                     "ItemID": "2243"
                 }
             ],
-            "SlotID": "9",
+            "SlotID": 9,
             "Name": "Logo"
         },
         null,
@@ -5453,7 +5814,7 @@
                     "ItemID": "2731"
                 }
             ],
-            "SlotID": "11",
+            "SlotID": 11,
             "Name": "Premium"
         },
         null,
@@ -5676,7 +6037,7 @@
                     "ItemID": "2490"
                 }
             ],
-            "SlotID": "13",
+            "SlotID": 13,
             "Name": "Engine"
         },
         {
@@ -5766,7 +6127,7 @@
                     "ItemID": "2779"
                 }
             ],
-            "SlotID": "14",
+            "SlotID": 14,
             "Name": "Trail"
         },
         {
@@ -5848,7 +6209,7 @@
                     "ItemID": "2791"
                 }
             ],
-            "SlotID": "15",
+            "SlotID": 15,
             "Name": "Explosion"
         },
         {
@@ -6110,7 +6471,7 @@
                     "ItemID": "2764"
                 }
             ],
-            "SlotID": "16",
+            "SlotID": 16,
             "Name": "Banner"
         }
     ]
