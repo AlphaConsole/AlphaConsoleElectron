@@ -973,7 +973,7 @@
         if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
           CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
         }
-        CopyFile("xapofx1_5.dll", document.getElementById("install-location").value + "/config.ini");
+        CopyFile("config.json", document.getElementById("install-location").value + "/config.json");
       }
     }
 
@@ -1128,7 +1128,7 @@
 
       //Discord rich presence options
       var DiscordOptions = {};
-      DiscordOptions.RichPresenceLevel = $("[name='discord']:checked").val();
+      DiscordOptions.RichPresenceLevel = parseInt($("[name='discord']:checked").val()) || 2;
       Config.DiscordOptions = DiscordOptions;
 
       //General options
