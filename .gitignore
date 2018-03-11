@@ -3,3 +3,4 @@ build/dev/
 .vscode
 .sass-cache
 textures/*
+config.json
