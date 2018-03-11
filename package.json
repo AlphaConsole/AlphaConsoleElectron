@@ -2,9 +2,9 @@
   "name": "alphaconsoleelectron",
   "version": "1.0.0",
   "description": "Electron version of AlphaConsole",
-  "main": "index.js",
+  "main": "source/index.js",
   "scripts": {
-    "package-win": "electron-packager . AlphaConsole --overwrite --asar=true --platform=win32 --arch=ia32 --icon=source/assets/img/app_icon.ico --prune=true --out=build/dev --version-string.CompanyName=AlphaConsole --version-string.FileDescription=AlphaConsole --version-string.ProductName=\"AlphaConsole\"",
+    "package-win": "electron-packager . AlphaConsole --overwrite --asar --platform=win32 --arch=ia32 --icon=source/assets/img/app_icon.ico --prune=true --out=build/dev --version-string.CompanyName=AlphaConsole --version-string.FileDescription=AlphaConsole --version-string.ProductName=\"AlphaConsole\"",
     "test": "electron source/index.js"
   },
   "repository": {
