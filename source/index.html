@@ -538,17 +538,17 @@
 
               <button class="accordion">CUSTOM PAINT COLOR</button>
               <div class="panel">
-                  <div class="row alt-row p-2">
-                      <div class="col-11 font-quarcaL">
-                        Color all cars
-                      </div>
-                      <div class="col-1">
-                        <label class="tick-container">
-                          <input id="color-all-cars" type="checkbox" checked="checked">
-                          <span class="checkmark"></span>
-                        </label>
-                      </div>
-                    </div>
+                <div class="row alt-row p-2">
+                  <div class="col-11 font-quarcaL">
+                    Color all cars
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="color-all-cars" type="checkbox" checked="checked">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
                 <div class="row p-2">
                   <div class="col-11 font-quarcaL b-team">
                     Blue Team
@@ -709,7 +709,7 @@
                   </div>
                   <div class="col-1">
                     <label class="tick-container">
-                      <input name="discord" type="radio" checked="checked" value = 2>
+                      <input name="discord" type="radio" checked="checked" value=2>
                       <span class="checkmark"></span>
                     </label>
                   </div>
@@ -720,7 +720,7 @@
                   </div>
                   <div class="col-1">
                     <label class="tick-container">
-                      <input name="discord" type="radio" value = 1>
+                      <input name="discord" type="radio" value=1>
                       <span class="checkmark"></span>
                     </label>
                   </div>
@@ -731,7 +731,7 @@
                   </div>
                   <div class="col-1">
                     <label class="tick-container">
-                      <input name="discord" type="radio" value = 0>
+                      <input name="discord" type="radio" value=0>
                       <span class="checkmark"></span>
                     </label>
                   </div>
@@ -978,12 +978,30 @@
       var fs = require('fs');
 
       if (FileExists(document.getElementById("install-location").value + "RocketLeague.exe")) {
+
         if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
           CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+        } else {
+          var stats = fs.statSync(document.getElementById("install-location").value + "/discord-rpc.dll");
+          var mtime = new Date(stats.mtime).getTime();
+          var stats2 = fs.statSync("discord-rpc.dll");
+          var mtime2 = new Date(stats2.mtime).getTime();
+          if (mtime2 > mtime) {
+            CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+          }
         }
         if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
           CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+        } else {
+          var stats = fs.statSync(document.getElementById("install-location").value + "/xapofx1_5.dll");
+          var mtime = new Date(stats.mtime).getTime();
+          var stats2 = fs.statSync("AlphaConsole.dll");
+          var mtime2 = new Date(stats2.mtime).getTime();
+          if (mtime2 > mtime) {
+            CopyFile("AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+          }
         }
+
         CopyFile("config.json", document.getElementById("install-location").value + "/config.json");
       } else {
         alert("Rocket League path not set or incorrect! Set it in General settings.");
@@ -1088,7 +1106,7 @@
 
           var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
           for (var j = 0; j < selects.length; j++) {
-            
+
             var team = $(selects[j]).closest('tbody').attr("team");
 
             Items[slotID][team] = {};
@@ -1224,7 +1242,7 @@
           });
 
           document.getElementById("detectInstall").addEventListener("click", (e) => {
-            
+
           });
         };
 
