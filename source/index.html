@@ -652,8 +652,6 @@
                 </div>
               </div>
 
-
-
               <button class="accordion ">RANKING OPTIONS</button>
               <div class="panel">
                 <div class="row p-2">
@@ -692,6 +690,44 @@
                 </div>
               </div>
 
+              <button class="accordion ">DISCORD RICH PRESENCE</button>
+              <div class="panel">
+                <div class="row p-2">
+                  <div class="col-11 font-quarcaL">
+                    Full Rich Presence
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input name="discord" type="radio" checked="checked" value = 2>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row p-2 alt-row">
+                  <div class="col-11 font-quarcaL">
+                    No Rank Data or Time Remaining
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input name="discord" type="radio" value = 1>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row p-2">
+                  <div class="col-11 font-quarcaL">
+                    Disabled
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input name="discord" type="radio" value = 0>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+
               <button class="accordion ">Kermalis</button>
               <div class="panel">
                 <div class="row p-2">
@@ -717,11 +753,11 @@
                   <!-- APPLY ON STARTUP -->
                   <div class="row p-2">
                     <div class="col-11 font-quarcaL">
-                      Apply items when Rocket League starts.
+                      Enable AlphaConsole.
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="apply-on-start" type="checkbox" checked="checked">
+                        <input id="ac-enabled" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                       </label>
                     </div>
@@ -782,7 +818,7 @@
                   <div class="row p-2">
                     <div style="font-size:20px;" class="col-12 font-quarcaL">
                       Developed by:
-                      <strong> Barbosicks, Carsillas, Arxarius & @root </strong>
+                      <strong> Barbosicks, Carsillas, Arxarius, @root & Kermalis </strong>
                     </div>
                   </div>
 
@@ -930,7 +966,7 @@
     function PlaceFiles() {
       var fs = require('fs');
 
-      if (FileExists(document.getElementById("install-location").value)) {
+      if (FileExists(document.getElementById("install-location").value + "RocketLeague.exe")) {
         if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
           CopyFile("discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
         }
@@ -992,11 +1028,15 @@
       $("#enable-unranked-mmr").prop('checked', Config.RankOptions.UnrankedMMR);
       $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
 
+      //Discord rich presence options
+      $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
+
       //General options
-      $("#apply-on-start").prop('checked', Config.GeneralOptions.ApplyOnStart);
+      $("#ac-enabled").prop('checked', Config.GeneralOptions.Enabled);
       $("#minimize-to-tray").prop('checked', Config.GeneralOptions.MinimizeToTray);
       $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
       $("#install-location").val(Config.GeneralOptions.InstallLocation);
+
 
     }
 
@@ -1086,13 +1126,22 @@
       RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
       Config.RankOptions = RankOptions;
 
+      //Discord rich presence options
+      var DiscordOptions = {};
+      DiscordOptions.RichPresenceLevel = $("[name='discord']:checked").val();
+      Config.DiscordOptions = DiscordOptions;
+
       //General options
       var GeneralOptions = {};
-      GeneralOptions.ApplyOnStart = $("#apply-on-start").prop('checked');
+      GeneralOptions.Enabled = $("#ac-enabled").prop('checked');
       GeneralOptions.MinimizeToTray = $("#minimize-to-tray").prop('checked');
       GeneralOptions.RunOnStartup = $("#run-on-startup").prop('checked');
       GeneralOptions.InstallLocation = $("#install-location").val();
       Config.GeneralOptions = GeneralOptions;
+
+      //Miscellaneous
+      Config.ACPath = __dirname;
+
 
       return JSON.stringify(Config);
     }
