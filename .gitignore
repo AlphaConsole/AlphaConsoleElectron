@@ -3,3 +3,4 @@ build/dev/
 .sass-cache
 textures/**/*.png
 config.json
+dist

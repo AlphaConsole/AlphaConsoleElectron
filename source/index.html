@@ -775,7 +775,8 @@
               <!-- GENERAL SETTIGNS -->
               <div class="row">
                 <div class="col">
-                  <div id="CustomPaint" class="section-header">GENERAL</div>
+                  <div class="section-header">GENERAL</div>
+
                   <!-- APPLY ON STARTUP -->
                   <div class="row p-2">
                     <div class="col-11 font-quarcaL">
@@ -788,6 +789,7 @@
                       </label>
                     </div>
                   </div>
+                  <!-- ./End -->
 
                   <!-- MINIMIZE TO TRAY -->
                   <div class="row p-2 alt-row">
@@ -801,6 +803,7 @@
                       </label>
                     </div>
                   </div>
+                  <!-- ./End -->
 
                   <!-- RUN ON WINDOWS STARTUP -->
                   <div class="row p-2">
@@ -814,6 +817,7 @@
                       </label>
                     </div>
                   </div>
+                  <!-- ./End -->
 
                   <!-- Detect RL install location  -->
                   <div class="row p-2 alt-row">
@@ -831,49 +835,45 @@
                       </div>
                     </div>
                   </div>
+                  <!-- ./End -->
 
                 </div>
               </div>
 
 
-              <!-- GENERAL SETTIGNS -->
+              <!-- General Info -->
               <div class="row">
                 <div class="col">
                   <div id="CustomPaint" class="section-header">INFO</div>
-                  <!-- APPLY ON STARTUP -->
                   <div class="row p-2">
                     <div style="font-size:20px;" class="col-12 font-quarcaL">
                       Developed by:
                       <strong> Barbosicks, Carsillas, Arxarius, @root & Kermalis </strong>
                     </div>
                   </div>
-
                 </div>
               </div>
+              <!-- ./End -->
+
             </section>
-
-
-
+            <!-- ./End -->
           </main>
+          <!-- ./End -->
 
-
+          <!-- Save & Apply section -->
           <div class="row">
-
             <div class="col-4">
               <button style="border-radius:0px;" class="ml-1 mt-3 font-quarcaL btn btn-success w-100" onclick="SaveConfiguration()">SAVE & APPLY</button>
             </div>
             <div class="col-4">
-              
-                <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="ml-1 mt-3 font-quarcaL btn btn-acc">DISCORD</a>
-                
+              <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="ml-1 mt-3 font-quarcaL btn btn-acc">DISCORD</a>
             </div>
             <div class="col-4">
-              
-                <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="ml-1 mt-3 font-quarcaL btn btn-acc w-100">DONATE</a>
-                      
+              <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="ml-1 mt-3 font-quarcaL btn btn-acc w-100">DONATE</a>
             </div>
-
           </div>
+          <!-- ./End -->
+
         </div>
       </div>
     </div>
@@ -907,7 +907,7 @@
     }
 
     function GetBasePath() {
-      
+
       return require("path").dirname(__dirname);
 
     }
@@ -983,25 +983,29 @@
       if (FileExists(document.getElementById("install-location").value + "RocketLeague.exe")) {
 
         if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
-          CopyFile(GetBasePath() + "/discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+          CopyFile(GetBasePath() + "/discord-rpc.dll", document.getElementById("install-location").value +
+            "/discord-rpc.dll");
         } else {
           var stats = fs.statSync(document.getElementById("install-location").value + "/discord-rpc.dll");
           var mtime = new Date(stats.mtime).getTime();
           var stats2 = fs.statSync(GetBasePath() + "/discord-rpc.dll");
           var mtime2 = new Date(stats2.mtime).getTime();
           if (mtime2 > mtime) {
-            CopyFile(GetBasePath() + "/discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+            CopyFile(GetBasePath() + "/discord-rpc.dll", document.getElementById("install-location").value +
+              "/discord-rpc.dll");
           }
         }
         if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
-          CopyFile(GetBasePath() + "/AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+          CopyFile(GetBasePath() + "/AlphaConsole.dll", document.getElementById("install-location").value +
+            "/xapofx1_5.dll");
         } else {
           var stats = fs.statSync(document.getElementById("install-location").value + "/xapofx1_5.dll");
           var mtime = new Date(stats.mtime).getTime();
           var stats2 = fs.statSync(GetBasePath() + "/AlphaConsole.dll");
           var mtime2 = new Date(stats2.mtime).getTime();
           if (mtime2 > mtime) {
-            CopyFile(GetBasePath() + "/AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+            CopyFile(GetBasePath() + "/AlphaConsole.dll", document.getElementById("install-location").value +
+              "/xapofx1_5.dll");
           }
         }
 
@@ -1026,14 +1030,16 @@
           if (slots[i].Name == "Body") {
             $("select[name='color-select']").each((index, value) => {
               var team = $(value).closest('tbody').attr("team");
-              $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']").val(Config.Items[slots[i].SlotID][team].Color);
+              $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']").val(Config.Items[
+                slots[i].SlotID][team].Color);
             })
           }
 
           var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
           for (var j = 0; j < selects.length; j++) {
             var team = $(selects[j]).closest('tbody').attr("team");
-            var valString = Config.Items[slots[i].SlotID][team].ItemID + ":" + Config.Items[slots[i].SlotID][team].PackageID + ":" + Config.Items[slots[i].SlotID][team].PackageSubID;
+            var valString = Config.Items[slots[i].SlotID][team].ItemID + ":" + Config.Items[slots[i].SlotID][team].PackageID +
+              ":" + Config.Items[slots[i].SlotID][team].PackageSubID;
             $(selects[j]).val(valString);
             $(selects[j]).parent().next("td").find("select").val(Config.Items[slots[i].SlotID][team].Color);
           }
@@ -1216,49 +1222,49 @@
   </script>
 
   <script>
-      (function () {
-        // Retrieve remote BrowserWindow
-        const {
-          BrowserWindow
-        } = require('electron').remote
+    (function () {
+      // Retrieve remote BrowserWindow
+      const {
+        BrowserWindow
+      } = require('electron').remote
 
-        function init() {
-          // Minimize task
-          document.getElementById("min-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.minimize();
-          });
+      function init() {
+        // Minimize task
+        document.getElementById("min-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.minimize();
+        });
 
-          // Maximize window
-          document.getElementById("max-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            if (window.isMaximized()) {
-              window.unmaximize();
-            } else {
-              window.maximize();
-            }
-          });
-
-          // Close app
-          document.getElementById("close-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.close();
-          });
-
-          document.getElementById("detectInstall").addEventListener("click", (e) => {
-
-          });
-        };
-
-        document.onreadystatechange = () => {
-          if (document.readyState == "complete") {
-            init();
+        // Maximize window
+        document.getElementById("max-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          if (window.isMaximized()) {
+            window.unmaximize();
+          } else {
+            window.maximize();
           }
-        };
+        });
+
+        // Close app
+        document.getElementById("close-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.close();
+        });
+
+        document.getElementById("detectInstall").addEventListener("click", (e) => {
+
+        });
+      };
+
+      document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+          init();
+        }
+      };
 
 
 
-      })();
+    })();
   </script>
 
   <script>
@@ -1324,7 +1330,6 @@
 
 
   <script>
-
     function GetTexturePackagePaths() {
 
       var walkSync = function (dir, filelist) {
@@ -1337,8 +1342,7 @@
         files.forEach(function (file) {
           if (fs.statSync(dir + file).isDirectory()) {
             filelist = walkSync(dir + file + '/', filelist);
-          }
-          else {
+          } else {
             if (path.extname(file) == '.json')
               filelist.push(dir + file);
           }
@@ -1346,7 +1350,7 @@
         return filelist;
       }
 
-        return walkSync(GetBasePath() + "/textures/", []);
+      return walkSync(GetBasePath() + "/textures/", []);
     }
 
     function GetTexturePackages() {
@@ -1461,7 +1465,7 @@
         //CUSTOM ITEMS
         for (var j = 0; j < TexturePackages.length; j++) {
           var customitems = TexturePackages[j].Package.items;
-          
+
 
           customitems.sort(compareValues(name));
           for (var k = 0; k < customitems.length; k++) {
@@ -1492,7 +1496,6 @@
     })
 
     LoadConfiguration();
-
   </script>
 
 

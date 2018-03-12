@@ -33,14 +33,14 @@ section {
     margin-left: -1px;
     overflow-x: hidden;
     display: none;
-    height: 601px;
+    height: 660px;
     border-top: 5px solid #454545;
 }
 
 .inner-fill {
     height: 100%;
     background: url('../../img/inner-fill.png')  center;
-    background-position-y: 0px;
+    background-position-y: 54px;
 }
 
 .panel {
@@ -78,8 +78,8 @@ section {
 
 .build-number{
     position:absolute !important; 
-    margin-top:-15px !important; 
-    margin-left:18px !important; 
+    margin-top: -40px !important;
+    margin-left: 295px !important;
     color: $ac-gray !important;
 }
 

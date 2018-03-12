@@ -40,17 +40,6 @@ body {
   overflow: hidden;
 }
 
-:not(input):not(textarea),
-:not(input):not(textarea)::after,
-:not(input):not(textarea)::before {
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
-}
-input, button, textarea, :focus {
-    outline: none; // You should add some other style for :focus to help UX/a11y
-}
-
 /*COMPONENTS ######################*/
 *,
 *:before,
@@ -87,14 +76,14 @@ section {
   margin-left: -1px;
   overflow-x: hidden;
   display: none;
-  height: 601px;
+  height: 660px;
   border-top: 5px solid #454545;
 }
 
 .inner-fill {
   height: 100%;
   background: url("../../img/inner-fill.png") center;
-  background-position-y: 0px;
+  background-position-y: 54px;
 }
 
 .panel {
@@ -132,8 +121,8 @@ section {
 
 .build-number {
   position: absolute !important;
-  margin-top: -15px !important;
-  margin-left: 18px !important;
+  margin-top: -40px !important;
+  margin-left: 295px !important;
   color: #616161 !important;
 }
 
@@ -156,7 +145,7 @@ section {
   padding: 10px;
   text-align: center;
   font-size: 28px;
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   text-decoration: none;
   border: 1px solid #454545;
 }
@@ -167,7 +156,7 @@ section {
   padding: 10px;
   text-align: center;
   font-size: 28px;
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   text-decoration: none;
   border: 1px solid #454545;
 }
@@ -198,7 +187,7 @@ section {
 }
 
 .section-header {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   font-size: 20px;
   background-color: #393939;
   color: #fff;
@@ -246,7 +235,7 @@ input {
 }
 
 label {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   display: inline-block;
   margin: -4px -4px -4px -1px;
   padding: 5px 5px;
@@ -264,7 +253,7 @@ label:hover {
 }
 
 input:checked + label {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   color: #fff;
   background: #414141;
   border: 1px solid #454545;
@@ -369,7 +358,7 @@ input:checked + label {
 }
 
 .accordion {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   font-size: 20px;
   background-color: #393939;
   color: #fff;

@@ -4,8 +4,8 @@
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
-    "package-win": "electron-packager . AlphaConsole --overwrite --platform=win32 --arch=ia32 --icon=source/assets/img/app_icon.ico --prune=true --out=build/dev --version-string.CompanyName=AlphaConsole --version-string.FileDescription=AlphaConsole --version-string.ProductName=\"AlphaConsole\"",
-    "test": "electron source/index.js"
+    "test": "electron source/index.js",
+    "build": "electron-packager . --out=dist --asar --overwrite --all"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   "homepage": "https://github.com/HaydenMeloche/AlphaConsoleElectron#readme",
   "devDependencies": {
     "electron": "^1.8.2",
-    "electron-packager": "^11.0.1",
+    "electron-packager": "^11.1.0",
     "grunt": "^1.0.2",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-sass": "^2.1.0"
