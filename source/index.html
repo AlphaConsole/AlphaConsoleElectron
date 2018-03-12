@@ -169,7 +169,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select" special="body">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -184,7 +184,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -199,7 +199,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -214,7 +214,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -242,7 +242,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -257,7 +257,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -368,7 +368,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select" special="body">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -383,7 +383,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -398,7 +398,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -413,7 +413,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -440,7 +440,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -455,7 +455,7 @@
                             </td>
                             <td class="alt-row">
                               <select class="acc-input" name="color-select">
-                                <option value="-1:-1:-1">Unchanged</option>
+                                <option value="-1">Unchanged</option>
                               </select>
                             </td>
                           </tr>
@@ -909,8 +909,8 @@
     }
 
     function GetBasePath() {
-
-      return __dirname + "/../";
+      
+      return require("path").dirname(__dirname);
 
     }
 
@@ -985,29 +985,29 @@
       if (FileExists(document.getElementById("install-location").value + "RocketLeague.exe")) {
 
         if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
-          CopyFile(GetBasePath() + "discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+          CopyFile(GetBasePath() + "/discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
         } else {
           var stats = fs.statSync(document.getElementById("install-location").value + "/discord-rpc.dll");
           var mtime = new Date(stats.mtime).getTime();
-          var stats2 = fs.statSync(GetBasePath() + "discord-rpc.dll");
+          var stats2 = fs.statSync(GetBasePath() + "/discord-rpc.dll");
           var mtime2 = new Date(stats2.mtime).getTime();
           if (mtime2 > mtime) {
-            CopyFile(GetBasePath() + "discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
+            CopyFile(GetBasePath() + "/discord-rpc.dll", document.getElementById("install-location").value + "/discord-rpc.dll");
           }
         }
         if (!FileExists(document.getElementById("install-location").value + "/xapofx1_5.dll")) {
-          CopyFile(GetBasePath() + "AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+          CopyFile(GetBasePath() + "/AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
         } else {
           var stats = fs.statSync(document.getElementById("install-location").value + "/xapofx1_5.dll");
           var mtime = new Date(stats.mtime).getTime();
-          var stats2 = fs.statSync(GetBasePath() + "AlphaConsole.dll");
+          var stats2 = fs.statSync(GetBasePath() + "/AlphaConsole.dll");
           var mtime2 = new Date(stats2.mtime).getTime();
           if (mtime2 > mtime) {
-            CopyFile(GetBasePath() + "AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
+            CopyFile(GetBasePath() + "/AlphaConsole.dll", document.getElementById("install-location").value + "/xapofx1_5.dll");
           }
         }
 
-        CopyFile(GetBasePath() + "config.json", document.getElementById("install-location").value + "/config.json");
+        CopyFile(GetBasePath() + "/config.json", document.getElementById("install-location").value + "/config.json");
       } else {
         alert("Rocket League path not set or incorrect! Set it in General settings.");
       }
@@ -1015,7 +1015,7 @@
 
     function LoadConfiguration() {
 
-      var Config = JSON.parse(LoadFile(GetBasePath() + "config.json"));
+      var Config = JSON.parse(LoadFile(GetBasePath() + "/config.json"));
 
       var Products = LoadItems();
       var colors = Products.Colors;
@@ -1184,7 +1184,7 @@
 
 
       //Miscellaneous
-      Config.ACPath = require("path").resolve(__dirname + "\\..\\");
+      Config.ACPath = GetBasePath();
 
 
       return JSON.stringify(Config);
@@ -1194,7 +1194,7 @@
 
       var fs = require('fs');
       try {
-        fs.writeFileSync('config.json', GetConfigurationString(), 'utf-8');
+        fs.writeFileSync(GetBasePath() + '/config.json', GetConfigurationString(), 'utf-8');
 
         //Add a copy to Win32 so that you can load prefs from local one? idk
         PlaceFiles();
@@ -1349,11 +1349,11 @@
       }
 
       if (FileExists("node.dll")) {
-        return walkSync("textures/resources/app/textures/", []);
+        alert(GetBasePath());
+        return walkSync(GetBasePath() + "/textures/", []);
       }
       else {
-
-        return walkSync("textures/", []);
+        return walkSync(GetBasePath() + "/textures/", []);
       }
     }
 
@@ -1378,7 +1378,7 @@
         packs.packages[i] = {};
         packs.packages[i].id = i;
         packs.packages[i].name = tp.Package.name;
-        packs.packages[i].folder = path.dirname(paths[i]);
+        packs.packages[i].folder = path.dirname(paths[i].substring(GetBasePath().length));
         packs.packages[i].author = tp.Package.author
 
         tps.push(tp);
@@ -1393,7 +1393,7 @@
     function SaveMasterPackages(packages) {
       var fs = require('fs');
       try {
-        fs.writeFileSync('textures/packages.json', JSON.stringify(packages), 'utf-8');
+        fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages), 'utf-8');
       } catch (e) {
         alert(e);
         alert('Failed to save the packages!');
