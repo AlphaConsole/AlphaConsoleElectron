@@ -14,6 +14,7 @@
     "topper-select": "Topper",
     "trail-select": "Trail",
     "wheel-select": "Wheel",
+    "ball-select": "Ball",
     "Antenna": "antenna-select",
     "Banner": "banner-select",
     "Body": "body-select",
@@ -28,5 +29,6 @@
     "Premium": "premium-select",
     "Topper": "topper-select",
     "Trail": "trail-select",
-    "Wheel": "wheel-select"
+    "Wheel": "wheel-select",
+    "Ball": "ball-select"
 }

@@ -1,0 +1,91 @@
+{
+  "name": "Famiy Balls",
+  "author": "Famiy",
+  "items": [
+	
+	{
+		"id": 0,
+		"name": "Psyonix Black",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_Psyonix_Black.png"
+			}
+		]
+	},
+	{
+		"id": 1,
+		"name": "Psyonix Green",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_Psyonix_Green.png"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Psyonix Sky Blue",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_Psyonix_Sky-Blue.png"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Psyonix White",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_Psyonix_White.png"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "RLCS",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_RLCS.png"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "RocketLeague Blue",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_RocketLeague_Blue.png"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "RocketLeague White",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Ball_RocketLeague_White.png"
+			}
+		]
+	}
+]
+}

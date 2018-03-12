@@ -2958,6 +2958,11 @@
             ],
             "SlotID": -1,
             "Name": "BoostSound"
+        }, {          
+            "Items": [
+        ],
+            "SlotID": -2,
+            "Name": "Ball"
         },
         {
             "Items": [

@@ -1,0 +1,174 @@
+{
+  "name": "KernelPad Flags",
+  "author": "KernelPad",
+  "items": [
+	{
+		"id": 0,
+		"name": "C9",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_c9.png"
+			}
+		]
+	},
+	{
+		"id": 1,
+		"name": "EnvyUS",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_envyus.png"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Excel",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_excel.png"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "F3",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_f3.png"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "G2",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_g2.png"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "GaleForce",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_galeforce.png"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Ghost",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_ghost.png"
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Hollywood Hammers",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_hh.png"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Method",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_method.png"
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Mock-It",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_mockit.png"
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "NRG",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_nrg.png"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "Renegades",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_renegades.png"
+			}
+		]
+	},
+	{
+		"id": 12,
+		"name": "Rogue",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_rogue.png"
+			}
+		]
+	},
+	{
+		"id": 13,
+		"name": "Splyce",
+		"slot": 4,
+		"item": 1454,
+		"parameters": [
+			{
+				"name": "TextureDiffuse",
+				"image": "flag_splyce.png"
+			}
+		]
+	}
+]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Discord Wheels",
+  "author": "Veer",
+  "items": [
+    {
+      "id": 0,
+      "name": "Discord (Dynamic)",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "Discord-Dynamic.png"
+        }
+      ]
+    },
+	    {
+      "id": 1,
+      "name": "Discord (static)",
+      "slot": 2,
+      "item": 820,
+      "parameters": [
+        {
+          "name": "ImageSeq_SubUV",
+          "image": "Discord-Static.png"
+        }
+      ]
+    }
+  ]
+}

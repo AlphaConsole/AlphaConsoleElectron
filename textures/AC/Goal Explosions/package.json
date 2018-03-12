@@ -1,0 +1,30 @@
+{
+  "name": "Goal Explosions",
+  "author": "Carsillas",
+  "items": [
+    {
+      "id": 0,
+      "name": "Banana Dance",
+      "slot": 15,
+      "item": 2586,
+      "parameters": [
+        {
+          "name": "Texture",
+          "image": "bananadance.png"
+        }
+      ]
+    },
+	    {
+      "id": 1,
+      "name": "Rizzo",
+      "slot": 15,
+      "item": 2586,
+      "parameters": [
+        {
+          "name": "Texture",
+          "image": "rizzo.png"
+        }
+      ]
+    }
+  ]
+}

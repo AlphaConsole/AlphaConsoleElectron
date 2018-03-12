@@ -1,0 +1,42 @@
+{
+  "name": "Goal Explosions",
+  "author": "HurricaneModding",
+  "items": [
+    {
+      "id": 0,
+      "name": "Fire Golem",
+      "slot": 15,
+      "item": 2586,
+      "parameters": [
+        {
+          "name": "Texture",
+          "image": "firegolem.png"
+        }
+      ]
+    },
+	    {
+      "id": 1,
+      "name": "Thinking",
+      "slot": 15,
+      "item": 2586,
+      "parameters": [
+        {
+          "name": "Texture",
+          "image": "thinking.png"
+        }
+      ]
+    },
+	    {
+      "id": 2,
+      "name": "PogChamp",
+      "slot": 15,
+      "item": 2586,
+      "parameters": [
+        {
+          "name": "Texture",
+          "image": "pogchamp.png"
+        }
+      ]
+    }
+  ]
+}
