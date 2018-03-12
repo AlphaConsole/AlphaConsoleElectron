@@ -1,7 +1,5 @@
-
 build/dev/
 .vscode
 .sass-cache
 textures/**/*.png
 config.json
-AlphaConsole-win32-x64
