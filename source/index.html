@@ -1348,13 +1348,7 @@
         return filelist;
       }
 
-      if (FileExists("node.dll")) {
-        alert(GetBasePath());
         return walkSync(GetBasePath() + "/textures/", []);
-      }
-      else {
-        return walkSync(GetBasePath() + "/textures/", []);
-      }
     }
 
     function GetTexturePackages() {
