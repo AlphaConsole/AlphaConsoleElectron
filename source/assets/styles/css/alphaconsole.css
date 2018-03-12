@@ -34,10 +34,9 @@ html {
 }
 
 body {
-  height: 840px;
+  height: 100%;
   color: #fff;
   background: linear-gradient(#393939, #222222);
-  overflow: hidden;
 }
 
 /*COMPONENTS ######################*/
@@ -51,7 +50,7 @@ body {
 
 html,
 body {
-  height: 100vh;
+  height: auto;
 }
 
 h1 {
@@ -61,23 +60,27 @@ h1 {
 }
 
 main {
-  width: 671px;
-  max-width: 800px;
-  padding: 7px;
+  width: 100%;
   margin: 0 auto;
   background: transparent;
-}
-
-.main {
+  margin-top: 10px;
   height: 100%;
+  float: left;
+  position: relative;
 }
 
 section {
   margin-left: -1px;
   overflow-x: hidden;
   display: none;
-  height: 660px;
   border-top: 5px solid #454545;
+  border-left: 1px solid #616161;
+  border-right: 1px solid #616161;
+  border-bottom: 1px solid #616161;
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 620px;
 }
 
 .inner-fill {
@@ -120,10 +123,33 @@ section {
 }
 
 .build-number {
-  position: absolute !important;
-  margin-top: -40px !important;
-  margin-left: 295px !important;
+  position: relative !important;
   color: #616161 !important;
+  float: right;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.status-text {
+  position: relative !important;
+  color: #eceeef !important;
+  width: 100% !important;
+  text-align: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.save-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  margin-bottom: 40px;
 }
 
 .tabssac {
@@ -179,11 +205,10 @@ section {
 }
 
 .heading-title {
-  margin-bottom: 10px !important;
   color: #fff;
   font-size: 42px !important;
   text-align: center;
-  margin-top: -10px !important;
+  float: left;
 }
 
 .section-header {
@@ -207,7 +232,7 @@ section {
 .btn-acc {
   border-radius: 0px;
   font-size: 20px;
-  width: 89% !important;
+  width: 100% !important;
   background: #3F3F3F;
   color: #fff;
   border-color: #3F3F3F;
@@ -404,28 +429,24 @@ input:checked + label {
 
 #title-bar {
   -webkit-app-region: drag;
-  height: 40px;
+  height: 35px;
   text-align: left;
   line-height: 40px;
   vertical-align: middle;
   background-color: #393939;
-  margin: 0px;
-  width: 720px;
+  margin: 0 auto;
+  width: 100%;
   position: fixed;
-}
-
-#title {
-  position: relative;
   float: left;
-  width: 600px;
+  z-index: 99998;
 }
 
 #title-bar-btns {
   text-align: right;
-  float: left;
-  position: absolute;
+  float: right;
+  position: fixed;
   -webkit-app-region: no-drag;
-  width: auto;
+  width: 10%;
   top: 0px;
   right: 0px;
   z-index: 99999;
@@ -437,6 +458,45 @@ input:checked + label {
 
 #title-bar-btns #close-btn:hover {
   background-color: #d9534f;
+}
+
+.title-bar-btn-wrapper {
+  width: 35px;
+  height: 35px;
+  float: left;
+  padding: 2px;
+}
+
+.min-btn {
+  width: 16px;
+  height: 16px;
+  margin-left: -3px;
+  margin-left: 8px;
+  margin-top: 7px;
+  float: left;
+}
+
+.close-btn {
+  margin-top: 7px;
+  float: left;
+}
+
+.title-bar-wrapper {
+  float: left;
+  width: 100%;
+}
+
+.footer-bar-wrapper {
+  float: left;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 25px;
+}
+
+.footer-bar {
+  background: #1d1d1d;
+  height: 25px;
 }
 
 /*# sourceMappingURL=alphaconsole.css.map */

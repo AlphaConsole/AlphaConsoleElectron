@@ -3,6 +3,15 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    watch: {
+      css: {
+        files: '**/*.scss',
+        tasks: ['sass'],
+        options: {
+          livereload: true,
+        },
+      },
+    },
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
@@ -14,13 +23,15 @@ module.exports = function(grunt) {
           'source/assets/styles/css/framework.css': 'source/assets/styles/scss/AlphaConsole/compile/framework_compile.scss',      
         }
       }
-    }
+    }  
   });
 
+ 
 
   // Default task(s).
  
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     
     grunt.registerTask('default', ['sass']);
 

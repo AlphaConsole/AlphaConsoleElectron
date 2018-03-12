@@ -10,10 +10,12 @@ const {app, BrowserWindow} = require('electron');
     // Create the browser window.
     mainWindow = new BrowserWindow({
       titleBarStyle: 'hidden', 
-      resizable: false, 
+      resizable: true, 
       frame: false, 
+      minWidth: 720,
+      maxWidth: 720,
       width: 720,
-      height: 950,
+      height: 930,
       webPreferences: {
         devTools: true
       },

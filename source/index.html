@@ -97,792 +97,876 @@
 
 
 <body style="min-height: 100%;">
-  <div class="mb-3" id="title-bar"></div>
-  <div id="title-bar-btns">
-    <a style="width:35px;height:35px; float:left; padding: 2px;" id="min-btn">
-      <img style="width:16px; height:16px; margin-left:-3px; margin-left: 8px; margin-top: 7px; float: left;" src="https://png.icons8.com/small/64/ffffff/minimize-window.png">
-    </a>
-    <a style="display:none;" id="max-btn"></a>
-    <a style="width:35px;height:35px; float:left; padding: 2px;" id="close-btn">
 
-      <span style="margin-top: 7px; float: left;" class="lnr lnr-cross pl-2 pr-2"></span>
+  <div class="title-bar-wrapper">
+  <!-- Title Bar : 
+    the bar is a seperate div to define a 100% draggable window 
+  -->
+  <div id="title-bar"></div>
+
+  <!-- Title Bar Buttons: 
+    The width of the wrapper for the buttons is relative to the buttons them self this way 
+    the buttons can not be used to drag the title bar and the title bar does not overlap the 
+    buttons 
+  -->
+  <div class="" id="title-bar-btns">
+    <!-- Minimize Button -->
+    <a class="title-bar-btn-wrapper" id="min-btn">
+      <img class="min-btn" src="https://png.icons8.com/small/64/ffffff/minimize-window.png">
+    </a>
+
+    <!-- Maximise Button : Disabled -->
+    <a style="display:none;" id="max-btn"></a>
+
+    <!-- Close Button -->
+    <a class="title-bar-btn-wrapper" id="close-btn">
+      <span class="close-btn lnr lnr-cross pl-2 pr-2"></span>
     </a>
   </div>
-  <div style="margin-top: 20px;   margin-left: 10px;  position: absolute;" class="main  inner-fill">
-    <div class="container-fluid">
-      <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 24px;" class="row">
-        <div class="col">
-          <p class="font-quarcaL text-white p-4 heading-title">ALPHACONSOLE</p>
-          <small class="build-number text-center">8.5.1.0 (public_build)</small>
+  <!-- Title Bar End ./// -->
+</div>
+
+<!-- Header -->
+  <div class=" mt-5 pull-left container-fluid w-100">
+        <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
+          <div class="col">
+            <p class="font-quarcaL p-2 w-100 heading-title">ALPHACONSOLE</p>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <main>
-            <!-- TAB1 -->
-            <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1">ITEMS</label>
-
-            <!-- TAB2 -->
-            <input id="tab2" type="radio" name="tabs">
-            <label for="tab2">EXTRAS</label>
-
-            <!-- TAB3 -->
-            <input id="tab3" type="radio" name="tabs">
-            <label for="tab3">SETTINGS</label>
+  </div>
+ <!-- Header End ./// -->
 
 
-            <!-- ITEMS TAB -->
-            <section style="overflow-y:scroll;" id="content1">
-              <div class="row">
-                <div class="col">
-                  <p class="p-2 mb-0 text-white font-quarcaM">
-                    Begin by selecting the item(s) you want and then the color you desire for each team.
-                  </p>
+ <div class="pull-left container-fluid w-100 full-height">
+    <div class="row m-0 w-100">
+      <div class="col">
+          <main class="">
+              <!-- TAB1 -->
+              <input id="tab1" type="radio" name="tabs" checked>
+              <label for="tab1">ITEMS</label>
+  
+              <!-- TAB2 -->
+              <input id="tab2" type="radio" name="tabs">
+              <label for="tab2">EXTRAS</label>
+  
+              <!-- TAB3 -->
+              <input id="tab3" type="radio" name="tabs">
+              <label for="tab3">SETTINGS</label>
+  
+  
+              <!-- ITEMS TAB -->
+              <section style="overflow-y:scroll;" id="content1">
+                <div class="row">
+                  <div class="col">
+                    <p class="p-2 mb-0 text-white font-quarcaM">
+                      Begin by selecting the item(s) you want and then the color you desire for each team.
+                    </p>
+                  </div>
                 </div>
-              </div>
-
-
-
-              <div class="row">
-                <div class="col">
-
-                  <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
-                  <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
-
-                  <div id="blueteamitems" class="tabcontent">
-                    <div class="table w-100">
-                      <table class="w-100">
-                        <thead>
-                          <tr class="alt-row">
-                            <td class="alt-row">Type</td>
-                            <td class="alt-row-strong">Item</td>
-                            <td class="alt-row">Color</td>
-                          </tr>
-                        </thead>
-                        <tbody team="Blue">
-                          <!-- BODY -->
-                          <tr>
-                            <td class="alt-row">Body</td>
-                            <td class="alt-row-strong">
-
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select" special="body">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- DECAL -->
-                          <tr>
-                            <td class="alt-row">Decal</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="decal-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- WHEELS -->
-                          <tr>
-                            <td class="alt-row">Wheels</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="wheel-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- BOOST -->
-                          <tr>
-                            <td class="alt-row">Boost</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="boost-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-
-                          <!-- BOOST SOUND -->
-                          <tr>
-                            <td class="alt-row">Boost Sound</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="boost-sound-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                            </td>
-                          </tr>
-
-                          <!-- ANTENNA -->
-                          <tr>
-                            <td class="alt-row">Antenna</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="antenna-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- TOPPER -->
-                          <tr>
-                            <td class="alt-row">Topper</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="topper-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-
-                          <!-- PAINT FINISH -->
-                          <tr>
-                            <td class="alt-row">Paint Finish</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="paint-select" disabled>
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                            </td>
-                          </tr>
-
-
-                          <!-- ENGINE AUDIO -->
-                          <tr>
-                            <td class="alt-row">Engine</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="engine-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-
-                          <!-- TRAIL -->
-                          <tr>
-                            <td class="alt-row">Trail</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="trail-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-                          <!-- GOAL EXPLOSION -->
-                          <tr>
-                            <td class="alt-row">Goal Explosion</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="explosion-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-
-                          <!-- BANNER -->
-                          <tr>
-                            <td class="alt-row">Banner</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="banner-select" disabled>
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-
-                          <!-- BALL -->
-                          <tr>
-                            <td class="alt-row">Ball</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="ball-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                            </td>
-                          </tr>
-
-
-                        </tbody>
-                      </table>
+  
+  
+  
+                <div class="row">
+                  <div class="col">
+  
+                    <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
+                    <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
+  
+                    <div id="blueteamitems" class="tabcontent">
+                      <div class="table w-100">
+                        <table class="w-100">
+                          <thead>
+                            <tr class="alt-row">
+                              <td class="alt-row">Type</td>
+                              <td class="alt-row-strong">Item</td>
+                              <td class="alt-row">Color</td>
+                            </tr>
+                          </thead>
+                          <tbody team="Blue">
+                            <!-- BODY -->
+                            <tr>
+                              <td class="alt-row">Body</td>
+                              <td class="alt-row-strong">
+  
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select" special="body">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- DECAL -->
+                            <tr>
+                              <td class="alt-row">Decal</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="decal-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- WHEELS -->
+                            <tr>
+                              <td class="alt-row">Wheels</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="wheel-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- BOOST -->
+                            <tr>
+                              <td class="alt-row">Boost</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="boost-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+  
+                            <!-- BOOST SOUND -->
+                            <tr>
+                              <td class="alt-row">Boost Sound</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="boost-sound-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+  
+                            <!-- ANTENNA -->
+                            <tr>
+                              <td class="alt-row">Antenna</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="antenna-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- TOPPER -->
+                            <tr>
+                              <td class="alt-row">Topper</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="topper-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+  
+                            <!-- PAINT FINISH -->
+                            <tr>
+                              <td class="alt-row">Paint Finish</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="paint-select" disabled>
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+  
+  
+                            <!-- ENGINE AUDIO -->
+                            <tr>
+                              <td class="alt-row">Engine</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="engine-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+  
+                            <!-- TRAIL -->
+                            <tr>
+                              <td class="alt-row">Trail</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="trail-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+                            <!-- GOAL EXPLOSION -->
+                            <tr>
+                              <td class="alt-row">Goal Explosion</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="explosion-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+  
+                            <!-- BANNER -->
+                            <tr>
+                              <td class="alt-row">Banner</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="banner-select" disabled>
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+  
+                            <!-- BALL -->
+                            <tr>
+                              <td class="alt-row">Ball</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="ball-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+  
+  
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+  
+                    <div id="orangeteamitems" class="tabcontent">
+                      <div class="table w-100">
+                        <table class="w-100">
+                          <thead>
+                            <tr class="alt-row">
+                              <td class="alt-row">Type</td>
+                              <td class="alt-row-strong">Item</td>
+                              <td class="alt-row">Color</td>
+                            </tr>
+                          </thead>
+                          <tbody team="Orange">
+                            <!-- BODY -->
+                            <tr>
+                              <td class="alt-row">Body</td>
+                              <td class="alt-row-strong">
+  
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select" special="body">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- DECAL -->
+                            <tr>
+                              <td class="alt-row">Decal</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="decal-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- WHEELS -->
+                            <tr>
+                              <td class="alt-row">Wheels</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="wheel-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- BOOST -->
+                            <tr>
+                              <td class="alt-row">Boost</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="boost-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- BOOST SOUND -->
+                            <tr>
+                              <td class="alt-row">Boost Sound</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="boost-sound-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+  
+                            <!-- ANTENNA -->
+                            <tr>
+                              <td class="alt-row">Antenna</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="antenna-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+                            <!-- TOPPER -->
+                            <tr>
+                              <td class="alt-row">Topper</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="topper-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                                <select class="acc-input" name="color-select">
+                                  <option value="-1">Unchanged</option>
+                                </select>
+                              </td>
+                            </tr>
+  
+  
+                            <!-- PAINT FINISH -->
+                            <tr>
+                              <td class="alt-row">Paint Finish</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="paint-select" disabled>
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+  
+                            <!-- ENGINE AUDIO -->
+                            <tr>
+                              <td class="alt-row">Engine</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="engine-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+  
+                            <!-- TRAIL -->
+                            <tr>
+                              <td class="alt-row">Trail</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="trail-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+                            <!-- GOAL EXPLOSION -->
+                            <tr>
+                              <td class="alt-row">Goal Explosion</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="explosion-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+  
+                            <!-- BANNER -->
+                            <tr>
+                              <td class="alt-row">Banner</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="banner-select" disabled>
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+  
+                              </td>
+                            </tr>
+  
+                            <!-- BALL -->
+                            <tr>
+                              <td class="alt-row">Ball</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="ball-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+  
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+  
+              </section>
+  
+              <section style="overflow-y:scroll;" id="content2">
+                <div class="row">
+                  <div class="col">
+                    <p class="p-2 mb-0 text-white font-quarcaM">
+                      Select an extra below (Click to expand a section)
+                    </p>
+                  </div>
+                </div>
+  
+                <button class="accordion">CUSTOM PAINT COLOR</button>
+                <div class="panel">
+                  <div class="row alt-row p-2">
+                    <div class="col-11 font-quarcaL">
+                      Color all cars
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="color-all-cars" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
                     </div>
                   </div>
-
-                  <div id="orangeteamitems" class="tabcontent">
-                    <div class="table w-100">
-                      <table class="w-100">
-                        <thead>
-                          <tr class="alt-row">
-                            <td class="alt-row">Type</td>
-                            <td class="alt-row-strong">Item</td>
-                            <td class="alt-row">Color</td>
-                          </tr>
-                        </thead>
-                        <tbody team="Orange">
-                          <!-- BODY -->
-                          <tr>
-                            <td class="alt-row">Body</td>
-                            <td class="alt-row-strong">
-
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select" special="body">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- DECAL -->
-                          <tr>
-                            <td class="alt-row">Decal</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="decal-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- WHEELS -->
-                          <tr>
-                            <td class="alt-row">Wheels</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="wheel-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- BOOST -->
-                          <tr>
-                            <td class="alt-row">Boost</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="boost-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- BOOST SOUND -->
-                          <tr>
-                            <td class="alt-row">Boost Sound</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="boost-sound-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                            </td>
-                          </tr>
-
-                          <!-- ANTENNA -->
-                          <tr>
-                            <td class="alt-row">Antenna</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="antenna-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-                          <!-- TOPPER -->
-                          <tr>
-                            <td class="alt-row">Topper</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="topper-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                              <select class="acc-input" name="color-select">
-                                <option value="-1">Unchanged</option>
-                              </select>
-                            </td>
-                          </tr>
-
-
-                          <!-- PAINT FINISH -->
-                          <tr>
-                            <td class="alt-row">Paint Finish</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="paint-select" disabled>
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-
-                          <!-- ENGINE AUDIO -->
-                          <tr>
-                            <td class="alt-row">Engine</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="engine-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-
-                          <!-- TRAIL -->
-                          <tr>
-                            <td class="alt-row">Trail</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="trail-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-                          <!-- GOAL EXPLOSION -->
-                          <tr>
-                            <td class="alt-row">Goal Explosion</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="explosion-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-
-                          <!-- BANNER -->
-                          <tr>
-                            <td class="alt-row">Banner</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="banner-select" disabled>
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-
-                            </td>
-                          </tr>
-
-                          <!-- BALL -->
-                          <tr>
-                            <td class="alt-row">Ball</td>
-                            <td class="alt-row-strong">
-                              <select class="acc-input" name="ball-select">
-                                <option value="-1:-1:-1">Unchanged</option>
-                              </select>
-                            </td>
-                            <td class="alt-row">
-                            </td>
-                          </tr>
-
-                        </tbody>
-                      </table>
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL b-team">
+                      Blue Team
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="custom-color-enabled-blue" type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
                     </div>
                   </div>
-
+                  <div class="row alt-row p-2">
+                    <div class="col-6 fs-26 font-quarcaL">
+                      Primary
+                    </div>
+                    <div class="col-6 font-quarcaL">
+                      Accent
+                    </div>
+                  </div>
+                  <div class="row alt-row p-2">
+  
+                    <div class="col-6 font-quarcaL">
+                      <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
+                    </div>
+                    <div class="col-6 font-quarcaL">
+                      <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
+                    </div>
+                  </div>
+                  <div class="row alt-row p-2">
+  
+                    <div class="col-6 font-quarcaL">
+                      <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+                    </div>
+                    <div class="col-6 font-quarcaL">
+                      <input id="accent-intensity-blue" class="acc-input" type="number" value="1.00" />
+                    </div>
+                  </div>
+  
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL o-team">
+                      Orange Team
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="custom-color-enabled-orange" type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row alt-row p-2">
+                    <div class="col-6 fs-26 font-quarcaL">
+                      Primary
+                    </div>
+                    <div class="col-6 font-quarcaL">
+                      Accent
+                    </div>
+                  </div>
+                  <div class="row alt-row p-2">
+  
+                    <div class="col-6 font-quarcaL">
+                      <input id="primary-color-orange" type="color" style="height:40px; padding:2px;" class="acc-input">
+                    </div>
+                    <div class="col-6 font-quarcaL">
+                      <input id="accent-color-orange" type="color" style="height:40px; padding:2px;" class="acc-input">
+                    </div>
+                  </div>
+                  <div class="row alt-row p-2">
+  
+                    <div class="col-6 font-quarcaL">
+                      <input id="primary-intensity-orange" class="acc-input" type="number" value="1.00" />
+                    </div>
+                    <div class="col-6 font-quarcaL">
+                      <input id="accent-intensity-orange" class="acc-input" type="number" value="1.00" />
+                    </div>
+                  </div>
+  
+  
+  
                 </div>
-              </div>
-
-            </section>
-
-            <section style="overflow-y:scroll;" id="content2">
-              <div class="row">
-                <div class="col">
-                  <p class="p-2 mb-0 text-white font-quarcaM">
-                    Select an extra below (Click to expand a section)
-                  </p>
-                </div>
-              </div>
-
-              <button class="accordion">CUSTOM PAINT COLOR</button>
-              <div class="panel">
-                <div class="row alt-row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Color all cars
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="color-all-cars" type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL b-team">
-                    Blue Team
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="custom-color-enabled-blue" type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row alt-row p-2">
-                  <div class="col-6 fs-26 font-quarcaL">
-                    Primary
-                  </div>
-                  <div class="col-6 font-quarcaL">
-                    Accent
-                  </div>
-                </div>
-                <div class="row alt-row p-2">
-
-                  <div class="col-6 font-quarcaL">
-                    <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                  </div>
-                  <div class="col-6 font-quarcaL">
-                    <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                  </div>
-                </div>
-                <div class="row alt-row p-2">
-
-                  <div class="col-6 font-quarcaL">
-                    <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                  </div>
-                  <div class="col-6 font-quarcaL">
-                    <input id="accent-intensity-blue" class="acc-input" type="number" value="1.00" />
-                  </div>
-                </div>
-
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL o-team">
-                    Orange Team
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="custom-color-enabled-orange" type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row alt-row p-2">
-                  <div class="col-6 fs-26 font-quarcaL">
-                    Primary
-                  </div>
-                  <div class="col-6 font-quarcaL">
-                    Accent
-                  </div>
-                </div>
-                <div class="row alt-row p-2">
-
-                  <div class="col-6 font-quarcaL">
-                    <input id="primary-color-orange" type="color" style="height:40px; padding:2px;" class="acc-input">
-                  </div>
-                  <div class="col-6 font-quarcaL">
-                    <input id="accent-color-orange" type="color" style="height:40px; padding:2px;" class="acc-input">
-                  </div>
-                </div>
-                <div class="row alt-row p-2">
-
-                  <div class="col-6 font-quarcaL">
-                    <input id="primary-intensity-orange" class="acc-input" type="number" value="1.00" />
-                  </div>
-                  <div class="col-6 font-quarcaL">
-                    <input id="accent-intensity-orange" class="acc-input" type="number" value="1.00" />
-                  </div>
-                </div>
-
-
-
-              </div>
-
-              <button class="accordion ">CUSTOM TITLE OPTIONS</button>
-              <div class="panel">
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Enable custom title
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="enable-custom-titles" type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2 alt-row">
-                  <div class="col-11 font-quarcaL">
-                    Use static titles
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="use-static-titles" type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2">
-                  <div class="col-9 font-quarcaL">
-                    Title flash rate
-                  </div>
-                  <div class="col-3">
-                    <input id="title-flash-rate" class="acc-input" type="number" value="1.00" />
-                  </div>
-                </div>
-              </div>
-
-              <button class="accordion ">RANKING OPTIONS</button>
-              <div class="panel">
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Display MMR and MMR updates ingame
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="display-mmr" type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2 alt-row">
-                  <div class="col-11 font-quarcaL">
-                    Enable MMR on unranked matches
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="enable-unranked-mmr" type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Upload match data to
-                    <a class="" href="https://rltracker.pro/" style="color:#fff;">RLTracker.pro</a>
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="upload-match-data" type="checkbox" checked="checked">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-              <button class="accordion ">DISCORD RICH PRESENCE</button>
-              <div class="panel">
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Full Rich Presence
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input name="discord" type="radio" checked="checked" value=2>
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2 alt-row">
-                  <div class="col-11 font-quarcaL">
-                    No Rank Data or Time Remaining
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input name="discord" type="radio" value=1>
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Disabled
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input name="discord" type="radio" value=0>
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-
-            </section>
-
-            <section id="content3">
-              <div class="row">
-                <div class="col">
-                  <p class="p-2 mb-0 text-white font-quarcaM">
-                    Toggle various settings below to adapt AlphaConsole to your play style
-                  </p>
-                </div>
-              </div>
-              <!-- GENERAL SETTIGNS -->
-              <div class="row">
-                <div class="col">
-                  <div class="section-header">GENERAL</div>
-
-                  <!-- APPLY ON STARTUP -->
+  
+                <button class="accordion ">CUSTOM TITLE OPTIONS</button>
+                <div class="panel">
                   <div class="row p-2">
                     <div class="col-11 font-quarcaL">
-                      Enable AlphaConsole.
+                      Enable custom title
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="ac-enabled" type="checkbox" checked="checked">
+                        <input id="enable-custom-titles" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                       </label>
                     </div>
                   </div>
-                  <!-- ./End -->
-
-                  <!-- MINIMIZE TO TRAY -->
                   <div class="row p-2 alt-row">
                     <div class="col-11 font-quarcaL">
-                      Minimize to tray.
+                      Use static titles
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="minimize-to-tray" type="checkbox" checked="checked">
+                        <input id="use-static-titles" type="checkbox">
                         <span class="checkmark"></span>
                       </label>
                     </div>
                   </div>
-                  <!-- ./End -->
-
-                  <!-- RUN ON WINDOWS STARTUP -->
+                  <div class="row p-2">
+                    <div class="col-9 font-quarcaL">
+                      Title flash rate
+                    </div>
+                    <div class="col-3">
+                      <input id="title-flash-rate" class="acc-input" type="number" value="1.00" />
+                    </div>
+                  </div>
+                </div>
+  
+                <button class="accordion ">RANKING OPTIONS</button>
+                <div class="panel">
                   <div class="row p-2">
                     <div class="col-11 font-quarcaL">
-                      Run on Windows startup.
+                      Display MMR and MMR updates ingame
                     </div>
                     <div class="col-1">
                       <label class="tick-container">
-                        <input id="run-on-startup" type="checkbox" checked="checked">
+                        <input id="display-mmr" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                       </label>
                     </div>
                   </div>
-                  <!-- ./End -->
-
-                  <!-- Detect RL install location  -->
                   <div class="row p-2 alt-row">
-                    <div class="col-12 font-quarcaL">
-                      Rocket League install location.
+                    <div class="col-11 font-quarcaL">
+                      Enable MMR on unranked matches
                     </div>
-                    <div class="col-12">
-                      <div class="row">
-                        <div class="col-4">
-                          <button id="detectInstall" class="font-quarcaL btn btn-acc w-100" onclick="DetectInstallLocation()">Auto-detect</button>
-                        </div>
-                        <div class="col-8">
-                          <input id="install-location" class="acc-input font-quarcaL" type="text" value="" readonly/>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="enable-unranked-mmr" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL">
+                      Upload match data to
+                      <a class="" href="https://rltracker.pro/" style="color:#fff;">RLTracker.pro</a>
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="upload-match-data" type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+  
+                <button class="accordion ">DISCORD RICH PRESENCE</button>
+                <div class="panel">
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL">
+                      Full Rich Presence
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input name="discord" type="radio" checked="checked" value=2>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row p-2 alt-row">
+                    <div class="col-11 font-quarcaL">
+                      No Rank Data or Time Remaining
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input name="discord" type="radio" value=1>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL">
+                      Disabled
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input name="discord" type="radio" value=0>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+  
+              <section id="content3">
+                <div class="row">
+                  <div class="col">
+                    <p class="p-2 mb-0 text-white font-quarcaM">
+                      Toggle various settings below to adapt AlphaConsole to your play style
+                    </p>
+                  </div>
+                </div>
+                <!-- GENERAL SETTIGNS -->
+                <div class="row">
+                  <div class="col">
+                    <div class="section-header">GENERAL</div>
+  
+                    <!-- APPLY ON STARTUP -->
+                    <div class="row p-2">
+                      <div class="col-11 font-quarcaL">
+                        Enable AlphaConsole.
+                      </div>
+                      <div class="col-1">
+                        <label class="tick-container">
+                          <input id="ac-enabled" type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- ./End -->
+  
+                    <!-- MINIMIZE TO TRAY -->
+                    <div class="row p-2 alt-row">
+                      <div class="col-11 font-quarcaL">
+                        Minimize to tray.
+                      </div>
+                      <div class="col-1">
+                        <label class="tick-container">
+                          <input id="minimize-to-tray" type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- ./End -->
+  
+                    <!-- RUN ON WINDOWS STARTUP -->
+                    <div class="row p-2">
+                      <div class="col-11 font-quarcaL">
+                        Run on Windows startup.
+                      </div>
+                      <div class="col-1">
+                        <label class="tick-container">
+                          <input id="run-on-startup" type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- ./End -->
+  
+                    <!-- Detect RL install location  -->
+                    <div class="row p-2 alt-row">
+                      <div class="col-12 font-quarcaL">
+                        Rocket League install location.
+                      </div>
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-4">
+                            <button id="detectInstall" class="font-quarcaL btn btn-acc w-100" onclick="DetectInstallLocation()">Auto-detect</button>
+                          </div>
+                          <div class="col-8">
+                            <input id="install-location" class="acc-input font-quarcaL" type="text" value="" readonly/>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <!-- ./End -->
+  
                   </div>
-                  <!-- ./End -->
-
                 </div>
-              </div>
-
-
-              <!-- General Info -->
-              <div class="row">
-                <div class="col">
-                  <div id="CustomPaint" class="section-header">INFO</div>
-                  <div class="row p-2">
-                    <div style="font-size:20px;" class="col-12 font-quarcaL">
-                      Developed by:
-                      <strong> Barbosicks, Carsillas, Arxarius, @root & Kermalis </strong>
+  
+  
+                <!-- General Info -->
+                <div class="row">
+                  <div class="col">
+                    <div id="CustomPaint" class="section-header">INFO</div>
+                    <div class="row p-2">
+                      <div style="font-size:20px;" class="col-12 font-quarcaL">
+                        Developed by:
+                        <strong> Barbosicks, Carsillas, Arxarius, @root & Kermalis </strong>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                <!-- ./End -->
+  
+              </section>
               <!-- ./End -->
-
-            </section>
+            </main>
             <!-- ./End -->
-          </main>
-          <!-- ./End -->
-
-          <!-- Save & Apply section -->
-          <div class="row">
-            <div class="col-4">
-              <button style="border-radius:0px;" class="ml-1 mt-3 font-quarcaL btn btn-success w-100" onclick="SaveConfiguration()">SAVE & APPLY</button>
-            </div>
-            <div class="col-4">
-              <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="ml-1 mt-3 font-quarcaL btn btn-acc">DISCORD</a>
-            </div>
-            <div class="col-4">
-              <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="ml-1 mt-3 font-quarcaL btn btn-acc w-100">DONATE</a>
-            </div>
-          </div>
-          <!-- ./End -->
-
-        </div>
+  
       </div>
     </div>
+</div>
+
+
+
+ <!-- Save & Apply section -->
+ <div class="save-wrapper">
+<div class="mt-4 pull-left container-fluid w-100">
+  <div class="row m-0 w-100 pr-3">
+    <div class="col-4 pr-0">
+      <button style="border-radius:0px;" class="font-quarcaL btn btn-success w-100" onclick="SaveConfiguration()">SAVE & APPLY</button>
+    </div>
+    <div class="col-4 pr-0">
+      <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="font-quarcaL btn btn-acc">DISCORD</a>
+    </div>
+    <div class="col-4 pr-0">
+      <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="font-quarcaL btn btn-acc w-100">DONATE</a>
+    </div>
   </div>
+</div>
+</div>
+<!-- Save & Apply End ./// -->
+
+
+
+<!-- Footer -->
+    <div class="footer-bar-wrapper affix">
+      <!-- Footer Bar -->
+      <div class="footer-bar">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-8">
+                  <small class="status-text">Status - <span id="status message" class="">Enabled: Items & Options loaded successfully</small></small>
+              </div>
+              <div class="col-4">
+                  <small class="build-number text-right">8.5.1.0 (public_build)</small>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+<!-- Footer End ./// -->
 
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+  var $element = $('.title-bar-wrapper');
+  var $follow = $element.find('#title-bar');
+  var followHeight = $element.find('title-bar').outerHeight();
+  var height = $element.outerHeight();
+  var window_height = $(window).height();
+
+  $(window).scroll(function () {
+    var pos = $(window).scrollTop();
+    var top = $element.offset().top;
+
+
+
+    // Check if element totally above or totally below viewport
+    if (top + height - followHeight < pos || top > pos + window_height) {
+      return;
+    }
+
+
+    var offset = parseInt($(window).scrollTop() - top);
+    
+    if (offset > 0) {
+    $follow.css('background', '#454545');
+    $("footer-bar-wrapper").hide;
+    }
+
+    if (offset < 0) {
+    $follow.css('background', 'transparent');
+    }
+
+  });
+});
+
+
+</script>
 
   <script>
     function CopyFile(source, target) {
@@ -1222,49 +1306,49 @@
   </script>
 
   <script>
-    (function () {
-      // Retrieve remote BrowserWindow
-      const {
-        BrowserWindow
-      } = require('electron').remote
+      (function () {
+        // Retrieve remote BrowserWindow
+        const {
+          BrowserWindow
+        } = require('electron').remote
 
-      function init() {
-        // Minimize task
-        document.getElementById("min-btn").addEventListener("click", (e) => {
-          var window = BrowserWindow.getFocusedWindow();
-          window.minimize();
-        });
+        function init() {
+          // Minimize task
+          document.getElementById("min-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.minimize();
+          });
 
-        // Maximize window
-        document.getElementById("max-btn").addEventListener("click", (e) => {
-          var window = BrowserWindow.getFocusedWindow();
-          if (window.isMaximized()) {
-            window.unmaximize();
-          } else {
-            window.maximize();
+          // Maximize window
+          document.getElementById("max-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            if (window.isMaximized()) {
+              window.unmaximize();
+            } else {
+              window.maximize();
+            }
+          });
+
+          // Close app
+          document.getElementById("close-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.close();
+          });
+
+          document.getElementById("detectInstall").addEventListener("click", (e) => {
+
+          });
+        };
+
+        document.onreadystatechange = () => {
+          if (document.readyState == "complete") {
+            init();
           }
-        });
-
-        // Close app
-        document.getElementById("close-btn").addEventListener("click", (e) => {
-          var window = BrowserWindow.getFocusedWindow();
-          window.close();
-        });
-
-        document.getElementById("detectInstall").addEventListener("click", (e) => {
-
-        });
-      };
-
-      document.onreadystatechange = () => {
-        if (document.readyState == "complete") {
-          init();
-        }
-      };
+        };
 
 
 
-    })();
+      })();
   </script>
 
   <script>
@@ -1327,7 +1411,6 @@
       });
     }
   </script>
-
 
   <script>
     function GetTexturePackagePaths() {
@@ -1497,7 +1580,6 @@
 
     LoadConfiguration();
   </script>
-
 
 </body>
 

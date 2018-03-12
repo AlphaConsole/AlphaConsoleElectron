@@ -9,10 +9,9 @@ html {
     font-family: $font-stack;
 }
 body {
-    height: 840px;
+    height: 100%;
     color: #fff;
     background: $body-background;
-    overflow: hidden;
 }
 
 /*COMPONENTS ######################*/
@@ -25,7 +24,7 @@ body {
 @import "../components/ac.accordian.scss"; 
 @import "../components/ac.scrollbar.scss"; 
 @import "../components/ac.titlebar.scss"; 
-
+@import "../components/ac.footer.scss"; 
 
   
 
