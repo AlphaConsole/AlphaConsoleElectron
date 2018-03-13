@@ -52,46 +52,6 @@
       font-family: QuarcaExtLight;
     }
 
-
-
-    /* Style tab links */
-
-    .tablink {
-      background-color: #555;
-      color: white;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      font-size: 17px;
-      width: 50%;
-    }
-
-    .tablink:hover {
-      background-color: #777;
-    }
-
-    /* Style the tab content (and add height:100% for full page content) */
-
-    .tabcontent {
-      color: white;
-      display: none;
-      height: 100%;
-    }
-
-    .table th,
-    .table td {
-
-      border-top: none;
-    }
-
-
-    select {
-
-      padding: 5px !important;
-
-    }
   </style>
 </head>
 
@@ -873,6 +833,11 @@
                         <strong>Arxarius, Barbosicks, Carsillas, Kermalis & @root</strong>
                       </div>
                     </div>
+                    <div class="row p-2">
+                        <div style="font-size:16px;" class="col-12 font-quarcaL">
+                          <small>Special thanks to all our Support Team, Admins, Moderators, Designers and Texture Modders</small>
+                        </div>
+                      </div>
                   </div>
                 </div>
                 <!-- ./End -->
@@ -892,21 +857,24 @@
  <div class="save-wrapper">
 <div class="mt-4 pull-left container-fluid w-100">
   <div class="row m-0 w-100 pr-3">
-    <div class="col-4 pr-0">
+    <div class="col-3 pr-0">
       <button style="border-radius:0px;" class="font-quarcaL btn btn-success w-100" onclick="SaveConfiguration()">SAVE & APPLY</button>
     </div>
-    <div class="col-4 pr-0">
+    <div class="col-3 pr-0">
       <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="font-quarcaL btn btn-acc">DISCORD</a>
     </div>
-    <div class="col-4 pr-0">
+    <div class="col-3 pr-0">
       <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="font-quarcaL btn btn-acc w-100">DONATE</a>
+    </div>
+    <div class="col-3 pr-0">
+      <button id="helpBtn" style="color:#fff;" class="font-quarcaL btn btn-acc w-100" data-toggle="tooltip" >HELP/INFO</a>
     </div>
   </div>
 </div>
 </div>
 <!-- Save & Apply End ./// -->
 
-
+<!-- data-placement="top" title="Tooltip on top" -->
 
 <!-- Footer -->
     <div class="footer-bar-wrapper affix">
@@ -915,7 +883,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-8">
-                  <small class="status-text">Status - <span id="status message" class="">Enabled: Items & Options loaded successfully</small></small>
+                  <small class="status-text">Status - <span id="status-message" class=""></small></small>
               </div>
               <div class="col-4">
                   <small class="build-number text-right">8.5.1.0 (public_build)</small>
@@ -926,10 +894,101 @@
     </div>
 <!-- Footer End ./// -->
 
+<!-- Help Modal -->
+<div id="helpModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+      <div class="modal-header">
+          <p class="font-quarcaL p-2 w-100 heading-title">HELP/INFO</p>
+          <span class="close lnr lnr-cross pl-2 pr-2"></span>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to the AlphaConsole Beta! Congratulations, you are one of the few people to help us test our new ui and app framework.</p>
+        <br>
+        <p>First we need to go over a few basic points.</p>
+        <ol class="pl-5">
+            <li><strong>The App:</strong> Now this is the most important part! You no longer need AlphaConsole on for your item changes to take effect.... magic ...... 
+              Just set it up once and you're good to go, unless you want to make changes! IKR how neat is that! If you want to disable AC 
+              without having to uninstall then just head over to the settings tab and UnCheck "Enable AlphaConsole", hit save and BOOM no more ac.</li>
+            <br>
+            <li><strong>Rocket League:</strong> For the above to work then the app needs to know where Rocket League is installed. This helps with alot of AC related functions.
+            If you go to the settings tab you will see an option called "Rocket League install location". IF you have Rocket League setup in the default location (Program Files)
+          that steam puts RL then just hit Auto-Detect and AC will find it for you. However, if you have moved the RL install path onto a different drive or path etc then you will
+         be propmted to find the install path manually, you go to where you have RL installed open "Binaries\Win32" and double click on "RocketLeague.exe"! YAY, you should now have
+        have AlphaConsole pointing at Rocket League.</li>
+            <br>
+            <li><strong>Bugs:</strong> We know not everything will be perfect thats why its beta ;)! But if you have crashes, issues, bugs, non loaded textures etc then please report
+            them to the #beta-help-and-bugs channel in the Discord. If you have any other issues after that then contact support. Please only escelate an issue to a Dev or Admin if
+          it is critical and can't be resolved by a member of support.</li>
+          </ol>
+          <br>
+          <p>Most of all, Have fun and play nice! Try to give us as much feedback as possible, both good and bad!</p>
+
+              <div class="row m-0 mt-3 mb-3 w-100 p-0">
+                <div class="col-3 pl-0 pr-0">
+                  <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="font-quarcaL btn btn-acc">DISCORD</a>
+                </div>
+                <div class="col-3  pr-0">
+                  <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="font-quarcaL btn btn-acc w-100">DONATE</a>
+                </div>
+                <div class="col-3  pr-0">
+                    <a href="http://www.alphaconsole.net" style="color:#fff;" class="font-quarcaL btn btn-acc w-100">WEBSITE</a>
+                  </div>
+              </div>
+     
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+
+</div>
+
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://raw.githubusercontent.com/HubSpot/tether/master/dist/js/tether.min.js"></script>
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  <script>
+
+$('#status-message').text("Enabled: Items & Options loaded successfully")
+
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+
+    // Get the modal
+    var modal = document.getElementById('helpModal');
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("helpBtn");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
+
 
 <script>
   $(document).ready(function () {
@@ -964,7 +1023,6 @@
 
   });
 });
-
 
 </script>
 
@@ -1039,6 +1097,7 @@
         }, (fileName) => {
           if (fileName === undefined) {
             alert("No install location selected");
+            $('#status-message').text("Failed to find install location")
             return;
           } else {
             document.getElementById("install-location").value = require("path").dirname(fileName[0]) + "\\"; //dum slashes
@@ -1067,7 +1126,7 @@
 
     function PlaceFiles() {
       var fs = require('fs');
-
+      $('#status-message').text("Applying...")
       if (FileExists(document.getElementById("install-location").value + "RocketLeague.exe")) {
 
         if (!FileExists(document.getElementById("install-location").value + "/discord-rpc.dll")) {
@@ -1098,7 +1157,10 @@
         }
 
         CopyFile(GetBasePath() + "/config.json", document.getElementById("install-location").value + "/config.json");
+
+        $('#status-message').text("Applied: Items & Options loaded successfully")
       } else {
+        $('#status-message').text("Failed!")
         alert("Rocket League path not set or incorrect! Set it in General settings.");
       }
     }
@@ -1286,13 +1348,16 @@
 
       var fs = require('fs');
       try {
+        $('#status-message').text("Applying...")
         fs.writeFileSync(GetBasePath() + '/config.json', GetConfigurationString(), 'utf-8');
 
         //Add a copy to Win32 so that you can load prefs from local one? idk
         PlaceFiles();
       } catch (e) {
+        $('#status-message').text("Failed!")
         alert(e);
         alert('Failed to save the configuration!');
+        
       }
 
     }

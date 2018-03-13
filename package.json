@@ -20,7 +20,6 @@
       "include": "build/installer.nsh"
     }
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HaydenMeloche/AlphaConsoleElectron.git"
