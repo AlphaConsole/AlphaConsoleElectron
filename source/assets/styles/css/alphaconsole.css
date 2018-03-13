@@ -81,12 +81,8 @@ section {
   width: 100%;
   position: relative;
   height: 620px;
-}
-
-.inner-fill {
-  height: 100%;
-  background: url("../../img/inner-fill.png") center;
-  background-position-y: 54px;
+  background-image: url("../../img/ball-bg.png");
+  background-position-y: -155px;
 }
 
 .panel {
@@ -260,6 +256,7 @@ section {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;
+  border: none;
 }
 
 /* Add Animation */
