@@ -5,7 +5,7 @@
   "main": "source/index.js",
   "scripts": {
     "test": "electron source/index.js",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "electron-packager . --out=dist --overwrite --all"
   },
   "repository": {
     "type": "git",
