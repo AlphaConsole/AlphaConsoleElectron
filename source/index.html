@@ -1016,6 +1016,10 @@
       if (FileExists("C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/RocketLeague.exe")) {
         document.getElementById("install-location").value =
           "C:/Program Files (x86)/Steam/steamapps/common/rocketleague/Binaries/Win32/";
+      }      
+      else if (FileExists("C:/Program Files/Steam/steamapps/common/rocketleague/Binaries/Win32/RocketLeague.exe")) {
+        document.getElementById("install-location").value =
+          "C:/Program Files/Steam/steamapps/common/rocketleague/Binaries/Win32/";
       } else {
         //failed, prompt for directory
 
