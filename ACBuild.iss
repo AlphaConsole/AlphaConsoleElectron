@@ -36,7 +36,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
-Source: "{#SourceFiles}\resources\app\AlphaConsole.dll"; DestName: "xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
+Source: "{#SourceFiles}\resources\app\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 Source: "{#SourceFiles}\resources\app\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 
 ;Source: "C:\Users\Barbosicks\Documents\Visual Studio 2017\Projects\AlphaConsoleElectron\dist\win-ia32-unpacked\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
