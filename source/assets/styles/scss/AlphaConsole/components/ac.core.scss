@@ -41,12 +41,8 @@ section {
     width: 100%;
     position: relative;
     height: 620px;
-}
-
-.inner-fill {
-    height: 100%;
-    background: url('../../img/inner-fill.png')  center;
-    background-position-y: 54px;
+    background-image: url("../../img/ball-bg.png");
+    background-position-y: -155px;
 }
 
 .panel {

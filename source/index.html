@@ -774,7 +774,7 @@
                     <!-- ./End -->
   
                     <!-- MINIMIZE TO TRAY -->
-                    <div class="row p-2 alt-row">
+                    <div class="row p-2 alt-row hidden">
                       <div class="col-11 font-quarcaL">
                         Minimize to tray. (Currently doesn't work)
                       </div>
@@ -788,7 +788,7 @@
                     <!-- ./End -->
   
                     <!-- RUN ON WINDOWS STARTUP -->
-                    <div class="row p-2">
+                    <div class="row p-2 hidden">
                       <div class="col-11 font-quarcaL">
                         Run on Windows startup. (Currently doesn't work)
                       </div>
@@ -802,18 +802,27 @@
                     <!-- ./End -->
   
                     <!-- Detect RL install location  -->
-                    <div class="row p-2 alt-row">
+                    <div class="row p-2 alt-row hidden">
                       <div class="col-12 font-quarcaL">
                         Rocket League install location.
                       </div>
                       <div class="col-12">
-                        <div class="row">
-                          <div class="col-4">
-                            <button id="detectInstall" class="font-quarcaL btn btn-acc w-100" onclick="DetectInstallLocation()">Auto-detect</button>
-                          </div>
+                        <div class="row mt-2 mb-1">
+                          
                           <div class="col-8">
                             <input id="install-location" class="acc-input font-quarcaL" type="text" value="" readonly/>
                           </div>
+                          <div class="col-3">
+                              <button style="max-height: 30px;"  id="detectInstall" class="font-quarcaL btn btn-acc w-100" onclick="DetectInstallLocation()">Auto-detect</button>
+                            </div>
+                            <div class="col-1">
+                                <button style="max-height: 30px;" type="button" class="font-quarcaL btn btn-acc w-100" data-toggle="tooltip" data-placement="left" title="Use Auto-Detect to find your RL path! More info in Help.">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="20" height="20"
+                                    viewBox="0 0 24 24"
+                                    style="fill:#ffffff;"><g id="surface1"><path style=" " d="M 12 2 C 6.476563 2 2 6.476563 2 12 C 2 17.523438 6.476563 22 12 22 C 17.523438 22 22 17.523438 22 12 C 22 6.476563 17.523438 2 12 2 Z M 13 17 L 11 17 L 11 11 L 13 11 Z M 13 9 L 11 9 L 11 7 L 13 7 Z "></path></g></svg>   
+                                </button>
+                              </div>
                         </div>
                       </div>
                     </div>
@@ -874,7 +883,7 @@
 </div>
 <!-- Save & Apply End ./// -->
 
-<!-- data-placement="top" title="Tooltip on top" -->
+<!--  -->
 
 <!-- Footer -->
     <div class="footer-bar-wrapper affix">
@@ -912,12 +921,12 @@
               Just set it up once and you're good to go, unless you want to make changes! IKR how neat is that! If you want to disable AC 
               without having to uninstall then just head over to the settings tab and UnCheck "Enable AlphaConsole", hit save and BOOM no more ac.</li>
             <br>
-            <li><strong>Rocket League:</strong> For the above to work then the app needs to know where Rocket League is installed. This helps with alot of AC related functions.
+            <!-- <li><strong>Rocket League:</strong> For the above to work then the app needs to know where Rocket League is installed. This helps with alot of AC related functions.
             If you go to the settings tab you will see an option called "Rocket League install location". IF you have Rocket League setup in the default location (Program Files)
           that steam puts RL then just hit Auto-Detect and AC will find it for you. However, if you have moved the RL install path onto a different drive or path etc then you will
          be propmted to find the install path manually, you go to where you have RL installed open "Binaries\Win32" and double click on "RocketLeague.exe"! YAY, you should now have
         have AlphaConsole pointing at Rocket League.</li>
-            <br>
+            <br> -->
             <li><strong>Bugs:</strong> We know not everything will be perfect thats why its beta ;)! But if you have crashes, issues, bugs, non loaded textures etc then please report
             them to the #beta-help-and-bugs channel in the Discord. If you have any other issues after that then contact support. Please only escelate an issue to a Dev or Admin if
           it is critical and can't be resolved by a member of support.</li>
@@ -945,21 +954,24 @@
 </div>
 
   <script src="assets/js/jquery-3.3.1.min.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://raw.githubusercontent.com/HubSpot/tether/master/dist/js/tether.min.js"></script>
+  <script src="assets/js/tether.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
-  <script>
-
-$('#status-message').text("Enabled: Items & Options loaded successfully")
-
-
-$(function () {
+<script>
+  $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+</script>
+  <script>
+
+$('#status-message').text("Enabled: Items & Options loaded successfully");
+
+
+
 
 
     // Get the modal
