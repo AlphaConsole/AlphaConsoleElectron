@@ -1175,7 +1175,7 @@
 
       //Discord rich presence options
       var DiscordOptions = {};
-      DiscordOptions.RichPresenceLevel = parseInt($("[name='discord']:checked").val()) || 2;
+      DiscordOptions.RichPresenceLevel = parseInt($("[name='discord']:checked").val());
       Config.DiscordOptions = DiscordOptions;
 
       //General options
