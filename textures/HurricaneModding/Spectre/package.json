@@ -100,30 +100,6 @@
     },
 	{
       "id": 4,
-      "name": "Modern Stripes",
-      "slot": 1,
-      "item": 1579,
-      "parameters": [
-        {
-          "name": "FX*Noise1",
-          "image": "modernstripes.png"
-        },        
-		{
-          "name": "DecalBlendNoise",
-          "image": "modernstripes.png"
-        },        
-		{
-          "name": "Decal1",
-          "image": "flow2.png"
-        },
-		{
-          "name": "Decal2",
-          "image": "flow2.png"
-        }
-      ]
-    },
-	{
-      "id": 5,
       "name": "Scales",
       "slot": 1,
       "item": 1579,

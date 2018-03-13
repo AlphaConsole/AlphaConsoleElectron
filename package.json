@@ -1,12 +1,25 @@
 {
-  "name": "alphaconsoleelectron",
+  "name": "AlphaConsole",
   "version": "1.0.0",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
     "test": "electron source/index.js",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "electron-packager . --out=dist --overwrite --platform win32 --arch x64",
+    "pack": "build --dir"
   },
+  "build":{
+    "appId": "alphaconsole.beta",
+    "productName": "AlphaConsole",
+    "asar": "false",
+    "nsis": {
+      "oneClick": "false",
+      "shortcutName": "AlphaConsole",
+      "allowToChangeInstallationDirectory": "true",
+      "include": "build/installer.nsh"
+    }
+  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HaydenMeloche/AlphaConsoleElectron.git"
@@ -19,10 +32,18 @@
   "homepage": "https://github.com/HaydenMeloche/AlphaConsoleElectron#readme",
   "devDependencies": {
     "electron": "^1.8.2",
+    "electron-installer-windows": "^0.2.0",
     "electron-packager": "^11.1.0",
+    "electron-winstaller": "^2.6.4",
     "grunt": "^1.0.2",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.1.0"
+    "grunt-electron": "^8.0.0",
+    "grunt-sass": "^2.1.0",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "modclean": "^2.1.2",
+    "squirrel": "^1.0.0"
   }
 }
