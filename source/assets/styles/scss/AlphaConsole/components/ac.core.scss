@@ -8,7 +8,7 @@
 
 html,
 body {
-    height: 100vh;
+    height: auto;
 }
 
 h1 {
@@ -18,23 +18,29 @@ h1 {
 }
 
 main {
-    width: 671px;
-    max-width: 800px;
-    padding: 7px;
+    width: 100%;
     margin: 0 auto;
     background: transparent;
+    margin-top:10px;
+    height: 100%;
+    float: left;
+    position: relative;
 }
 
-.main{
-    height: 100%;
-}
+
 
 section {
     margin-left: -1px;
     overflow-x: hidden;
     display: none;
-    height: 660px;
-    border-top: 5px solid #454545;
+    border-top:5px solid #454545;
+    border-left:1px solid $ac-gray;
+    border-right:1px solid $ac-gray;
+    border-bottom:1px solid $ac-gray;
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 620px;
 }
 
 .inner-fill {
@@ -77,10 +83,33 @@ section {
 }
 
 .build-number{
-    position:absolute !important; 
-    margin-top: -40px !important;
-    margin-left: 295px !important;
+    position:relative !important; 
     color: $ac-gray !important;
+    float: right;
+    margin-top:5px;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.status-text{
+    position:relative !important; 
+    color: $gray-lighter !important;
+    width: 100% !important;
+    text-align: right !important;
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.save-wrapper{
+    float: left;
+    width: 100%;
+    position:relative;
+    bottom:0px;
+    margin-bottom: 40px;
 }
 
 // =====================================
