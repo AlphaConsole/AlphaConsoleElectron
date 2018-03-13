@@ -5,8 +5,12 @@
   "main": "source/index.js",
   "scripts": {
     "test": "electron source/index.js",
+<<<<<<< HEAD
     "build": "electron-packager . --out=dist --overwrite --platform win32 --arch x64",
     "pack": "build --dir"
+=======
+    "build": "electron-packager . --out=dist --overwrite --all"
+>>>>>>> 8f1fbbc4936f79cc2303f1b4c45f9e0c5519fbe0
   },
   "build":{
     "appId": "alphaconsole.beta",
