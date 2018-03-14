@@ -30,6 +30,8 @@ Compression=lzma
 SolidCompression=yes
 OutputDir=build
 ArchitecturesInstallIn64BitMode=x64
+CloseApplicationsFilter=*.exe,*.dll,*.chm,RocketLeague.exe
+CloseApplications=force
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
