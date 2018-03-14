@@ -1353,7 +1353,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
       Config.ACPath = GetBasePath();
 
 
-      return JSON.stringify(Config);
+      return JSON.stringify(Config, null, "\t");
     }
 
     function SaveConfiguration() {
@@ -1362,9 +1362,9 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
       try {
         $('#status-message').text("Applying...")
         fs.writeFileSync(GetBasePath() + '/config.json', GetConfigurationString(), 'utf-8');
-
+		$('#status-message').text("Applied: Items & Options loaded successfully!");
         //Add a copy to Win32 so that you can load prefs from local one? idk
-        PlaceFiles();
+        //PlaceFiles();
       } catch (e) {
         $('#status-message').text("Failed!")
         alert(e);
@@ -1538,7 +1538,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
         packs.packages[i] = {};
         packs.packages[i].id = i;
         packs.packages[i].name = tp.Package.name;
-        packs.packages[i].folder = path.dirname(paths[i].substring(GetBasePath().length));
+        packs.packages[i].folder = path.dirname(paths[i].substring((GetBasePath()+"/textures/").length));
         packs.packages[i].author = tp.Package.author
 
         tps.push(tp);
@@ -1553,7 +1553,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
     function SaveMasterPackages(packages) {
       var fs = require('fs');
       try {
-        fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages), 'utf-8');
+        fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
       } catch (e) {
         alert(e);
         alert('Failed to save the packages!');
