@@ -45,8 +45,8 @@ Source: "{#SourceFiles}\resources\app\discord-rpc.dll"; DestDir: "{app}\.."; Fla
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{commonprograms}\{#MyAppName}"; Filename: "{code:GetInstallFolder}\{#MyAppExeName}"
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{code:GetInstallFolder}\{#MyAppExeName}" 
+Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}" 
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
