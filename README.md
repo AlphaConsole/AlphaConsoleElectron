@@ -1,5 +1,11 @@
 # AlphaConsoleElectron
 
+## About 
+
+This is the AlphaConsole UI. Originally written in c#.net but now moved to Electron where we can get a more custom UI.
+This project contains only the electron code and not the DLL code that does the actual magic.
+
+
 ## Initial setup
 
 Installing the dependencies. Navigate to the root of the project using a terminal (GitBash).
