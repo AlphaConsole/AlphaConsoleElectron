@@ -5,3 +5,4 @@ textures/**/*.png
 config.json
 dist
 node_modules
+__temp-tail.txt

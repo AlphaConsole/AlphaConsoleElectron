@@ -1,11 +1,14 @@
 const {app, BrowserWindow} = require('electron');
-const {FileWatcher} = require('./filewatcher');
 const path = require('path')
 const url = require('url')
+const {FileWatcher} = require('./filewatcher');
+const PORT = 4455;
+const FILE_PATH = '__temp-tail.txt';
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+let fileWatcher;
 
 function createWindow () {
   // Create the browser window.
@@ -44,6 +47,7 @@ function createWindow () {
   if (fileWatcher != null) {
     fileWatcher.shutdown();
   }
+  fileWatcher = new FileWatcher(path.join(__dirname, FILE_PATH), PORT);
 }
 
 // This method will be called when Electron has finished
