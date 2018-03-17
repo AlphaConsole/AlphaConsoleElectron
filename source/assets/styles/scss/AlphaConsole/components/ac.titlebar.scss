@@ -1,29 +1,24 @@
 #title-bar {
 
     -webkit-app-region: drag;
-    height: 40px;
+    height: 35px;
     text-align: left;
     line-height: 40px;
     vertical-align: middle;
     background-color: #393939;
-
-    margin: 0px;
-    width: 720px;
+    margin: 0 auto;
+    width: 100%;
     position: fixed;
-  }
-
-  #title {
-    position: relative;
     float: left;
-    width: 600px;
+    z-index: 99998;
   }
 
   #title-bar-btns {
     text-align: right;
-    float: left;
-    position: absolute;
+    float: right;
+    position: fixed;
     -webkit-app-region: no-drag;
-    width: auto;
+    width: 10%;
     top: 0px;
     right: 0px;
     z-index: 99999;
@@ -37,3 +32,23 @@
   #title-bar-btns #close-btn:hover {
     background-color: $red;
   }
+
+  .title-bar-btn-wrapper{
+    width:35px;
+    height:35px; 
+    float:left; 
+    padding: 2px;
+  }   
+
+.min-btn{
+  width:16px; height:16px; margin-left:-3px; margin-left: 8px; margin-top: 7px; float: left;
+}
+
+  .close-btn{
+    margin-top: 7px; float: left;
+  }
+
+.title-bar-wrapper{
+  float: left;
+  width: 100%;
+}

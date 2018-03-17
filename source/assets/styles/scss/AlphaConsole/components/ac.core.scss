@@ -8,7 +8,7 @@
 
 html,
 body {
-    height: 100vh;
+    height: auto;
 }
 
 h1 {
@@ -18,29 +18,31 @@ h1 {
 }
 
 main {
-    width: 671px;
-    max-width: 800px;
-    padding: 7px;
+    width: 100%;
     margin: 0 auto;
     background: transparent;
+    margin-top:10px;
+    height: 100%;
+    float: left;
+    position: relative;
 }
 
-.main{
-    height: 100%;
-}
+
 
 section {
     margin-left: -1px;
     overflow-x: hidden;
     display: none;
-    height: 601px;
-    border-top: 5px solid #454545;
-}
-
-.inner-fill {
-    height: 100%;
-    background: url('../../img/inner-fill.png')  center;
-    background-position-y: 0px;
+    border-top:5px solid #454545;
+    border-left:1px solid $ac-gray;
+    border-right:1px solid $ac-gray;
+    border-bottom:1px solid $ac-gray;
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 620px;
+    background-image: url("../../img/ball-bg.png");
+    background-position-y: -155px;
 }
 
 .panel {
@@ -51,7 +53,7 @@ section {
     color: #fff;
     transition: max-height 0.2s ease-out;
 }
-
+ 
 .alt-row-h {
     background-color: rgba(57, 57, 57, 0.5) !important;
 }
@@ -77,10 +79,33 @@ section {
 }
 
 .build-number{
-    position:absolute !important; 
-    margin-top:-15px !important; 
-    margin-left:18px !important; 
+    position:relative !important; 
     color: $ac-gray !important;
+    float: right;
+    margin-top:5px;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.status-text{
+    position:relative !important; 
+    color: $gray-lighter !important;
+    width: 100% !important;
+    text-align: right !important;
+}
+
+.pull-left{
+    float: left !important;
+}
+
+.save-wrapper{
+    float: left;
+    width: 100%;
+    position:relative;
+    bottom:0px;
+    margin-bottom: 40px;
 }
 
 // =====================================
@@ -137,3 +162,139 @@ section {
     top: -1px;
   }
   
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: transparent;
+    color: white;
+    border:none;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px; border:none;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: transparent;
+    color: white;
+    border:none;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background: $body-background;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border:none;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+
+/* The Close Button */
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Style tab links */
+
+    .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 50%;
+      }
+  
+      .tablink:hover {
+        background-color: #777;
+      }
+  
+      /* Style the tab content (and add height:100% for full page content) */
+  
+      .tabcontent {
+        color: white;
+        display: none;
+        height: 100%;
+      }
+  
+      .table th,
+      .table td {
+  
+        border-top: none;
+      }
+  
+  
+      select {
+  
+        padding: 5px !important;
+  
+      }

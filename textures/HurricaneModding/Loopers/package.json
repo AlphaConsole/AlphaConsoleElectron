@@ -28,18 +28,6 @@
     },
 	{
       "id": 2,
-      "name": "Web",
-      "slot": 2,
-      "item": 820,
-      "parameters": [
-        {
-          "name": "ImageSeq_SubUV",
-          "image": "looperweb.png"
-        }
-      ]
-    },
-	{
-      "id": 3,
       "name": "Star",
       "slot": 2,
       "item": 820,
@@ -51,7 +39,7 @@
       ]
     },
 	{
-      "id": 4,
+      "id": 3,
       "name": "Trinity",
       "slot": 2,
       "item": 820,

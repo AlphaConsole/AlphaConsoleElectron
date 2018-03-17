@@ -34,21 +34,9 @@ html {
 }
 
 body {
-  height: 840px;
+  height: 100%;
   color: #fff;
   background: linear-gradient(#393939, #222222);
-  overflow: hidden;
-}
-
-:not(input):not(textarea),
-:not(input):not(textarea)::after,
-:not(input):not(textarea)::before {
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
-}
-input, button, textarea, :focus {
-    outline: none; // You should add some other style for :focus to help UX/a11y
 }
 
 /*COMPONENTS ######################*/
@@ -62,7 +50,7 @@ input, button, textarea, :focus {
 
 html,
 body {
-  height: 100vh;
+  height: auto;
 }
 
 h1 {
@@ -72,29 +60,29 @@ h1 {
 }
 
 main {
-  width: 671px;
-  max-width: 800px;
-  padding: 7px;
+  width: 100%;
   margin: 0 auto;
   background: transparent;
-}
-
-.main {
+  margin-top: 10px;
   height: 100%;
+  float: left;
+  position: relative;
 }
 
 section {
   margin-left: -1px;
   overflow-x: hidden;
   display: none;
-  height: 601px;
   border-top: 5px solid #454545;
-}
-
-.inner-fill {
-  height: 100%;
-  background: url("../../img/inner-fill.png") center;
-  background-position-y: 0px;
+  border-left: 1px solid #616161;
+  border-right: 1px solid #616161;
+  border-bottom: 1px solid #616161;
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 620px;
+  background-image: url("../../img/ball-bg.png");
+  background-position-y: -155px;
 }
 
 .panel {
@@ -131,10 +119,33 @@ section {
 }
 
 .build-number {
-  position: absolute !important;
-  margin-top: -15px !important;
-  margin-left: 18px !important;
+  position: relative !important;
   color: #616161 !important;
+  float: right;
+  margin-top: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.status-text {
+  position: relative !important;
+  color: #eceeef !important;
+  width: 100% !important;
+  text-align: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.save-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  margin-bottom: 40px;
 }
 
 .tabssac {
@@ -156,7 +167,7 @@ section {
   padding: 10px;
   text-align: center;
   font-size: 28px;
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   text-decoration: none;
   border: 1px solid #454545;
 }
@@ -167,7 +178,7 @@ section {
   padding: 10px;
   text-align: center;
   font-size: 28px;
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   text-decoration: none;
   border: 1px solid #454545;
 }
@@ -189,16 +200,133 @@ section {
   top: -1px;
 }
 
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Header */
+.modal-header {
+  padding: 2px 16px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2px 16px;
+  border: none;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 2px 16px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background: linear-gradient(#393939, #222222);
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border: none;
+}
+
+/* Add Animation */
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* The Close Button */
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  height: 100%;
+}
+
+.table th,
+.table td {
+  border-top: none;
+}
+
+select {
+  padding: 5px !important;
+}
+
 .heading-title {
-  margin-bottom: 10px !important;
   color: #fff;
   font-size: 42px !important;
   text-align: center;
-  margin-top: -10px !important;
+  float: left;
 }
 
 .section-header {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   font-size: 20px;
   background-color: #393939;
   color: #fff;
@@ -218,7 +346,7 @@ section {
 .btn-acc {
   border-radius: 0px;
   font-size: 20px;
-  width: 89% !important;
+  width: 100% !important;
   background: #3F3F3F;
   color: #fff;
   border-color: #3F3F3F;
@@ -246,7 +374,7 @@ input {
 }
 
 label {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   display: inline-block;
   margin: -4px -4px -4px -1px;
   padding: 5px 5px;
@@ -264,7 +392,7 @@ label:hover {
 }
 
 input:checked + label {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   color: #fff;
   background: #414141;
   border: 1px solid #454545;
@@ -369,7 +497,7 @@ input:checked + label {
 }
 
 .accordion {
-  font-family: QuarcaExtLight;
+  font-family: BourgeoisLight;
   font-size: 20px;
   background-color: #393939;
   color: #fff;
@@ -415,28 +543,24 @@ input:checked + label {
 
 #title-bar {
   -webkit-app-region: drag;
-  height: 40px;
+  height: 35px;
   text-align: left;
   line-height: 40px;
   vertical-align: middle;
   background-color: #393939;
-  margin: 0px;
-  width: 720px;
+  margin: 0 auto;
+  width: 100%;
   position: fixed;
-}
-
-#title {
-  position: relative;
   float: left;
-  width: 600px;
+  z-index: 99998;
 }
 
 #title-bar-btns {
   text-align: right;
-  float: left;
-  position: absolute;
+  float: right;
+  position: fixed;
   -webkit-app-region: no-drag;
-  width: auto;
+  width: 10%;
   top: 0px;
   right: 0px;
   z-index: 99999;
@@ -448,6 +572,45 @@ input:checked + label {
 
 #title-bar-btns #close-btn:hover {
   background-color: #d9534f;
+}
+
+.title-bar-btn-wrapper {
+  width: 35px;
+  height: 35px;
+  float: left;
+  padding: 2px;
+}
+
+.min-btn {
+  width: 16px;
+  height: 16px;
+  margin-left: -3px;
+  margin-left: 8px;
+  margin-top: 7px;
+  float: left;
+}
+
+.close-btn {
+  margin-top: 7px;
+  float: left;
+}
+
+.title-bar-wrapper {
+  float: left;
+  width: 100%;
+}
+
+.footer-bar-wrapper {
+  float: left;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 25px;
+}
+
+.footer-bar {
+  background: #1d1d1d;
+  height: 25px;
 }
 
 /*# sourceMappingURL=alphaconsole.css.map */
