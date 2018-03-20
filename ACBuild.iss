@@ -29,7 +29,6 @@ SetupIconFile=source\assets\img\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 OutputDir=build
-ArchitecturesInstallIn64BitMode=x64
 CloseApplicationsFilter=*.exe,*.dll,*.chm,RocketLeague.exe
 CloseApplications=force
 
@@ -45,8 +44,7 @@ Source: "{#SourceFiles}\resources\app\discord-rpc.dll"; DestDir: "{app}\.."; Fla
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{commonprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}" 
+Name: "{commondesktop}\{#MyAppName} Beta"; Filename: "{app}\{#MyAppExeName}" 
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
@@ -65,9 +63,17 @@ var
   UserPage: TInputFileWizardPage;
   FileSelector: TInputFileWizardPage;
   InstallFolder : String;
+function GetHKLM: Integer;
+begin
+  if IsWin64 then
+    Result := HKLM64
+  else
+    Result := HKLM32;
+end;  
+  
 function FindRLUninstallKey(out ResultFolder: string) : Boolean;
 begin
-  if RegQueryStringValue(HKEY_LOCAL_MACHINE, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 252950', 'InstallLocation', InstallFolder) then begin
+  if RegQueryStringValue(GetHKLM, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 252950', 'InstallLocation', InstallFolder) then begin
     if FileExists(InstallFolder + '\Binaries\Win32\RocketLeague.exe') then begin       
       ResultFolder := InstallFolder + '\Binaries\Win32\AlphaConsole'
       Result := true
