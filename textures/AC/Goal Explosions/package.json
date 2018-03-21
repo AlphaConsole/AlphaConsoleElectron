@@ -25,6 +25,22 @@
           "image": "rizzo.png"
         }
       ]
+    },
+	{
+      "id": 2,
+      "name": "Think Blast",
+      "slot": 15,
+      "item": 2791,
+      "textures": [
+        {
+          "name": "MiniBalls_D",
+          "image": "ThinkBlastDark.png"
+        },
+        {
+          "name": "MiniBalls_N",
+          "image": "thinkblastntest.png"
+        }
+      ]
     }
   ]
 }
