@@ -53,7 +53,11 @@
     }
 
     body {
-      user-select: none;
+      -moz-user-select: none; 
+      -webkit-user-select: none; 
+      -ms-user-select:none; 
+      user-select:none;
+      -o-user-select:none;
     }
 
   </style>
@@ -90,6 +94,8 @@
   <!-- Title Bar End ./// -->
 </div>
 
+
+
 <!-- Header -->
   <div class=" mt-5 pull-left container-fluid w-100">
         <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
@@ -125,6 +131,7 @@
                     <p class="p-2 mb-0 text-white font-quarcaM">
                       Begin by selecting the item(s) you want and then the color you desire for each team.
                     </p>
+                    
                   </div>
                 </div>
   
@@ -132,7 +139,13 @@
   
                 <div class="row">
                   <div class="col">
-  
+                    <button class="font-quarcaL btn btn-success" 
+                            style="position:fixed; display:block; z-index:999999; bottom: 130px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                            data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
+                            <i class="fas fa-sync"></i>
+                  </button>
+
+
                     <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
                     <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
   
@@ -917,6 +930,8 @@
       </div>
     </div>
 <!-- Footer End ./// -->
+
+
 
 <!-- Help Modal -->
 <div id="helpModal" class="modal">
