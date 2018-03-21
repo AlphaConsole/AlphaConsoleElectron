@@ -682,6 +682,17 @@
                       </label>
                     </div>
                   </div>
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL">
+                      Display total team MMR instead of average team MMR
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="display-teamTotal" type="checkbox" >
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
                   <div class="row p-2 alt-row">
                     <div class="col-11 font-quarcaL">
                       Enable MMR on unranked matches
@@ -1333,6 +1344,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
       RankOptions.DisplayMMR = $("#display-mmr").prop('checked');
       RankOptions.UnrankedMMR = $("#enable-unranked-mmr").prop('checked');
       RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
+      RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
       Config.RankOptions = RankOptions;
 
       //Discord rich presence options
@@ -1658,7 +1670,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
     $("select[name='ball-select']").on('change', function () {
       $("select[name='ball-select']").val(this.value);
     })
-
+ 
     LoadConfiguration();
   </script>
 
