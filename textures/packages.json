@@ -26,54 +26,72 @@
 		},
 		{
 			"id": 4,
+			"name": "Spacewatch",
+			"folder": "AC/Spacewatch",
+			"author": "Carsillas"
+		},
+		{
+			"id": 5,
 			"name": "AlphaConsole Terminal",
 			"folder": "AC/Terminal",
 			"author": "BakedPVP"
 		},
 		{
-			"id": 5,
+			"id": 6,
+			"name": "Famiy Antennas",
+			"folder": "Famiy/Antennas",
+			"author": "Famiy"
+		},
+		{
+			"id": 7,
 			"name": "Famiy Balls",
 			"folder": "Famiy/Balls",
 			"author": "Famiy"
 		},
 		{
-			"id": 6,
+			"id": 8,
 			"name": "Alpha Caps",
 			"folder": "HurricaneModding/Alpha Caps",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 7,
+			"id": 9,
 			"name": "HM Ball",
 			"folder": "HurricaneModding/Ball",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 8,
+			"id": 10,
+			"name": "Hurricane Boosts",
+			"folder": "HurricaneModding/Boosts",
+			"author": "HurricaneModding"
+		},
+		{
+			"id": 11,
 			"name": "Dragon Lord Decals",
 			"folder": "HurricaneModding/Dragon Lord",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 9,
+			"id": 12,
 			"name": "Goal Explosions",
 			"folder": "HurricaneModding/Goal Explosions",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 10,
+			"id": 13,
 			"name": "Looper Wheels",
 			"folder": "HurricaneModding/Loopers",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 11,
+			"id": 14,
 			"name": "Spectre Decals",
 			"folder": "HurricaneModding/Spectre",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 12,
+			"id": 15,
 			"name": "KernelPad Flags",
 			"folder": "KernalPad/Flags",
 			"author": "KernelPad"

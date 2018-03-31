@@ -14,7 +14,7 @@
         }
       ]
     },
-	    {
+	{
       "id": 1,
       "name": "Thinking",
       "slot": 15,
@@ -35,6 +35,58 @@
         {
           "name": "Texture",
           "image": "pogchamp.png"
+        }
+      ]
+    },
+	{
+      "id": 3,
+      "name": "Minecraft Grass",
+      "slot": 15,
+      "item": 2329,
+      "parameters": [
+        {
+          "name": "Diffuse",
+          "image": "blocks.png"
+        },
+		{
+          "name": "Normal",
+          "image": "blocksn.png"
+        }
+      ],
+	  "textures": [
+        {
+          "name": "Popcorn_SubUV_D",
+          "image": "blocks.png"
+        },
+        {
+          "name": "Popcorn_SubUV_N",
+          "image": "blocksn.png"
+        }
+      ]
+    },
+	{
+      "id": 4,
+      "name": "Minecraft Diamond Ore",
+      "slot": 15,
+      "item": 2329,
+      "parameters": [
+        {
+          "name": "Diffuse",
+          "image": "blocks2.png"
+        },
+		{
+          "name": "Normal",
+          "image": "blocksn2.png"
+        }
+      ],
+	  "textures": [
+        {
+          "name": "Popcorn_SubUV_D",
+          "image": "blocks2.png"
+        },
+        {
+          "name": "Popcorn_SubUV_N",
+          "image": "blocksn2.png"
         }
       ]
     }

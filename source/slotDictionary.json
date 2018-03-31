@@ -15,6 +15,7 @@
     "trail-select": "Trail",
     "wheel-select": "Wheel",
     "ball-select": "Ball",
+    "mb-decal-select":"MBDecal",
     "Antenna": "antenna-select",
     "Banner": "banner-select",
     "Body": "body-select",
@@ -30,5 +31,6 @@
     "Topper": "topper-select",
     "Trail": "trail-select",
     "Wheel": "wheel-select",
-    "Ball": "ball-select"
+    "Ball": "ball-select",
+    "MBDecal": "mb-decal-select"
 }

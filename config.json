@@ -18,9 +18,9 @@
 		"1": {
 			"SlotName": "Decal",
 			"Blue": {
-				"ItemID": -1,
-				"PackageID": -1,
-				"PackageSubID": -1,
+				"ItemID": 306,
+				"PackageID": 4,
+				"PackageSubID": 1,
 				"Color": -1
 			},
 			"Orange": {
@@ -203,6 +203,21 @@
 				"PackageSubID": -1,
 				"Color": -1
 			}
+		},
+		"-3": {
+			"SlotName": "MBDecal",
+			"Blue": {
+				"ItemID": -1,
+				"PackageID": 4,
+				"PackageSubID": 1,
+				"Color": -1
+			},
+			"Orange": {
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
+				"Color": -1
+			}
 		}
 	},
 	"CustomColors": {
@@ -230,7 +245,8 @@
 	"RankOptions": {
 		"DisplayMMR": true,
 		"UnrankedMMR": true,
-		"UploadMatchData": true
+		"UploadMatchData": true,
+		"TeamTotal": false
 	},
 	"DiscordOptions": {
 		"RichPresenceLevel": 2
@@ -241,5 +257,5 @@
 		"RunOnStartup": true,
 		"InstallLocation": ""
 	},
-	"ACPath": "C:\\Users\\Barbosicks\\Documents\\Visual Studio 2017\\Projects\\AlphaConsoleElectron"
+	"ACPath": "C:\\Users\\SamSSD\\Documents\\GitHub\\AlphaConsoleElectron"
 }

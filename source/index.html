@@ -52,6 +52,14 @@
       font-family: QuarcaExtLight;
     }
 
+    body {
+      -moz-user-select: none; 
+      -webkit-user-select: none; 
+      -ms-user-select:none; 
+      user-select:none;
+      -o-user-select:none;
+    }
+
   </style>
 </head>
 
@@ -85,6 +93,8 @@
   </div>
   <!-- Title Bar End ./// -->
 </div>
+
+
 
 <!-- Header -->
   <div class=" mt-5 pull-left container-fluid w-100">
@@ -121,6 +131,7 @@
                     <p class="p-2 mb-0 text-white font-quarcaM">
                       Begin by selecting the item(s) you want and then the color you desire for each team.
                     </p>
+                    
                   </div>
                 </div>
   
@@ -128,7 +139,13 @@
   
                 <div class="row">
                   <div class="col">
-  
+                    <button class="font-quarcaL btn btn-success" 
+                            style="position:fixed; display:block; z-index:999999; bottom: 130px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                            data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
+                            <i class="fas fa-sync"></i>
+                  </button>
+
+
                     <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
                     <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
   
@@ -156,6 +173,18 @@
                               </td>
                             </tr>
   
+                             <!-- MAIN BODY DECAL -->
+                             <tr>
+                              <td class="alt-row">Main Body Decal</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="mb-decal-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+
                             <!-- DECAL -->
                             <tr>
                               <td class="alt-row">Decal</td>
@@ -355,6 +384,19 @@
                               </td>
                             </tr>
   
+                              
+                             <!-- MAIN BODY DECAL -->
+                             <tr>
+                              <td class="alt-row">Main Body Decal</td>
+                              <td class="alt-row-strong">
+                                <select class="acc-input" name="mb-decal-select">
+                                  <option value="-1:-1:-1">Unchanged</option>
+                                </select>
+                              </td>
+                              <td class="alt-row">
+                              </td>
+                            </tr>
+
                             <!-- DECAL -->
                             <tr>
                               <td class="alt-row">Decal</td>
@@ -682,6 +724,17 @@
                       </label>
                     </div>
                   </div>
+                  <div class="row p-2">
+                    <div class="col-11 font-quarcaL">
+                      Display total team MMR instead of average team MMR
+                    </div>
+                    <div class="col-1">
+                      <label class="tick-container">
+                        <input id="display-teamTotal" type="checkbox" >
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
                   <div class="row p-2 alt-row">
                     <div class="col-11 font-quarcaL">
                       Enable MMR on unranked matches
@@ -902,6 +955,8 @@
       </div>
     </div>
 <!-- Footer End ./// -->
+
+
 
 <!-- Help Modal -->
 <div id="helpModal" class="modal">
@@ -1333,6 +1388,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
       RankOptions.DisplayMMR = $("#display-mmr").prop('checked');
       RankOptions.UnrankedMMR = $("#enable-unranked-mmr").prop('checked');
       RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
+      RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
       Config.RankOptions = RankOptions;
 
       //Discord rich presence options
@@ -1658,7 +1714,7 @@ $('#status-message').text("Enabled: Items & Options loaded successfully");
     $("select[name='ball-select']").on('change', function () {
       $("select[name='ball-select']").val(this.value);
     })
-
+ 
     LoadConfiguration();
   </script>
 

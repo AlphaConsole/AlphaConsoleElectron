@@ -2597,7 +2597,8 @@
             ],
             "SlotID": 3,
             "Name": "Boost"
-        }, {
+        }, 
+        {
             "Items": [
                 {
                     "Name": "(Alpha Reward) Gold Rush",
@@ -2958,11 +2959,18 @@
             ],
             "SlotID": -1,
             "Name": "BoostSound"
-        }, {          
+        }, 
+        {          
             "Items": [
-        ],
+            ],
             "SlotID": -2,
             "Name": "Ball"
+        },
+        {          
+            "Items": [
+            ],
+            "SlotID": -3,
+            "Name": "MBDecal"
         },
         {
             "Items": [

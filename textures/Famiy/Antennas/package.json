@@ -1,0 +1,33 @@
+{
+  "name": "Famiy Antennas",
+  "author": "Famiy",
+  "items": [
+	
+		{
+			"id": 0,
+			"name": "Psyonix Penant",
+			"slot": 4,
+			"item": 286,
+			"parameters": [
+				{
+					"name": "TextureDiffuse",
+					"image": "Antenna_Psyonix.png"
+				},
+				{
+					"name": "Diffuse",
+					"image": "Antenna_Psyonix.png"
+				}
+			],			
+			"textures": [
+				{
+					"name": "Pennant_N_T",
+					"image": "Antenna_Psyonix.png"
+				},
+				{
+					"name": "Pennant_BlueChecker_T",
+					"image": "Antenna_Psyonix.png"
+				}
+			]
+		}
+	]
+}

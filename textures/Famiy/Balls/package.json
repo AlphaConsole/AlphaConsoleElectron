@@ -86,6 +86,70 @@
 				"image": "Ball_RocketLeague_White.png"
 			}
 		]
+	},
+	{
+		"id": 7,
+		"name": "Esports Cloud9 Black",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Esports Cloud9 Black.png"
+			},
+			{
+				"name": "Normal",
+				"image": "Esports Cloud9 Black Bumpmap.png"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Esports exceL Gray",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Esports exceL Grey.png"
+			},
+			{
+				"name": "Normal",
+				"image": "Esports exceL Grey Bumpmap.png"
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Esports Vitality Yellow",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Esports Vitality Yellow.png"
+			},
+			{
+				"name": "Normal",
+				"image": "Esports Vitality Yellow Bumpmap.png"
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Psyonix Titanium White",
+		"slot": -2,
+		"item": -1,
+		"parameters": [
+			{
+				"name": "Diffuse",
+				"image": "Psyonix Titanium White.png"
+			},
+			{
+				"name": "Normal",
+				"image": "Psyonix Titanium White Bumpmap.png"
+			}
+		]
 	}
 ]
 }

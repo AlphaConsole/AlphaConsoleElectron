@@ -1,0 +1,78 @@
+{
+  "name": "Hurricane Boosts",
+  "author": "HurricaneModding",
+  "items": [
+    {
+      "id": 0,
+      "name": "Cosmic",
+      "slot": 3,
+      "item": 36,
+      "textures": [
+        {
+          "name": "Water_01_Pack",
+          "image": "cosmic.png"
+        }
+      ]
+    },
+	{
+      "id": 1,
+      "name": "Cosmic Blue",
+      "slot": 3,
+      "item": 37,
+      "textures": [
+        {
+          "name": "Water_01_Pack",
+          "image": "cosmic.png"
+        }
+      ]
+    },
+	{
+      "id": 2,
+      "name": "Cosmic Green",
+      "slot": 3,
+      "item": 38,
+      "textures": [
+        {
+          "name": "Water_01_Pack",
+          "image": "cosmic.png"
+        }
+      ]
+    },
+	{
+      "id": 3,
+      "name": "Cosmic Pink",
+      "slot": 3,
+      "item": 39,
+      "textures": [
+        {
+          "name": "Water_01_Pack",
+          "image": "cosmic.png"
+        }
+      ]
+    },
+	{
+      "id": 4,
+      "name": "Cosmic Purple",
+      "slot": 3,
+      "item": 40,
+      "textures": [
+        {
+          "name": "Water_01_Pack",
+          "image": "cosmic.png"
+        }
+      ]
+    },
+	{
+      "id": 5,
+      "name": "Cosmic Red",
+      "slot": 3,
+      "item": 41,
+      "textures": [
+        {
+          "name": "Water_01_Pack",
+          "image": "cosmic.png"
+        }
+      ]
+    }
+  ]
+}
