@@ -848,6 +848,20 @@
                 </div>
                 <!-- ./End -->
 
+                <!-- BROADCAST GAME EVENTS -->
+                <div class="row p-2">
+                  <div class="col-11 font-quarcaL">
+                    Broadcast Game Events.
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="broadcast-enabled" type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- ./End -->
+
                 <!-- MINIMIZE TO TRAY -->
                 <div class="row p-2 alt-row hidden">
                   <div class="col-11 font-quarcaL">
@@ -1326,6 +1340,7 @@
 
       //General options
       $("#ac-enabled").prop('checked', Config.GeneralOptions.Enabled);
+      $("#broadcast-enabled").prop('checked', Config.GeneralOptions.EventBroadcast);
       $("#minimize-to-tray").prop('checked', Config.GeneralOptions.MinimizeToTray);
       $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
       $("#install-location").val(Config.GeneralOptions.InstallLocation);
@@ -1437,6 +1452,7 @@
       GeneralOptions.MinimizeToTray = $("#minimize-to-tray").prop('checked');
       GeneralOptions.RunOnStartup = $("#run-on-startup").prop('checked');
       GeneralOptions.InstallLocation = $("#install-location").val();
+      GeneralOptions.EventBroadcast = $("#broadcast-enabled").prop('checked');
       Config.GeneralOptions = GeneralOptions;
 
 

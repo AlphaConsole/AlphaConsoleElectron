@@ -20,15 +20,15 @@
 		},
 		{
 			"id": 3,
-			"name": "AlphaConsole Snowflake",
-			"folder": "AC/Snowflake",
-			"author": "Veer"
+			"name": "Spacewatch",
+			"folder": "AC/MainBodyUtilTextures",
+			"author": "Carsillas"
 		},
 		{
 			"id": 4,
-			"name": "Spacewatch",
-			"folder": "AC/Spacewatch",
-			"author": "Carsillas"
+			"name": "AlphaConsole Snowflake",
+			"folder": "AC/Snowflake",
+			"author": "Veer"
 		},
 		{
 			"id": 5,
@@ -98,8 +98,20 @@
 		},
 		{
 			"id": 16,
+			"name": "Goodsmile Racing",
+			"folder": "KernalPad/Goodsmile Racing Decals",
+			"author": "KernelPad"
+		},
+		{
+			"id": 17,
+			"name": "Hoonicorn",
+			"folder": "KernalPad/Hoonicorn Decals by KernelPad",
+			"author": "KernelPad"
+		},
+		{
+			"id": 18,
 			"name": "Hyper Beast",
-			"folder": "KernalPad/HyperBeast",
+			"folder": "KernalPad/Hyper Beast Decals by KernelPad",
 			"author": "KernelPad"
 		}
 	]

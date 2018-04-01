@@ -19,8 +19,8 @@
 			"SlotName": "Decal",
 			"Blue": {
 				"ItemID": 306,
-				"PackageID": 4,
-				"PackageSubID": 1,
+				"PackageID": 3,
+				"PackageSubID": 0,
 				"Color": -1
 			},
 			"Orange": {
@@ -270,7 +270,8 @@
 		"Enabled": true,
 		"MinimizeToTray": true,
 		"RunOnStartup": true,
-		"InstallLocation": ""
+		"InstallLocation": "",
+		"EventBroadcast": false
 	},
 	"ACPath": "C:\\Users\\SamSSD\\Documents\\GitHub\\AlphaConsoleElectron"
 }
