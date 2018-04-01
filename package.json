@@ -9,7 +9,7 @@
     "pack": "build --dir",
     "watch": "grunt watch"
   },
-  "build":{
+  "build": {
     "appId": "alphaconsole.beta",
     "productName": "AlphaConsole",
     "asar": "false",
@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "modclean": "^2.1.2",
-    "squirrel": "^1.0.0"
+    "squirrel": "^1.0.0",
+    "tail": "^1.2.3",
+    "websocket": "^1.0.25"
   }
 }
