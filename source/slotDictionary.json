@@ -16,6 +16,7 @@
     "wheel-select": "Wheel",
     "ball-select": "Ball",
     "mb-decal-select":"MBDecal",
+    "engine-texture-select": "EngineTexture",
     "Antenna": "antenna-select",
     "Banner": "banner-select",
     "Body": "body-select",
@@ -32,5 +33,6 @@
     "Trail": "trail-select",
     "Wheel": "wheel-select",
     "Ball": "ball-select",
-    "MBDecal": "mb-decal-select"
+    "MBDecal": "mb-decal-select",
+    "EngineTexture": "engine-texture-select"
 }

@@ -95,6 +95,12 @@
 			"name": "KernelPad Flags",
 			"folder": "KernalPad/Flags",
 			"author": "KernelPad"
+		},
+		{
+			"id": 16,
+			"name": "Hyper Beast",
+			"folder": "KernalPad/HyperBeast",
+			"author": "KernelPad"
 		}
 	]
 }

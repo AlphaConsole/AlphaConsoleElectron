@@ -2971,6 +2971,12 @@
             ],
             "SlotID": -3,
             "Name": "MBDecal"
+        },        
+        {          
+            "Items": [
+            ],
+            "SlotID": -4,
+            "Name": "EngineTexture"
         },
         {
             "Items": [

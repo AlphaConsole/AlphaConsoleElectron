@@ -208,7 +208,22 @@
 			"SlotName": "MBDecal",
 			"Blue": {
 				"ItemID": -1,
-				"PackageID": 4,
+				"PackageID": 16,
+				"PackageSubID": 0,
+				"Color": -1
+			},
+			"Orange": {
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
+				"Color": -1
+			}
+		},
+		"-4": {
+			"SlotName": "EngineTexture",
+			"Blue": {
+				"ItemID": -1,
+				"PackageID": 16,
 				"PackageSubID": 1,
 				"Color": -1
 			},
