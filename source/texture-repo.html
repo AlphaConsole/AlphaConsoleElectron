@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<!-- Not sure if this was on purpose or not but this was missing the closing > I'm not too familiar with html so /shrug -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>AlphaConsole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link rel="stylesheet" href="assets/styles/css/framework.css">
+  <link rel="stylesheet" href="assets/styles/css/alphaconsole.css">
+
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+  <style>
+    @font-face {
+      font-family: BourgeoisLight;
+      src: url(assets/fonts/BourgeoisLight.otf);
+    }
+
+    @font-face {
+      font-family: BourgeoisMedium;
+      src: url(assets/fonts/BourgeoisMedium.otf);
+    }
+
+    @font-face {
+      font-family: QuarcaExtLight;
+      src: url(assets/fonts/QuarcaExtLightModified.otf);
+    }
+
+
+    .font-bourgL {
+      font-size: 22px;
+      font-family: BourgeoisLight;
+    }
+
+    .font-bourgM {
+      font-size: 16px;
+      font-family: BourgeoisMedium;
+    }
+
+    .font-quarcaL {
+      font-size: 16px;
+      font-family: QuarcaExtLight;
+    }
+
+    .font-quarcaM {
+      font-size: 16px;
+      font-family: QuarcaExtLight;
+    }
+
+    body {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -o-user-select: none;
+    }
+
+    .square {
+      float: left;
+      position: relative;
+      width: 30%;
+      padding-bottom: 30%;
+      margin: 1.66%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .separator {
+      float: left;
+      position: relative;
+      width: 100%;
+      margin-left: 1.66%;
+      margin-right: 1.66%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .author {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      text-align: right;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+
+    .pack-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
+      
+
+  </style>
+</head>
+
+
+<body style="min-height: 100%;">
+
+  <div class="title-bar-wrapper">
+    <!-- Title Bar : 
+    the bar is a seperate div to define a 100% draggable window 
+  -->
+    <div id="title-bar"></div>
+
+    <!-- Title Bar Buttons: 
+    The width of the wrapper for the buttons is relative to the buttons them self this way 
+    the buttons can not be used to drag the title bar and the title bar does not overlap the 
+    buttons 
+  -->
+    <div class="" id="title-bar-btns">
+      <!-- Minimize Button -->
+      <a class="title-bar-btn-wrapper" id="min-btn">
+        <img class="min-btn" src="https://png.icons8.com/small/64/ffffff/minimize-window.png">
+      </a>
+
+      <!-- Maximise Button : Disabled -->
+      <a style="display:none;" id="max-btn"></a>
+
+      <!-- Close Button -->
+      <a class="title-bar-btn-wrapper" id="close-btn">
+        <span class="close-btn lnr lnr-cross pl-2 pr-2"></span>
+      </a>
+    </div>
+    <!-- Title Bar End ./// -->
+  </div>
+
+
+
+  <!-- Header -->
+  <div class=" mt-5 pull-left container-fluid w-100">
+    <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
+      <div class="col">
+        <p class="font-quarcaL p-2 w-100 heading-title">TEXTURE REPO</p>
+      </div>
+    </div>
+  </div>
+  <!-- Header End ./// -->
+
+
+  <div class="pull-left container-fluid w-100 full-height">
+    <div class="row m-0 w-100">
+      <div class="col">
+        <main class="">
+
+          <!-- TEXTURE LIST -->
+          <div class="row">
+            <div class="col" id="texture-pack-list">
+
+
+            </div>
+          </div>
+
+
+        </main>
+        <!-- ./End -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/tether.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      var $element = $('.title-bar-wrapper');
+      var $follow = $element.find('#title-bar');
+      var followHeight = $element.find('title-bar').outerHeight();
+      var height = $element.outerHeight();
+      var window_height = $(window).height();
+
+      $(window).scroll(function () {
+        var pos = $(window).scrollTop();
+        var top = $element.offset().top;
+
+        // Check if element totally above or totally below viewport
+        if (top + height - followHeight < pos || top > pos + window_height) {
+          return;
+        }
+
+        var offset = parseInt($(window).scrollTop() - top);
+
+        if (offset > 0) {
+          $follow.css('background', '#454545');
+          $("footer-bar-wrapper").hide;
+        }
+
+        if (offset < 0) {
+          $follow.css('background', 'transparent');
+        }
+
+      });
+    });
+
+  </script>
+
+  <script>
+    function CopyFile(source, target) {
+      var fs = require('fs');
+      var rd = fs.createReadStream(source);
+      var wr = fs.createWriteStream(target);
+      return new Promise(function (resolve, reject) {
+        rd.on('error', reject);
+        wr.on('error', reject);
+        wr.on('finish', resolve);
+        rd.pipe(wr);
+      }).catch(function (error) {
+        rd.destroy();
+        wr.end();
+        throw error;
+      });
+    }
+
+    function LoadFile(path) {
+      var fs = require("fs");
+      return fs.readFileSync(path);
+    }
+
+    function GetBasePath() {
+      return require("path").dirname(__dirname);
+    }
+
+
+    function FileExists(path) {
+      var fs = require('fs');
+      return fs.existsSync(path);
+    }
+
+
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+
+  </script>
+
+  <script>
+    let shell = require('electron').shell
+
+    document.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+        event.preventDefault()
+        shell.openExternal(event.target.href)
+      }
+    })
+  </script>
+
+  <script>
+      (function () {
+        // Retrieve remote BrowserWindow
+        const {
+          BrowserWindow
+        } = require('electron').remote
+
+        function init() {
+          // Minimize task
+          document.getElementById("min-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.minimize();
+          });
+
+          // Maximize window
+          document.getElementById("max-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            if (window.isMaximized()) {
+              window.unmaximize();
+            } else {
+              window.maximize();
+            }
+          });
+
+          // Close app
+          document.getElementById("close-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.close();
+          });
+
+        };
+
+        document.onreadystatechange = () => {
+          if (document.readyState == "complete") {
+            init();
+          }
+        };
+
+
+
+      })();
+  </script>
+
+  <script>
+    //TAB CONTROL TOGGLES
+    $(document).ready(function () {
+      requestPackages();
+    });
+
+
+    var SelectedPackage;
+
+    function requestPackages() {
+      var request = require("request");
+
+
+      request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/packages.json', { json: true }, (err, res, body) => {
+        if (err) { return console.log(err); }
+
+        var i = 0;
+
+        for (let item of body.packages) {
+          i++;
+
+          var newPack = $('<div>');
+          newPack.addClass("square");
+          newPack.css("background-image", "url(" + "https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/" + item.folder + "/preview.png" + ")");
+          newPack.attr("details-id", "details" + Math.floor((i - 1) / 3));
+
+          var para = $("<p>");
+          para.addClass("author font-bourgM");
+          para.text("by " + item.author)
+
+          var para2 = $("<p>");
+          para2.addClass("pack-title font-bourgM");
+          para2.text(item.name)
+
+          newPack.append(para);
+          newPack.append(para2);
+
+          newPack.mouseenter(function () {
+            $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
+          });
+          newPack.mouseleave(function () {
+            if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
+              $(this).css("box-shadow", "0 0 0 0 #8D661B");
+            } else {
+              $(this).css("box-shadow", "0 0 3pt 2pt #2E8C58");
+            }
+          });
+
+          newPack.click(function () {
+            if (SelectedPackage != undefined) {
+              SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
+              $("#" + SelectedPackage.attr("details-id")).collapse('hide');
+            }
+            if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
+              SelectedPackage = $(this);
+              SelectedPackage.css("box-shadow", "0 0 3pt 2pt #2E8C58");
+              $("#" + SelectedPackage.attr("details-id")).collapse('show');
+            } else {
+              $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
+              $("#" + $(this).attr("details-id")).collapse('hide');
+              SelectedPackage = undefined;
+            }
+          });
+
+          $("#texture-pack-list").append(newPack);
+
+
+          if (i % 3 == 0) {
+            var separator = $('<div>');
+            separator.addClass("separator collapse");
+            separator.attr("id", "details" + Math.floor((i - 1) / 3));
+
+            var para3 = $("<p>");
+            para3.addClass("font-bourgM");
+            para3.text(item.name + "<br /><br />Test pack description<br /><br/>Multiline description<br>etc<br>etc");
+
+            var divlevel = $("<div>");
+            divlevel.css("padding-bottom", "30%")
+
+            divlevel.append(para3);
+            separator.append(divlevel);
+
+            $("#texture-pack-list").append(separator);
+
+          }
+
+
+        }
+
+
+
+      });
+
+    }
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+
+  </script>
+
+</body>
+
+</html>

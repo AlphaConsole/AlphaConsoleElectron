@@ -862,6 +862,21 @@
                 </div>
                 <!-- ./End -->
 
+
+                <!-- DOWNLOAD TEXTURES -->
+                <div class="row p-2">
+                  <div class="col-11 font-quarcaL">
+                    Download textures
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <button onclick="ShowTexturesRepo()">Download textures!</button>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+                <!-- ./End -->
+
                 <!-- MINIMIZE TO TRAY -->
                 <div class="row p-2 alt-row hidden">
                   <div class="col-11 font-quarcaL">
@@ -1601,6 +1616,40 @@
   </script>
 
   <script>
+
+
+    function ShowTexturesRepo() {
+      const remote = require('electron').remote;
+      const BrowserWindow = remote.BrowserWindow;
+      
+      const path = require('path');
+      const url = require('url')
+
+      var win =
+        new BrowserWindow({
+          titleBarStyle: 'hidden',
+          resizable: true,
+          frame: false,
+          minWidth: 720,
+          maxWidth: 720,
+          width: 720,
+          height: 930,
+          webPreferences: {
+            devTools: true
+          },
+          icon: path.join(__dirname, '/assets/img/logo_normal.png')
+        })
+
+      win.loadURL(
+        url.format(
+          {
+            pathname: path.join(__dirname, 'texture-repo.html'),
+            protocol: 'file:',
+            slashes: true
+          }
+        ));
+    }
+
     function GetTexturePackagePaths() {
 
       var walkSync = function (dir, filelist) {

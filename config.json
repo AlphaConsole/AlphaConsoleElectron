@@ -18,8 +18,8 @@
 		"1": {
 			"SlotName": "Decal",
 			"Blue": {
-				"ItemID": 306,
-				"PackageID": 3,
+				"ItemID": 1059,
+				"PackageID": 10,
 				"PackageSubID": 0,
 				"Color": -1
 			},
@@ -147,9 +147,9 @@
 		"15": {
 			"SlotName": "Explosion",
 			"Blue": {
-				"ItemID": -1,
-				"PackageID": -1,
-				"PackageSubID": -1,
+				"ItemID": 2586,
+				"PackageID": 2,
+				"PackageSubID": 1,
 				"Color": -1
 			},
 			"Orange": {
@@ -208,8 +208,8 @@
 			"SlotName": "MBDecal",
 			"Blue": {
 				"ItemID": -1,
-				"PackageID": 16,
-				"PackageSubID": 0,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
@@ -223,8 +223,8 @@
 			"SlotName": "EngineTexture",
 			"Blue": {
 				"ItemID": -1,
-				"PackageID": 16,
-				"PackageSubID": 1,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {

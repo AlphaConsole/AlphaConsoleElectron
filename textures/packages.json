@@ -20,7 +20,7 @@
 		},
 		{
 			"id": 3,
-			"name": "Spacewatch",
+			"name": "Util",
 			"folder": "AC/MainBodyUtilTextures",
 			"author": "Carsillas"
 		},
@@ -56,60 +56,54 @@
 		},
 		{
 			"id": 9,
-			"name": "HM Ball",
-			"folder": "HurricaneModding/Ball",
-			"author": "HurricaneModding"
-		},
-		{
-			"id": 10,
 			"name": "Hurricane Boosts",
 			"folder": "HurricaneModding/Boosts",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 11,
+			"id": 10,
 			"name": "Dragon Lord Decals",
 			"folder": "HurricaneModding/Dragon Lord",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 12,
+			"id": 11,
 			"name": "Goal Explosions",
 			"folder": "HurricaneModding/Goal Explosions",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 13,
+			"id": 12,
 			"name": "Looper Wheels",
 			"folder": "HurricaneModding/Loopers",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 14,
+			"id": 13,
 			"name": "Spectre Decals",
 			"folder": "HurricaneModding/Spectre",
 			"author": "HurricaneModding"
 		},
 		{
-			"id": 15,
+			"id": 14,
 			"name": "KernelPad Flags",
 			"folder": "KernalPad/Flags",
 			"author": "KernelPad"
 		},
 		{
-			"id": 16,
+			"id": 15,
 			"name": "Goodsmile Racing",
 			"folder": "KernalPad/Goodsmile Racing Decals",
 			"author": "KernelPad"
 		},
 		{
-			"id": 17,
+			"id": 16,
 			"name": "Hoonicorn",
 			"folder": "KernalPad/Hoonicorn Decals by KernelPad",
 			"author": "KernelPad"
 		},
 		{
-			"id": 18,
+			"id": 17,
 			"name": "Hyper Beast",
 			"folder": "KernalPad/Hyper Beast Decals by KernelPad",
 			"author": "KernelPad"
