@@ -466,7 +466,7 @@
           $("#texture-pack-list").append(newPack);
 
 
-          if (i % 3 == 2) {
+          if (i % 3 == 2 || i + 1 == body.packages.length) {
             var separator = $('<div>');
             separator.addClass("bg-black separator collapse");
             separator.attr("id", "details" + Math.floor(i / 3));
