@@ -88,7 +88,6 @@
       right: 0;
       text-align: right;
       padding: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
       width: 100%;
     }
 
@@ -97,11 +96,51 @@
       top: 0;
       left: 0;
       padding: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
       width: 100%;
     }
-      
 
+    .details-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      padding-right: 15px;
+      width: 100%;
+      text-align: right;
+    }
+
+    .description {
+      padding-top: 40px;
+      padding-left: 10px;
+      max-height: 600px;
+      min-height: 200px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    iframe {
+      padding-right:10px;
+    }
+
+    li {
+      margin-left: 16px;
+    }
+
+    li ul {
+      margin-left: 32px;
+    }
+
+    .bg-black {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .download {
+      position: absolute;
+      margin:10px;
+      bottom: 0;
+      right: 0;
+      padding: 10px;
+    }
   </style>
 </head>
 
@@ -217,56 +256,6 @@
   </script>
 
   <script>
-    function CopyFile(source, target) {
-      var fs = require('fs');
-      var rd = fs.createReadStream(source);
-      var wr = fs.createWriteStream(target);
-      return new Promise(function (resolve, reject) {
-        rd.on('error', reject);
-        wr.on('error', reject);
-        wr.on('finish', resolve);
-        rd.pipe(wr);
-      }).catch(function (error) {
-        rd.destroy();
-        wr.end();
-        throw error;
-      });
-    }
-
-    function LoadFile(path) {
-      var fs = require("fs");
-      return fs.readFileSync(path);
-    }
-
-    function GetBasePath() {
-      return require("path").dirname(__dirname);
-    }
-
-
-    function FileExists(path) {
-      var fs = require('fs');
-      return fs.existsSync(path);
-    }
-
-
-    function openPage(pageName, elmnt, color) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(pageName).style.display = "block";
-      elmnt.style.backgroundColor = color;
-
-    }
-
-  </script>
-
-  <script>
     let shell = require('electron').shell
 
     document.addEventListener('click', function (event) {
@@ -323,40 +312,107 @@
   <script>
     //TAB CONTROL TOGGLES
     $(document).ready(function () {
-      requestPackages();
+      RequestPackages();
     });
 
 
-    var SelectedPackage;
+    function GetBasePath() {
+      return require("path").dirname(__dirname);
+    }
 
-    function requestPackages() {
+
+    var SelectedPackage;
+    var Details = [];
+
+
+    var path = require('path');
+    var fs = require('fs');
+
+    function ensureDirectoryExistence(filePath) {
+      var dirname = path.dirname(filePath);
+      if (fs.existsSync(dirname)) {
+        return true;
+      }
+      ensureDirectoryExistence(dirname);
+      fs.mkdirSync(dirname);
+    }
+
+    function DownloadPackage() {
+      if (SelectedPackage === undefined) { return; }
+
       var request = require("request");
 
+      var index = SelectedPackage.attr("details-index");
 
+      request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json', { json: true }, (err, res, body) => {
+        if (err) { return console.log(err); }
+
+
+        var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json';
+        var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json';
+
+        ensureDirectoryExistence(savePath);
+        request(url).pipe(fs.createWriteStream(savePath));
+
+        for (let item of body.items) {
+
+          if (item.parameters != undefined)
+            for (let image of item.parameters) {
+
+              var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
+              var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/' + image.image;
+
+              ensureDirectoryExistence(savePath);
+              request(url).pipe(fs.createWriteStream(savePath));
+
+            }
+
+          if (item.textures != undefined)
+            for (let image of item.textures) {
+
+              var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
+              var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/' + image.image;
+
+              ensureDirectoryExistence(savePath);
+              request(url).pipe(fs.createWriteStream(savePath));
+
+            }
+
+        }
+
+      });
+
+    }
+
+    function RequestPackages() {
+
+      var request = require("request");
       request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/packages.json', { json: true }, (err, res, body) => {
         if (err) { return console.log(err); }
 
         var i = 0;
-
         for (let item of body.packages) {
-          i++;
+
+          Details[i] = item;
 
           var newPack = $('<div>');
           newPack.addClass("square");
           newPack.css("background-image", "url(" + "https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/" + item.folder + "/preview.png" + ")");
-          newPack.attr("details-id", "details" + Math.floor((i - 1) / 3));
-
+          newPack.attr("details-row", Math.floor(i / 3));
+          newPack.attr("details-index", i);
           var para = $("<p>");
-          para.addClass("author font-bourgM");
-          para.text("by " + item.author)
+          para.addClass("bg-black author font-bourgM");
+          para.text("by " + item.author);
 
           var para2 = $("<p>");
-          para2.addClass("pack-title font-bourgM");
-          para2.text(item.name)
+          para2.addClass("bg-black pack-title font-bourgM");
+          para2.text(item.name);
 
           newPack.append(para);
           newPack.append(para2);
 
+
+          ////HIGHTLIGHT
           newPack.mouseenter(function () {
             $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
           });
@@ -367,46 +423,79 @@
               $(this).css("box-shadow", "0 0 3pt 2pt #2E8C58");
             }
           });
+          //////////////
 
+
+          ////DETAILS PANEL
           newPack.click(function () {
             if (SelectedPackage != undefined) {
               SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
-              $("#" + SelectedPackage.attr("details-id")).collapse('hide');
+
+              var d = $("#details" + SelectedPackage.attr("details-row"));
+              var index = SelectedPackage.attr("details-index");
+
+              if (SelectedPackage.attr("details-row") != $(this).attr("details-row")) {
+                d.collapse('hide');
+              } else {
+
+              }
             }
             if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
               SelectedPackage = $(this);
               SelectedPackage.css("box-shadow", "0 0 3pt 2pt #2E8C58");
-              $("#" + SelectedPackage.attr("details-id")).collapse('show');
+
+              var d = $("#details" + SelectedPackage.attr("details-row"));
+              var index = SelectedPackage.attr("details-index");
+
+              d.find("#title").text(Details[index].name + " by " + Details[index].author);
+
+              var descHtml = Details[index].description || "No description found.<br><br>";
+              d.find("#description").html(descHtml + "<div style='padding:10px'></div>");
+
+              d.collapse('show');
+
+
             } else {
               $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
-              $("#" + $(this).attr("details-id")).collapse('hide');
+              $("#details" + $(this).attr("details-row")).collapse('hide');
               SelectedPackage = undefined;
             }
           });
+          /////////////////
 
           $("#texture-pack-list").append(newPack);
 
 
-          if (i % 3 == 0) {
+          if (i % 3 == 2) {
             var separator = $('<div>');
-            separator.addClass("separator collapse");
-            separator.attr("id", "details" + Math.floor((i - 1) / 3));
+            separator.addClass("bg-black separator collapse");
+            separator.attr("id", "details" + Math.floor(i / 3));
 
-            var para3 = $("<p>");
-            para3.addClass("font-bourgM");
-            para3.text(item.name + "<br /><br />Test pack description<br /><br/>Multiline description<br>etc<br>etc");
+            var title = $("<p>");
+            title.addClass("details-title font-bourgM");
+            title.attr("id", "title");
+
+            var desc = $("<div>");
+            desc.addClass("font-bourgM description");
+            desc.attr("id", "description");
+
+            var download = $("<button onclick='DownloadPackage()'>Download</button>");
+            download.addClass("font-quarcaL btn btn-success download");
+
 
             var divlevel = $("<div>");
-            divlevel.css("padding-bottom", "30%")
+            divlevel.css("position", "relative");
+            divlevel.append(title);
+            divlevel.append(desc);
+            divlevel.append(download);
 
-            divlevel.append(para3);
             separator.append(divlevel);
 
             $("#texture-pack-list").append(separator);
 
           }
 
-
+          i++;
         }
 
 

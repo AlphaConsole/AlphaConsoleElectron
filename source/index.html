@@ -138,7 +138,7 @@
 
             <div class="row">
               <div class="col">
-                <button class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 130px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                <button hidden class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 130px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
                   data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
                   <i class="fas fa-sync"></i>
                 </button>
@@ -865,14 +865,8 @@
 
                 <!-- DOWNLOAD TEXTURES -->
                 <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Download textures
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <button onclick="ShowTexturesRepo()">Download textures!</button>
-                      <span class="checkmark"></span>
-                    </label>
+                  <div class="col-5">
+                      <button class="font-quarcaL btn btn-success w-100"  onclick="ShowTexturesRepo()">DOWNLOAD TEXTURES</button>
                   </div>
                 </div>
                 <!-- ./End -->
@@ -1689,13 +1683,17 @@
 
         var tp = {};
         tp.Path = paths[i];
+
+        console.log(tp.Path);
+
         tp.Package = JSON.parse(LoadFile(paths[i]));
 
         packs.packages[i] = {};
         packs.packages[i].id = i;
         packs.packages[i].name = tp.Package.name;
         packs.packages[i].folder = path.dirname(paths[i].substring((GetBasePath() + "/textures/").length));
-        packs.packages[i].author = tp.Package.author
+        packs.packages[i].author = tp.Package.author;
+        packs.packages[i].description = tp.Package.description;
 
         tps.push(tp);
 
