@@ -1642,6 +1642,7 @@
             slashes: true
           }
         ));
+      
     }
 
     function GetTexturePackagePaths() {
@@ -1667,7 +1668,7 @@
       return walkSync(GetBasePath() + "/textures/", []);
     }
 
-    function GetTexturePackages() {
+    function GetTexturePackages() { 
 
       var path = require('path');
       var paths = GetTexturePackagePaths();

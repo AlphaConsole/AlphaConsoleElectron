@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "modclean": "^2.1.2",
-    "squirrel": "^1.0.0"
+    "squirrel": "^1.0.0",
+	"request": "^2.83.0"
   }
 }
