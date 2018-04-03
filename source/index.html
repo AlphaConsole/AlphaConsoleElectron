@@ -68,14 +68,14 @@
   <div class="title-bar-wrapper">
     <!-- Title Bar : 
     the bar is a seperate div to define a 100% draggable window 
-  -->
+    -->
     <div id="title-bar"></div>
 
     <!-- Title Bar Buttons: 
     The width of the wrapper for the buttons is relative to the buttons them self this way 
     the buttons can not be used to drag the title bar and the title bar does not overlap the 
     buttons 
-  -->
+    -->
     <div class="" id="title-bar-btns">
       <!-- Minimize Button -->
       <a class="title-bar-btn-wrapper" id="min-btn">
@@ -866,7 +866,7 @@
                 <!-- DOWNLOAD TEXTURES -->
                 <div class="row p-2">
                   <div class="col-5">
-                      <button class="font-quarcaL btn btn-success w-100"  onclick="ShowTexturesRepo()">DOWNLOAD TEXTURES</button>
+                    <button class="font-quarcaL btn btn-success w-100" onclick="ShowTexturesRepo()">DOWNLOAD TEXTURES</button>
                   </div>
                 </div>
                 <!-- ./End -->
@@ -1074,7 +1074,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
- 
+
 
   <script>
     let shell = require('electron').shell
@@ -1085,53 +1085,52 @@
         shell.openExternal(event.target.href)
       }
     })
-    </script>
-    <script>
-
+  </script>
+  <script>
     //DONT TOUCH
     //this must stay in this file. 
 
     (function () {
-        // Retrieve remote BrowserWindow
-        const {
-          BrowserWindow
-        } = require('electron').remote
+      // Retrieve remote BrowserWindow
+      const {
+        BrowserWindow
+      } = require('electron').remote
 
-        function init() {
-          // Minimize task
-          document.getElementById("min-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.minimize();
-          });
+      function init() {
+        // Minimize task
+        document.getElementById("min-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.minimize();
+        });
 
-          // Maximize window
-          document.getElementById("max-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            if (window.isMaximized()) {
-              window.unmaximize();
-            } else {
-              window.maximize();
-            }
-          });
-
-          // Close app
-          document.getElementById("close-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.close();
-          });
-
-          document.getElementById("detectInstall").addEventListener("click", (e) => {
-
-          });
-        };
-
-        document.onreadystatechange = () => {
-          if (document.readyState == "complete") {
-            init();
+        // Maximize window
+        document.getElementById("max-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          if (window.isMaximized()) {
+            window.unmaximize();
+          } else {
+            window.maximize();
           }
-        };
+        });
 
-      })();
+        // Close app
+        document.getElementById("close-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.close();
+        });
+
+        document.getElementById("detectInstall").addEventListener("click", (e) => {
+
+        });
+      };
+
+      document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+          init();
+        }
+      };
+
+    })();
   </script>
   <script src="./assets/js/backend.js"></script>
   <script src="./assets/js/UI.js"></script>
