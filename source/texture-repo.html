@@ -335,12 +335,22 @@
     function DownloadPackage() {
       if (SelectedPackage === undefined) { return; }
 
+      const notifier = require('node-notifier');
+
       var request = require("request");
 
       var index = SelectedPackage.attr("details-index");
 
       request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json', { json: true }, (err, res, body) => {
-        if (err) { return console.log(err); }
+        if (err) { 
+          notifier.notify({
+            title: 'AlphaConsole',
+            message: err,
+            icon: GetBasePath() + "\\source\\assets\\img\\logo_normal.png",
+            sound: true
+          });
+        return console.log(err); 
+        }
 
 
         var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json';
@@ -374,14 +384,19 @@
             }
 
         }
-
+        
+        notifier.notify({
+        title: 'AlphaConsole',
+        message: "Download complete!",
+        icon: GetBasePath() + "\\source\\assets\\img\\logo_normal.png",
+        sound: false
+        });
       });
 
     }
 
     function RequestPackages() {
-
-      var request = require("request");
+        var request = require("request");
       request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/packages.json', { json: true }, (err, res, body) => {
         if (err) { return console.log(err); }
 
