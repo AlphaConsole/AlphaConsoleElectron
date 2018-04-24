@@ -1,4 +1,6 @@
 const {app, BrowserWindow} = require('electron');
+const { ipcMain } = require('electron');
+
   const path = require('path')
   const url = require('url')
   
@@ -9,7 +11,7 @@ const {app, BrowserWindow} = require('electron');
   function createWindow () {
     // Create the browser window.
     mainWindow = new BrowserWindow({
-      titleBarStyle: 'hidden', 
+      titleBarStyle: 'hidden',
       resizable: true, 
       frame: false, 
       minWidth: 720,
@@ -62,6 +64,11 @@ const {app, BrowserWindow} = require('electron');
       createWindow()
     }
   })
+
+  ipcMain.on('refreshwindow', () => {
+    //Refreshes window to load in new items
+    mainWindow.webContents.reloadIgnoringCache()
+  });
   
   // In this file you can include the rest of your app's specific main process
   // code. You can also put them in separate files and require them here.

@@ -384,13 +384,18 @@
             }
 
         }
-        
+        //send notification
         notifier.notify({
         title: 'AlphaConsole',
         message: "Download complete!",
         icon: GetBasePath() + "\\source\\assets\\img\\logo_normal.png",
         sound: false
         });
+        
+        //Send refresh window command
+        const { ipcRenderer } = require('electron');
+        ipcRenderer.send('refreshwindow');
+
       });
 
     }
