@@ -1,3 +1,5 @@
+ const con = require('electron').remote.getGlobal('console');
+
 function CopyFile(source, target) {
     var fs = require('fs');
     var rd = fs.createReadStream(source);
@@ -141,6 +143,7 @@ function CopyFile(source, target) {
     var Config = JSON.parse(LoadFile(GetBasePath() + "/config.json"));
 
     var Products = LoadItems();
+		
     var colors = Products.Colors;
     var slots = Products.Slots;
 
@@ -237,7 +240,7 @@ function CopyFile(source, target) {
 
         var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
         for (var j = 0; j < selects.length; j++) {
-
+					
           var team = $(selects[j]).closest('tbody').attr("team");
 
           Items[slotID][team] = {};
@@ -415,7 +418,7 @@ function CopyFile(source, target) {
       tp.Package = JSON.parse(LoadFile(paths[i]));
 
       packs.packages[i] = {};
-      packs.packages[i].id = i;
+      packs.packages[i].id = tp.Package.id;
       packs.packages[i].name = tp.Package.name;
       packs.packages[i].folder = path.dirname(paths[i].substring((GetBasePath() + "/textures/").length));
       packs.packages[i].author = tp.Package.author;
@@ -518,7 +521,7 @@ function CopyFile(source, target) {
 
             $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
               var newOp = $('<option>');
-              newOp.attr('value', customitems[k].item + ":" + j + ":" + customitems[k].id);
+              newOp.attr('value', customitems[k].item + ":" + TexturePackages[j].Package.id + ":" + customitems[k].id);
               newOp.text("Custom: " + customitems[k].name);
 
               $(this).prepend(newOp);

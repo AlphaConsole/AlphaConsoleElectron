@@ -310,6 +310,7 @@
   <script>
     $(document).ready(function () {
       RequestPackages();
+	  console.log("READY");
     });
 
     function GetBasePath() {
@@ -332,6 +333,8 @@
       fs.mkdirSync(dirname);
     }
 
+	//TODO: Make sure package is downloaded before allowing closing the window.
+	//TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
     function DownloadPackage() {
       if (SelectedPackage === undefined) { return; }
 
@@ -340,25 +343,32 @@
       var request = require("request");
 
       var index = SelectedPackage.attr("details-index");
-
+	  const con = require('electron').remote.getGlobal('console');
+	  const { ipcRenderer } = require('electron');
       request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json', { json: true }, (err, res, body) => {
-        if (err) { 
-          notifier.notify({
-            title: 'AlphaConsole',
-            message: err,
-            icon: GetBasePath() + "\\source\\assets\\img\\logo_normal.png",
-            sound: true
-          });
-        return console.log(err); 
+        if (err) {           
+			return console.log(err); 
         }
 
-
+		var total = 0;
+		var cur = 0;
+		
         var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json';
         var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json';
 
         ensureDirectoryExistence(savePath);
-        request(url).pipe(fs.createWriteStream(savePath));
-
+        request(url).on('response', function(response) {
+				var len = parseInt(response.headers['content-length'], 10);
+				total += len;
+			}).on('data', function(data) {
+					cur += data.length;
+				// compressed data as it is received
+					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
+			}).on('end', function() {				
+				ipcRenderer.send('refreshwindow');
+			}).pipe(fs.createWriteStream(savePath));
+		
         for (let item of body.items) {
 
           if (item.parameters != undefined)
@@ -368,33 +378,43 @@
               var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/' + image.image;
 
               ensureDirectoryExistence(savePath);
-              request(url).pipe(fs.createWriteStream(savePath));
+			  request(url).on('response', function(response) {
+				var len = parseInt(response.headers['content-length'], 10);
+				total += len;
+			}).on('data', function(data) {
+					cur += data.length;
+				// compressed data as it is received
+					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
+			}).on('end', function(response) {
+				ipcRenderer.send('refreshwindow');
+			}).pipe(fs.createWriteStream(savePath));
 
             }
 
           if (item.textures != undefined)
             for (let image of item.textures) {
-
               var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
               var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/' + image.image;
 
               ensureDirectoryExistence(savePath);
-              request(url).pipe(fs.createWriteStream(savePath));
+              request(url).on('response', function(response) {
+				var len = parseInt(response.headers['content-length'], 10);
+				total += len;
+			}).on('data', function(data) {
+					cur += data.length;
+				// compressed data as it is received
+					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
+			}).on('end', function() {				
+				ipcRenderer.send('refreshwindow');
+			}).pipe(fs.createWriteStream(savePath));
 
             }
-
-        }
-        //send notification
-        notifier.notify({
-        title: 'AlphaConsole',
-        message: "Download complete!",
-        icon: GetBasePath() + "\\source\\assets\\img\\logo_normal.png",
-        sound: false
-        });
-        
+        }                
         //Send refresh window command
-        const { ipcRenderer } = require('electron');
-        ipcRenderer.send('refreshwindow');
+        
+        
 
       });
 
@@ -415,6 +435,7 @@
           newPack.css("background-image", "url(" + "https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/" + item.folder + "/preview.png" + ")");
           newPack.attr("details-row", Math.floor(i / 3));
           newPack.attr("details-index", i);
+		  var j = i;
           var para = $("<p>");
           para.addClass("bg-black author font-bourgM");
           para.text("by " + item.author);
@@ -475,6 +496,8 @@
               $("#details" + $(this).attr("details-row")).collapse('hide');
               SelectedPackage = undefined;
             }
+			$(".progress-bar").width(0);
+			$(".progress-bar").html("");
           });
           /////////////////
 
@@ -494,8 +517,10 @@
             desc.addClass("font-bourgM description");
             desc.attr("id", "description");
 
-            var download = $("<button onclick='DownloadPackage()'>Download</button>");
+            var download = $("<button style=\"margin-bottom:30px\" onclick='DownloadPackage()'>Download</button>");
             download.addClass("font-quarcaL btn btn-success download");
+			var progress = $("<div class=\"progress\"> <div class=\"progress-bar\" style=\"width:0%;background-color: #5cb85c;\">0%</div></div>");
+
 
 
             var divlevel = $("<div>");
@@ -503,7 +528,7 @@
             divlevel.append(title);
             divlevel.append(desc);
             divlevel.append(download);
-
+			divlevel.append(progress);
             separator.append(divlevel);
 
             $("#texture-pack-list").append(separator);
