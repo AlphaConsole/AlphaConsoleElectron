@@ -386,7 +386,7 @@ function CopyFile(source, target) {
         if (fs.statSync(dir + file).isDirectory()) {
           filelist = walkSync(dir + file + '/', filelist);
         } else {
-          if (path.extname(file) == '.json' && file != 'packages.json')
+          if (file == 'package.json')
             filelist.push(dir + file);
         }
       });
