@@ -386,7 +386,7 @@ function CopyFile(source, target) {
         if (fs.statSync(dir + file).isDirectory()) {
           filelist = walkSync(dir + file + '/', filelist);
         } else {
-          if (path.extname(file) == '.json')
+          if (path.extname(file) == '.json' && file != 'packages.json')
             filelist.push(dir + file);
         }
       });
@@ -403,20 +403,12 @@ function CopyFile(source, target) {
     var tps = [];
     var packs = {};
     packs.packages = [];
-
+		
     for (var i = 0; i < paths.length; i++) {
-
-      if (paths[i].includes("packages.json")) {
-        continue;
-      }
-
+			
       var tp = {};
       tp.Path = paths[i];
-
-      console.log(tp.Path);
-
       tp.Package = JSON.parse(LoadFile(paths[i]));
-
       packs.packages[i] = {};
       packs.packages[i].id = tp.Package.id;
       packs.packages[i].name = tp.Package.name;
@@ -427,7 +419,7 @@ function CopyFile(source, target) {
       tps.push(tp);
 
     }
-
+		
     SaveMasterPackages(packs);
 
     return tps;
