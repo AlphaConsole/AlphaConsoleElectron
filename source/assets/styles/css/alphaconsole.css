@@ -80,7 +80,7 @@ section {
   float: left;
   width: 100%;
   position: relative;
-  height: 620px;
+  height: 604px;
   background-image: url("../../img/ball-bg.png");
   background-position-y: -155px;
 }
@@ -312,6 +312,11 @@ section {
 .table th,
 .table td {
   border-top: none;
+  padding: 2px 0.75rem;
+}
+
+.table {
+	margin-bottom: 0;
 }
 
 select {
@@ -358,15 +363,22 @@ select {
 }
 
 .acc-input {
-  display: block;
+  display: inline-block;
   color: #fff;
   padding: 10px;
   border: 1px solid #3D3D3D;
   background-color: #313131;
   height: 100%;
-  width: 100%;
+  width: 88%;
   max-height: 30px;
   font-size: 12px;
+}
+.alt-row-strong > .acc-input {
+	width: 94%;
+}
+.alt-row span,
+.alt-row-strong span {
+    cursor: pointer;
 }
 
 input {
@@ -456,19 +468,19 @@ input:checked + label {
   height: 25px;
   width: 25px;
   border: 1px solid #3D3D3D;
-  background-color: #313131;
+  background-color: #616161;
 }
 
 /* On mouse-over, add a grey background color */
 .tick-container:hover input ~ .checkmark {
   border: 1px solid #3D3D3D;
-  background-color: #313131;
+  background-color: #616161;
 }
 
 /* When the checkbox is checked, add a blue background */
 .tick-container input:checked ~ .checkmark {
   border: 1px solid #3D3D3D;
-  background-color: #313131;
+  background-color: #616161;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */

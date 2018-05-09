@@ -158,7 +158,7 @@ function CopyFile(source, target) {
               slots[i].SlotID][team].Color);
           })
         }
-
+        
         var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
         for (var j = 0; j < selects.length; j++) {
           var team = $(selects[j]).closest('tbody').attr("team");
@@ -533,5 +533,15 @@ function CopyFile(source, target) {
   $("select[name='ball-select']").on('change', function () {
     $("select[name='ball-select']").val(this.value);
   })
+  
 
+
+  $( document ).ready(function() {
+   $(".teams .acc-input" ).after( "<span class='reset-input'> ✗</span>" );
+   $('.reset-input').on('click', function() {   
+    $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);   
+    })
+  });
+  
+  
   LoadConfiguration();

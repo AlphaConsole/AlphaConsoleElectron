@@ -136,10 +136,9 @@
 
 
 
-            <div class="row">
+            <div class="row teams">
               <div class="col">
-                <button hidden class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 130px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
-                  data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
+                <button hidden class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;" data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
                   <i class="fas fa-sync"></i>
                 </button>
 
@@ -167,7 +166,7 @@
                           <td class="alt-row">
                             <select class="acc-input" name="color-select" special="body">
                               <option value="-1">Unchanged</option>
-                            </select>
+                            </select>							
                           </td>
                         </tr>
 
@@ -177,7 +176,7 @@
                           <td class="alt-row-strong">
                             <select class="acc-input" name="mb-decal-select">
                               <option value="-1:-1:-1">Unchanged</option>
-                            </select>
+                            </select>							
                           </td>
                           <td class="alt-row">
                           </td>
@@ -199,7 +198,7 @@
                         <tr>
                           <td class="alt-row">Decal</td>
                           <td class="alt-row-strong">
-                            <select class="acc-input" name="decal-select">
+                            <select class="acc-input selDiv" name="decal-select">
                               <option value="-1:-1:-1">Unchanged</option>
                             </select>
                           </td>
@@ -285,18 +284,27 @@
 
 
                         <!-- PAINT FINISH -->
-                        <tr hidden>
-                          <td class="alt-row">Paint Finish</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="paint-select" disabled style="color:#666">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-                          </td>
-                        </tr>
-
-
+						<tr>
+						<td class="alt-row">Primary Paint Finish</td>
+						<td class="alt-row-strong">
+							<select class="acc-input" name="paint-select">
+							<option value="-1:-1:-1">Unchanged</option>
+							</select>
+						</td>
+						<td class="alt-row">
+						</td>
+						</tr>
+                        <!-- ACCENT  PAINT FINISH -->
+						<tr>
+						<td class="alt-row">Accent Paint Finish</td>
+						<td class="alt-row-strong">
+							<select class="acc-input" name="accent-paint-select">
+							<option value="-1:-1:-1">Unchanged</option>
+							</select>
+						</td>
+						<td class="alt-row">
+						</td>
+						</tr>
                         <!-- ENGINE AUDIO -->
                         <tr>
                           <td class="alt-row">Engine</td>
@@ -508,17 +516,27 @@
 
 
                         <!-- PAINT FINISH -->
-                        <tr hidden>
-                          <td class="alt-row">Paint Finish</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="paint-select" disabled style="color:#666">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-
-                          </td>
-                        </tr>
+						<tr>
+						<td class="alt-row">Primary Paint Finish</td>
+						<td class="alt-row-strong">
+							<select class="acc-input" name="paint-select">
+							<option value="-1:-1:-1">Unchanged</option>
+							</select>
+						</td>
+						<td class="alt-row">
+						</td>
+						</tr>
+                        <!-- ACCENT  PAINT FINISH -->
+						<tr>
+						<td class="alt-row">Accent Paint Finish</td>
+						<td class="alt-row-strong">
+							<select class="acc-input" name="accent-paint-select">
+							<option value="-1:-1:-1">Unchanged</option>
+							</select>
+						</td>
+						<td class="alt-row">
+						</td>
+						</tr>
 
 
                         <!-- ENGINE AUDIO -->
@@ -621,7 +639,7 @@
               </div>
               <div class="row p-2">
                 <div class="col-11 font-quarcaL b-team">
-                  Blue Team
+                  Enable Blue Team
                 </div>
                 <div class="col-1">
                   <label class="tick-container">
@@ -659,7 +677,7 @@
 
               <div class="row p-2">
                 <div class="col-11 font-quarcaL o-team">
-                  Orange Team
+                  Enable Orange Team
                 </div>
                 <div class="col-1">
                   <label class="tick-container">
@@ -782,42 +800,42 @@
               </div>
             </div>
 
-            <button class="accordion ">DISCORD RICH PRESENCE</button>
-            <div class="panel">
-              <div class="row p-2">
-                <div class="col-11 font-quarcaL">
-                  Full Rich Presence
-                </div>
-                <div class="col-1">
-                  <label class="tick-container">
-                    <input name="discord" type="radio" checked="checked" value=2>
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-              </div>
-              <div class="row p-2 alt-row">
-                <div class="col-11 font-quarcaL">
-                  No Rank Data or Time Remaining
-                </div>
-                <div class="col-1">
-                  <label class="tick-container">
-                    <input name="discord" type="radio" value=1>
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-              </div>
-              <div class="row p-2">
-                <div class="col-11 font-quarcaL">
-                  Disabled
-                </div>
-                <div class="col-1">
-                  <label class="tick-container">
-                    <input name="discord" type="radio" value=0>
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
+            <!-- <button class="accordion ">DISCORD RICH PRESENCE</button> -->
+            <!-- <div class="panel"> -->
+              <!-- <div class="row p-2"> -->
+                <!-- <div class="col-11 font-quarcaL"> -->
+                  <!-- Full Rich Presence -->
+                <!-- </div> -->
+                <!-- <div class="col-1"> -->
+                  <!-- <label class="tick-container"> -->
+                    <!-- <input name="discord" type="radio" checked="checked" value=2> -->
+                    <!-- <span class="checkmark"></span> -->
+                  <!-- </label> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row p-2 alt-row"> -->
+                <!-- <div class="col-11 font-quarcaL"> -->
+                  <!-- No Rank Data or Time Remaining -->
+                <!-- </div> -->
+                <!-- <div class="col-1"> -->
+                  <!-- <label class="tick-container"> -->
+                    <!-- <input name="discord" type="radio" value=1> -->
+                    <!-- <span class="checkmark"></span> -->
+                  <!-- </label> -->
+                <!-- </div> -->
+              <!-- </div> -->
+              <!-- <div class="row p-2"> -->
+                <!-- <div class="col-11 font-quarcaL"> -->
+                  <!-- Disabled -->
+                <!-- </div> -->
+                <!-- <div class="col-1"> -->
+                  <!-- <label class="tick-container"> -->
+                    <!-- <input name="discord" type="radio" value=0> -->
+                    <!-- <span class="checkmark"></span> -->
+                  <!-- </label> -->
+                <!-- </div> -->
+              <!-- </div> -->
+            <!-- </div> -->
 
           </section>
 
@@ -848,18 +866,20 @@
                 </div>
                 <!-- ./End -->
 
+				
+
                 <!-- BROADCAST GAME EVENTS -->
-                <div class="row p-2">
-                  <div class="col-11 font-quarcaL">
-                    Broadcast Game Events.
-                  </div>
-                  <div class="col-1">
-                    <label class="tick-container">
-                      <input id="broadcast-enabled" type="checkbox">
-                      <span class="checkmark"></span>
-                    </label>
-                  </div>
-                </div>
+                <!-- <div class="row p-2"> -->
+                  <!-- <div class="col-11 font-quarcaL"> -->
+                    <!-- Broadcast Game Events. -->
+                  <!-- </div> -->
+                  <!-- <div class="col-1"> -->
+                    <!-- <label class="tick-container"> -->
+                      <!-- <input id="broadcast-enabled" type="checkbox"> -->
+                      <!-- <span class="checkmark"></span> -->
+                    <!-- </label> -->
+                  <!-- </div> -->
+                <!-- </div> -->
                 <!-- ./End -->
 
 

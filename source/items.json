@@ -6253,8 +6253,121 @@
             "SlotID": 11
         },
         {
-            "Items": [],
-            "Name": "Paint",
+            "Items": [                
+                {
+                    "ItemID": 266,
+                    "Name": "Brushed Metal"
+                },
+                {
+                    "ItemID": 268,
+                    "Name": "Corroded Metal"
+                },
+                {
+                    "ItemID": 270,
+                    "Name": "Glossy"
+                },
+                {
+                    "ItemID": 271,
+                    "Name": "Furry"
+                },
+                {
+                    "ItemID": 272,
+                    "Name": "Carbon Fiber"
+                },
+                {
+                    "ItemID": 273,
+                    "Name": "Matte"
+                },
+                {
+                    "ItemID": 274,
+                    "Name": "Metallic"
+                },
+                {
+                    "ItemID": 275,
+                    "Name": "Metallic Pearl"
+                },
+                {
+                    "ItemID": 276,
+                    "Name": "Pearlescent"
+                },
+                {
+                    "ItemID": 277,
+                    "Name": "Semigloss"
+                },
+                {
+                    "ItemID": 279,
+                    "Name": "Toon Glossy"
+                },
+                {
+                    "ItemID": 280,
+                    "Name": "Toon Wood"
+                },
+                {
+                    "ItemID": 281,
+                    "Name": "Toon Matte"
+                },
+                {
+                    "ItemID": 283,
+                    "Name": "Wood"
+                },
+                {
+                    "ItemID": 541,
+                    "Name": "Camo"
+                },
+                {
+                    "ItemID": 542,
+                    "Name": "Sun-Damaged"
+                },
+                {
+                    "ItemID": 623,
+                    "Name": "Stainless Steel"
+                },
+                {
+                    "ItemID": 1681,
+                    "Name": "Circuit Board"
+                },
+                {
+                    "ItemID": 1688,
+                    "Name": "Moon Rock"
+                },
+                {
+                    "ItemID": 1700,
+                    "Name": "Cookie Dough"
+                },
+                {
+                    "ItemID": 1707,
+                    "Name": "Knitted Yarn"
+                },
+                {
+                    "ItemID": 1710,
+                    "Name": "Burlap"
+                },
+                {
+                    "ItemID": 1712,
+                    "Name": "Zebra"
+                },
+                {
+                    "ItemID": 1978,
+                    "Name": "Glossy Block"
+                },
+                {
+                    "ItemID": 1980,
+                    "Name": "Pearlescent (Matte)"
+                },
+                {
+                    "ItemID": 2066,
+                    "Name": "Metallic (Smooth)"
+                },
+                {
+                    "ItemID": 2067,
+                    "Name": "Metallic Pearl (Smooth)"
+                },
+                {
+                    "ItemID": 2275,
+                    "Name": "Anodized"
+                }
+            ],
+            "Name": "Accent Paint Finish",
             "SlotID": 12
         },
         {
