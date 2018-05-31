@@ -530,9 +530,9 @@ function CopyFile(source, target) {
 
 
   //Keep ball slots the same
-  // $("select[name='ball-select']").on('change', function () {
-    // $("select[name='ball-select']").val(this.value);
-  // })
+  $("select[name='ball-select']").on('change', function () {
+    $("select[name='ball-select']").val(this.value);
+  })
   
 
 
