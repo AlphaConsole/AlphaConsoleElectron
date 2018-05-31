@@ -459,6 +459,14 @@
                 {
                     "ItemID": 2879,
                     "Name": "Popcorn"
+                },
+                {
+                    "ItemID": 2899,
+                    "Name": "Enchanter"
+                },
+                {
+                    "ItemID": 2916,
+                    "Name": "Cirrus"
                 }
             ],
             "Name": "Rocket Boost",
@@ -849,6 +857,14 @@
                 {
                     "ItemID": 2879,
                     "Name": "Popcorn"
+                },
+                {
+                    "ItemID": 2899,
+                    "Name": "Enchanter"
+                },
+                {
+                    "ItemID": 2916,
+                    "Name": "Cirrus"
                 }
             ],
             "Name": "BoostSound",
@@ -985,10 +1001,6 @@
                 {
                     "ItemID": 29,
                     "Name": "Hotshot"
-                },
-                {
-                    "ItemID": 30,
-                    "Name": "Merc"
                 },
                 {
                     "ItemID": 31,
@@ -1141,6 +1153,14 @@
                 {
                     "ItemID": 2666,
                     "Name": "'89 Batmobile"
+                },
+                {
+                    "ItemID": 2853,
+                    "Name": "Twinzer"
+                },
+                {
+                    "ItemID": 3040,
+                    "Name": "Merc"
                 }
             ],
             "Name": "Body",
@@ -2977,6 +2997,10 @@
                     "Name": "Uncaged Cat"
                 },
                 {
+                    "ItemID": 2868,
+                    "Name": "Instinct"
+                },
+                {
                     "ItemID": 2870,
                     "Name": "Pegboard Nerds"
                 },
@@ -3011,6 +3035,46 @@
                 {
                     "ItemID": 2914,
                     "Name": "Protostar"
+                },
+                {
+                    "ItemID": 2930,
+                    "Name": "S. Watercolour"
+                },
+                {
+                    "ItemID": 2990,
+                    "Name": "Bad Computer"
+                },
+                {
+                    "ItemID": 2991,
+                    "Name": "Dion Timmer"
+                },
+                {
+                    "ItemID": 2992,
+                    "Name": "Duumu"
+                },
+                {
+                    "ItemID": 2995,
+                    "Name": "Stephen Walking"
+                },
+                {
+                    "ItemID": 2997,
+                    "Name": "Skyelle"
+                },
+                {
+                    "ItemID": 2998,
+                    "Name": "Sundial"
+                },
+                {
+                    "ItemID": 3029,
+                    "Name": "Inverness"
+                },
+                {
+                    "ItemID": 3030,
+                    "Name": "Soupandreas"
+                },
+                {
+                    "ItemID": 3052,
+                    "Name": "Aiobahn"
                 }
             ],
             "Name": "Antenna",
@@ -3567,6 +3631,10 @@
                     "Name": "Little Dog"
                 },
                 {
+                    "ItemID": 2608,
+                    "Name": "Goldfish"
+                },
+                {
                     "ItemID": 2728,
                     "Name": "GG the Clown"
                 },
@@ -3581,6 +3649,14 @@
                 {
                     "ItemID": 2749,
                     "Name": "Dizzy Birds"
+                },
+                {
+                    "ItemID": 2786,
+                    "Name": "Swim Ring"
+                },
+                {
+                    "ItemID": 2787,
+                    "Name": "Palm Tree"
                 }
             ],
             "Name": "Topper",
@@ -3937,6 +4013,10 @@
                     "Name": "Nipper"
                 },
                 {
+                    "ItemID": 1981,
+                    "Name": "Masato"
+                },
+                {
                     "ItemID": 2022,
                     "Name": "Decennium Pro"
                 },
@@ -4069,12 +4149,28 @@
                     "Name": "The Flash"
                 },
                 {
+                    "ItemID": 2819,
+                    "Name": "Reaper"
+                },
+                {
                     "ItemID": 2827,
                     "Name": "Hypnotik"
                 },
                 {
                     "ItemID": 2896,
                     "Name": "WWE"
+                },
+                {
+                    "ItemID": 2935,
+                    "Name": "Santa Fe"
+                },
+                {
+                    "ItemID": 2971,
+                    "Name": "Centro"
+                },
+                {
+                    "ItemID": 3041,
+                    "Name": "Mothership Pro"
                 }
             ],
             "Name": "Wheels",
@@ -5412,7 +5508,7 @@
                 },
                 {
                     "ItemID": 2021,
-                    "Name": "Breakout Type-S: Smore'd"
+                    "Name": "Breakout Type-S: S'mored"
                 },
                 {
                     "ItemID": 2024,
@@ -5469,6 +5565,10 @@
                 {
                     "ItemID": 2336,
                     "Name": "Breakout: Chainsaw"
+                },
+                {
+                    "ItemID": 2339,
+                    "Name": "Dominus GT: Staredown"
                 },
                 {
                     "ItemID": 2340,
@@ -5535,6 +5635,10 @@
                     "Name": "Centio V17: Machina"
                 },
                 {
+                    "ItemID": 2461,
+                    "Name": "Centio V17: Splashback"
+                },
+                {
                     "ItemID": 2480,
                     "Name": "Endo: Polar Force"
                 },
@@ -5595,6 +5699,10 @@
                     "Name": "Merc: Athena"
                 },
                 {
+                    "ItemID": 2544,
+                    "Name": "Imperator DT5: Windswept"
+                },
+                {
                     "ItemID": 2547,
                     "Name": "Imperator DT5: Mosher"
                 },
@@ -5619,6 +5727,14 @@
                     "Name": "Breakout: Froggy"
                 },
                 {
+                    "ItemID": 2621,
+                    "Name": "Triton: Glyphtrix"
+                },
+                {
+                    "ItemID": 2625,
+                    "Name": "Aftershock: Tiger Tiger"
+                },
+                {
                     "ItemID": 2628,
                     "Name": "Dominus: Fantasmo"
                 },
@@ -5627,12 +5743,24 @@
                     "Name": "Octane: Royal Tyrant"
                 },
                 {
+                    "ItemID": 2649,
+                    "Name": "Masamune: Min-Spec"
+                },
+                {
                     "ItemID": 2657,
                     "Name": "Octane: Dune Racer"
                 },
                 {
+                    "ItemID": 2672,
+                    "Name": "Road Hog: Sundae"
+                },
+                {
                     "ItemID": 2680,
                     "Name": "Breakout: Egged"
+                },
+                {
+                    "ItemID": 2687,
+                    "Name": "Paladin: ShapeRacer"
                 },
                 {
                     "ItemID": 2693,
@@ -5721,6 +5849,38 @@
                 {
                     "ItemID": 2895,
                     "Name": "Samurai: Pegasus"
+                },
+                {
+                    "ItemID": 2942,
+                    "Name": "Twinzer: Motor Monster"
+                },
+                {
+                    "ItemID": 2944,
+                    "Name": "Twinzer: Stripes"
+                },
+                {
+                    "ItemID": 2945,
+                    "Name": "Twinzer: AWD"
+                },
+                {
+                    "ItemID": 2946,
+                    "Name": "Twinzer: Trace Racer"
+                },
+                {
+                    "ItemID": 2947,
+                    "Name": "Twinzer: Radium"
+                },
+                {
+                    "ItemID": 2966,
+                    "Name": "Fire God"
+                },
+                {
+                    "ItemID": 2967,
+                    "Name": "Streamline"
+                },
+                {
+                    "ItemID": 2989,
+                    "Name": "Twinzer: Slimed"
                 }
             ],
             "Name": "Decal",
@@ -6247,13 +6407,25 @@
                 {
                     "ItemID": 2897,
                     "Name": "Crate - Triumph"
+                },
+                {
+                    "ItemID": 3009,
+                    "Name": "Crate - Impact"
+                },
+                {
+                    "ItemID": 3010,
+                    "Name": "Crate - RL Beach Blast"
+                },
+                {
+                    "ItemID": 3011,
+                    "Name": "Crate - RL Beach Blast (Unlocked)"
                 }
             ],
             "Name": "Crates",
             "SlotID": 11
         },
         {
-            "Items": [                
+            "Items": [
                 {
                     "ItemID": 266,
                     "Name": "Brushed Metal"
@@ -6599,6 +6771,10 @@
                 {
                     "ItemID": 2769,
                     "Name": "'89 Batmobile"
+                },
+                {
+                    "ItemID": 2999,
+                    "Name": "Twinzer"
                 }
             ],
             "Name": "Engine Audio",
@@ -6689,6 +6865,22 @@
                 {
                     "ItemID": 2817,
                     "Name": "Atomizer"
+                },
+                {
+                    "ItemID": 2915,
+                    "Name": "Juiced"
+                },
+                {
+                    "ItemID": 3018,
+                    "Name": "Striker"
+                },
+                {
+                    "ItemID": 3019,
+                    "Name": "Striker Pro"
+                },
+                {
+                    "ItemID": 3020,
+                    "Name": "Striker Legend"
                 }
             ],
             "Name": "Goal Explosion",
@@ -6865,12 +7057,20 @@
                     "Name": "Starbase ARC"
                 },
                 {
+                    "ItemID": 2533,
+                    "Name": "Burnout"
+                },
+                {
                     "ItemID": 2539,
                     "Name": "Howler"
                 },
                 {
                     "ItemID": 2552,
                     "Name": "Winning Streak"
+                },
+                {
+                    "ItemID": 2555,
+                    "Name": "Migraine"
                 },
                 {
                     "ItemID": 2557,
@@ -7023,6 +7223,38 @@
                 {
                     "ItemID": 2878,
                     "Name": "WWE WrestleMania 34"
+                },
+                {
+                    "ItemID": 2977,
+                    "Name": "S. Watercolour"
+                },
+                {
+                    "ItemID": 3002,
+                    "Name": "Season 7 - Tier 1"
+                },
+                {
+                    "ItemID": 3003,
+                    "Name": "Season 7 - Tier 6"
+                },
+                {
+                    "ItemID": 3004,
+                    "Name": "Season 7 - Tier 5"
+                },
+                {
+                    "ItemID": 3005,
+                    "Name": "Season 7 - Tier 3"
+                },
+                {
+                    "ItemID": 3006,
+                    "Name": "Season 7 - Tier 7"
+                },
+                {
+                    "ItemID": 3007,
+                    "Name": "Season 7 - Tier 4"
+                },
+                {
+                    "ItemID": 3008,
+                    "Name": "Season 7 - Tier 2"
                 }
             ],
             "Name": "Player Banner",
@@ -7037,6 +7269,21 @@
             "Items": [],
             "Name": "Goal Stinger",
             "SlotID": 18
+        },
+        {
+            "Items": [],
+            "Name": "Player Avatar",
+            "SlotID": 19
+        },
+        {
+            "Items": [],
+            "Name": "Avatar Border",
+            "SlotID": 20
+        },
+        {
+            "Items": [],
+            "Name": "PlayerTitle",
+            "SlotID": 21
         },
         {
             "Items": [],
