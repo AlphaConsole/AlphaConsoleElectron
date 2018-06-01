@@ -1,4 +1,22 @@
- const con = require('electron').remote.getGlobal('console');
+const con = require('electron').remote.getGlobal('console');
+
+var SyncTeams = false;
+
+function ToggleSyncTeams(){
+
+  SyncTeams = !SyncTeams;
+
+  console.log(SyncTeams);
+  if(SyncTeams){
+    $("#button-sync-teams").css("background-color", "");
+    $("#button-sync-teams").css("border-color", "");
+  }else {
+    $("#button-sync-teams").css("background-color", "#f00");
+    $("#button-sync-teams").css("border-color", "#f44");
+  }
+
+}
+
 
 function CopyFile(source, target) {
     var fs = require('fs');
@@ -533,7 +551,37 @@ function CopyFile(source, target) {
   $("select[name='ball-select']").on('change', function () {
     $("select[name='ball-select']").val(this.value);
   })
+
+  $("select[name='color-select']").on('change', function () {
+    if(SyncTeams){
+
+      var selects = $("select[name='color-select']");
+      for(var k = 0; k < selects.length; k++){
+
+        if($(selects[k]).parent().parent().index() == $(this).parent().parent().index()){
+          $(selects[k]).val(this.value);
+        }
+      }
+    }
+  })
   
+
+  $("[class='row teams'] select").on('change', function () {
+    if(SyncTeams){
+
+      var selects =  $("[class='row teams'] select");
+
+      console.log($(this).parent().index());
+
+      for(var k = 0; k < selects.length; k++){
+
+        if($(selects[k]).parent().parent().index() == $(this).parent().parent().index()
+          && $(this).parent().index() == 1 && $(selects[k]).parent().index() == 1){
+          $(selects[k]).val(this.value);
+        }
+      }
+    }
+  })
 
 
   $( document ).ready(function() {
