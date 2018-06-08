@@ -1,6 +1,6 @@
 {
     "antenna-select": "Antenna",
-    "banner-select": "Banner",
+    "banner-select": "Player Banner",
     "body-select": "Body",
     "boost-select": "Rocket Boost",
     "boost-sound-select": "BoostSound",
@@ -19,7 +19,7 @@
     "mb-decal-select":"MBDecal",
     "engine-texture-select": "EngineTexture",
     "Antenna": "antenna-select",
-    "Banner": "banner-select",
+    "Player Banner": "banner-select",
     "Body": "body-select",
     "Rocket Boost": "boost-select",
     "BoostSound": "boost-sound-select",

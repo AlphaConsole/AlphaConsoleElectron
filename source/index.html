@@ -138,7 +138,7 @@
 
             <div class="row teams">
               <div class="col">
-                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;" data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
+                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;" data-toggle="tooltip" data-placement="right" title="Apply changes to both teams">
                   <i class="fas fa-sync"></i>
                 </button>
 
@@ -167,6 +167,21 @@
                             <select class="acc-input" name="color-select" special="body">
                               <option value="-1">Unchanged</option>
                             </select>							
+                          </td>
+                        </tr>
+
+                        <!-- BANNER -->
+                        <tr>
+                          <td class="alt-row">Banner</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="banner-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
                           </td>
                         </tr>
 
@@ -284,7 +299,7 @@
 
 
                         <!-- PAINT FINISH -->
-						<tr hidden>
+						<tr>
 						<td class="alt-row">Primary Paint Finish</td>
 						<td class="alt-row-strong">
 							<select class="acc-input" name="paint-select">
@@ -295,7 +310,7 @@
 						</td>
 						</tr>
                         <!-- ACCENT  PAINT FINISH -->
-						<tr hidden>
+						<tr>
 						<td class="alt-row">Accent Paint Finish</td>
 						<td class="alt-row-strong">
 							<select class="acc-input" name="accent-paint-select">
@@ -307,7 +322,7 @@
 						</tr>
                         <!-- ENGINE AUDIO -->
                         <tr>
-                          <td class="alt-row">Engine</td>
+                          <td class="alt-row">Engine Sound</td>
                           <td class="alt-row-strong">
                             <select class="acc-input" name="engine-select">
                               <option value="-1:-1:-1">Unchanged</option>
@@ -345,19 +360,6 @@
                           </td>
                         </tr>
 
-
-                        <!-- BANNER -->
-                        <tr hidden>
-                          <td class="alt-row">Banner</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="banner-select" disabled style="color:#666">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-
-                          </td>
-                        </tr>
 
 
                         <!-- BALL -->
@@ -402,6 +404,20 @@
                           </td>
                         </tr>
 
+                        <!-- BANNER -->
+                        <tr>
+                          <td class="alt-row">Banner</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="banner-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
 
                         <!-- MAIN BODY DECAL -->
                         <tr>
@@ -516,7 +532,7 @@
 
 
                         <!-- PAINT FINISH -->
-						<tr hidden>
+						<tr>
 						<td class="alt-row">Primary Paint Finish</td>
 						<td class="alt-row-strong">
 							<select class="acc-input" name="paint-select">
@@ -527,7 +543,7 @@
 						</td>
 						</tr>
                         <!-- ACCENT  PAINT FINISH -->
-						<tr hidden>
+						<tr>
 						<td class="alt-row">Accent Paint Finish</td>
 						<td class="alt-row-strong">
 							<select class="acc-input" name="accent-paint-select">
@@ -541,7 +557,7 @@
 
                         <!-- ENGINE AUDIO -->
                         <tr>
-                          <td class="alt-row">Engine</td>
+                          <td class="alt-row">Engine Sound</td>
                           <td class="alt-row-strong">
                             <select class="acc-input" name="engine-select">
                               <option value="-1:-1:-1">Unchanged</option>
@@ -580,18 +596,6 @@
                         </tr>
 
 
-                        <!-- BANNER -->
-                        <tr hidden>
-                          <td class="alt-row">Banner</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="banner-select" disabled style="color:#666">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-
-                          </td>
-                        </tr>
 
                         <!-- BALL -->
                         <tr>

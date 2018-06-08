@@ -80,7 +80,7 @@ section {
   float: left;
   width: 100%;
   position: relative;
-  height: 604px;
+  height: 635px;
   background-image: url("../../img/ball-bg.png");
   background-position-y: -155px;
 }
@@ -145,7 +145,7 @@ section {
   width: 100%;
   position: relative;
   bottom: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .tabssac {
@@ -209,7 +209,7 @@ section {
   z-index: 1;
   /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
+  /* Location of the box */	
   left: 0;
   top: 0;
   width: 100%;
