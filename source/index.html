@@ -134,11 +134,32 @@
               </div>
             </div>
 
-
+            <div class="row">
+              <div class="col">
+                <p class="p-2 mb-0 text-white font-quarcaM">
+                  Preset:
+                </p>
+              </div>
+              <div class="col">
+                <select class="acc-input" id="preset-select">
+                  <option value="0">Default</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <input id="preset-name" class="acc-input font-quarcaL" type="text" value=""/>
+              </div>
+              <div class="col">
+                <button style="color:#fff;" class="font-quarcaL btn btn-acc w-100" onclick="AddNewPreset()">Add Preset</button>
+              </div>
+              <div class="col">
+                <button style="color:#fff;" class="font-quarcaL btn btn-acc w-100" onclick="DeletePreset()">Delete Preset</button>
+              </div>
+            </div>
 
             <div class="row teams">
               <div class="col">
-                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;" data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
+                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                  data-toggle="tooltip" data-placement="right" title="Sync Team Items & Colors">
                   <i class="fas fa-sync"></i>
                 </button>
 
@@ -166,7 +187,7 @@
                           <td class="alt-row">
                             <select class="acc-input" name="color-select" special="body">
                               <option value="-1">Unchanged</option>
-                            </select>							
+                            </select>
                           </td>
                         </tr>
 
@@ -176,7 +197,7 @@
                           <td class="alt-row-strong">
                             <select class="acc-input" name="mb-decal-select">
                               <option value="-1:-1:-1">Unchanged</option>
-                            </select>							
+                            </select>
                           </td>
                           <td class="alt-row">
                           </td>
@@ -284,27 +305,27 @@
 
 
                         <!-- PAINT FINISH -->
-						<tr hidden>
-						<td class="alt-row">Primary Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr hidden>
+                          <td class="alt-row">Primary Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
                         <!-- ACCENT  PAINT FINISH -->
-						<tr hidden>
-						<td class="alt-row">Accent Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="accent-paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr hidden>
+                          <td class="alt-row">Accent Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="accent-paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
                         <!-- ENGINE AUDIO -->
                         <tr>
                           <td class="alt-row">Engine</td>
@@ -516,27 +537,27 @@
 
 
                         <!-- PAINT FINISH -->
-						<tr hidden>
-						<td class="alt-row">Primary Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr hidden>
+                          <td class="alt-row">Primary Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
                         <!-- ACCENT  PAINT FINISH -->
-						<tr hidden>
-						<td class="alt-row">Accent Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="accent-paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr hidden>
+                          <td class="alt-row">Accent Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="accent-paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
 
 
                         <!-- ENGINE AUDIO -->
@@ -802,39 +823,39 @@
 
             <!-- <button class="accordion ">DISCORD RICH PRESENCE</button> -->
             <!-- <div class="panel"> -->
-              <!-- <div class="row p-2"> -->
-                <!-- <div class="col-11 font-quarcaL"> -->
-                  <!-- Full Rich Presence -->
-                <!-- </div> -->
-                <!-- <div class="col-1"> -->
-                  <!-- <label class="tick-container"> -->
-                    <!-- <input name="discord" type="radio" checked="checked" value=2> -->
-                    <!-- <span class="checkmark"></span> -->
-                  <!-- </label> -->
-                <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="row p-2 alt-row"> -->
-                <!-- <div class="col-11 font-quarcaL"> -->
-                  <!-- No Rank Data or Time Remaining -->
-                <!-- </div> -->
-                <!-- <div class="col-1"> -->
-                  <!-- <label class="tick-container"> -->
-                    <!-- <input name="discord" type="radio" value=1> -->
-                    <!-- <span class="checkmark"></span> -->
-                  <!-- </label> -->
-                <!-- </div> -->
-              <!-- </div> -->
-              <!-- <div class="row p-2"> -->
-                <!-- <div class="col-11 font-quarcaL"> -->
-                  <!-- Disabled -->
-                <!-- </div> -->
-                <!-- <div class="col-1"> -->
-                  <!-- <label class="tick-container"> -->
-                    <!-- <input name="discord" type="radio" value=0> -->
-                    <!-- <span class="checkmark"></span> -->
-                  <!-- </label> -->
-                <!-- </div> -->
-              <!-- </div> -->
+            <!-- <div class="row p-2"> -->
+            <!-- <div class="col-11 font-quarcaL"> -->
+            <!-- Full Rich Presence -->
+            <!-- </div> -->
+            <!-- <div class="col-1"> -->
+            <!-- <label class="tick-container"> -->
+            <!-- <input name="discord" type="radio" checked="checked" value=2> -->
+            <!-- <span class="checkmark"></span> -->
+            <!-- </label> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="row p-2 alt-row"> -->
+            <!-- <div class="col-11 font-quarcaL"> -->
+            <!-- No Rank Data or Time Remaining -->
+            <!-- </div> -->
+            <!-- <div class="col-1"> -->
+            <!-- <label class="tick-container"> -->
+            <!-- <input name="discord" type="radio" value=1> -->
+            <!-- <span class="checkmark"></span> -->
+            <!-- </label> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <div class="row p-2"> -->
+            <!-- <div class="col-11 font-quarcaL"> -->
+            <!-- Disabled -->
+            <!-- </div> -->
+            <!-- <div class="col-1"> -->
+            <!-- <label class="tick-container"> -->
+            <!-- <input name="discord" type="radio" value=0> -->
+            <!-- <span class="checkmark"></span> -->
+            <!-- </label> -->
+            <!-- </div> -->
+            <!-- </div> -->
             <!-- </div> -->
 
           </section>
@@ -866,36 +887,36 @@
                 </div>
                 <!-- ./End -->
 
-				
+
 
                 <!-- BROADCAST GAME EVENTS -->
                 <!-- <div class="row p-2"> -->
-                  <!-- <div class="col-11 font-quarcaL"> -->
-                    <!-- Broadcast Game Events. -->
-                  <!-- </div> -->
-                  <!-- <div class="col-1"> -->
-                    <!-- <label class="tick-container"> -->
-                      <!-- <input id="broadcast-enabled" type="checkbox"> -->
-                      <!-- <span class="checkmark"></span> -->
-                    <!-- </label> -->
-                  <!-- </div> -->
+                <!-- <div class="col-11 font-quarcaL"> -->
+                <!-- Broadcast Game Events. -->
+                <!-- </div> -->
+                <!-- <div class="col-1"> -->
+                <!-- <label class="tick-container"> -->
+                <!-- <input id="broadcast-enabled" type="checkbox"> -->
+                <!-- <span class="checkmark"></span> -->
+                <!-- </label> -->
+                <!-- </div> -->
                 <!-- </div> -->
                 <!-- ./End -->
 
 
                 <!-- DOWNLOAD TEXTURES -->
                 <!-- <div class="row p-2"> -->
-                  <!-- <div class="col-5"> -->
-                    <!-- <button class="font-quarcaL btn btn-success w-100" onclick="ShowTexturesRepo()">DOWNLOAD TEXTURES</button> -->
-                  <!-- </div> -->
+                <!-- <div class="col-5"> -->
+                <!-- <button class="font-quarcaL btn btn-success w-100" onclick="ShowTexturesRepo()">DOWNLOAD TEXTURES</button> -->
                 <!-- </div> -->
-                <!-- ./End -->               
-                
+                <!-- </div> -->
+                <!-- ./End -->
+
                 <!-- REFRESH -->
                 <!-- <div class="row p-2"> -->
-                  <!-- <div class="col-5"> -->
-                    <!-- <button class="font-quarcaL btn btn-success w-100" onClick="window.location.reload()">REFRESH</button> -->
-                  <!-- </div> -->
+                <!-- <div class="col-5"> -->
+                <!-- <button class="font-quarcaL btn btn-success w-100" onClick="window.location.reload()">REFRESH</button> -->
+                <!-- </div> -->
                 <!-- </div> -->
                 <!-- ./End -->
 
@@ -999,7 +1020,7 @@
         </div>
         <div class="col-3 pr-0">
           <!-- <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="font-quarcaL btn btn-acc">DISCORD</a> -->
-		   <button style="color:#fff; background-color:#7b6d26;" class="font-quarcaL btn w-100" onclick="ShowTexturesRepo()">GET TEXTURES</a>
+          <button style="color:#fff; background-color:#7b6d26;" class="font-quarcaL btn w-100" onclick="ShowTexturesRepo()">GET TEXTURES</a>
         </div>
         <div class="col-3 pr-0">
           <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="font-quarcaL btn btn-acc w-100">DONATE</a>
@@ -1114,50 +1135,50 @@
     })
   </script>
   <script>
-    //DONT TOUCH
-    //this must stay in this file. 
+      //DONT TOUCH
+      //this must stay in this file. 
 
-    (function () {
-      // Retrieve remote BrowserWindow
-      const {
-        BrowserWindow
-      } = require('electron').remote
+      (function () {
+        // Retrieve remote BrowserWindow
+        const {
+          BrowserWindow
+        } = require('electron').remote
 
-      function init() {
-        // Minimize task
-        document.getElementById("min-btn").addEventListener("click", (e) => {
-          var window = BrowserWindow.getFocusedWindow();
-          window.minimize();
-        });
+        function init() {
+          // Minimize task
+          document.getElementById("min-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.minimize();
+          });
 
-        // Maximize window
-        document.getElementById("max-btn").addEventListener("click", (e) => {
-          var window = BrowserWindow.getFocusedWindow();
-          if (window.isMaximized()) {
-            window.unmaximize();
-          } else {
-            window.maximize();
+          // Maximize window
+          document.getElementById("max-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            if (window.isMaximized()) {
+              window.unmaximize();
+            } else {
+              window.maximize();
+            }
+          });
+
+          // Close app
+          document.getElementById("close-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.close();
+          });
+
+          document.getElementById("detectInstall").addEventListener("click", (e) => {
+
+          });
+        };
+
+        document.onreadystatechange = () => {
+          if (document.readyState == "complete") {
+            init();
           }
-        });
+        };
 
-        // Close app
-        document.getElementById("close-btn").addEventListener("click", (e) => {
-          var window = BrowserWindow.getFocusedWindow();
-          window.close();
-        });
-
-        document.getElementById("detectInstall").addEventListener("click", (e) => {
-
-        });
-      };
-
-      document.onreadystatechange = () => {
-        if (document.readyState == "complete") {
-          init();
-        }
-      };
-
-    })();
+      })();
   </script>
   <script src="./assets/js/backend.js"></script>
   <script src="./assets/js/UI.js"></script>
