@@ -19,9 +19,9 @@
 		"1": {
 			"SlotName": "Decal",
 			"Blue": {
-				"ItemID": 306,
-				"PackageID": 11,
-				"PackageSubID": 15,
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
@@ -34,9 +34,9 @@
 		"2": {
 			"SlotName": "Wheels",
 			"Blue": {
-				"ItemID": 820,
-				"PackageID": 13,
-				"PackageSubID": 1,
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
@@ -139,7 +139,7 @@
 		"13": {
 			"SlotName": "Engine Audio",
 			"Blue": {
-				"ItemID": 1805,
+				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
 				"Color": -1
@@ -154,7 +154,7 @@
 		"14": {
 			"SlotName": "Trail",
 			"Blue": {
-				"ItemID": 2704,
+				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
 				"Color": -1
@@ -169,7 +169,7 @@
 		"15": {
 			"SlotName": "Goal Explosion",
 			"Blue": {
-				"ItemID": 2791,
+				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
 				"Color": -1
@@ -182,7 +182,19 @@
 			}
 		},
 		"16": {
-			"SlotName": "Player Banner"
+			"SlotName": "Player Banner",
+			"Blue": {
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
+				"Color": -1
+			},
+			"Orange": {
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
+				"Color": -1
+			}
 		},
 		"17": {
 			"SlotName": "GarageComplexRow"
@@ -218,14 +230,14 @@
 			"SlotName": "Ball",
 			"Blue": {
 				"ItemID": -1,
-				"PackageID": 7,
-				"PackageSubID": 5,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
 				"ItemID": -1,
-				"PackageID": 7,
-				"PackageSubID": 5,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			}
 		},
@@ -233,8 +245,8 @@
 			"SlotName": "MBDecal",
 			"Blue": {
 				"ItemID": -1,
-				"PackageID": 18,
-				"PackageSubID": 0,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
@@ -248,8 +260,8 @@
 			"SlotName": "EngineTexture",
 			"Blue": {
 				"ItemID": -1,
-				"PackageID": 17,
-				"PackageSubID": 1,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
@@ -281,269 +293,6 @@
 				"1": {
 					"SlotName": "Decal",
 					"Blue": {
-						"ItemID": 306,
-						"PackageID": 11,
-						"PackageSubID": 15,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"2": {
-					"SlotName": "Wheels",
-					"Blue": {
-						"ItemID": 820,
-						"PackageID": 13,
-						"PackageSubID": 1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"3": {
-					"SlotName": "Rocket Boost",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"4": {
-					"SlotName": "Antenna",
-					"Blue": {
-						"ItemID": 286,
-						"PackageID": 6,
-						"PackageSubID": 0,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"5": {
-					"SlotName": "Topper",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"6": {
-					"SlotName": "Bumper"
-				},
-				"7": {
-					"SlotName": "Paint Finish",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"8": {
-					"SlotName": "Bot"
-				},
-				"9": {
-					"SlotName": "Logo"
-				},
-				"10": {
-					"SlotName": "UnderGlow"
-				},
-				"11": {
-					"SlotName": "Crates"
-				},
-				"12": {
-					"SlotName": "Accent Paint Finish",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"13": {
-					"SlotName": "Engine Audio",
-					"Blue": {
-						"ItemID": 1805,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"14": {
-					"SlotName": "Trail",
-					"Blue": {
-						"ItemID": 2704,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"15": {
-					"SlotName": "Goal Explosion",
-					"Blue": {
-						"ItemID": 2791,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"16": {
-					"SlotName": "Player Banner"
-				},
-				"17": {
-					"SlotName": "GarageComplexRow"
-				},
-				"18": {
-					"SlotName": "Goal Stinger"
-				},
-				"19": {
-					"SlotName": "Player Avatar"
-				},
-				"20": {
-					"SlotName": "Avatar Border"
-				},
-				"21": {
-					"SlotName": "PlayerTitle"
-				},
-				"-1": {
-					"SlotName": "BoostSound",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"-2": {
-					"SlotName": "Ball",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": 7,
-						"PackageSubID": 5,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": 7,
-						"PackageSubID": 5,
-						"Color": -1
-					}
-				},
-				"-3": {
-					"SlotName": "MBDecal",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": 18,
-						"PackageSubID": 0,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"-4": {
-					"SlotName": "EngineTexture",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": 17,
-						"PackageSubID": 1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				}
-			},
-			"Name": ""
-		},
-		"35584": {
-			"Items": {
-				"0": {
-					"SlotName": "Body",
-					"Blue": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					},
-					"Orange": {
-						"ItemID": -1,
-						"PackageID": -1,
-						"PackageSubID": -1,
-						"Color": -1
-					}
-				},
-				"1": {
-					"SlotName": "Decal",
-					"Blue": {
 						"ItemID": -1,
 						"PackageID": -1,
 						"PackageSubID": -1,
@@ -707,7 +456,19 @@
 					}
 				},
 				"16": {
-					"SlotName": "Player Banner"
+					"SlotName": "Player Banner",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1
+					}
 				},
 				"17": {
 					"SlotName": "GarageComplexRow"
@@ -743,14 +504,14 @@
 					"SlotName": "Ball",
 					"Blue": {
 						"ItemID": -1,
-						"PackageID": 7,
-						"PackageSubID": 5,
+						"PackageID": -1,
+						"PackageSubID": -1,
 						"Color": -1
 					},
 					"Orange": {
 						"ItemID": -1,
-						"PackageID": 7,
-						"PackageSubID": 5,
+						"PackageID": -1,
+						"PackageSubID": -1,
 						"Color": -1
 					}
 				},
@@ -785,23 +546,37 @@
 					}
 				}
 			},
-			"Name": "pr"
+			"CustomColors": {
+				"Blue": {
+					"PrimaryColor": "#000000",
+					"AccentColor": "#000000",
+					"PrimaryIntensity": 1,
+					"AccentIntensity": 1
+				},
+				"Orange": {
+					"PrimaryColor": "#000000",
+					"AccentColor": "#000000",
+					"PrimaryIntensity": 1,
+					"AccentIntensity": 1
+				}
+			},
+			"Name": "Default"
 		}
 	},
 	"CustomColors": {
 		"Blue": {
+			"Enabled": false,
 			"PrimaryColor": "#000000",
 			"AccentColor": "#000000",
 			"PrimaryIntensity": 1,
-			"AccentIntensity": 1,
-			"Enabled": false
+			"AccentIntensity": 1
 		},
 		"Orange": {
+			"Enabled": false,
 			"PrimaryColor": "#000000",
 			"AccentColor": "#000000",
 			"PrimaryIntensity": 1,
-			"AccentIntensity": 1,
-			"Enabled": false
+			"AccentIntensity": 1
 		},
 		"ColorAllCars": false
 	},
@@ -823,7 +598,8 @@
 		"Enabled": true,
 		"MinimizeToTray": true,
 		"RunOnStartup": true,
-		"InstallLocation": ""
+		"InstallLocation": "",
+		"SyncTeams": false
 	},
 	"ACPath": "C:\\Users\\SamSSD\\Documents\\GitHub\\AlphaConsoleElectron"
 }

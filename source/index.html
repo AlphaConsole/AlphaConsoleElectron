@@ -134,31 +134,36 @@
               </div>
             </div>
 
+
+
+            <!-- PRESETS -->
             <div class="row">
-              <div class="col">
-                <p class="p-2 mb-0 text-white font-quarcaM">
+              <div style="width:10% margin-left:10px; padding-left: 18px">
+                <p class="p-2 mb-0 text-white font-quarcaM" style="padding-left: 10px" >
                   Preset:
                 </p>
               </div>
-              <div class="col">
+              <div style="width:24%">
                 <select class="acc-input" id="preset-select">
                   <option value="0">Default</option>
                 </select>
               </div>
-              <div class="col-4">
-                <input id="preset-name" class="acc-input font-quarcaL" type="text" value=""/>
+              <div style="width:24%">
+                <input id="preset-name" class="acc-input font-quarcaL" type="text" value="" />
               </div>
-              <div class="col">
-                <button style="color:#fff;" class="font-quarcaL btn btn-acc w-100" onclick="AddNewPreset()">Add Preset</button>
+              <div style="width:18%">
+                <button style="color:#fff; padding:4px" class="font-quarcaL btn btn-acc w-100" onclick="AddNewPreset()">Add Preset</button>
               </div>
-              <div class="col">
-                <button style="color:#fff;" class="font-quarcaL btn btn-acc w-100" onclick="DeletePreset()">Delete Preset</button>
+              <div style="width:18%">
+                <button style="color:#fff; padding: 4px; margin-left: 5px" class="font-quarcaL btn btn-acc w-100" onclick="DeletePreset()">Delete Preset</button>
               </div>
             </div>
+            <!-- END PRESETS -->
 
             <div class="row teams">
               <div class="col">
-                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;" data-toggle="tooltip" data-placement="right" title="Apply changes to both teams">
+                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                  data-toggle="tooltip" data-placement="right" title="Apply changes to both teams">
                   <i class="fas fa-sync"></i>
                 </button>
 
@@ -177,6 +182,30 @@
                         </tr>
                       </thead>
                       <tbody team="Blue">
+
+
+                        <!-- COLORS -->
+                        <tr>
+                          <td class="alt-row">Colors</td>
+                          <td class="alt-row-strong">
+                            <input id="primary-color-blue" type="color" style="height:36px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row">
+                            <input id="accent-color-blue" type="color" style="height:36px; padding:0px;" class="acc-input">
+                          </td>
+                        </tr>
+
+                        <!-- COLOR INTENSITY -->
+                        <tr>
+                          <td class="alt-row">Color intensity</td>
+                          <td class="alt-row-strong">
+                            <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+                          </td>
+                          <td class="alt-row">
+                            <input id="accent-intensity-blue" class="acc-input" type="number" value="1.00" />
+                          </td>
+                        </tr>
+
                         <!-- BODY -->
                         <tr>
                           <td class="alt-row">Body</td>
@@ -319,27 +348,27 @@
 
 
                         <!-- PAINT FINISH -->
-						<tr>
-						<td class="alt-row">Primary Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr>
+                          <td class="alt-row">Primary Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
                         <!-- ACCENT  PAINT FINISH -->
-						<tr>
-						<td class="alt-row">Accent Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="accent-paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr>
+                          <td class="alt-row">Accent Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="accent-paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
 
                         <!-- ENGINE AUDIO -->
                         <tr>
@@ -395,7 +424,6 @@
                           </td>
                         </tr>
 
-
                       </tbody>
                     </table>
                   </div>
@@ -412,6 +440,31 @@
                         </tr>
                       </thead>
                       <tbody team="Orange">
+
+
+                        <!-- COLORS -->
+                        <tr>
+                          <td class="alt-row">Colors</td>
+                          <td class="alt-row-strong">
+                            <input id="primary-color-orange" type="color" style="height:36px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row">
+                            <input id="accent-color-orange" type="color" style="height:36px; padding:0px;" class="acc-input">
+                          </td>
+                        </tr>
+
+                        <!-- COLOR INTENSITY -->
+                        <tr>
+                          <td class="alt-row">Color intensity</td>
+                          <td class="alt-row-strong">
+                            <input id="primary-intensity-orange" class="acc-input" type="number" value="1.00" />
+                          </td>
+                          <td class="alt-row">
+                            <input id="accent-intensity-orange" class="acc-input" type="number" value="1.00" />
+                          </td>
+                        </tr>
+
+
                         <!-- BODY -->
                         <tr>
                           <td class="alt-row">Body</td>
@@ -553,27 +606,27 @@
 
 
                         <!-- PAINT FINISH -->
-						<tr>
-						<td class="alt-row">Primary Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr>
+                          <td class="alt-row">Primary Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
                         <!-- ACCENT  PAINT FINISH -->
-						<tr>
-						<td class="alt-row">Accent Paint Finish</td>
-						<td class="alt-row-strong">
-							<select class="acc-input" name="accent-paint-select">
-							<option value="-1:-1:-1">Unchanged</option>
-							</select>
-						</td>
-						<td class="alt-row">
-						</td>
-						</tr>
+                        <tr>
+                          <td class="alt-row">Accent Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="accent-paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
 
 
 
@@ -674,32 +727,7 @@
                   </label>
                 </div>
               </div>
-              <div class="row alt-row p-2">
-                <div class="col-6 font-quarcaL">
-                  Primary
-                </div>
-                <div class="col-6 font-quarcaL">
-                  Accent
-                </div>
-              </div>
-              <div class="row alt-row p-2">
 
-                <div class="col-6 font-quarcaL">
-                  <input id="primary-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                </div>
-                <div class="col-6 font-quarcaL">
-                  <input id="accent-color-blue" type="color" style="height:40px; padding:2px;" class="acc-input">
-                </div>
-              </div>
-              <div class="row alt-row p-2">
-
-                <div class="col-6 font-quarcaL">
-                  <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                </div>
-                <div class="col-6 font-quarcaL">
-                  <input id="accent-intensity-blue" class="acc-input" type="number" value="1.00" />
-                </div>
-              </div>
 
               <div class="row p-2">
                 <div class="col-11 font-quarcaL o-team">
@@ -712,34 +740,6 @@
                   </label>
                 </div>
               </div>
-              <div class="row alt-row p-2">
-                <div class="col-6 font-quarcaL">
-                  Primary
-                </div>
-                <div class="col-6 font-quarcaL">
-                  Accent
-                </div>
-              </div>
-              <div class="row alt-row p-2">
-
-                <div class="col-6 font-quarcaL">
-                  <input id="primary-color-orange" type="color" style="height:40px; padding:2px;" class="acc-input">
-                </div>
-                <div class="col-6 font-quarcaL">
-                  <input id="accent-color-orange" type="color" style="height:40px; padding:2px;" class="acc-input">
-                </div>
-              </div>
-              <div class="row alt-row p-2">
-
-                <div class="col-6 font-quarcaL">
-                  <input id="primary-intensity-orange" class="acc-input" type="number" value="1.00" />
-                </div>
-                <div class="col-6 font-quarcaL">
-                  <input id="accent-intensity-orange" class="acc-input" type="number" value="1.00" />
-                </div>
-              </div>
-
-
 
             </div>
 

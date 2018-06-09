@@ -158,6 +158,14 @@ function PlaceFiles() {
   }
 }
 
+
+function OpenColorPicker(button) {
+
+
+}
+
+
+
 function LoadConfiguration() {
 
   var Config = JSON.parse(LoadFile(GetBasePath() + "/config.json"));
@@ -165,8 +173,9 @@ function LoadConfiguration() {
   GlobalACConfig = Config;
 
   for (var preset in GlobalACConfig.Presets) {
-    if(preset != 0)
-    AddPreset(preset, GlobalACConfig.Presets[preset].Name);
+    if (preset != 0) {
+      AddPreset(preset, GlobalACConfig.Presets[preset].Name);
+    }
   }
 
   LoadPreset(Config.Preset);
@@ -174,14 +183,7 @@ function LoadConfiguration() {
   $("#preset-select").val(Config.Preset);
 
   //Custom color options
-  $("#primary-color-blue").val(Config.CustomColors.Blue.PrimaryColor);
-  $("#accent-color-blue").val(Config.CustomColors.Blue.AccentColor);
-  $("#primary-color-orange").val(Config.CustomColors.Orange.PrimaryColor);
-  $("#accent-color-orange").val(Config.CustomColors.Orange.AccentColor);
-  $("#primary-intensity-blue").val(Config.CustomColors.Blue.PrimaryIntensity);
-  $("#accent-intensity-blue").val(Config.CustomColors.Blue.AccentIntensity);
-  $("#primary-intensity-orange").val(Config.CustomColors.Orange.PrimaryIntensity);
-  $("#accent-intensity-orange").val(Config.CustomColors.Orange.AccentIntensity);
+
   $("#custom-color-enabled-blue").prop('checked', Config.CustomColors.Blue.Enabled);
   $("#custom-color-enabled-orange").prop('checked', Config.CustomColors.Orange.Enabled);
   $("#color-all-cars").prop("checked", Config.CustomColors.ColorAllCars);
@@ -206,23 +208,27 @@ function LoadConfiguration() {
   $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
   $("#install-location").val(Config.GeneralOptions.InstallLocation);
 
+  if (Config.GeneralOptions.SyncTeams) {
+    ToggleSyncTeams();
+  }
+
 }
 
-function AddPreset(ID, Name){
-  
+function AddPreset(ID, Name) {
+
   var newOp = $('<option>');
   newOp.attr('value', ID);
   newOp.text(Name);
-  
+
   $("#preset-select").append(newOp);
 
 }
 
-function AddNewPreset(){
+function AddNewPreset() {
 
   SavePreset($("#preset-select").val());
 
-  var id = Math.floor( Math.random() * 100000); //lazy
+  var id = Math.floor(Math.random() * 100000); //lazy
   AddPreset(id, "New preset");
 
   $("#preset-name").val("New preset");
@@ -232,9 +238,9 @@ function AddNewPreset(){
 }
 
 
-function DeletePreset(){
+function DeletePreset() {
 
-  if($("#preset-select").val() == 0){
+  if ($("#preset-select").val() == 0) {
     return;
   }
 
@@ -297,14 +303,34 @@ function SavePreset(PresetID) {
     }
   }
 
-  if(GlobalACConfig.Presets === undefined){
+  //custom colors in presets
+  var CustomColors = {};
+  CustomColors.Blue = {};
+  CustomColors.Orange = {};
+  CustomColors.Blue.PrimaryColor = $("#primary-color-blue").val();
+  CustomColors.Blue.AccentColor = $("#accent-color-blue").val();
+  CustomColors.Orange.PrimaryColor = $("#primary-color-orange").val();
+  CustomColors.Orange.AccentColor = $("#accent-color-orange").val();
+  CustomColors.Blue.PrimaryIntensity = parseFloat($("#primary-intensity-blue").val());
+  CustomColors.Blue.AccentIntensity = parseFloat($("#accent-intensity-blue").val());
+  CustomColors.Orange.PrimaryIntensity = parseFloat($("#primary-intensity-orange").val());
+  CustomColors.Orange.AccentIntensity = parseFloat($("#accent-intensity-orange").val());
+
+
+  if (GlobalACConfig.Presets === undefined) {
     GlobalACConfig.Presets = {};
   }
 
   GlobalACConfig.Presets[PresetID] = {};
   GlobalACConfig.Presets[PresetID].Items = Items;
 
-  GlobalACConfig.Presets[PresetID].Name = $("#preset-name").val();
+  GlobalACConfig.Presets[PresetID].CustomColors = CustomColors;
+
+  if (PresetID == 0) {
+    GlobalACConfig.Presets[PresetID].Name = "Default";
+  } else {
+    GlobalACConfig.Presets[PresetID].Name = $("#preset-name").val();
+  }
 
 }
 
@@ -312,7 +338,11 @@ function LoadPreset(ID) {
 
   $("#preset-name").val(GlobalACConfig.Presets[ID].Name);
 
-  console.log(GlobalACConfig.Presets[ID]);
+  if (ID == 0) {
+    $("#preset-name").prop('readonly', true);
+  } else {
+    $("#preset-name").prop('readonly', false);
+  }
 
   var Products = LoadItems();
 
@@ -342,6 +372,19 @@ function LoadPreset(ID) {
     }
   }
 
+
+  //custom color options
+  $("#primary-color-blue").val(GlobalACConfig.Presets[ID].CustomColors.Blue.PrimaryColor);
+  $("#accent-color-blue").val(GlobalACConfig.Presets[ID].CustomColors.Blue.AccentColor);
+  $("#primary-color-orange").val(GlobalACConfig.Presets[ID].CustomColors.Orange.PrimaryColor);
+  $("#accent-color-orange").val(GlobalACConfig.Presets[ID].CustomColors.Orange.AccentColor);
+  $("#primary-intensity-blue").val(GlobalACConfig.Presets[ID].CustomColors.Blue.PrimaryIntensity);
+  $("#accent-intensity-blue").val(GlobalACConfig.Presets[ID].CustomColors.Blue.AccentIntensity);
+  $("#primary-intensity-orange").val(GlobalACConfig.Presets[ID].CustomColors.Orange.PrimaryIntensity);
+  $("#accent-intensity-orange").val(GlobalACConfig.Presets[ID].CustomColors.Orange.AccentIntensity);
+
+
+
 }
 
 
@@ -359,6 +402,11 @@ function GetConfigurationString() {
   var CustomColors = {};
   CustomColors.Blue = {};
   CustomColors.Orange = {};
+
+  CustomColors.Blue.Enabled = $("#custom-color-enabled-blue").prop('checked');
+  CustomColors.Orange.Enabled = $("#custom-color-enabled-orange").prop('checked');
+  CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
+
   CustomColors.Blue.PrimaryColor = $("#primary-color-blue").val();
   CustomColors.Blue.AccentColor = $("#accent-color-blue").val();
   CustomColors.Orange.PrimaryColor = $("#primary-color-orange").val();
@@ -367,9 +415,7 @@ function GetConfigurationString() {
   CustomColors.Blue.AccentIntensity = parseFloat($("#accent-intensity-blue").val());
   CustomColors.Orange.PrimaryIntensity = parseFloat($("#primary-intensity-orange").val());
   CustomColors.Orange.AccentIntensity = parseFloat($("#accent-intensity-orange").val());
-  CustomColors.Blue.Enabled = $("#custom-color-enabled-blue").prop('checked');
-  CustomColors.Orange.Enabled = $("#custom-color-enabled-orange").prop('checked');
-  CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
+
   Config.CustomColors = CustomColors;
 
 
@@ -402,6 +448,7 @@ function GetConfigurationString() {
   GeneralOptions.RunOnStartup = $("#run-on-startup").prop('checked');
   GeneralOptions.InstallLocation = $("#install-location").val();
   GeneralOptions.EventBroadcast = $("#broadcast-enabled").prop('checked');
+  GeneralOptions.SyncTeams = SyncTeams;
   Config.GeneralOptions = GeneralOptions;
 
 
@@ -656,30 +703,26 @@ $("[class='row teams'] select").on('change', function () {
 });
 
 
-    var previousPresetID;
+var previousPresetID;
 
-    $("#preset-select").focus(function () {
-      previousPresetID = this.value;
-    });
-    
-    $("#preset-select").change(function () {
-      
-      SavePreset(previousPresetID);
-      LoadPreset(this.value);
+$("#preset-select").focus(function () {
+  previousPresetID = this.value;
+});
 
-      if(this.value == 0){
-        $("#preset-name").prop('readonly', true);
-      } else {
-        $("#preset-name").prop('readonly', false);
-      }
+$("#preset-select").change(function () {
 
-      previousPresetID = this.value;
-    });
+  SavePreset(previousPresetID);
+  LoadPreset(this.value);
+
+  SaveConfiguration();
+
+  previousPresetID = this.value;
+});
 
 
-    $("#preset-name").on("input", function(){
-      $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
-    });
+$("#preset-name").on("input", function () {
+  $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
+});
 
 $(document).ready(function () {
   $(".teams .acc-input").after("<span class='reset-input'> ✗</span>");
