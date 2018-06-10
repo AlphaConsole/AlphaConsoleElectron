@@ -674,6 +674,7 @@ $("[class='row teams'] select").on('change', function () {
       }
 
       previousPresetID = this.value;
+      SaveConfiguration();
     });
 
 
