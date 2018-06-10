@@ -38,10 +38,12 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 [Files]
 Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "{#SourceFiles}\resources\app\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
-Source: "{#SourceFiles}\resources\app\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion
+Source: "{#SourceFiles}\resources\app\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion          
 
-;Source: "C:\Users\Barbosicks\Documents\Visual Studio 2017\Projects\AlphaConsoleElectron\dist\win-ia32-unpacked\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+
+[InstallDelete]
+Type: filesandordirs; Name: "{app}\resources\app\textures"
 
 [Icons]
 Name: "{commondesktop}\{#MyAppName} Beta"; Filename: "{app}\{#MyAppExeName}" 
@@ -58,6 +60,17 @@ Type: files; Name: "{app}\..\discord-rpc.dll"
 Type: filesandordirs; Name: "{app}\resources\app\textures"
 Type: dirifempty; Name: "{app}"
 
+
+[Code]
+function InitializeSetup(): Boolean;
+begin
+  Result := True;
+  if MsgBox('This setup will delete all your current custom textures on the AlphaConsole folder.' + #13#10 + #13#10 +
+    'Are you sure you want to continue?', mbConfirmation, MB_YESNO) = IDNO then
+  begin
+      Result := False;
+  end;   
+end;
 
 [Code]
 var

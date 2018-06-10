@@ -73,14 +73,14 @@ section {
   margin-left: -1px;
   overflow-x: hidden;
   display: none;
-  border-top: 5px solid #454545;
+  border-top: 5px solid #414141;
   border-left: 1px solid #616161;
   border-right: 1px solid #616161;
   border-bottom: 1px solid #616161;
   float: left;
   width: 100%;
   position: relative;
-  height: 635px;
+  height: 645px;
   background-image: url("../../img/ball-bg.png");
   background-position-y: -155px;
 }
@@ -624,5 +624,31 @@ input:checked + label {
   background: #1d1d1d;
   height: 25px;
 }
+.color-table nth-child(odd) {
+	width: 18%;
+}
+.color-table nth-child(even) {
+	width: 27%;
+}
+.color-table td:last-child {
+	width: 10%;
+}
+.color-table tbody tr td:last-child {
+	padding-left: 27px;
+}
+.color-table .acc-input {
+	width: 70px;
+	display: inline-block;
+}
+.color-table {
+	border-bottom: solid 5px #616161;
+}
+.teams .item-table .alt-row:first-child {
+	width: 150px;
+}
+.teams table thead {
+	font-weight: bold;
+}
+
 
 /*# sourceMappingURL=alphaconsole.css.map */

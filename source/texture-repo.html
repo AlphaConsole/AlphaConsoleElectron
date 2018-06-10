@@ -332,7 +332,7 @@
       ensureDirectoryExistence(dirname);
       fs.mkdirSync(dirname);
     }
-
+	const baseurl ='https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/dev/textures/';
 	//TODO: Make sure package is downloaded before allowing closing the window.
 	//TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
     function DownloadPackage() {
@@ -345,7 +345,7 @@
       var index = SelectedPackage.attr("details-index");
 	  const con = require('electron').remote.getGlobal('console');
 	  const { ipcRenderer } = require('electron');
-      request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json', { json: true }, (err, res, body) => {
+      request(baseurl + Details[index].folder + '/package.json', { json: true }, (err, res, body) => {
         if (err) {           
 			return console.log(err); 
         }
@@ -354,7 +354,7 @@
 		var cur = 0;
 		
         var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json';
-        var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/package.json';
+        var url = baseurl + Details[index].folder + '/package.json';
 
         ensureDirectoryExistence(savePath);
         request(url).on('response', function(response) {
@@ -375,7 +375,7 @@
             for (let image of item.parameters) {
 
               var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
-              var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/' + image.image;
+              var url = baseurl + Details[index].folder + '/' + image.image;
 
               ensureDirectoryExistence(savePath);
 			  request(url).on('response', function(response) {
@@ -395,7 +395,7 @@
           if (item.textures != undefined)
             for (let image of item.textures) {
               var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
-              var url = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/' + Details[index].folder + '/' + image.image;
+              var url = baseurl + Details[index].folder + '/' + image.image;
 
               ensureDirectoryExistence(savePath);
               request(url).on('response', function(response) {
@@ -422,7 +422,7 @@
 
     function RequestPackages() {
         var request = require("request");
-      request('https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/packages.json', { json: true }, (err, res, body) => {
+		request(baseurl + 'packages.json?' + Math.random(), { json: true }, (err, res, body) => {
         if (err) { return console.log(err); }
 
         var i = 0;
@@ -432,7 +432,7 @@
 
           var newPack = $('<div>');
           newPack.addClass("square");
-          newPack.css("background-image", "url(" + "https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/master/textures/" + item.folder + "/preview.png" + ")");
+          newPack.css("background-image", "url(" + baseurl + item.folder + "/preview.png" + ")");
           newPack.attr("details-row", Math.floor(i / 3));
           newPack.attr("details-index", i);
 		  var j = i;

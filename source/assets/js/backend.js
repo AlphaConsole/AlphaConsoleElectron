@@ -221,7 +221,7 @@ function AddPreset(ID, Name) {
   newOp.text(Name);
 
   $("#preset-select").append(newOp);
-
+  
 }
 
 function AddNewPreset() {
@@ -230,7 +230,7 @@ function AddNewPreset() {
 
   var id = Math.floor(Math.random() * 100000); //lazy
   AddPreset(id, "New preset");
-
+  $("#preset-name").prop('readonly', false);
   $("#preset-name").val("New preset");
   $("#preset-select").val(id);
   SavePreset(id);
@@ -723,7 +723,7 @@ $("#preset-name").on("input", function () {
 });
 
 $(document).ready(function () {
-  $(".teams .acc-input").after("<span class='reset-input'> ✗</span>");
+  $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
   $('.reset-input').on('click', function () {
     $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
   })

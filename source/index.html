@@ -112,7 +112,7 @@
         <main class="">
           <!-- TAB1 -->
           <input id="tab1" type="radio" name="tabs" checked>
-          <label for="tab1">ITEMS</label>
+          <label for="tab1">PRESETS</label>
 
           <!-- TAB2 -->
           <input id="tab2" type="radio" name="tabs">
@@ -125,19 +125,19 @@
 
           <!-- ITEMS TAB -->
           <section style="overflow-y:scroll;" id="content1">
-            <div class="row">
-              <div class="col">
-                <p class="p-2 mb-0 text-white font-quarcaM">
-                  Begin by selecting the item(s) you want and then the color you desire for each team.
-                </p>
+            <!-- <div class="row"> -->
+              <!-- <div class="col"> -->
+                <!-- <p class="p-2 mb-0 text-white font-quarcaM"> -->
+                  <!-- Begin by selecting the item(s) you want and then the color you desire for each team. -->
+                <!-- </p> -->
 
-              </div>
-            </div>
+              <!-- </div> -->
+            <!-- </div> -->
 
 
 
             <!-- PRESETS -->
-            <div class="row mb-3 mt-1">
+            <div class="row mb-2 mt-2">
               <div class="col-2 pr-0" style="max-width: 12.666667%;">
                 <p class="mb-0 p-1 text-white font-quarcaM" style="margin-top:2px;">
                   PRESET:
@@ -172,8 +172,39 @@
                 <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
 
                 <div id="blueteamitems" class="tabcontent">
-                  <div class="table w-100">
-                    <table class="w-100">
+                  <div class="table w-100">                    
+					<table class="w-100 color-table">
+                      <thead>
+                        <tr class="alt-row">
+                          <td class="alt-row" colspan="2">Primary Paint Color</td>    
+                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>						                           
+                          <td class="alt-row-">Enabled</td>
+                        </tr>
+                      </thead>
+                      <tbody team="Blue">
+                        <!-- COLORS -->
+                        <tr>
+							<td class="alt-row">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="primary-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+							</td>
+							<td class="alt-row">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
+							</td>                          
+							<td class="alt-row-strong">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="accent-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+							</td>
+							<td class="alt-row-strong">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="accent-intensity-blue" class="acc-input" type="number" value="1.00" />
+							</td>
+							<td class="alt-row">
+								<label class="tick-container">
+									<input id="custom-color-enabled-blue" type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</td>
+                        </tr>        
+                    </table>
+					<table class="w-100 item-table">
                       <thead>
                         <tr class="alt-row">
                           <td class="alt-row">Type</td>
@@ -182,30 +213,6 @@
                         </tr>
                       </thead>
                       <tbody team="Blue">
-
-
-                        <!-- COLORS -->
-                        <tr>
-                          <td class="alt-row">Colors</td>
-                          <td class="alt-row-strong">
-                            <input id="primary-color-blue" type="color" style="height:36px; padding:0px;" class="acc-input">
-                          </td>
-                          <td class="alt-row">
-                            <input id="accent-color-blue" type="color" style="height:36px; padding:0px;" class="acc-input">
-                          </td>
-                        </tr>
-
-                        <!-- COLOR INTENSITY -->
-                        <tr>
-                          <td class="alt-row">Color intensity</td>
-                          <td class="alt-row-strong">
-                            <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00" />
-                          </td>
-                          <td class="alt-row">
-                            <input id="accent-intensity-blue" class="acc-input" type="number" value="1.00" />
-                          </td>
-                        </tr>
-
                         <!-- BODY -->
                         <tr>
                           <td class="alt-row">Body</td>
@@ -235,7 +242,7 @@
                         </tr>
 
                         <!-- MAIN BODY DECAL -->
-                        <tr>
+                        <tr hidden>
                           <td class="alt-row">Main Body Decal</td>
                           <td class="alt-row-strong">
                             <select class="acc-input" name="mb-decal-select">
@@ -247,7 +254,7 @@
                         </tr>
 
                         <!-- ENGINE TEXTURE -->
-                        <tr>
+                        <tr hidden>
                           <td class="alt-row">Engine Texture</td>
                           <td class="alt-row-strong">
                             <select class="acc-input" name="engine-texture-select">
@@ -288,33 +295,7 @@
                           </td>
                         </tr>
 
-                        <!-- BOOST -->
-                        <tr>
-                          <td class="alt-row">Boost</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="boost-select">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-                            <select class="acc-input" name="color-select">
-                              <option value="-1">Unchanged</option>
-                            </select>
-                          </td>
-                        </tr>
-
-
-                        <!-- BOOST SOUND -->
-                        <tr>
-                          <td class="alt-row">Boost Sound</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="boost-sound-select">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-                          </td>
-                        </tr>
+                        
 
                         <!-- ANTENNA -->
                         <tr>
@@ -345,7 +326,34 @@
                             </select>
                           </td>
                         </tr>
+						
+						<!-- BOOST -->
+                        <tr>
+                          <td class="alt-row">Boost</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
 
+
+                        <!-- BOOST SOUND -->
+                        <tr>
+                          <td class="alt-row">Boost Sound</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-sound-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
 
                         <!-- PAINT FINISH -->
                         <tr>
@@ -431,7 +439,38 @@
 
                 <div id="orangeteamitems" class="tabcontent">
                   <div class="table w-100">
-                    <table class="w-100">
+                    					<table class="w-100 color-table">
+                      <thead>
+                        <tr class="alt-row">
+                          <td class="alt-row" colspan="2">Primary Paint Color</td>    
+                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>						                           
+                          <td class="alt-row-">Enabled</td>
+                        </tr>
+                      </thead>
+                      <tbody team="Orange">
+                        <!-- COLORS -->
+                        <tr>
+							<td class="alt-row">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="primary-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+							</td>
+							<td class="alt-row">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="primary-intensity-orange" class="acc-input" type="number" value="1.00" />
+							</td>                          
+							<td class="alt-row-strong">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="accent-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+							</td>
+							<td class="alt-row-strong">
+								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="accent-intensity-orange" class="acc-input" type="number" value="1.00" />
+							</td>
+							<td class="alt-row">
+								<label class="tick-container">
+									<input id="custom-color-enabled-orange" type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</td>
+                        </tr>        
+                    </table>
+					<table class="w-100 item-table">
                       <thead>
                         <tr class="alt-row">
                           <td class="alt-row">Type</td>
@@ -440,30 +479,6 @@
                         </tr>
                       </thead>
                       <tbody team="Orange">
-
-
-                        <!-- COLORS -->
-                        <tr>
-                          <td class="alt-row">Colors</td>
-                          <td class="alt-row-strong">
-                            <input id="primary-color-orange" type="color" style="height:36px; padding:0px;" class="acc-input">
-                          </td>
-                          <td class="alt-row">
-                            <input id="accent-color-orange" type="color" style="height:36px; padding:0px;" class="acc-input">
-                          </td>
-                        </tr>
-
-                        <!-- COLOR INTENSITY -->
-                        <tr>
-                          <td class="alt-row">Color intensity</td>
-                          <td class="alt-row-strong">
-                            <input id="primary-intensity-orange" class="acc-input" type="number" value="1.00" />
-                          </td>
-                          <td class="alt-row">
-                            <input id="accent-intensity-orange" class="acc-input" type="number" value="1.00" />
-                          </td>
-                        </tr>
-
 
                         <!-- BODY -->
                         <tr>
@@ -494,7 +509,7 @@
                         </tr>
 
                         <!-- MAIN BODY DECAL -->
-                        <tr>
+                        <tr hidden>
                           <td class="alt-row">Main Body Decal</td>
                           <td class="alt-row-strong">
                             <select class="acc-input" name="mb-decal-select">
@@ -506,7 +521,7 @@
                         </tr>
 
                         <!-- ENGINE TEXTURE -->
-                        <tr>
+                        <tr hidden>
                           <td class="alt-row">Engine Texture</td>
                           <td class="alt-row-strong">
                             <select class="acc-input" name="engine-texture-select">
@@ -547,33 +562,6 @@
                           </td>
                         </tr>
 
-                        <!-- BOOST -->
-                        <tr>
-                          <td class="alt-row">Boost</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="boost-select">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-                            <select class="acc-input" name="color-select">
-                              <option value="-1">Unchanged</option>
-                            </select>
-                          </td>
-                        </tr>
-
-                        <!-- BOOST SOUND -->
-                        <tr>
-                          <td class="alt-row">Boost Sound</td>
-                          <td class="alt-row-strong">
-                            <select class="acc-input" name="boost-sound-select">
-                              <option value="-1:-1:-1">Unchanged</option>
-                            </select>
-                          </td>
-                          <td class="alt-row">
-                          </td>
-                        </tr>
-
                         <!-- ANTENNA -->
                         <tr>
                           <td class="alt-row">Antenna</td>
@@ -604,7 +592,33 @@
                           </td>
                         </tr>
 
+                        <!-- BOOST -->
+                        <tr>
+                          <td class="alt-row">Boost</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
 
+                        <!-- BOOST SOUND -->
+                        <tr>
+                          <td class="alt-row">Boost Sound</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-sound-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+						
                         <!-- PAINT FINISH -->
                         <tr>
                           <td class="alt-row">Primary Paint Finish</td>
@@ -716,30 +730,30 @@
                   </label>
                 </div>
               </div>
-              <div class="row p-2">
-                <div class="col-11 font-quarcaL b-team">
-                  Enable Blue Team
-                </div>
-                <div class="col-1">
-                  <label class="tick-container">
-                    <input id="custom-color-enabled-blue" type="checkbox">
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-              </div>
+              <!-- <div class="row p-2"> -->
+                <!-- <div class="col-11 font-quarcaL b-team"> -->
+                  <!-- Enable Blue Team -->
+                <!-- </div> -->
+                <!-- <div class="col-1"> -->
+                  <!-- <label class="tick-container"> -->
+                    <!-- <input id="custom-color-enabled-blue" type="checkbox"> -->
+                    <!-- <span class="checkmark"></span> -->
+                  <!-- </label> -->
+                <!-- </div> -->
+              <!-- </div> -->
 
 
-              <div class="row p-2">
-                <div class="col-11 font-quarcaL o-team">
-                  Enable Orange Team
-                </div>
-                <div class="col-1">
-                  <label class="tick-container">
-                    <input id="custom-color-enabled-orange" type="checkbox">
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-              </div>
+              <!-- <div class="row p-2"> -->
+                <!-- <div class="col-11 font-quarcaL o-team"> -->
+                  <!-- Enable Orange Team -->
+                <!-- </div> -->
+                <!-- <div class="col-1"> -->
+                  <!-- <label class="tick-container"> -->
+                    <!-- <input id="custom-color-enabled-orange" type="checkbox"> -->
+                    <!-- <span class="checkmark"></span> -->
+                  <!-- </label> -->
+                <!-- </div> -->
+              <!-- </div> -->
 
             </div>
 
