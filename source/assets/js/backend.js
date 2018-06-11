@@ -1,5 +1,7 @@
 const con = require('electron').remote.getGlobal('console');
 
+
+
 var SyncTeams = false;
 
 var GlobalACConfig = {};
@@ -43,13 +45,13 @@ function LoadFile(path) {
 
 function GetBasePath() {
 
-  return require("path").dirname(__dirname);
+  return require("path").dirname(__dirname).replace('app.asar', 'app.asar.unpacked');
 
 }
 
 function LoadItems() {
-  var contents = LoadFile(GetBasePath() + "/source/items.json");
-  var contents2 = LoadFile(GetBasePath() + "/source/slotDictionary.json");
+  var contents = LoadFile(GetBasePath() + "/items.json");
+  var contents2 = LoadFile(GetBasePath() + "/slotDictionary.json");
   var products = JSON.parse(contents);
   var lookup = JSON.parse(contents2);
   products.Lookup = lookup;
@@ -621,6 +623,21 @@ $("select[name='color-select']").each(function (index, value) {
 });
 
 var slots = Products.Slots;
+var customItems = {}
+for (var j = 0; j < TexturePackages.length; j++) {
+  
+  var customitems = TexturePackages[j].Package.items;
+  customitems.sort(compareValues(name));
+  for (var k = 0; k < customitems.length; k++) {
+    var v = slots.findIndex(x => x.SlotID==customitems[k].slot);
+    if(v > 0){
+      if(!slots[v].customItems) slots[v].customItems = []
+      customitems[k].packageid = TexturePackages[j].Package.id;
+      slots[v].customItems.push(customitems[k]); 
+    }    
+  }
+}
+
 for (var i = 0; i < slots.length; i++) {
 
   if (slots[i] != null) {
@@ -641,31 +658,41 @@ for (var i = 0; i < slots.length; i++) {
     }
 
     //CUSTOM ITEMS
-    for (var j = 0; j < TexturePackages.length; j++) {
-      var customitems = TexturePackages[j].Package.items;
+    if(slots[i].customItems){
+      var customitems = slots[i].customItems;
+      
+      customitems.sort(compareValues('name'));
+      $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
+        var newOp = $('<option>');
+        newOp.attr('value', '-2:-2:-2');
+        newOp.text("-----------------------------------------------------------------");   
+        newOp.attr("disabled", "disabled");      
+        $(this).children(":first").after(newOp);
+      });
+     
+      for (var k = customitems.length-1; k >=0; k--) {         
 
-
-      customitems.sort(compareValues(name));
-      for (var k = 0; k < customitems.length; k++) {
-
-        if (customitems[k].slot == slots[i].SlotID) {
-
-          $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
-            var newOp = $('<option>');
-            newOp.attr('value', customitems[k].item + ":" + TexturePackages[j].Package.id + ":" + customitems[k].id);
-            newOp.text("Custom: " + customitems[k].name);
-
-            $(this).prepend(newOp);
-
-          });
-
-        }
+        $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
+          var newOp = $('<option>');
+          newOp.attr('value', customitems[k].item + ":" + customitems[k].packageid + ":" + customitems[k].id);
+          newOp.html(customitems[k].name);            
+          $(this).children(":first").after(newOp);  
+        });
+    
       }
+      
+      $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
+        var newOp = $('<option>');
+        newOp.attr('value', '-2:-2:-2');
+        newOp.text("Custom:");   
+        newOp.attr("disabled", "disabled");      
+        $(this).children(":first").after(newOp);
+      });
+      
     }
-
-
   }
 }
+
 
 
 //Keep ball slots the same
@@ -727,6 +754,8 @@ $(document).ready(function () {
   $('.reset-input').on('click', function () {
     $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
   })
+  
+  
 });
 
 

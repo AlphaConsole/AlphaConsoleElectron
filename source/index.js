@@ -1,14 +1,38 @@
 const {app, BrowserWindow} = require('electron');
 const { ipcMain } = require('electron');
+const path = require('path')
+const url = require('url')
+const autoUpdater = require("electron-updater").autoUpdater
+var log = require("electron-log")
 
-  const path = require('path')
-  const url = require('url')
-  
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
   let mainWindow
-  
+autoUpdater.logger = log
+autoUpdater.logger.transports.file.level = "info"
+autoUpdater.on("checking-for-update", function (_arg1) {
+    return log.info("Checking for update...");
+});
+autoUpdater.on("update-available", function (_arg2) {
+    return log.info("Update available.");
+});
+autoUpdater.on("update-not-available", function (_arg3) {
+    return log.info("Update not available.");
+});
+autoUpdater.on("error", function (err) {
+    return log.info("Error in auto-updater. " + err);
+});
+autoUpdater.on("download-progress", function (progressObj) {
+    return log.info("Downloading update.");
+});
+autoUpdater.on("update-downloaded", function (_arg4) {
+    return log.info("Update downloaded.");
+}); 
+
+ 
   function createWindow () {
+
+    
     // Create the browser window.
     mainWindow = new BrowserWindow({
       titleBarStyle: 'hidden',
@@ -32,8 +56,8 @@ const { ipcMain } = require('electron');
     }))
   
     // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
-  
+    //mainWindow.webContents.openDevTools()
+ 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
       // Dereference the window object, usually you would store windows
@@ -47,7 +71,9 @@ const { ipcMain } = require('electron');
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
   app.on('ready', createWindow)
-  
+  app.on("ready", function () {
+    autoUpdater.checkForUpdatesAndNotify();
+  });
   // Quit when all windows are closed.
   app.on('window-all-closed', () => {
     // On macOS it is common for applications and their menu bar

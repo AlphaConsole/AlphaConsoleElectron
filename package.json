@@ -1,24 +1,33 @@
 {
   "name": "AlphaConsole",
-  "version": "1.0.0",
+  "version": "9.1.0",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
     "test": "electron source/index.js",
-    "build": "electron-packager . --out=build --overwrite --platform win32 --icon=source/assets/img/app_icon.ico",
-    "pack": "build --dir",
+    "build-packager": "electron-packager . --out=build --overwrite --platform win32 --icon=source/assets/img/app_icon.ico",
+    "pack": "build --dir",   
+    "publish": "build -p onTag",
     "watch": "grunt watch"
   },
   "build": {
     "appId": "alphaconsole.beta",
     "productName": "AlphaConsole",
-    "asar": "false",
-    "nsis": {
-      "oneClick": "false",
-      "shortcutName": "AlphaConsole",
-      "allowToChangeInstallationDirectory": "true",
-      "include": "build/installer.nsh"
-    }
+    "asarUnpack": [
+      "textures/",
+      "items.json",
+      "slotDictionary.json",
+      "config.json",
+      "xapofx1_5.dll",
+      "discord-rpc.dll"
+    ],
+    "icon": "source/assets/img/app_icon.ico",
+    "extraResources": [
+      {
+        "from": "app-update.yml",
+        "to": "app-update.yml"
+      }
+    ]
   },
   "repository": {
     "type": "git",
@@ -40,9 +49,12 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-electron": "^8.0.0",
     "grunt-sass": "^2.1.0",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "electron-builder": "19.37.0"
   },
-  "dependencies": {
+  "dependencies": {    
+    "electron-log": "^2.2.14",
+    "electron-updater": "2.12.0",
     "modclean": "^2.1.2",
     "node-notifier": "^5.2.1",
     "request": "^2.83.0",

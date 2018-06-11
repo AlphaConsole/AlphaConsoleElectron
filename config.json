@@ -64,9 +64,9 @@
 		"4": {
 			"SlotName": "Antenna",
 			"Blue": {
-				"ItemID": 286,
-				"PackageID": 6,
-				"PackageSubID": 0,
+				"ItemID": -1,
+				"PackageID": -1,
+				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
@@ -338,9 +338,9 @@
 				"4": {
 					"SlotName": "Antenna",
 					"Blue": {
-						"ItemID": 286,
-						"PackageID": 6,
-						"PackageSubID": 0,
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
 						"Color": -1
 					},
 					"Orange": {
@@ -601,5 +601,5 @@
 		"InstallLocation": "",
 		"SyncTeams": false
 	},
-	"ACPath": "C:\\Users\\SamSSD\\Documents\\GitHub\\AlphaConsoleElectron"
+	"ACPath": "C:\\Users\\Barbosicks\\Documents\\Visual Studio 2017\\Projects\\AlphaConsoleElectron"
 }

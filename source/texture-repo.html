@@ -345,7 +345,7 @@
       var index = SelectedPackage.attr("details-index");
 	  const con = require('electron').remote.getGlobal('console');
 	  const { ipcRenderer } = require('electron');
-      request(baseurl + Details[index].folder + '/package.json', { json: true }, (err, res, body) => {
+      request(baseurl + Details[index].folder + '/package.json?' + Math.random(), { json: true }, (err, res, body) => {
         if (err) {           
 			return console.log(err); 
         }
@@ -354,7 +354,7 @@
 		var cur = 0;
 		
         var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json';
-        var url = baseurl + Details[index].folder + '/package.json';
+        var url = baseurl + Details[index].folder + '/package.json?' + Math.random();
 
         ensureDirectoryExistence(savePath);
         request(url).on('response', function(response) {
