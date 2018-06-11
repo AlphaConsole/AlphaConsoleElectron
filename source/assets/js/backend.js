@@ -186,8 +186,6 @@ function LoadConfiguration() {
 
   //Custom color options
 
-  $("#custom-color-enabled-blue").prop('checked', Config.CustomColors.Blue.Enabled);
-  $("#custom-color-enabled-orange").prop('checked', Config.CustomColors.Orange.Enabled);
   $("#color-all-cars").prop("checked", Config.CustomColors.ColorAllCars);
 
   //Custom title options
@@ -317,6 +315,8 @@ function SavePreset(PresetID) {
   CustomColors.Blue.AccentIntensity = parseFloat($("#accent-intensity-blue").val());
   CustomColors.Orange.PrimaryIntensity = parseFloat($("#primary-intensity-orange").val());
   CustomColors.Orange.AccentIntensity = parseFloat($("#accent-intensity-orange").val());
+  CustomColors.Blue.Enabled = $("#custom-color-enabled-blue").prop('checked');
+  CustomColors.Orange.Enabled = $("#custom-color-enabled-orange").prop('checked');
 
 
   if (GlobalACConfig.Presets === undefined) {
@@ -384,7 +384,8 @@ function LoadPreset(ID) {
   $("#accent-intensity-blue").val(GlobalACConfig.Presets[ID].CustomColors.Blue.AccentIntensity);
   $("#primary-intensity-orange").val(GlobalACConfig.Presets[ID].CustomColors.Orange.PrimaryIntensity);
   $("#accent-intensity-orange").val(GlobalACConfig.Presets[ID].CustomColors.Orange.AccentIntensity);
-
+  $("#custom-color-enabled-blue").prop('checked', GlobalACConfig.Presets[ID].CustomColors.Blue.Enabled);
+  $("#custom-color-enabled-orange").prop('checked', GlobalACConfig.Presets[ID].CustomColors.Orange.Enabled);
 
 
 }
@@ -401,22 +402,8 @@ function GetConfigurationString() {
   Config.Presets = GlobalACConfig.Presets;
 
   //Custom color options
-  var CustomColors = {};
-  CustomColors.Blue = {};
-  CustomColors.Orange = {};
-
-  CustomColors.Blue.Enabled = $("#custom-color-enabled-blue").prop('checked');
-  CustomColors.Orange.Enabled = $("#custom-color-enabled-orange").prop('checked');
+  var CustomColors = GlobalACConfig.Presets[Config.Preset].CustomColors;
   CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
-
-  CustomColors.Blue.PrimaryColor = $("#primary-color-blue").val();
-  CustomColors.Blue.AccentColor = $("#accent-color-blue").val();
-  CustomColors.Orange.PrimaryColor = $("#primary-color-orange").val();
-  CustomColors.Orange.AccentColor = $("#accent-color-orange").val();
-  CustomColors.Blue.PrimaryIntensity = parseFloat($("#primary-intensity-blue").val());
-  CustomColors.Blue.AccentIntensity = parseFloat($("#accent-intensity-blue").val());
-  CustomColors.Orange.PrimaryIntensity = parseFloat($("#primary-intensity-orange").val());
-  CustomColors.Orange.AccentIntensity = parseFloat($("#accent-intensity-orange").val());
 
   Config.CustomColors = CustomColors;
 
