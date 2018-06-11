@@ -49,7 +49,7 @@ Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "
 Name: "{commondesktop}\{#MyAppName} Beta"; Filename: "{app}\{#MyAppExeName}" 
 
 [Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall
         
 [Dirs]
 Name: "{app}"; Permissions: users-full
