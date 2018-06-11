@@ -57,7 +57,7 @@ Name: "{app}"; Permissions: users-full
 [UninstallDelete] 
 Type: files; Name: "{app}\..\xapofx1_5.dll"
 Type: files; Name: "{app}\..\discord-rpc.dll"
-;Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
+Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
 Type: dirifempty; Name: "{app}"
 
 
