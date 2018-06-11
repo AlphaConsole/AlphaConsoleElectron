@@ -314,7 +314,7 @@
     });
 
     function GetBasePath() {
-      return require("path").dirname(__dirname);
+      return require("path").dirname(__dirname).replace('app.asar', 'app.asar.unpacked');
     } 
 
     var SelectedPackage;
@@ -323,8 +323,27 @@
 
     var path = require('path');
     var fs = require('fs');
-
-    function ensureDirectoryExistence(filePath) {
+	var tmp = require('tmp');
+    
+	packagesBeingDownloaded = {};
+	const { ipcRenderer } = require('electron');
+	function fisnihedDownload(packagedID, filename) {
+		packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true
+		for (var file in packagesBeingDownloaded[packagedID]['files']) {
+			if (!packagesBeingDownloaded[packagedID]['files'][file]['done']) {
+				return;
+			}	
+		}
+		var dir = GetBasePath() + "/textures/" + packagesBeingDownloaded[packagedID]['dir'] + '/' 		
+		for (var file in packagesBeingDownloaded[packagedID]['files']) {	
+			ensureDirectoryExistence(dir + file);
+			fs.rename(packagesBeingDownloaded[packagedID]['files'][file]['tmpobj'].name, dir + file, function (err) {});
+		}		
+		ipcRenderer.send('refreshwindow');
+	}
+	
+	
+	function ensureDirectoryExistence(filePath) {
       var dirname = path.dirname(filePath);
       if (fs.existsSync(dirname)) {
         return true;
@@ -337,47 +356,36 @@
 	//TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
     function DownloadPackage() {
       if (SelectedPackage === undefined) { return; }
-
+	
       const notifier = require('node-notifier');
 
       var request = require("request");
 
       var index = SelectedPackage.attr("details-index");
+	  packagesBeingDownloaded[index] = {}
+	  packagesBeingDownloaded[index]['dir'] = Details[index].folder
+	  packagesBeingDownloaded[index]['files'] = {}
+	 
 	  const con = require('electron').remote.getGlobal('console');
-	  const { ipcRenderer } = require('electron');
+	 
       request(baseurl + Details[index].folder + '/package.json?' + Math.random(), { json: true }, (err, res, body) => {
         if (err) {           
 			return console.log(err); 
         }
 
 		var total = 0;
-		var cur = 0;
+		var cur = 0;  
 		
-        var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json';
-        var url = baseurl + Details[index].folder + '/package.json?' + Math.random();
-
-        ensureDirectoryExistence(savePath);
-        request(url).on('response', function(response) {
-				var len = parseInt(response.headers['content-length'], 10);
-				total += len;
-			}).on('data', function(data) {
-					cur += data.length;
-				// compressed data as it is received
-					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).on('end', function() {				
-				ipcRenderer.send('refreshwindow');
-			}).pipe(fs.createWriteStream(savePath));
-		
-        for (let item of body.items) {
+		for (let item of body.items) {
 
           if (item.parameters != undefined)
             for (let image of item.parameters) {
-
-              var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
+              
               var url = baseurl + Details[index].folder + '/' + image.image;
-
-              ensureDirectoryExistence(savePath);
+		      image.tmpobj = tmp.fileSync()            
+			  packagesBeingDownloaded[index]['files'][image.image] = {}
+			  packagesBeingDownloaded[index]['files'][image.image]['done'] = false
+			  packagesBeingDownloaded[index]['files'][image.image]['tmpobj'] = image.tmpobj
 			  request(url).on('response', function(response) {
 				var len = parseInt(response.headers['content-length'], 10);
 				total += len;
@@ -386,19 +394,19 @@
 				// compressed data as it is received
 					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
 					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).on('end', function(response) {
-				ipcRenderer.send('refreshwindow');
-			}).pipe(fs.createWriteStream(savePath));
-
-            }
+			}).pipe(fs.createWriteStream(image.tmpobj.name).on('finish', function() {
+				fisnihedDownload(index, image.image);		
+			}))
+			}
 
           if (item.textures != undefined)
             for (let image of item.textures) {
-              var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/' + image.image;
               var url = baseurl + Details[index].folder + '/' + image.image;
-
-              ensureDirectoryExistence(savePath);
-              request(url).on('response', function(response) {
+			  image.tmpobj = tmp.fileSync()  
+              packagesBeingDownloaded[index]['files'][image.image] = {}
+			  packagesBeingDownloaded[index]['files'][image.image]['done'] = false
+			  packagesBeingDownloaded[index]['files'][image.image]['tmpobj'] = image.tmpobj
+			  request(url).on('response', function(response) {
 				var len = parseInt(response.headers['content-length'], 10);
 				total += len;
 			}).on('data', function(data) {
@@ -406,14 +414,36 @@
 				// compressed data as it is received
 					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
 					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).on('end', function() {				
-				ipcRenderer.send('refreshwindow');
-			}).pipe(fs.createWriteStream(savePath));
-
-            }
+			}).pipe(fs.createWriteStream(image.tmpobj.name).on('finish', function() {
+				fisnihedDownload(index, image.image);							
+			}))
+			}
         }                
-        //Send refresh window command
-        
+		
+        var url = baseurl + Details[index].folder + '/package.json?' + Math.random();		
+		var tmppackageobj = tmp.fileSync();
+		packagesBeingDownloaded[index]['files']['package.json'] = {}
+		packagesBeingDownloaded[index]['files']['package.json']['done'] = false
+		packagesBeingDownloaded[index]['files']['package.json']['tmpobj'] = tmppackageobj
+		request(url).on('response', function(response) {
+				var len = parseInt(response.headers['content-length'], 10);
+				total += len;
+				
+			}).on('data', function(data) {
+					cur += data.length;
+				// compressed data as it is received
+					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
+			}).pipe(fs.createWriteStream(tmppackageobj.name).on('finish', function() {
+				fisnihedDownload(index, 'package.json');
+				<!-- var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json'; -->
+				<!-- ensureDirectoryExistence(savePath); -->
+				<!-- console.log("Stream finished");				 -->
+				<!-- fs.createReadStream(tmppackageobj.name) -->
+				<!-- .pipe(fs.createWriteStream(savePath).on('finish', function() { -->
+					<!-- tmppackageobj.removeCallback(); -->
+				<!-- }))			 -->
+		}))       
         
 
       });

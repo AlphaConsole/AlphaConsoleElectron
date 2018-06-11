@@ -1,12 +1,12 @@
 {
   "name": "AlphaConsole",
-  "version": "9.1.0",
+  "version": "9.0.0",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
     "test": "electron source/index.js",
     "build-packager": "electron-packager . --out=build --overwrite --platform win32 --icon=source/assets/img/app_icon.ico",
-    "pack": "build --dir",   
+    "pack": "build --dir",
     "publish": "build -p onTag",
     "watch": "grunt watch"
   },
@@ -41,6 +41,7 @@
   "homepage": "https://github.com/HaydenMeloche/AlphaConsoleElectron#readme",
   "devDependencies": {
     "electron": "^1.8.2",
+    "electron-builder": "19.37.0",
     "electron-installer-windows": "^0.2.0",
     "electron-packager": "^11.1.0",
     "electron-winstaller": "^2.6.4",
@@ -49,15 +50,15 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-electron": "^8.0.0",
     "grunt-sass": "^2.1.0",
-    "gulp": "^4.0.0",
-    "electron-builder": "19.37.0"
+    "gulp": "^4.0.0"
   },
-  "dependencies": {    
+  "dependencies": {
     "electron-log": "^2.2.14",
     "electron-updater": "2.12.0",
     "modclean": "^2.1.2",
     "node-notifier": "^5.2.1",
     "request": "^2.83.0",
-    "squirrel": "^1.0.0"
+    "squirrel": "^1.0.0",
+    "tmp": "^0.0.33"
   }
 }

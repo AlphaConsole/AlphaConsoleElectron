@@ -684,7 +684,7 @@ for (var i = 0; i < slots.length; i++) {
       $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
         var newOp = $('<option>');
         newOp.attr('value', '-2:-2:-2');
-        newOp.text("Custom:");   
+        newOp.text("Custom");   
         newOp.attr("disabled", "disabled");      
         $(this).children(":first").after(newOp);
       });
@@ -754,7 +754,7 @@ $(document).ready(function () {
   $('.reset-input').on('click', function () {
     $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
   })
-  
+  $(".build-number").html("Beta Version " + require('electron').remote.app.getVersion());
   
 });
 

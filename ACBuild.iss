@@ -2,13 +2,12 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define AppId  "{{CCCDBFCF-CD8B-4728-915A-DCB71C1118BE}"
-#define MyAppName "AlphaConsole"
-#define MyAppVersion "9.1.0"
+#define MyAppName "AlphaConsole" 
 #define MyAppPublisher "AlphaConsole"
 #define MyAppURL "http://www.alphaconsole.net"
 #define MyAppExeName "AlphaConsole.exe"
 #define SourceFiles "dist\win-ia32-unpacked"
-
+#define MyAppVersion GetFileVersion(SourceFiles + "\" + MyAppExeName)
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
@@ -37,7 +36,7 @@ PrivilegesRequired=lowest
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-;Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
