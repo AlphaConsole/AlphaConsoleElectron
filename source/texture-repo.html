@@ -323,7 +323,6 @@
 
     var path = require('path');
     var fs = require('fs');
-	var tmp = require('tmp');
     
 	packagesBeingDownloaded = {};
 	const { ipcRenderer } = require('electron');
@@ -438,13 +437,6 @@
 					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
 			}).pipe(fs.createWriteStream(basedir + 'tmp_package.json').on('finish', function() {
 				fisnihedDownload(index, 'package.json');
-				<!-- var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json'; -->
-				<!-- ensureDirectoryExistence(savePath); -->
-				<!-- console.log("Stream finished");				 -->
-				<!-- fs.createReadStream(tmppackageobj.name) -->
-				<!-- .pipe(fs.createWriteStream(savePath).on('finish', function() { -->
-					<!-- tmppackageobj.removeCallback(); -->
-				<!-- }))			 -->
 		}))       
         
 

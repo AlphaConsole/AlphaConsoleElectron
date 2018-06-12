@@ -20,7 +20,7 @@ AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
-DefaultDirName={pf32}\{#MyAppName}
+DefaultDirName=C:\AlphaConsole
 DisableDirPage=yes
 DisableProgramGroupPage=yes
 OutputBaseFilename={#MyAppName}_Setup_{#MyAppVersion}
@@ -36,7 +36,7 @@ PrivilegesRequired=lowest
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+;Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
@@ -58,6 +58,7 @@ Name: "{app}"; Permissions: users-full
 Type: files; Name: "{app}\..\xapofx1_5.dll"
 Type: files; Name: "{app}\..\discord-rpc.dll"
 Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
+Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\config.json"
 Type: dirifempty; Name: "{app}"
 
 
@@ -137,15 +138,16 @@ var
   rlFolder : String;
   originalInstallation : String;
 begin 
-  if FileExists('C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\RocketLeague.exe') then begin
-    WizardForm.DirEdit.Text := 'C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\AlphaConsole'
-  end
-  else begin
-    if FindRLUninstallKey(rlFolder) then
-      WizardForm.DirEdit.Text := rlFolder 
+  if WizardForm.DirEdit.Text = 'C:\AlphaConsole' then begin
+    if FileExists('C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\RocketLeague.exe') then begin
+      WizardForm.DirEdit.Text := 'C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\AlphaConsole'
+    end
     else begin
-      UserPage := CreateInputFilePage(wpSelectDir, 'Select Rocket League Folder', 'Find RocketLeague.exe', 'The Setup could not find RocketLeague.exe. Please select it using the dialog below: ')
-      UserPage.Add('Location of RocketLeague.exe:', 'RocketLeague.exe|RocketLeague.exe', 'RocketLeague.exe');
-      UserPage.OnNextButtonClick := @InputFileCheck;      
-  end end; 
+      if FindRLUninstallKey(rlFolder) then
+        WizardForm.DirEdit.Text := rlFolder 
+      else begin
+        UserPage := CreateInputFilePage(wpSelectDir, 'Select Rocket League Folder', 'Find RocketLeague.exe', 'The Setup could not find RocketLeague.exe. Please select it using the dialog below: ')
+        UserPage.Add('Location of RocketLeague.exe:', 'RocketLeague.exe|RocketLeague.exe', 'RocketLeague.exe');
+        UserPage.OnNextButtonClick := @InputFileCheck;      
+  end end end; 
 end;
