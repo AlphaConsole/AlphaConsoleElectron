@@ -31,26 +31,22 @@ OutputDir=dist
 CloseApplicationsFilter=*.exe,*.dll,*.chm,RocketLeague.exe
 CloseApplications=force
 PrivilegesRequired=lowest
+DisableWelcomePage=yes
+DisableReadyPage=yes
+DisableFinishedPage=yes 
+AllowCancelDuringInstall=no
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-;Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-
-;[InstallDelete]
-;Type: filesandordirs; Name: "{app}\resources\app"
-;Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
 
 [Icons]
 Name: "{commondesktop}\{#MyAppName} Beta"; Filename: "{app}\{#MyAppExeName}" 
-
-[Run]
-Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall
-        
+    
 [Dirs]
 Name: "{app}"; Permissions: users-full
 
@@ -60,18 +56,6 @@ Type: files; Name: "{app}\..\discord-rpc.dll"
 Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
 Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\config.json"
 Type: dirifempty; Name: "{app}"
-
-
-;[Code]
-;function InitializeSetup(): Boolean;
-;begin
-;  Result := True;
-;  if MsgBox('This setup will delete all your current custom textures on the AlphaConsole folder.' + #13#10 + #13#10 +
-;    'Are you sure you want to continue?', mbError, MB_YESNO) = IDNO then
-;  begin
-;      Result := False;
-;  end;   
-;end;
 
 [Code]
 var
@@ -150,4 +134,32 @@ begin
         UserPage.Add('Location of RocketLeague.exe:', 'RocketLeague.exe|RocketLeague.exe', 'RocketLeague.exe');
         UserPage.OnNextButtonClick := @InputFileCheck;      
   end end end; 
+end;
+
+const
+  BN_CLICKED = 0;
+  WM_COMMAND = $0111;
+  CN_BASE = $BC00;
+  CN_COMMAND = CN_BASE + WM_COMMAND;
+
+procedure CurPageChanged(CurPageID: Integer);
+var
+  Param: Longint;
+  ResultCode: Integer;
+begin
+  if CurPageID = wpReady then
+  begin
+    Param := 0 or BN_CLICKED shl 16;
+    PostMessage(WizardForm.NextButton.Handle, CN_COMMAND, Param, 0);
+  end; 
+end;
+
+procedure CurStepChanged(CurStep: TSetupStep);
+var
+  Param: Longint;
+  ResultCode: Integer;
+begin
+  if CurStep = ssPostInstall then
+    ExecAsOriginalUser(ExpandConstant('{app}\{#MyAppExeName}'), '', '', 
+      SW_SHOWNORMAL, ewNoWait, ResultCode);    
 end;
