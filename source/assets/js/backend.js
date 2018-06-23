@@ -208,6 +208,10 @@ function LoadConfiguration() {
   $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
   $("#install-location").val(Config.GeneralOptions.InstallLocation);
 
+  $("#field-color-blue").val(Config.CustomColors.FieldBlue);
+  $("#field-color-orange").val(Config.CustomColors.FieldOrange);
+  $("#enable-field-color").prop('checked', Config.CustomColors.EnableFieldColors);
+
   if (Config.GeneralOptions.SyncTeams) {
     ToggleSyncTeams();
   }
@@ -406,8 +410,10 @@ function GetConfigurationString() {
   CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
 
   Config.CustomColors = CustomColors;
-
-
+  Config.CustomColors.FieldBlue = $("#field-color-blue").val();
+  Config.CustomColors.FieldOrange = $("#field-color-orange").val();
+  
+  Config.CustomColors.EnableFieldColors = $("#enable-field-color").prop('checked');
 
   //Custom title options
   var CustomTitles = {};
