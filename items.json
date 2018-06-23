@@ -461,16 +461,8 @@
                     "Name": "Popcorn"
                 },
                 {
-                    "ItemID": 2880,
-                    "Name": "Torrent"
-                },
-                {
                     "ItemID": 2899,
                     "Name": "Enchanter"
-                },
-                {
-                    "ItemID": 2904,
-                    "Name": "Sun Ray"
                 },
                 {
                     "ItemID": 2916,
@@ -867,16 +859,8 @@
                     "Name": "Popcorn"
                 },
                 {
-                    "ItemID": 2880,
-                    "Name": "Torrent"
-                },
-                {
                     "ItemID": 2899,
                     "Name": "Enchanter"
-                },
-                {
-                    "ItemID": 2904,
-                    "Name": "Sun Ray"
                 },
                 {
                     "ItemID": 2916,
@@ -979,10 +963,6 @@
                 {
                     "ItemID": 2850,
                     "Name": "EKG-OMG"
-                },
-                {
-                    "ItemID": 2925,
-                    "Name": "Toon Hydro"
                 }
             ],
             "Name": "Trail",
@@ -2993,10 +2973,6 @@
                     "Name": "Tuvalu"
                 },
                 {
-                    "ItemID": 2828,
-                    "Name": "Mr. Toasty"
-                },
-                {
                     "ItemID": 2839,
                     "Name": "Monstercat"
                 },
@@ -3039,10 +3015,6 @@
                 {
                     "ItemID": 2873,
                     "Name": "WWE WrestleMania 34"
-                },
-                {
-                    "ItemID": 2903,
-                    "Name": "Bubble Wand"
                 },
                 {
                     "ItemID": 2905,
@@ -3659,10 +3631,6 @@
                     "Name": "Little Dog"
                 },
                 {
-                    "ItemID": 2559,
-                    "Name": "Mr. Pineapple"
-                },
-                {
                     "ItemID": 2608,
                     "Name": "Goldfish"
                 },
@@ -3689,18 +3657,6 @@
                 {
                     "ItemID": 2787,
                     "Name": "Palm Tree"
-                },
-                {
-                    "ItemID": 2813,
-                    "Name": "Kayak"
-                },
-                {
-                    "ItemID": 2816,
-                    "Name": "Buzzer"
-                },
-                {
-                    "ItemID": 2838,
-                    "Name": "Sand Castle"
                 }
             ],
             "Name": "Topper",
@@ -4013,10 +3969,6 @@
                     "Name": "Gearlock"
                 },
                 {
-                    "ItemID": 1777,
-                    "Name": "Quimby"
-                },
-                {
                     "ItemID": 1784,
                     "Name": "Triplex"
                 },
@@ -4209,16 +4161,8 @@
                     "Name": "WWE"
                 },
                 {
-                    "ItemID": 2918,
-                    "Name": "Cruxe"
-                },
-                {
                     "ItemID": 2935,
                     "Name": "Santa Fe"
-                },
-                {
-                    "ItemID": 2956,
-                    "Name": "Sovereign A/T"
                 },
                 {
                     "ItemID": 2971,
@@ -5619,20 +5563,8 @@
                     "Name": "Octane: Thanatos"
                 },
                 {
-                    "ItemID": 2326,
-                    "Name": "Octane: Turtle Tribe"
-                },
-                {
                     "ItemID": 2336,
                     "Name": "Breakout: Chainsaw"
-                },
-                {
-                    "ItemID": 2337,
-                    "Name": "Breakout: 9 Lives"
-                },
-                {
-                    "ItemID": 2338,
-                    "Name": "Breakout: Sneaky Slither"
                 },
                 {
                     "ItemID": 2339,
@@ -5693,10 +5625,6 @@
                 {
                     "ItemID": 2440,
                     "Name": "Cold Sweater"
-                },
-                {
-                    "ItemID": 2458,
-                    "Name": "Animus GP: Peacock"
                 },
                 {
                     "ItemID": 2459,
@@ -5763,10 +5691,6 @@
                     "Name": "Chameleon"
                 },
                 {
-                    "ItemID": 2513,
-                    "Name": "Leviathan"
-                },
-                {
                     "ItemID": 2535,
                     "Name": "Animus GP: Rose King"
                 },
@@ -5799,10 +5723,6 @@
                     "Name": "Marauder: XVIII"
                 },
                 {
-                    "ItemID": 2596,
-                    "Name": "Octane: Island King"
-                },
-                {
                     "ItemID": 2618,
                     "Name": "Breakout: Froggy"
                 },
@@ -5813,10 +5733,6 @@
                 {
                     "ItemID": 2625,
                     "Name": "Aftershock: Tiger Tiger"
-                },
-                {
-                    "ItemID": 2627,
-                    "Name": "Dominus: Proptosis"
                 },
                 {
                     "ItemID": 2628,
@@ -5961,10 +5877,6 @@
                 {
                     "ItemID": 2967,
                     "Name": "Streamline"
-                },
-                {
-                    "ItemID": 2968,
-                    "Name": "Boo-ya!"
                 },
                 {
                     "ItemID": 2989,
@@ -6959,10 +6871,6 @@
                     "Name": "Juiced"
                 },
                 {
-                    "ItemID": 2922,
-                    "Name": "Beach Party"
-                },
-                {
                     "ItemID": 3018,
                     "Name": "Striker"
                 },
@@ -7037,10 +6945,6 @@
                     "Name": "Circuit Pro"
                 },
                 {
-                    "ItemID": 2430,
-                    "Name": "Ice Pop"
-                },
-                {
                     "ItemID": 2431,
                     "Name": "Soccer Splash"
                 },
@@ -7091,10 +6995,6 @@
                 {
                     "ItemID": 2465,
                     "Name": "Narwhal"
-                },
-                {
-                    "ItemID": 2474,
-                    "Name": "Circuit Board"
                 },
                 {
                     "ItemID": 2476,
@@ -7159,10 +7059,6 @@
                 {
                     "ItemID": 2533,
                     "Name": "Burnout"
-                },
-                {
-                    "ItemID": 2538,
-                    "Name": "S'mored"
                 },
                 {
                     "ItemID": 2539,

@@ -611,14 +611,13 @@ $("select[name='color-select']").each(function (index, value) {
 
 var slots = Products.Slots;
 var customItems = {}
-
 for (var j = 0; j < TexturePackages.length; j++) {
   
   var customitems = TexturePackages[j].Package.items;
   customitems.sort(compareValues(name));
   for (var k = 0; k < customitems.length; k++) {
     var v = slots.findIndex(x => x.SlotID==customitems[k].slot);
-    if(v > -1){
+    if(v > 0){
       if(!slots[v].customItems) slots[v].customItems = []
       customitems[k].packageid = TexturePackages[j].Package.id;
       slots[v].customItems.push(customitems[k]); 

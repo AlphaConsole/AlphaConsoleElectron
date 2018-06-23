@@ -1,6 +1,6 @@
 {
   "name": "AlphaConsole",
-  "version": "9.1.0",
+  "version": "9.0.0",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
@@ -17,6 +17,7 @@
       "textures/",
       "items.json",
       "slotDictionary.json",
+      "config.json",
       "xapofx1_5.dll",
       "discord-rpc.dll"
     ],

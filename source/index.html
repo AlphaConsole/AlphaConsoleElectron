@@ -148,8 +148,8 @@
                   <option value="0">Default</option>
                 </select>
               </div>
-              <div class="col-3 pl-0 pr-1">
-                <input style="max-height: 34px;" id="preset-name" class="acc-input font-quarcaL w-100 h-100" type="text" value="Default" />
+              <div style="width:24%">
+                <input id="preset-name" class="acc-input font-quarcaL" type="text" value="" />
               </div>
               <div style="width:18%">
                 <button style="color:#fff; padding:4px" class="font-quarcaL btn btn-acc w-100" onclick="AddNewPreset()">Add Preset</button>
@@ -172,39 +172,8 @@
                 <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
 
                 <div id="blueteamitems" class="tabcontent">
-                  <div class="table w-100">                    
-					<table class="w-100 color-table">
-                      <thead>
-                        <tr class="alt-row">
-                          <td class="alt-row" colspan="2">Primary Paint Color</td>    
-                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>						                           
-                          <td class="alt-row-">Enabled</td>
-                        </tr>
-                      </thead>
-                      <tbody team="Blue">
-                        <!-- COLORS -->
-                        <tr>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="primary-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="primary-intensity-blue" class="acc-input" type="number" value="1" />
-							</td>                          
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="accent-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="accent-intensity-blue" class="acc-input" type="number" value="1" />
-							</td>
-							<td class="alt-row">
-								<label class="tick-container">
-									<input id="custom-color-enabled-blue" type="checkbox">
-									<span class="checkmark"></span>
-								</label>
-							</td>
-                        </tr>        
-                    </table>
-					<table class="w-100 item-table">
+                  <div class="table w-100">
+                    <table class="w-100">
                       <thead>
                         <tr class="alt-row">
                           <td class="alt-row">Type</td>
@@ -462,38 +431,7 @@
 
                 <div id="orangeteamitems" class="tabcontent">
                   <div class="table w-100">
-                    					<table class="w-100 color-table">
-                      <thead>
-                        <tr class="alt-row">
-                          <td class="alt-row" colspan="2">Primary Paint Color</td>    
-                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>						                           
-                          <td class="alt-row-">Enabled</td>
-                        </tr>
-                      </thead>
-                      <tbody team="Orange">
-                        <!-- COLORS -->
-                        <tr>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="primary-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="primary-intensity-orange" class="acc-input" type="number" value="1" />
-							</td>                          
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="accent-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="accent-intensity-orange" class="acc-input" type="number" value="1" />
-							</td>
-							<td class="alt-row">
-								<label class="tick-container">
-									<input id="custom-color-enabled-orange" type="checkbox">
-									<span class="checkmark"></span>
-								</label>
-							</td>
-                        </tr>        
-                    </table>
-					<table class="w-100 item-table">
+                    <table class="w-100">
                       <thead>
                         <tr class="alt-row">
                           <td class="alt-row">Type</td>
