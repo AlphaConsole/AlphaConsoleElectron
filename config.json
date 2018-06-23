@@ -49,13 +49,13 @@
 		"3": {
 			"SlotName": "Rocket Boost",
 			"Blue": {
-				"ItemID": 32,
+				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
 				"Color": -1
 			},
 			"Orange": {
-				"ItemID": 32,
+				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
 				"Color": -1
@@ -323,13 +323,13 @@
 				"3": {
 					"SlotName": "Rocket Boost",
 					"Blue": {
-						"ItemID": 32,
+						"ItemID": -1,
 						"PackageID": -1,
 						"PackageSubID": -1,
 						"Color": -1
 					},
 					"Orange": {
-						"ItemID": 32,
+						"ItemID": -1,
 						"PackageID": -1,
 						"PackageSubID": -1,
 						"Color": -1
@@ -548,9 +548,9 @@
 			},
 			"CustomColors": {
 				"Blue": {
-					"PrimaryColor": "#ff0080",
+					"PrimaryColor": "#000000",
 					"AccentColor": "#000000",
-					"PrimaryIntensity": 1.5,
+					"PrimaryIntensity": 1,
 					"AccentIntensity": 1,
 					"Enabled": true
 				},
@@ -859,9 +859,9 @@
 	},
 	"CustomColors": {
 		"Blue": {
-			"PrimaryColor": "#ff0080",
+			"PrimaryColor": "#000000",
 			"AccentColor": "#000000",
-			"PrimaryIntensity": 1.5,
+			"PrimaryIntensity": 1,
 			"AccentIntensity": 1,
 			"Enabled": true
 		},
@@ -886,7 +886,7 @@
 		"TeamTotal": false
 	},
 	"DiscordOptions": {
-		"RichPresenceLevel": 2
+		"RichPresenceLevel": null
 	},
 	"GeneralOptions": {
 		"Enabled": true,
