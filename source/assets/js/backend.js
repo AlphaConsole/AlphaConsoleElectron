@@ -188,6 +188,10 @@ function LoadConfiguration() {
 
   $("#color-all-cars").prop("checked", Config.CustomColors.ColorAllCars);
 
+  $("#field-color-blue").val(Config.CustomColors.FieldBlue);
+  $("#field-color-orange").val(Config.CustomColors.FieldOrange);
+  $("#enable-field-color").prop('checked', Config.CustomColors.EnableFieldColors);
+
   //Custom title options
   $("#enable-custom-titles").prop('checked', Config.CustomTitles.EnableCustomTitles);
   $("#use-static-titles").prop('checked', Config.CustomTitles.UseStaticTitles);
@@ -207,6 +211,9 @@ function LoadConfiguration() {
   $("#minimize-to-tray").prop('checked', Config.GeneralOptions.MinimizeToTray);
   $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
   $("#install-location").val(Config.GeneralOptions.InstallLocation);
+
+
+
 
   if (Config.GeneralOptions.SyncTeams) {
     ToggleSyncTeams();
@@ -406,8 +413,11 @@ function GetConfigurationString() {
   CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
 
   Config.CustomColors = CustomColors;
-
-
+  
+  Config.CustomColors.FieldBlue = $("#field-color-blue").val();
+  Config.CustomColors.FieldOrange = $("#field-color-orange").val();
+  
+  Config.CustomColors.EnableFieldColors = $("#enable-field-color").prop('checked');
 
   //Custom title options
   var CustomTitles = {};
