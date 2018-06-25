@@ -208,10 +208,6 @@ function LoadConfiguration() {
   $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
   $("#install-location").val(Config.GeneralOptions.InstallLocation);
 
-  $("#field-color-blue").val(Config.CustomColors.FieldBlue);
-  $("#field-color-orange").val(Config.CustomColors.FieldOrange);
-  $("#enable-field-color").prop('checked', Config.CustomColors.EnableFieldColors);
-
   if (Config.GeneralOptions.SyncTeams) {
     ToggleSyncTeams();
   }
@@ -410,10 +406,8 @@ function GetConfigurationString() {
   CustomColors.ColorAllCars = $("#color-all-cars").prop('checked');
 
   Config.CustomColors = CustomColors;
-  Config.CustomColors.FieldBlue = $("#field-color-blue").val();
-  Config.CustomColors.FieldOrange = $("#field-color-orange").val();
-  
-  Config.CustomColors.EnableFieldColors = $("#enable-field-color").prop('checked');
+
+
 
   //Custom title options
   var CustomTitles = {};
@@ -617,13 +611,14 @@ $("select[name='color-select']").each(function (index, value) {
 
 var slots = Products.Slots;
 var customItems = {}
+
 for (var j = 0; j < TexturePackages.length; j++) {
   
   var customitems = TexturePackages[j].Package.items;
   customitems.sort(compareValues(name));
   for (var k = 0; k < customitems.length; k++) {
     var v = slots.findIndex(x => x.SlotID==customitems[k].slot);
-    if(v > 0){
+    if(v > -1){
       if(!slots[v].customItems) slots[v].customItems = []
       customitems[k].packageid = TexturePackages[j].Package.id;
       slots[v].customItems.push(customitems[k]); 
