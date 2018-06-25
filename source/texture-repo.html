@@ -323,7 +323,6 @@
 
     var path = require('path');
     var fs = require('fs');
-	var tmp = require('tmp');
     
 	packagesBeingDownloaded = {};
 	const { ipcRenderer } = require('electron');
@@ -337,9 +336,14 @@
 		var dir = GetBasePath() + "/textures/" + packagesBeingDownloaded[packagedID]['dir'] + '/' 		
 		for (var file in packagesBeingDownloaded[packagedID]['files']) {	
 			ensureDirectoryExistence(dir + file);
-			fs.rename(packagesBeingDownloaded[packagedID]['files'][file]['tmpobj'].name, dir + file, function (err) {});
+			fs.rename(dir + 'tmp_' + file, dir + file, function (err) {
+				if(err) {
+					return console.log(err);
+				}
+				ipcRenderer.send('refreshwindow');
+			});	
 		}		
-		ipcRenderer.send('refreshwindow');
+		
 	}
 	
 	
@@ -375,17 +379,16 @@
 
 		var total = 0;
 		var cur = 0;  
-		
+		var basedir = GetBasePath() + "/textures/" + Details[index].folder + '/'
 		for (let item of body.items) {
 
           if (item.parameters != undefined)
             for (let image of item.parameters) {
-              
-              var url = baseurl + Details[index].folder + '/' + image.image;
-		      image.tmpobj = tmp.fileSync()            
+              console.log("Downloading " + basedir + 'tmp_' + image.image)
+			  ensureDirectoryExistence(basedir + 'tmp_' + image.image);
+              var url = baseurl + Details[index].folder + '/' + image.image;           
 			  packagesBeingDownloaded[index]['files'][image.image] = {}
 			  packagesBeingDownloaded[index]['files'][image.image]['done'] = false
-			  packagesBeingDownloaded[index]['files'][image.image]['tmpobj'] = image.tmpobj
 			  request(url).on('response', function(response) {
 				var len = parseInt(response.headers['content-length'], 10);
 				total += len;
@@ -394,7 +397,7 @@
 				// compressed data as it is received
 					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
 					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).pipe(fs.createWriteStream(image.tmpobj.name).on('finish', function() {
+			}).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function() {
 				fisnihedDownload(index, image.image);		
 			}))
 			}
@@ -402,10 +405,9 @@
           if (item.textures != undefined)
             for (let image of item.textures) {
               var url = baseurl + Details[index].folder + '/' + image.image;
-			  image.tmpobj = tmp.fileSync()  
+			  ensureDirectoryExistence(basedir + 'tmp_' + image.image); 
               packagesBeingDownloaded[index]['files'][image.image] = {}
 			  packagesBeingDownloaded[index]['files'][image.image]['done'] = false
-			  packagesBeingDownloaded[index]['files'][image.image]['tmpobj'] = image.tmpobj
 			  request(url).on('response', function(response) {
 				var len = parseInt(response.headers['content-length'], 10);
 				total += len;
@@ -414,17 +416,16 @@
 				// compressed data as it is received
 					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
 					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).pipe(fs.createWriteStream(image.tmpobj.name).on('finish', function() {
+			}).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function() {
 				fisnihedDownload(index, image.image);							
 			}))
 			}
         }                
 		
-        var url = baseurl + Details[index].folder + '/package.json?' + Math.random();		
-		var tmppackageobj = tmp.fileSync();
+        var url = baseurl + Details[index].folder + '/package.json?' + Math.random();
 		packagesBeingDownloaded[index]['files']['package.json'] = {}
 		packagesBeingDownloaded[index]['files']['package.json']['done'] = false
-		packagesBeingDownloaded[index]['files']['package.json']['tmpobj'] = tmppackageobj
+		ensureDirectoryExistence(basedir + 'tmp_package.json');
 		request(url).on('response', function(response) {
 				var len = parseInt(response.headers['content-length'], 10);
 				total += len;
@@ -434,15 +435,8 @@
 				// compressed data as it is received
 					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
 					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).pipe(fs.createWriteStream(tmppackageobj.name).on('finish', function() {
+			}).pipe(fs.createWriteStream(basedir + 'tmp_package.json').on('finish', function() {
 				fisnihedDownload(index, 'package.json');
-				<!-- var savePath = GetBasePath() + "/textures/" + Details[index].folder + '/package.json'; -->
-				<!-- ensureDirectoryExistence(savePath); -->
-				<!-- console.log("Stream finished");				 -->
-				<!-- fs.createReadStream(tmppackageobj.name) -->
-				<!-- .pipe(fs.createWriteStream(savePath).on('finish', function() { -->
-					<!-- tmppackageobj.removeCallback(); -->
-				<!-- }))			 -->
 		}))       
         
 
