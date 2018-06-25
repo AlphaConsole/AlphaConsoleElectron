@@ -126,12 +126,12 @@
           <!-- ITEMS TAB -->
           <section style="overflow-y:scroll;" id="content1">
             <!-- <div class="row"> -->
-              <!-- <div class="col"> -->
-                <!-- <p class="p-2 mb-0 text-white font-quarcaM"> -->
-                  <!-- Begin by selecting the item(s) you want and then the color you desire for each team. -->
-                <!-- </p> -->
+            <!-- <div class="col"> -->
+            <!-- <p class="p-2 mb-0 text-white font-quarcaM"> -->
+            <!-- Begin by selecting the item(s) you want and then the color you desire for each team. -->
+            <!-- </p> -->
 
-              <!-- </div> -->
+            <!-- </div> -->
             <!-- </div> -->
 
 
@@ -149,7 +149,7 @@
                 </select>
               </div>
               <div class="col-3 pl-0 pr-1">
-                <input style="max-height: 34px;" id="preset-name" class="acc-input font-quarcaL w-100 h-100" type="text" value="Default" />
+                <input style="max-height: 34px;" id="preset-name" class="acc-input font-quarcaL w-100 h-100" type="text" value="" />
               </div>
               <div class="col-3 pl-0 pr-1" style="max-width: 18%;">
                 <button style="color:#fff; padding:4px" class="font-quarcaL btn btn-acc w-100 fs-14 h-100" onclick="AddNewPreset()">ADD PRESET</button>
@@ -172,39 +172,45 @@
                 <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
 
                 <div id="blueteamitems" class="tabcontent">
-                  <div class="table w-100">                    
-					<table class="w-100 color-table">
+                  <div class="table w-100">
+                    <table class="w-100 color-table">
                       <thead>
                         <tr class="alt-row">
-                          <td class="alt-row" colspan="2">Primary Paint Color</td>    
-                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>						                           
+                          <td class="alt-row" colspan="2">Primary Paint Color</td>
+                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>
                           <td class="alt-row-">Enabled</td>
                         </tr>
                       </thead>
                       <tbody team="Blue">
                         <!-- COLORS -->
                         <tr>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="primary-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="primary-intensity-blue" class="acc-input" type="number" value="1" />
-							</td>                          
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="accent-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="accent-intensity-blue" class="acc-input" type="number" value="1" />
-							</td>
-							<td class="alt-row">
-								<label class="tick-container">
-									<input id="custom-color-enabled-blue" type="checkbox">
-									<span class="checkmark"></span>
-								</label>
-							</td>
-                        </tr>        
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="primary-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="primary-intensity-blue" class="acc-input" type="number" value="1.00"
+                            />
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="accent-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="accent-intensity-blue" class="acc-input" type="number" value="1.00"
+                            />
+                          </td>
+                          <td class="alt-row">
+                            <label class="tick-container">
+                              <input id="custom-color-enabled-blue" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                        </tr>
                     </table>
-					<table class="w-100 item-table">
+                    <table class="w-100 item-table">
                       <thead>
                         <tr class="alt-row">
                           <td class="alt-row">Type</td>
@@ -295,7 +301,7 @@
                           </td>
                         </tr>
 
-                        
+
 
                         <!-- ANTENNA -->
                         <tr>
@@ -326,8 +332,8 @@
                             </select>
                           </td>
                         </tr>
-						
-						<!-- BOOST -->
+
+                        <!-- BOOST -->
                         <tr>
                           <td class="alt-row">Boost</td>
                           <td class="alt-row-strong">
@@ -439,38 +445,44 @@
 
                 <div id="orangeteamitems" class="tabcontent">
                   <div class="table w-100">
-                    					<table class="w-100 color-table">
+                    <table class="w-100 color-table">
                       <thead>
                         <tr class="alt-row">
-                          <td class="alt-row" colspan="2">Primary Paint Color</td>    
-                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>						                           
+                          <td class="alt-row" colspan="2">Primary Paint Color</td>
+                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>
                           <td class="alt-row-">Enabled</td>
                         </tr>
                       </thead>
                       <tbody team="Orange">
                         <!-- COLORS -->
                         <tr>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="primary-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="primary-intensity-orange" class="acc-input" type="number" value="1" />
-							</td>                          
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div><input id="accent-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
-							</td>
-							<td class="alt-row-strong">
-								<div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div><input id="accent-intensity-orange" class="acc-input" type="number" value="1" />
-							</td>
-							<td class="alt-row">
-								<label class="tick-container">
-									<input id="custom-color-enabled-orange" type="checkbox">
-									<span class="checkmark"></span>
-								</label>
-							</td>
-                        </tr>        
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="primary-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="primary-intensity-orange" class="acc-input" type="number" value="1.00"
+                            />
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="accent-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="accent-intensity-orange" class="acc-input" type="number" value="1.00"
+                            />
+                          </td>
+                          <td class="alt-row">
+                            <label class="tick-container">
+                              <input id="custom-color-enabled-orange" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                        </tr>
                     </table>
-					<table class="w-100 item-table">
+                    <table class="w-100 item-table">
                       <thead>
                         <tr class="alt-row">
                           <td class="alt-row">Type</td>
@@ -618,7 +630,7 @@
                           <td class="alt-row">
                           </td>
                         </tr>
-						
+
                         <!-- PAINT FINISH -->
                         <tr>
                           <td class="alt-row">Primary Paint Finish</td>
@@ -730,29 +742,61 @@
                   </label>
                 </div>
               </div>
+
+              <div class="row alt-row p-2">
+                <div class="col-11 font-quarcaL">
+                  Enable field colors
+                </div>
+                <div class="col-1">
+                  <label class="tick-container">
+                    <input id="enable-field-color" type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="row alt-row p-2">
+                <div class="col-9 font-quarcaL">
+                  Blue Team Field Color
+                </div>
+                <div class="col-3">
+                  <input id="field-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+                </div>
+              </div>
+
+              <div class="row alt-row p-2">
+                <div class="col-9 font-quarcaL">
+                  Orange Team Field Color
+                </div>
+                <div class="col-3">
+                  <input id="field-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+                </div>
+              </div>
+
+
               <!-- <div class="row p-2"> -->
-                <!-- <div class="col-11 font-quarcaL b-team"> -->
-                  <!-- Enable Blue Team -->
-                <!-- </div> -->
-                <!-- <div class="col-1"> -->
-                  <!-- <label class="tick-container"> -->
-                    <!-- <input id="custom-color-enabled-blue" type="checkbox"> -->
-                    <!-- <span class="checkmark"></span> -->
-                  <!-- </label> -->
-                <!-- </div> -->
+              <!-- <div class="col-11 font-quarcaL b-team"> -->
+              <!-- Enable Blue Team -->
+              <!-- </div> -->
+              <!-- <div class="col-1"> -->
+              <!-- <label class="tick-container"> -->
+              <!-- <input id="custom-color-enabled-blue" type="checkbox"> -->
+              <!-- <span class="checkmark"></span> -->
+              <!-- </label> -->
+              <!-- </div> -->
               <!-- </div> -->
 
 
               <!-- <div class="row p-2"> -->
-                <!-- <div class="col-11 font-quarcaL o-team"> -->
-                  <!-- Enable Orange Team -->
-                <!-- </div> -->
-                <!-- <div class="col-1"> -->
-                  <!-- <label class="tick-container"> -->
-                    <!-- <input id="custom-color-enabled-orange" type="checkbox"> -->
-                    <!-- <span class="checkmark"></span> -->
-                  <!-- </label> -->
-                <!-- </div> -->
+              <!-- <div class="col-11 font-quarcaL o-team"> -->
+              <!-- Enable Orange Team -->
+              <!-- </div> -->
+              <!-- <div class="col-1"> -->
+              <!-- <label class="tick-container"> -->
+              <!-- <input id="custom-color-enabled-orange" type="checkbox"> -->
+              <!-- <span class="checkmark"></span> -->
+              <!-- </label> -->
+              <!-- </div> -->
               <!-- </div> -->
 
             </div>
@@ -840,42 +884,42 @@
               </div>
             </div>
 
-            <!-- <button class="accordion ">DISCORD RICH PRESENCE</button> -->
-            <!-- <div class="panel"> -->
-            <!-- <div class="row p-2"> -->
-            <!-- <div class="col-11 font-quarcaL"> -->
-            <!-- Full Rich Presence -->
-            <!-- </div> -->
-            <!-- <div class="col-1"> -->
-            <!-- <label class="tick-container"> -->
-            <!-- <input name="discord" type="radio" checked="checked" value=2> -->
-            <!-- <span class="checkmark"></span> -->
-            <!-- </label> -->
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- <div class="row p-2 alt-row"> -->
-            <!-- <div class="col-11 font-quarcaL"> -->
-            <!-- No Rank Data or Time Remaining -->
-            <!-- </div> -->
-            <!-- <div class="col-1"> -->
-            <!-- <label class="tick-container"> -->
-            <!-- <input name="discord" type="radio" value=1> -->
-            <!-- <span class="checkmark"></span> -->
-            <!-- </label> -->
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- <div class="row p-2"> -->
-            <!-- <div class="col-11 font-quarcaL"> -->
-            <!-- Disabled -->
-            <!-- </div> -->
-            <!-- <div class="col-1"> -->
-            <!-- <label class="tick-container"> -->
-            <!-- <input name="discord" type="radio" value=0> -->
-            <!-- <span class="checkmark"></span> -->
-            <!-- </label> -->
-            <!-- </div> -->
-            <!-- </div> -->
-            <!-- </div> -->
+            <button class="accordion ">DISCORD RICH PRESENCE</button>
+            <div class="panel">
+              <div class="row p-2">
+                <div class="col-11 font-quarcaL">
+                  Full Rich Presence
+                </div>
+                <div class="col-1">
+                  <label class="tick-container">
+                    <input name="discord" type="radio" checked="checked" value=2>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row p-2 alt-row">
+                <div class="col-11 font-quarcaL">
+                  No Rank Data or Time Remaining
+                </div>
+                <div class="col-1">
+                  <label class="tick-container">
+                    <input name="discord" type="radio" value=1>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row p-2">
+                <div class="col-11 font-quarcaL">
+                  Disabled
+                </div>
+                <div class="col-1">
+                  <label class="tick-container">
+                    <input name="discord" type="radio" value=0>
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
 
           </section>
 
@@ -1105,9 +1149,9 @@
             <br> -->
           <li>
             <strong>Bugs:</strong> We know not everything will be perfect thats why its beta ;)! But if you have crashes, issues,
-            bugs, non loaded textures etc then please report them to the #beta-help channel in the Discord. If you
-            have any other issues after that then contact support. Please only escalate an issue to a Dev or Admin if it
-            is critical and can't be resolved by a member of support.</li>
+            bugs, non loaded textures etc then please report them to the #beta-help channel in the Discord. If you have any
+            other issues after that then contact support. Please only escalate an issue to a Dev or Admin if it is critical
+            and can't be resolved by a member of support.</li>
         </ol>
         <br>
         <p>Most of all, Have fun and play nice! Try to give us as much feedback as possible, both good and bad!</p>
