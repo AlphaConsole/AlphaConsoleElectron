@@ -738,6 +738,17 @@ $("#preset-select").change(function () {
 });
 
 
+$("#always-on-top").change(function () {
+  
+  console.log("wow!!")
+
+	const { ipcRenderer } = require('electron');
+
+  ipcRenderer.send('alwaystop');
+  
+
+});
+
 $("#preset-name").on("input", function () {
   $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
 });

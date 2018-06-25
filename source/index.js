@@ -31,7 +31,6 @@ autoUpdater.on("update-downloaded", function (_arg4) {
 
  
   function createWindow () {
-
     
     // Create the browser window.
     mainWindow = new BrowserWindow({
@@ -47,13 +46,14 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       },
       icon: path.join(__dirname, '/assets/img/logo_normal.png')
     })
-  
+
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({
       pathname: path.join(__dirname, 'index.html'),
       protocol: 'file:',
       slashes: true
     }))
+
   
     // Open the DevTools.
     //mainWindow.webContents.openDevTools()
@@ -94,6 +94,16 @@ autoUpdater.on("update-downloaded", function (_arg4) {
   ipcMain.on('refreshwindow', () => {
     //Refreshes window to load in new items
     mainWindow.webContents.reloadIgnoringCache()
+  });
+
+  ipcMain.on('always-on-top', () => {
+      
+    console.log(alwaysontop);
+
+    mainWindow.setAlwaysOnTop(alwaysontop, "floating");
+    mainWindow.setVisibleOnAllWorkspaces(alwaysontop);
+    mainWindow.setFullScreenable(!alwaysontop);
+
   });
   
   // In this file you can include the rest of your app's specific main process
