@@ -1,6 +1,6 @@
 {
   "name": "AlphaConsole",
-  "version": "9.1.0",
+  "version": "9.2.0",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {

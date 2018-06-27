@@ -53,7 +53,6 @@ autoUpdater.on("update-downloaded", function (info) {
       protocol: 'file:',
       slashes: true
     }))
-
   
     // Open the DevTools.
     //mainWindow.webContents.openDevTools()
@@ -96,8 +95,8 @@ autoUpdater.on("update-downloaded", function (info) {
     mainWindow.webContents.reloadIgnoringCache()
   });
 
-  ipcMain.on('always-on-top', () => {
-      
+  ipcMain.on('alwaysontop', () => {
+    var alwaysontop = true;  
     console.log(alwaysontop);
 
     mainWindow.setAlwaysOnTop(alwaysontop, "floating");

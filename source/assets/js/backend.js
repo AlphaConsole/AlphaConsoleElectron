@@ -748,9 +748,7 @@ $("#always-on-top").change(function () {
   console.log("wow!!")
 
 	const { ipcRenderer } = require('electron');
-
-  ipcRenderer.send('alwaystop');
-  
+  ipcRenderer.send('alwaystop');  
 
 });
 
