@@ -25,11 +25,11 @@ autoUpdater.on("error", function (err) {
 autoUpdater.on("download-progress", function (progressObj) {
     return log.info("Downloading update.");
 });
-autoUpdater.on("update-downloaded", function (info) {
-    log.info("Update downloaded.");
-    autoUpdater.quitAndInstall(); 
+autoUpdater.on("update-downloaded", function (_arg4) {
+    return log.info("Update downloaded.");
 }); 
 
+ 
   function createWindow () {
     
     // Create the browser window.
@@ -53,6 +53,7 @@ autoUpdater.on("update-downloaded", function (info) {
       protocol: 'file:',
       slashes: true
     }))
+
   
     // Open the DevTools.
     //mainWindow.webContents.openDevTools()
@@ -95,13 +96,13 @@ autoUpdater.on("update-downloaded", function (info) {
     mainWindow.webContents.reloadIgnoringCache()
   });
 
-  ipcMain.on('alwaysontop', () => {
-    var alwaysontop = true;  
-    console.log(alwaysontop);
+  ipcMain.on('alwaystop', (event, arg) => {
+      
+    console.log(arg);
 
-    mainWindow.setAlwaysOnTop(alwaysontop, "floating");
-    mainWindow.setVisibleOnAllWorkspaces(alwaysontop);
-    mainWindow.setFullScreenable(!alwaysontop);
+    mainWindow.setAlwaysOnTop(arg, "floating");
+    mainWindow.setVisibleOnAllWorkspaces(arg);
+    mainWindow.setFullScreenable(!arg);
 
   });
   

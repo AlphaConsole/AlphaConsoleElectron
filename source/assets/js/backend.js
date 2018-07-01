@@ -743,12 +743,13 @@ $("#preset-select").change(function () {
 });
 
 
+  const { ipcRenderer } = require('electron');
+  
 $("#always-on-top").change(function () {
   
-  console.log("wow!!")
+  console.log($(this).prop('checked'));
 
-	const { ipcRenderer } = require('electron');
-  ipcRenderer.send('alwaystop');  
+  ipcRenderer.send('alwaystop', $(this).prop('checked'));  
 
 });
 
