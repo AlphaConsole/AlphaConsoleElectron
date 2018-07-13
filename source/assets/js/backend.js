@@ -206,9 +206,9 @@ function LoadConfiguration() {
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
 
   //Trade Options
-  $("#trade-save-log").prop('checked', Config.TradeOptions.SaveLog)
-  $("#trade-enable-modal").prop('checked', Config.TradeOptions.ShowModal)
-  $("#trade-enable-popups").prop('checked', Config.TradeOptions.ShowPopups)
+  $("#trade-save-log").prop('checked', Config.TradeOptions ? Config.TradeOptions.SaveLog : true)
+  $("#trade-enable-modal").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowModal : true)
+  $("#trade-enable-popups").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowPopups : true)
 
   //General options
   $("#ac-enabled").prop('checked', Config.GeneralOptions.Enabled);
