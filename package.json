@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "electron-log": "^2.2.14",
-    "electron-updater": "2.12.0",
+    "electron-updater": "^2.18.2",
     "modclean": "^2.1.2",
     "node-notifier": "^5.2.1",
     "request": "^2.83.0",
