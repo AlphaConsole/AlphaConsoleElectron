@@ -205,6 +205,11 @@ function LoadConfiguration() {
   //Discord rich presence options
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
 
+  //Trade Options
+  $("#trade-save-log").prop('checked', Config.TradeOptions.SaveLog)
+  $("#trade-enable-modal").prop('checked', Config.TradeOptions.ShowModal)
+  $("#trade-enable-popups").prop('checked', Config.TradeOptions.ShowPopups)
+
   //General options
   $("#ac-enabled").prop('checked', Config.GeneralOptions.Enabled);
   $("#broadcast-enabled").prop('checked', Config.GeneralOptions.EventBroadcast);
@@ -439,6 +444,13 @@ function GetConfigurationString() {
   var DiscordOptions = {};
   DiscordOptions.RichPresenceLevel = parseInt($("[name='discord']:checked").val());
   Config.DiscordOptions = DiscordOptions;
+
+  //Trading options
+  var TradeOptions = {};
+  TradeOptions.SaveLog = $("#trade-save-log").prop('checked');
+  TradeOptions.ShowModal = $("#trade-enable-modal").prop('checked');
+  TradeOptions.ShowPopups = $("#trade-enable-popups").prop('checked');
+  Config.TradeOptions = TradeOptions;
 
   //General options
   var GeneralOptions = {};
