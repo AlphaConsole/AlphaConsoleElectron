@@ -597,6 +597,11 @@
 	"DiscordOptions": {
 		"RichPresenceLevel": null
 	},
+	"TradeOptions": {
+		"SaveLog": true,
+		"ShowModal": true,
+		"ShowPopups": true
+	},
 	"GeneralOptions": {
 		"Enabled": true,
 		"MinimizeToTray": true,
@@ -604,5 +609,5 @@
 		"InstallLocation": "",
 		"SyncTeams": false
 	},
-	"ACPath": "C:\\Users\\Barbosicks\\Documents\\Visual Studio 2017\\Projects\\AlphaConsoleElectron"
+	"ACPath": "D:\\Projects\\Freetime\\AC Project\\AC_Beta"
 }

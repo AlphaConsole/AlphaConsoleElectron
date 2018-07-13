@@ -205,6 +205,11 @@ function LoadConfiguration() {
   //Discord rich presence options
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
 
+  //Trade Options
+  $("#trade-save-log").prop('checked', Config.TradeOptions ? Config.TradeOptions.SaveLog : true)
+  $("#trade-enable-modal").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowModal : true)
+  $("#trade-enable-popups").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowPopups : true)
+
   //General options
   $("#ac-enabled").prop('checked', Config.GeneralOptions.Enabled);
   $("#broadcast-enabled").prop('checked', Config.GeneralOptions.EventBroadcast);
@@ -440,6 +445,13 @@ function GetConfigurationString() {
   DiscordOptions.RichPresenceLevel = parseInt($("[name='discord']:checked").val());
   Config.DiscordOptions = DiscordOptions;
 
+  //Trading options
+  var TradeOptions = {};
+  TradeOptions.SaveLog = $("#trade-save-log").prop('checked');
+  TradeOptions.ShowModal = $("#trade-enable-modal").prop('checked');
+  TradeOptions.ShowPopups = $("#trade-enable-popups").prop('checked');
+  Config.TradeOptions = TradeOptions;
+
   //General options
   var GeneralOptions = {};
   GeneralOptions.Enabled = $("#ac-enabled").prop('checked');
@@ -517,6 +529,9 @@ function GetTexturePackagePaths() {
     var fs = require('fs');
     var path = require('path');
 
+    // Check if textures folder exist. If it doesn't exist return empty array. You could potentially create a textures folder now and return empty array.
+    if (!fs.existsSync(dir)) return [];
+
     files = fs.readdirSync(dir);
 
     filelist = filelist || [];
@@ -566,7 +581,8 @@ function GetTexturePackages() {
 function SaveMasterPackages(packages) {
   var fs = require('fs');
   try {
-    fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
+    if (fs.existsSync(GetBasePath() + '/textures/packages.json')) // Let's first check if that textures folder & file exist. Otherwise just ignore.
+      fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
   } catch (e) {
     alert(e);
     alert('Failed to save the packages!');
