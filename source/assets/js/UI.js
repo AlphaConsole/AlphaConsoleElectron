@@ -30,6 +30,28 @@ $(function () {
       }
     }
 
+    var fileInput = document.getElementById("trade-log-location");
+    var divInput = document.getElementById("trade-log-location-template");
+    var textInput = document.getElementById("trade-log-location-text");
+    var clearInput = document.getElementById("trade-log-location-x");
+
+    //On file location change check if the value is valid.
+    fileInput.onchange = function() {
+      if (!(fileInput.files[0].name.endsWith(".txt") || fileInput.files[0].name.endsWith(".log")))
+        return fileInput.value = "";
+
+      fileInput.style.display = "none";
+      textInput.value = fileInput.files[0].path;
+      divInput.style.display = "block";
+    }
+    clearInput.onclick = function() {
+      textInput.value = "";
+      fileInput.value = "";
+
+      fileInput.style.display = "block";
+      divInput.style.display = "none";
+    }
+
     $(document).ready(function () {
         var $element = $('.title-bar-wrapper');
         var $follow = $element.find('#title-bar');
