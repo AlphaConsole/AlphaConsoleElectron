@@ -209,6 +209,12 @@ function LoadConfiguration() {
   $("#trade-save-log").prop('checked', Config.TradeOptions ? Config.TradeOptions.SaveLog : true)
   $("#trade-enable-modal").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowModal : true)
   $("#trade-enable-popups").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowPopups : true)
+  if (Config.TradeOptions && Config.TradeOptions.LogLocation.length > 3) {
+
+    $("#trade-log-location").css("display", "none");
+    $("#trade-log-location-template").css("display", "block");
+    $("#trade-log-location-text").prop("value", Config.TradeOptions.LogLocation);
+  }
 
   //General options
   $("#ac-enabled").prop('checked', Config.GeneralOptions.Enabled);
@@ -448,6 +454,7 @@ function GetConfigurationString() {
   //Trading options
   var TradeOptions = {};
   TradeOptions.SaveLog = $("#trade-save-log").prop('checked');
+  TradeOptions.LogLocation = $("#trade-log-location-text").val().length > 3 ? $("#trade-log-location-text").val() : "trades.log";
   TradeOptions.ShowModal = $("#trade-enable-modal").prop('checked');
   TradeOptions.ShowPopups = $("#trade-enable-popups").prop('checked');
   Config.TradeOptions = TradeOptions;

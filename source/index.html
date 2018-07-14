@@ -811,7 +811,7 @@
 
             <button class="accordion ">RANKING OPTIONS</button>
             <div class="panel">
-              <div class="row p-2">
+              <div class="row p-2 alt-row">
                 <div class="col-11 font-quarcaL">
                   Display MMR and MMR updates ingame
                 </div>
@@ -871,6 +871,18 @@
                   </label>
                 </div>
               </div>
+              <div class="row p-2 alt-row">
+                <div class="col-6 font-quarcaL">
+                  File log location
+                </div>
+                <div class="col-6">
+                  <input id="trade-log-location" class="acc-input" type="file" style="padding: 0;" accept=".txt, .log" />
+                  <div id="trade-log-location-template" style="display: none;">
+                    <input id="trade-log-location-text" class="acc-input" type="text" readonly />
+                    <span id="trade-log-location-x" class='reset-input'> ✗</span>
+                  </div>
+                </div>
+              </div>
               <div class="row p-2">
                 <div class="col-11 font-quarcaL">
                   Show trade log popup
@@ -888,7 +900,7 @@
                 </div>
                 <div class="col-1">
                   <label class="tick-container">
-                    <input id="trade-enable-popups" type="checkbox">
+                    <input id="trade-enable-popups" type="checkbox" checked="checked">
                     <span class="checkmark"></span>
                   </label>
                 </div>

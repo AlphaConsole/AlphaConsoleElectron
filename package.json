@@ -6,7 +6,7 @@
   "scripts": {
     "test": "electron source/index.js",
     "build-packager": "electron-packager . --out=build --overwrite --platform win32 --icon=source/assets/img/app_icon.ico",
-    "pack": "build --dir",
+    "pack": "build --dir --ia32",
     "publish": "build -p onTag",
     "watch": "grunt watch"
   },
