@@ -242,12 +242,16 @@ function LoadConfiguration() {
     let text = data.map(t => {
       let temp = `<h3>Update ${t.tag_name}</h3><p>${t.body.replace(/-/g, "<br/>-")}</p>`;
       temp = temp.replace("</h3><p><br/>", "</h3><p>");
-      console.log(temp);
 
       return temp;
     }).join("<br/>");
 
     $("#changelogsInfo").html(text);
+    if ('v' + require('electron').remote.app.getVersion() !== data[0].tag_name) {
+      $("#promptTitle").html("New version available");
+      $("#promptContent").html("<p class=\"text-center\">Download the new version <a href=\"https://github.com/alphaconsole/AlphaConsoleElectron/releases\">here</a>!</p>")
+      $("#prompt").css("display", "block")
+    }
   })
 
 }
