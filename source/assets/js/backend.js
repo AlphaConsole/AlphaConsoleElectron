@@ -209,7 +209,7 @@ function LoadConfiguration() {
   $("#trade-save-log").prop('checked', Config.TradeOptions ? Config.TradeOptions.SaveLog : true)
   $("#trade-enable-modal").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowModal : true)
   $("#trade-enable-popups").prop('checked', Config.TradeOptions ? Config.TradeOptions.ShowPopups : true)
-  if (Config.TradeOptions && Config.TradeOptions.LogLocation.length > 3) {
+  if (Config.TradeOptions && Config.TradeOptions.LogLocation && Config.TradeOptions.LogLocation.length > 3) {
 
     $("#trade-log-location").css("display", "none");
     $("#trade-log-location-template").css("display", "block");
@@ -229,6 +229,26 @@ function LoadConfiguration() {
   if (Config.GeneralOptions.SyncTeams) {
     ToggleSyncTeams();
   }
+
+  const request = require('request');
+
+  request("https://api.github.com/repos/AlphaConsole/AlphaConsoleElectron/releases", {
+    headers: {
+      "User-Agent": "AlphaConsole"
+    }
+  }, (err, result, body) => {
+    let data = JSON.parse(body);
+    data = [data[0], data[1], data[2]];
+    let text = data.map(t => {
+      let temp = `<h3>Update ${t.tag_name}</h3><p>${t.body.replace(/-/g, "<br/>-")}</p>`;
+      temp = temp.replace("</h3><p><br/>", "</h3><p>");
+      console.log(temp);
+
+      return temp;
+    }).join("<br/>");
+
+    $("#changelogsInfo").html(text);
+  })
 
 }
 
