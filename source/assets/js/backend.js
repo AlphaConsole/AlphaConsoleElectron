@@ -247,6 +247,20 @@ function LoadConfiguration() {
     }).join("<br/>");
 
     $("#changelogsInfo").html(text);
+    if (!Config.LastVersion || Config.LastVersion !== require('electron').remote.app.getVersion()) {
+      let lastVersion = data[0];
+      let changelogs = `<h3>${lastVersion.tag_name}</h3><p>${lastVersion.body.replace(/-/g, "<br/>-")}</p>`;
+      changelogs = changelogs.replace("</h3><p><br/>", "</h3><p>");
+
+      $("#promptTitle").html("New Update Installed");
+      $("#promptContent").html(changelogs);
+      $("#prompt").css("display", "block");
+
+      const fs = require('fs');
+
+      Config.LastVersion = require('electron').remote.app.getVersion();
+      fs.writeFileSync(GetBasePath() + '/config.json', JSON.stringify(Config, null, "\t"), 'utf-8');
+    }
   })
 
 }
