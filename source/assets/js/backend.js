@@ -247,11 +247,6 @@ function LoadConfiguration() {
     }).join("<br/>");
 
     $("#changelogsInfo").html(text);
-    if ('v' + require('electron').remote.app.getVersion() !== data[0].tag_name) {
-      $("#promptTitle").html("New version available");
-      $("#promptContent").html("<p class=\"text-center\">Download the new version <a href=\"https://github.com/alphaconsole/AlphaConsoleElectron/releases\">here</a>!</p>")
-      $("#prompt").css("display", "block")
-    }
   })
 
 }
