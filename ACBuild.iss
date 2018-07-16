@@ -154,6 +154,7 @@ var
   rlFolder : String;
   originalInstallation : String;
 begin 
+  //TODO check for RocketLeague.exe even if AC is already installed
   if WizardForm.DirEdit.Text = 'C:\AlphaConsole' then begin
     if FileExists('C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\RocketLeague.exe') then begin
       WizardForm.DirEdit.Text := 'C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\AlphaConsole'
@@ -165,7 +166,9 @@ begin
         UserPage := CreateInputFilePage(wpSelectDir, 'Select Rocket League Folder', 'Find RocketLeague.exe', 'The Setup could not find RocketLeague.exe. Please select it using the dialog below: ')
         UserPage.Add('Location of RocketLeague.exe:', 'RocketLeague.exe|RocketLeague.exe', 'RocketLeague.exe');
         UserPage.OnNextButtonClick := @InputFileCheck;      
-  end end end; 
+      end 
+    end 
+  end;  
 end;  
 
 procedure CurPageChanged(CurPageID: Integer);
