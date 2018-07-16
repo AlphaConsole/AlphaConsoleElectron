@@ -6,16 +6,26 @@ $(function () {
 
     // Get the modal
     var modal = document.getElementById('helpModal');
+    var changelogs = document.getElementById('changelogsModal');
+    var prompt = document.getElementById('prompt')
 
     // Get the button that opens the modal
     var btn = document.getElementById("helpBtn");
+    var changelogsBtn = document.getElementById("ChangelogsBtn");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
+    var changelogsSpan = document.getElementById("closeChangeLogs");
+    var promptSpan = document.getElementById("closePrompt");
 
     // When the user clicks the button, open the modal 
     btn.onclick = function () {
       modal.style.display = "block";
+    }
+
+    changelogsBtn.onclick = function () {
+      modal.style.display = "none";
+      changelogs.style.display = "block";
     }
 
     // When the user clicks on <span> (x), close the modal
@@ -23,10 +33,25 @@ $(function () {
       modal.style.display = "none";
     }
 
+    changelogsSpan.onclick = function () {
+      changelogs.style.display = "none";
+    }
+
+    promptSpan.onclick = function() {
+      prompt.style.display = "none";
+    }
+
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modal) {
         modal.style.display = "none";
+      }
+      if (event.target == changelogs) {
+        changelogs.style.display = "none";
+      }
+
+      if (event.target == prompt) {
+        prompt.style.display = "none";
       }
     }
 
