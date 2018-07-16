@@ -223,7 +223,8 @@ function LoadConfiguration() {
   $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
   $("#install-location").val(Config.GeneralOptions.InstallLocation);
 
-
+  $("#always-on-top").prop('checked', Config.AlwaysOnTop);
+  ipcRenderer.send('alwaystop', Config.AlwaysOnTop);
 
 
   if (Config.GeneralOptions.SyncTeams) {
@@ -502,6 +503,8 @@ function GetConfigurationString() {
   GeneralOptions.SyncTeams = SyncTeams;
   Config.GeneralOptions = GeneralOptions;
 
+  Config.LastVersion = require('electron').remote.app.getVersion();
+  Config.AlwaysOnTop = $("#always-on-top").prop('checked');
 
   //Miscellaneous
   Config.ACPath = GetBasePath();
