@@ -30,7 +30,7 @@ SolidCompression=yes
 OutputDir=dist
 CloseApplicationsFilter=*.exe,*.dll,*.chm,RocketLeague.exe
 CloseApplications=force
-PrivilegesRequired=lowest
+PrivilegesRequired=admin
 DisableWelcomePage=yes
 DisableReadyPage=yes
 DisableFinishedPage=yes 
@@ -154,7 +154,10 @@ var
   rlFolder : String;
   originalInstallation : String;
 begin 
-  //TODO check for RocketLeague.exe even if AC is already installed
+  if not(WizardForm.DirEdit.Text = 'C:\AlphaConsole') then begin
+     if not(FileExists(WizardForm.DirEdit.Text + '\..\RocketLeague.exe')) then
+        WizardForm.DirEdit.Text := 'C:\AlphaConsole'
+  end;
   if WizardForm.DirEdit.Text = 'C:\AlphaConsole' then begin
     if FileExists('C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\RocketLeague.exe') then begin
       WizardForm.DirEdit.Text := 'C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\AlphaConsole'
@@ -168,7 +171,7 @@ begin
         UserPage.OnNextButtonClick := @InputFileCheck;      
       end 
     end 
-  end;  
+  end;
 end;  
 
 procedure CurPageChanged(CurPageID: Integer);
