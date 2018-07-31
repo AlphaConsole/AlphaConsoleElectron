@@ -27,6 +27,7 @@ autoUpdater.on("download-progress", function (progressObj) {
 });
 autoUpdater.on("update-downloaded", function (_arg4) {
     return log.info("Update downloaded.");
+    autoUpdater.quitAndInstall(); 
 }); 
 
  
