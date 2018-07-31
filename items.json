@@ -475,6 +475,10 @@
                 {
                     "ItemID": 2916,
                     "Name": "Cirrus"
+                },
+                {
+                    "ItemID": 3114,
+                    "Name": "Virtual Wave"
                 }
             ],
             "Name": "Rocket Boost",
@@ -881,6 +885,10 @@
                 {
                     "ItemID": 2916,
                     "Name": "Cirrus"
+                },
+                {
+                    "ItemID": 3114,
+                    "Name": "Virtual Wave"
                 }
             ],
             "Name": "BoostSound",
@@ -983,6 +991,10 @@
                 {
                     "ItemID": 2925,
                     "Name": "Toon Hydro"
+                },
+                {
+                    "ItemID": 3220,
+                    "Name": "Binary"
                 }
             ],
             "Name": "Trail",
@@ -1021,6 +1033,10 @@
                 {
                     "ItemID": 29,
                     "Name": "Hotshot"
+                },
+                {
+                    "ItemID": 30,
+                    "Name": "Merc"
                 },
                 {
                     "ItemID": 31,
@@ -1179,8 +1195,16 @@
                     "Name": "Twinzer"
                 },
                 {
-                    "ItemID": 3040,
-                    "Name": "Merc"
+                    "ItemID": 2919,
+                    "Name": "Jurassic Jeep® Wrangler"
+                },
+                {
+                    "ItemID": 3031,
+                    "Name": "Cyclone"
+                },
+                {
+                    "ItemID": 3138,
+                    "Name": "Mystery Item"
                 }
             ],
             "Name": "Body",
@@ -3065,8 +3089,24 @@
                     "Name": "Protostar"
                 },
                 {
+                    "ItemID": 2920,
+                    "Name": "Jurassic Park"
+                },
+                {
+                    "ItemID": 2921,
+                    "Name": "Jurassic World"
+                },
+                {
                     "ItemID": 2930,
                     "Name": "S. Watercolour"
+                },
+                {
+                    "ItemID": 2932,
+                    "Name": "InGen"
+                },
+                {
+                    "ItemID": 2940,
+                    "Name": "SARPBC-10"
                 },
                 {
                     "ItemID": 2990,
@@ -3701,6 +3741,18 @@
                 {
                     "ItemID": 2838,
                     "Name": "Sand Castle"
+                },
+                {
+                    "ItemID": 2959,
+                    "Name": "Battle-Cars Anniversary"
+                },
+                {
+                    "ItemID": 2960,
+                    "Name": "Birthday Bash"
+                },
+                {
+                    "ItemID": 2976,
+                    "Name": "Jurassic Park Hard Hat"
                 }
             ],
             "Name": "Topper",
@@ -4213,8 +4265,16 @@
                     "Name": "Cruxe"
                 },
                 {
+                    "ItemID": 2926,
+                    "Name": "Mothership Pro"
+                },
+                {
                     "ItemID": 2935,
                     "Name": "Santa Fe"
+                },
+                {
+                    "ItemID": 2955,
+                    "Name": "Jurassic Jeep® Wrangler"
                 },
                 {
                     "ItemID": 2956,
@@ -4225,8 +4285,28 @@
                     "Name": "Centro"
                 },
                 {
-                    "ItemID": 3041,
-                    "Name": "Mothership Pro"
+                    "ItemID": 2972,
+                    "Name": "Dynamo"
+                },
+                {
+                    "ItemID": 2985,
+                    "Name": "SARPBC-10"
+                },
+                {
+                    "ItemID": 3000,
+                    "Name": "Psyonix"
+                },
+                {
+                    "ItemID": 3001,
+                    "Name": "Libertine"
+                },
+                {
+                    "ItemID": 3072,
+                    "Name": "Thread-X2"
+                },
+                {
+                    "ItemID": 3079,
+                    "Name": "Reactor"
                 }
             ],
             "Name": "Wheels",
@@ -4745,6 +4825,10 @@
                 {
                     "ItemID": 1104,
                     "Name": "Breakout: Snakeskin"
+                },
+                {
+                    "ItemID": 1123,
+                    "Name": "Dominus: Dot Matrix"
                 },
                 {
                     "ItemID": 1130,
@@ -5643,6 +5727,14 @@
                     "Name": "Dominus GT: NNTR"
                 },
                 {
+                    "ItemID": 2345,
+                    "Name": "Octane ZSR: Mechaceph"
+                },
+                {
+                    "ItemID": 2346,
+                    "Name": "Octane: Chantico"
+                },
+                {
                     "ItemID": 2363,
                     "Name": "Endo: Mummified"
                 },
@@ -5791,6 +5883,10 @@
                     "Name": "Jäger 619 RS: Hip-Hop"
                 },
                 {
+                    "ItemID": 2551,
+                    "Name": "Jäger 619 RS: StarLighter"
+                },
+                {
                     "ItemID": 2581,
                     "Name": "Jäger 619 RS: XVI"
                 },
@@ -5837,6 +5933,10 @@
                 {
                     "ItemID": 2672,
                     "Name": "Road Hog: Sundae"
+                },
+                {
+                    "ItemID": 2679,
+                    "Name": "Breakout: Astaroth"
                 },
                 {
                     "ItemID": 2680,
@@ -5969,6 +6069,34 @@
                 {
                     "ItemID": 2989,
                     "Name": "Twinzer: Slimed"
+                },
+                {
+                    "ItemID": 3217,
+                    "Name": "Cyclone: Whiteout"
+                },
+                {
+                    "ItemID": 3219,
+                    "Name": "Cyclone: Bat Boy"
+                },
+                {
+                    "ItemID": 3231,
+                    "Name": "Cyclone: L-ITA 99"
+                },
+                {
+                    "ItemID": 3232,
+                    "Name": "Cyclone: Sliver"
+                },
+                {
+                    "ItemID": 3233,
+                    "Name": "Cyclone: Flames"
+                },
+                {
+                    "ItemID": 3236,
+                    "Name": "Cyclone: Stripes"
+                },
+                {
+                    "ItemID": 3239,
+                    "Name": "Mainframe"
                 }
             ],
             "Name": "Decal",
@@ -6092,6 +6220,18 @@
                 {
                     "ItemID": 2275,
                     "Name": "Anodized"
+                },
+                {
+                    "ItemID": 2748,
+                    "Name": "'89 Batmobile"
+                },
+                {
+                    "ItemID": 2973,
+                    "Name": "Canvas"
+                },
+                {
+                    "ItemID": 2974,
+                    "Name": "Metallic (Rough)"
                 }
             ],
             "Name": "Paint Finish",
@@ -6507,6 +6647,14 @@
                 {
                     "ItemID": 3011,
                     "Name": "Crate - RL Beach Blast (Unlocked)"
+                },
+                {
+                    "ItemID": 3049,
+                    "Name": "Golden Egg"
+                },
+                {
+                    "ItemID": 3262,
+                    "Name": "Crate - Zephyr"
                 }
             ],
             "Name": "Crates",
@@ -6625,6 +6773,18 @@
                 {
                     "ItemID": 2275,
                     "Name": "Anodized"
+                },
+                {
+                    "ItemID": 2748,
+                    "Name": "'89 Batmobile"
+                },
+                {
+                    "ItemID": 2973,
+                    "Name": "Canvas"
+                },
+                {
+                    "ItemID": 2974,
+                    "Name": "Metallic (Rough)"
                 }
             ],
             "Name": "Accent Paint Finish",
@@ -6861,8 +7021,16 @@
                     "Name": "'89 Batmobile"
                 },
                 {
+                    "ItemID": 2927,
+                    "Name": "Jurassic Jeep® Wrangler"
+                },
+                {
                     "ItemID": 2999,
                     "Name": "Twinzer"
+                },
+                {
+                    "ItemID": 3091,
+                    "Name": "Cyclone"
                 }
             ],
             "Name": "Engine Audio",
@@ -6963,6 +7131,10 @@
                     "Name": "Beach Party"
                 },
                 {
+                    "ItemID": 2975,
+                    "Name": "T. rex"
+                },
+                {
                     "ItemID": 3018,
                     "Name": "Striker"
                 },
@@ -6973,6 +7145,10 @@
                 {
                     "ItemID": 3020,
                     "Name": "Striker Legend"
+                },
+                {
+                    "ItemID": 3071,
+                    "Name": "Singularity"
                 }
             ],
             "Name": "Goal Explosion",
@@ -6980,6 +7156,10 @@
         },
         {
             "Items": [
+                {
+                    "ItemID": 2407,
+                    "Name": "Mrs. Avocado"
+                },
                 {
                     "ItemID": 2410,
                     "Name": "Calculated"
@@ -7333,6 +7513,22 @@
                     "Name": "S. Watercolour"
                 },
                 {
+                    "ItemID": 2978,
+                    "Name": "Battle-Cars Anniversary"
+                },
+                {
+                    "ItemID": 2982,
+                    "Name": "Mr DNA"
+                },
+                {
+                    "ItemID": 2983,
+                    "Name": "Jurassic Park"
+                },
+                {
+                    "ItemID": 2984,
+                    "Name": "Jurassic World"
+                },
+                {
                     "ItemID": 3002,
                     "Name": "Season 7 - Tier 1"
                 },
@@ -7359,6 +7555,10 @@
                 {
                     "ItemID": 3008,
                     "Name": "Season 7 - Tier 2"
+                },
+                {
+                    "ItemID": 3188,
+                    "Name": "Birthday Bash"
                 }
             ],
             "Name": "Player Banner",
