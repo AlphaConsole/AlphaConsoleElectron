@@ -119,7 +119,7 @@
     }
 
     iframe {
-      padding-right:10px;
+      padding-right: 10px;
     }
 
     li {
@@ -136,10 +136,17 @@
 
     .download {
       position: absolute;
-      margin:10px;
+      margin: 10px;
       bottom: 0;
       right: 0;
       padding: 10px;
+    }
+
+    .page-control {
+      color: #fff;
+      font-size: 21px !important;
+      text-align: center;
+      float: left;
     }
   </style>
 </head>
@@ -193,12 +200,48 @@
       <div class="col">
         <main class="">
 
+          <!-- PAGE CONTROL -->
+          <div class="row">
+
+            <a onclick="PrevPage()" class="" id="button-prev-page" style="width:40px; height:40px; color:#fff; padding:5px;" href="#">
+              <i style="width:30px; height:30px; font-size:30px;" class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+
+            <div class="col">
+              <p id="page-number-top" class="font-quarcaM p-2 w-100 page-control">Page: </p>
+            </div>
+
+            <a onclick="NextPage()" class="" id="button-next-page" style="width:40px; height:40px; color:#fff; padding:5px;" href="#">
+              <i style="width:30px; height:30px; font-size:30px;" class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+          </div>
+
+
           <!-- TEXTURE LIST -->
           <div class="row">
             <div class="col" id="texture-pack-list">
 
 
             </div>
+          </div>
+
+          <!-- PAGE CONTROL -->
+          <div class="row">
+
+            <a onclick="PrevPage()" class="" id="button-prev-page" style="width:40px; height:40px; color:#fff; padding:5px;" href="#">
+              <i style="width:30px; height:30px; font-size:30px;" class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+
+            <div class="col">
+              <p id="page-number-bottom" class="font-quarcaM p-2 w-100 page-control">Page: </p>
+            </div>
+
+            <a onclick="NextPage()" class="" id="button-next-page" style="width:40px; height:40px; color:#fff; padding:5px;" href="#">
+              <i style="width:30px; height:30px; font-size:30px;" class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+
+
           </div>
 
 
@@ -310,44 +353,48 @@
   <script>
     $(document).ready(function () {
       RequestPackages();
-	  console.log("READY");
+      console.log("READY");
     });
 
     function GetBasePath() {
       return require("path").dirname(__dirname).replace('app.asar', 'app.asar.unpacked');
-    } 
+    }
 
     var SelectedPackage;
     var Details = [];
 
+    var AllPackages;
+    var PageNumber = 1;
+    var PackagesPerPage = 21;
+    var NumberOfPages = 1;
 
     var path = require('path');
     var fs = require('fs');
-    
-	packagesBeingDownloaded = {};
-	const { ipcRenderer } = require('electron');
-	function fisnihedDownload(packagedID, filename) {
-		packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true
-		for (var file in packagesBeingDownloaded[packagedID]['files']) {
-			if (!packagesBeingDownloaded[packagedID]['files'][file]['done']) {
-				return;
-			}	
-		}
-		var dir = GetBasePath() + "/textures/" + packagesBeingDownloaded[packagedID]['dir'] + '/' 		
-		for (var file in packagesBeingDownloaded[packagedID]['files']) {	
-			ensureDirectoryExistence(dir + file);
-			fs.rename(dir + 'tmp_' + file, dir + file, function (err) {
-				if(err) {
-					return console.log(err);
-				}
-				ipcRenderer.send('refreshwindow');
-			});	
-		}		
-		
-	}
-	
-	
-	function ensureDirectoryExistence(filePath) {
+
+    packagesBeingDownloaded = {};
+    const { ipcRenderer } = require('electron');
+    function fisnihedDownload(packagedID, filename) {
+      packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true
+      for (var file in packagesBeingDownloaded[packagedID]['files']) {
+        if (!packagesBeingDownloaded[packagedID]['files'][file]['done']) {
+          return;
+        }
+      }
+      var dir = GetBasePath() + "/textures/" + packagesBeingDownloaded[packagedID]['dir'] + '/'
+      for (var file in packagesBeingDownloaded[packagedID]['files']) {
+        ensureDirectoryExistence(dir + file);
+        fs.rename(dir + 'tmp_' + file, dir + file, function (err) {
+          if (err) {
+            return console.log(err);
+          }
+          ipcRenderer.send('refreshwindow');
+        });
+      }
+
+    }
+
+
+    function ensureDirectoryExistence(filePath) {
       var dirname = path.dirname(filePath);
       if (fs.existsSync(dirname)) {
         return true;
@@ -355,218 +402,254 @@
       ensureDirectoryExistence(dirname);
       fs.mkdirSync(dirname);
     }
-	const baseurl ='https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/dev/textures/';
-	//TODO: Make sure package is downloaded before allowing closing the window.
-	//TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
+    const baseurl = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/dev/textures/';
+    //TODO: Make sure package is downloaded before allowing closing the window.
+    //TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
     function DownloadPackage() {
       if (SelectedPackage === undefined) { return; }
-	
+
       const notifier = require('node-notifier');
 
       var request = require("request");
 
       var index = SelectedPackage.attr("details-index");
-	  packagesBeingDownloaded[index] = {}
-	  packagesBeingDownloaded[index]['dir'] = Details[index].folder
-	  packagesBeingDownloaded[index]['files'] = {}
-	 
-	  const con = require('electron').remote.getGlobal('console');
-	 
+      packagesBeingDownloaded[index] = {}
+      packagesBeingDownloaded[index]['dir'] = Details[index].folder
+      packagesBeingDownloaded[index]['files'] = {}
+
+      const con = require('electron').remote.getGlobal('console');
+
       request(baseurl + Details[index].folder + '/package.json?' + Math.random(), { json: true }, (err, res, body) => {
-        if (err) {           
-			return console.log(err); 
+        if (err) {
+          return console.log(err);
         }
 
-		var total = 0;
-		var cur = 0;  
-		var basedir = GetBasePath() + "/textures/" + Details[index].folder + '/'
-		for (let item of body.items) {
+        var total = 0;
+        var cur = 0;
+        var basedir = GetBasePath() + "/textures/" + Details[index].folder + '/'
+        for (let item of body.items) {
 
           if (item.parameters != undefined)
             for (let image of item.parameters) {
               console.log("Downloading " + basedir + 'tmp_' + image.image)
-			  ensureDirectoryExistence(basedir + 'tmp_' + image.image);
-              var url = baseurl + Details[index].folder + '/' + image.image;           
-			  packagesBeingDownloaded[index]['files'][image.image] = {}
-			  packagesBeingDownloaded[index]['files'][image.image]['done'] = false
-			  request(url).on('response', function(response) {
-				var len = parseInt(response.headers['content-length'], 10);
-				total += len;
-			}).on('data', function(data) {
-					cur += data.length;
-				// compressed data as it is received
-					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function() {
-				fisnihedDownload(index, image.image);		
-			}))
-			}
+              ensureDirectoryExistence(basedir + 'tmp_' + image.image);
+              var url = baseurl + Details[index].folder + '/' + image.image;
+              packagesBeingDownloaded[index]['files'][image.image] = {}
+              packagesBeingDownloaded[index]['files'][image.image]['done'] = false
+              request(url).on('response', function (response) {
+                var len = parseInt(response.headers['content-length'], 10);
+                total += len;
+              }).on('data', function (data) {
+                cur += data.length;
+                // compressed data as it is received
+                $(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+                $(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');
+              }).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function () {
+                fisnihedDownload(index, image.image);
+              }))
+            }
 
           if (item.textures != undefined)
             for (let image of item.textures) {
               var url = baseurl + Details[index].folder + '/' + image.image;
-			  ensureDirectoryExistence(basedir + 'tmp_' + image.image); 
+              ensureDirectoryExistence(basedir + 'tmp_' + image.image);
               packagesBeingDownloaded[index]['files'][image.image] = {}
-			  packagesBeingDownloaded[index]['files'][image.image]['done'] = false
-			  request(url).on('response', function(response) {
-				var len = parseInt(response.headers['content-length'], 10);
-				total += len;
-			}).on('data', function(data) {
-					cur += data.length;
-				// compressed data as it is received
-					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function() {
-				fisnihedDownload(index, image.image);							
-			}))
-			}
-        }                
-		
+              packagesBeingDownloaded[index]['files'][image.image]['done'] = false
+              request(url).on('response', function (response) {
+                var len = parseInt(response.headers['content-length'], 10);
+                total += len;
+              }).on('data', function (data) {
+                cur += data.length;
+                // compressed data as it is received
+                $(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+                $(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');
+              }).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function () {
+                fisnihedDownload(index, image.image);
+              }))
+            }
+        }
+
         var url = baseurl + Details[index].folder + '/package.json?' + Math.random();
-		packagesBeingDownloaded[index]['files']['package.json'] = {}
-		packagesBeingDownloaded[index]['files']['package.json']['done'] = false
-		ensureDirectoryExistence(basedir + 'tmp_package.json');
-		request(url).on('response', function(response) {
-				var len = parseInt(response.headers['content-length'], 10);
-				total += len;
-				
-			}).on('data', function(data) {
-					cur += data.length;
-				// compressed data as it is received
-					$(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-					$(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');					
-			}).pipe(fs.createWriteStream(basedir + 'tmp_package.json').on('finish', function() {
-				fisnihedDownload(index, 'package.json');
-		}))       
-        
+        packagesBeingDownloaded[index]['files']['package.json'] = {}
+        packagesBeingDownloaded[index]['files']['package.json']['done'] = false
+        ensureDirectoryExistence(basedir + 'tmp_package.json');
+        request(url).on('response', function (response) {
+          var len = parseInt(response.headers['content-length'], 10);
+          total += len;
+
+        }).on('data', function (data) {
+          cur += data.length;
+          // compressed data as it is received
+          $(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
+          $(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');
+        }).pipe(fs.createWriteStream(basedir + 'tmp_package.json').on('finish', function () {
+          fisnihedDownload(index, 'package.json');
+        }))
+
 
       });
 
     }
 
-    function RequestPackages() {
-        var request = require("request");
-		request(baseurl + 'packages.json?' + Math.random(), { json: true }, (err, res, body) => {
-        if (err) { return console.log(err); }
-
-        var i = 0;
-        for (let item of body.packages) {
-
-          Details[i] = item;
-
-          var newPack = $('<div>');
-          newPack.addClass("square");
-          newPack.css("background", "url(" + baseurl + item.folder + "/preview." + (item.previewExtension == null ? "png" : item.previewExtension) + ") no-repeat center center");
-          newPack.css("background-size", "100% 100%");
-          newPack.attr("details-row", Math.floor(i / 3));
-          newPack.attr("details-index", i);
-		  var j = i;
-          var para = $("<p>");
-          para.addClass("bg-black author font-bourgM");
-          para.text("by " + item.author);
-
-          var para2 = $("<p>");
-          para2.addClass("bg-black pack-title font-bourgM");
-          para2.text(item.name);
-
-          newPack.append(para);
-          newPack.append(para2);
-
-
-          ////HIGHTLIGHT
-          newPack.mouseenter(function () {
-            $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
-          });
-          newPack.mouseleave(function () {
-            if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
-              $(this).css("box-shadow", "0 0 0 0 #8D661B");
-            } else {
-              $(this).css("box-shadow", "0 0 3pt 2pt #2E8C58");
-            }
-          });
-          //////////////
-
-
-          ////DETAILS PANEL
-          newPack.click(function () {
-            if (SelectedPackage != undefined) {
-              SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
-
-              var d = $("#details" + SelectedPackage.attr("details-row"));
-              var index = SelectedPackage.attr("details-index");
-
-              if (SelectedPackage.attr("details-row") != $(this).attr("details-row")) {
-                d.collapse('hide');
-              } else {
-
-              }
-            }
-            if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
-              SelectedPackage = $(this);
-              SelectedPackage.css("box-shadow", "0 0 3pt 2pt #2E8C58");
-
-              var d = $("#details" + SelectedPackage.attr("details-row"));
-              var index = SelectedPackage.attr("details-index");
-
-              d.find("#title").text(Details[index].name + " by " + Details[index].author);
-
-              var descHtml = Details[index].description || "No description found.<br><br>";
-              d.find("#description").html(descHtml + "<div style='padding:10px'></div>");
-
-              d.collapse('show');
-
-
-            } else {
-              $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
-              $("#details" + $(this).attr("details-row")).collapse('hide');
-              SelectedPackage = undefined;
-            }
-			$(".progress-bar").width(0);
-			$(".progress-bar").html("");
-          });
-          /////////////////
-
-          $("#texture-pack-list").append(newPack);
-
-
-          if (i % 3 == 2 || i + 1 == body.packages.length) {
-            var separator = $('<div>');
-            separator.addClass("bg-black separator collapse");
-            separator.attr("id", "details" + Math.floor(i / 3));
-
-            var title = $("<p>");
-            title.addClass("details-title font-bourgM");
-            title.attr("id", "title");
-
-            var desc = $("<div>");
-            desc.addClass("font-bourgM description");
-            desc.attr("id", "description");
-
-            var download = $("<button style=\"margin-bottom:30px\" onclick='DownloadPackage()'>Download</button>");
-            download.addClass("font-quarcaL btn btn-success download");
-			var progress = $("<div class=\"progress\"> <div class=\"progress-bar\" style=\"width:0%;background-color: #5cb85c;\">0%</div></div>");
 
 
 
-            var divlevel = $("<div>");
-            divlevel.css("position", "relative");
-            divlevel.append(title);
-            divlevel.append(desc);
-            divlevel.append(download);
-			divlevel.append(progress);
-            separator.append(divlevel);
 
-            $("#texture-pack-list").append(separator);
+    function PopulateTexturePackList(packageList) { // packageList is a slice of body.packages from RequestPackages
 
+      $("#texture-pack-list").empty();
+
+      var i = 0;
+      for (let item of packageList) {
+
+        Details[i] = item;
+
+        var newPack = $('<div>');
+        newPack.addClass("square");
+        newPack.css("background", "url(" + baseurl + item.folder + "/preview." + (item.previewExtension == null ? "png" : item.previewExtension) + ") no-repeat center center");
+        newPack.css("background-size", "100% 100%");
+        newPack.attr("details-row", Math.floor(i / 3));
+        newPack.attr("details-index", i);
+        var j = i;
+        var para = $("<p>");
+        para.addClass("bg-black author font-bourgM");
+        para.text("by " + item.author);
+
+        var para2 = $("<p>");
+        para2.addClass("bg-black pack-title font-bourgM");
+        para2.text(item.name);
+
+        newPack.append(para);
+        newPack.append(para2);
+
+
+        ////HIGHTLIGHT
+        newPack.mouseenter(function () {
+          $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
+        });
+        newPack.mouseleave(function () {
+          if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
+            $(this).css("box-shadow", "0 0 0 0 #8D661B");
+          } else {
+            $(this).css("box-shadow", "0 0 3pt 2pt #2E8C58");
           }
+        });
+        //////////////
 
-          i++;
+
+        ////DETAILS PANEL
+        newPack.click(function () {
+          if (SelectedPackage != undefined) {
+            SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
+
+            var d = $("#details" + SelectedPackage.attr("details-row"));
+            var index = SelectedPackage.attr("details-index");
+
+            if (SelectedPackage.attr("details-row") != $(this).attr("details-row")) {
+              d.collapse('hide');
+            } else {
+
+            }
+          }
+          if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
+            SelectedPackage = $(this);
+            SelectedPackage.css("box-shadow", "0 0 3pt 2pt #2E8C58");
+
+            var d = $("#details" + SelectedPackage.attr("details-row"));
+            var index = SelectedPackage.attr("details-index");
+
+            d.find("#title").text(Details[index].name + " by " + Details[index].author);
+
+            var descHtml = Details[index].description || "No description found.<br><br>";
+            d.find("#description").html(descHtml + "<div style='padding:10px'></div>");
+
+            d.collapse('show');
+
+
+          } else {
+            $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
+            $("#details" + $(this).attr("details-row")).collapse('hide');
+            SelectedPackage = undefined;
+          }
+          $(".progress-bar").width(0);
+          $(".progress-bar").html("");
+        });
+        /////////////////
+
+        $("#texture-pack-list").append(newPack);
+
+
+        if (i % 3 == 2 || i + 1 == packageList.length) {
+          var separator = $('<div>');
+          separator.addClass("bg-black separator collapse");
+          separator.attr("id", "details" + Math.floor(i / 3));
+
+          var title = $("<p>");
+          title.addClass("details-title font-bourgM");
+          title.attr("id", "title");
+
+          var desc = $("<div>");
+          desc.addClass("font-bourgM description");
+          desc.attr("id", "description");
+
+          var download = $("<button style=\"margin-bottom:30px\" onclick='DownloadPackage()'>Download</button>");
+          download.addClass("font-quarcaL btn btn-success download");
+          var progress = $("<div class=\"progress\"> <div class=\"progress-bar\" style=\"width:0%;background-color: #5cb85c;\">0%</div></div>");
+
+
+
+          var divlevel = $("<div>");
+          divlevel.css("position", "relative");
+          divlevel.append(title);
+          divlevel.append(desc);
+          divlevel.append(download);
+          divlevel.append(progress);
+          separator.append(divlevel);
+
+          $("#texture-pack-list").append(separator);
+
         }
 
+        i++;
+      }
 
+    }
+
+
+    function RequestPackages() {
+      var request = require("request");
+      request(baseurl + 'packages.json?' + Math.random(), { json: true }, (err, res, body) => {
+        if (err) { return console.log(err); }
+
+
+        AllPackages = body.packages;
+        NumberOfPages = Math.ceil(AllPackages.length / PackagesPerPage);
+        PageNumber = 1;
+
+        RefreshPackageList();
 
       });
 
+    }
+
+    function RefreshPackageList() {
+      PopulateTexturePackList(AllPackages.slice((PageNumber - 1) * PackagesPerPage, PageNumber * PackagesPerPage));
+      $("#page-number-top").text("Page: " + PageNumber + "/" + NumberOfPages);
+      $("#page-number-bottom").text("Page: " + PageNumber + "/" + NumberOfPages);
+    }
+
+    function NextPage() {
+      if (PageNumber < NumberOfPages) {
+        PageNumber++;
+        RefreshPackageList();
+      }
+    }
+
+    function PrevPage() {
+      if (PageNumber > 1) {
+        PageNumber--;
+        RefreshPackageList();
+      }
     }
 
 
