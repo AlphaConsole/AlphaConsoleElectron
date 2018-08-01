@@ -456,7 +456,8 @@
 
           var newPack = $('<div>');
           newPack.addClass("square");
-          newPack.css("background-image", "url(" + baseurl + item.folder + "/preview.png" + ")");
+          newPack.css("background", "url(" + baseurl + item.folder + "/preview." + (item.previewExtension == null ? "png" : item.previewExtension) + ") no-repeat center center");
+          newPack.css("background-size", "100% 100%");
           newPack.attr("details-row", Math.floor(i / 3));
           newPack.attr("details-index", i);
 		  var j = i;
