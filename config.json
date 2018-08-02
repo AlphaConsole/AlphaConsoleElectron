@@ -609,5 +609,6 @@
 		"InstallLocation": "",
 		"SyncTeams": false
 	},
-	"ACPath": "D:\\Projects\\Freetime\\AC Project\\AC_Beta"
+	"ACPath": "D:\\Projects\\Freetime\\AC Project\\AC_Beta",
+	"LastVersion": "1.8.4"
 }

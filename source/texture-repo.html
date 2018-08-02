@@ -203,10 +203,10 @@
           <!-- PAGE CONTROL -->
           <div class="row">
 
-            
+
 
             <div class="col">
-              <a onclick="PrevPage()" class="" id="button-prev-page" style="width:40px; height:40px; color:#fff; padding:5px;  float:right; cursor:pointer" >
+              <a onclick="PrevPage()" class="" id="button-prev-page" style="width:40px; height:40px; color:#fff; padding:5px;  float:right; cursor:pointer">
                 <i style="width:30px; height:30px; font-size:30px;" class="fa fa-arrow-left" aria-hidden="true"></i>
               </a>
             </div>
@@ -216,12 +216,12 @@
             </div>
 
             <div class="col">
-              <a onclick="NextPage()" class="" id="button-next-page" style="width:40px; height:40px; color:#fff; padding:5px;  float:left; cursor:pointer" >
+              <a onclick="NextPage()" class="" id="button-next-page" style="width:40px; height:40px; color:#fff; padding:5px;  float:left; cursor:pointer">
                 <i style="width:30px; height:30px; font-size:30px; " class="fa fa-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
 
-           
+
 
           </div>
 
@@ -237,7 +237,7 @@
           <!-- PAGE CONTROL -->
           <div class="row">
 
-         
+
             <div class="col">
               <a onclick="PrevPage()" class="" id="button-prev-page" style="width:40px; height:40px; color:#fff; padding:5px;  float:right; cursor:pointer">
                 <i style="width:30px; height:30px; font-size:30px;" class="fa fa-arrow-left" aria-hidden="true"></i>
@@ -254,7 +254,7 @@
               </a>
             </div>
 
-           
+
 
           </div>
 
@@ -416,6 +416,29 @@
       ensureDirectoryExistence(dirname);
       fs.mkdirSync(dirname);
     }
+
+    function DownloadSingleImage(basedir, url, imageName, index, Progress) {
+
+      var request = require("request");
+
+      console.log("Downloading " + basedir + 'tmp_' + imageName)
+      ensureDirectoryExistence(basedir + 'tmp_' + imageName);
+
+      packagesBeingDownloaded[index]['files'][imageName] = {}
+      packagesBeingDownloaded[index]['files'][imageName]['done'] = false
+      request(url).on('response', function (response) {
+        var len = parseInt(response.headers['content-length'], 10);
+        Progress.total += len;
+      }).on('data', function (data) {
+        Progress.cur += data.length;
+        // compressed data as it is received
+        $(".progress-bar").width((100.0 * Progress.cur / Progress.total).toFixed(2) + '%');
+        $(".progress-bar").html((100.0 * Progress.cur / Progress.total).toFixed(0) + '%');
+      }).pipe(fs.createWriteStream(basedir + 'tmp_' + imageName).on('finish', function () {
+        fisnihedDownload(index, imageName);
+      }));
+    }
+
     const baseurl = 'https://raw.githubusercontent.com/AlphaConsole/AlphaConsoleTextures/dev/textures/';
     //TODO: Make sure package is downloaded before allowing closing the window.
     //TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
@@ -438,48 +461,40 @@
           return console.log(err);
         }
 
-        var total = 0;
-        var cur = 0;
+        //All so i can pass by reference, i hate js
+        var Progress = {};
+        Progress.total = 0;
+        Progress.cur = 0;
+
         var basedir = GetBasePath() + "/textures/" + Details[index].folder + '/'
         for (let item of body.items) {
 
           if (item.parameters != undefined)
             for (let image of item.parameters) {
-              console.log("Downloading " + basedir + 'tmp_' + image.image)
-              ensureDirectoryExistence(basedir + 'tmp_' + image.image);
-              var url = baseurl + Details[index].folder + '/' + image.image;
-              packagesBeingDownloaded[index]['files'][image.image] = {}
-              packagesBeingDownloaded[index]['files'][image.image]['done'] = false
-              request(url).on('response', function (response) {
-                var len = parseInt(response.headers['content-length'], 10);
-                total += len;
-              }).on('data', function (data) {
-                cur += data.length;
-                // compressed data as it is received
-                $(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-                $(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');
-              }).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function () {
-                fisnihedDownload(index, image.image);
-              }))
+              if (image.animated != undefined && image.animated == true) {
+                for (var imageIndex = 0; imageIndex < image.frames; imageIndex++) {
+                  var imageName = image.image + imageIndex + ".png";
+                  var url = baseurl + Details[index].folder + '/' + imageName;
+                  DownloadSingleImage(basedir, url, imageName, index, Progress);
+                }
+              } else {
+                var url = baseurl + Details[index].folder + '/' + image.image;
+                DownloadSingleImage(basedir, url, image.image, index, Progress);
+              }
             }
 
           if (item.textures != undefined)
             for (let image of item.textures) {
-              var url = baseurl + Details[index].folder + '/' + image.image;
-              ensureDirectoryExistence(basedir + 'tmp_' + image.image);
-              packagesBeingDownloaded[index]['files'][image.image] = {}
-              packagesBeingDownloaded[index]['files'][image.image]['done'] = false
-              request(url).on('response', function (response) {
-                var len = parseInt(response.headers['content-length'], 10);
-                total += len;
-              }).on('data', function (data) {
-                cur += data.length;
-                // compressed data as it is received
-                $(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-                $(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');
-              }).pipe(fs.createWriteStream(basedir + 'tmp_' + image.image).on('finish', function () {
-                fisnihedDownload(index, image.image);
-              }))
+              if (image.animated != undefined && image.animated == true) {
+                for (var imageIndex = 0; imageIndex < image.frames; imageIndex++) {
+                  var imageName = image.image + imageIndex + ".png";
+                  var url = baseurl + Details[index].folder + '/' + imageName;
+                  DownloadSingleImage(basedir, url, imageName, index, Progress);
+                }
+              } else {
+                var url = baseurl + Details[index].folder + '/' + image.image;
+                DownloadSingleImage(basedir, url, image.image, index, Progress);
+              }
             }
         }
 
@@ -489,13 +504,13 @@
         ensureDirectoryExistence(basedir + 'tmp_package.json');
         request(url).on('response', function (response) {
           var len = parseInt(response.headers['content-length'], 10);
-          total += len;
+          Progress.total += len;
 
         }).on('data', function (data) {
-          cur += data.length;
+          Progress.cur += data.length;
           // compressed data as it is received
-          $(".progress-bar").width((100.0 * cur / total).toFixed(2) + '%');
-          $(".progress-bar").html((100.0 * cur / total).toFixed(0) + '%');
+          $(".progress-bar").width((100.0 * Progress.cur / Progress.total).toFixed(2) + '%');
+          $(".progress-bar").html((100.0 * Progress.cur / Progress.total).toFixed(0) + '%');
         }).pipe(fs.createWriteStream(basedir + 'tmp_package.json').on('finish', function () {
           fisnihedDownload(index, 'package.json');
         }))
