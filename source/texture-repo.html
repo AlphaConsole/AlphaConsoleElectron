@@ -99,6 +99,21 @@
       width: 100%;
     }
 
+    .like-status {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px;
+      width: 100%;
+    }
+
+    .like-count {
+      font-size:13px; 
+      color:#fff; 
+      margin-left:23px;
+      margin-bottom:3px;
+    }
+
     .details-title {
       position: absolute;
       top: 0;
@@ -548,8 +563,49 @@
         para2.addClass("bg-black pack-title font-bourgM");
         para2.text(item.name);
 
+
+        var likeDiv = $("<div>");
+        var likeLink = $("<a>");
+        likeLink.addClass("like-status");
+        var likeImage = $('<i style="width:20px; height:20px; font-size:18px; color:#f5b; ">');
+        var likeNumber = $('<p class="like-count like-status">')
+        likeNumber.text(item.Likes);
+
+        likeImage.addClass("fa");
+        likeImage.addClass(item.Liked? "fa-heart":"fa-heart-o");
+
+        likeImage.click(function(event){
+          event.stopPropagation();
+
+          LikedPackage = Details[$(this).closest('.square').attr("details-index")];
+
+          if(LikedPackage.Liked){
+            $(this).removeClass("fa-heart");
+            $(this).addClass("fa-heart-o");
+            LikedPackage.Likes--;
+          } else {
+            $(this).removeClass("fa-heart-o");
+            $(this).addClass("fa-heart");
+            LikedPackage.Likes++;
+          }
+
+          LikedPackage.Liked = !LikedPackage.Liked;
+          
+          $(this).parent().next().text(LikedPackage.Likes);
+
+          var request = require("request");
+          request('http://alphaconsole.net/textures/registerLike.php?PackID=' + LikedPackage.id + "&Status=" + LikedPackage.Liked, function (error, response, body) { 
+          });
+
+        });
+
+        likeLink.append(likeImage);
+        likeDiv.append(likeLink);
+        likeDiv.append(likeNumber);
+
         newPack.append(para);
         newPack.append(para2);
+        newPack.append(likeDiv);
 
 
         ////HIGHTLIGHT
@@ -568,6 +624,10 @@
 
         ////DETAILS PANEL
         newPack.click(function () {
+
+            console.log($(this).prop("tagName"));
+    
+
           if (SelectedPackage != undefined) {
             SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
 
@@ -655,7 +715,36 @@
         NumberOfPages = Math.ceil(AllPackages.length / PackagesPerPage);
         PageNumber = 1;
 
-        RefreshPackageList();
+
+        request("http://alphaconsole.net/textures/getLikes.php", { json: true }, (err2, res2, body2) => {
+          if (err2) { RefreshPackageList(); return console.log(err2); }
+
+          for(var i = 0; i < AllPackages.length; i++){
+
+            if(body2.All[AllPackages[i].id] != undefined){
+              AllPackages[i].Likes = body2.All[AllPackages[i].id];
+            } else {
+              AllPackages[i].Likes = 0;
+            }
+
+            if(body2.Own[AllPackages[i].id] != undefined){
+              AllPackages[i].Liked = true;
+            } else {
+              AllPackages[i].Liked = false;
+            }
+
+          }
+
+          AllPackages.sort((a, b) => {
+            return b.Likes - a.Likes;
+          });
+
+          console.log(AllPackages);
+
+          RefreshPackageList();
+
+
+        });
 
       });
 
