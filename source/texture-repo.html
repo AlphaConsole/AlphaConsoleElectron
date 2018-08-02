@@ -105,13 +105,15 @@
       left: 0;
       padding: 10px;
       width: 100%;
+      z-index: 99999;
     }
 
     .like-count {
-      font-size:13px; 
-      color:#fff; 
-      margin-left:23px;
-      margin-bottom:3px;
+      font-size: 13px;
+    color: #fff;
+    margin-left: 35px;
+    margin-bottom: 3px;
+    padding-left: 0;
     }
 
     .details-title {
@@ -567,7 +569,7 @@
         var likeDiv = $("<div>");
         var likeLink = $("<a>");
         likeLink.addClass("like-status");
-        var likeImage = $('<i style="width:20px; height:20px; font-size:18px; color:#f5b; ">');
+        var likeImage = $('<i style="font-size:20px; color:#f5b; ">');
         var likeNumber = $('<p class="like-count like-status">')
         likeNumber.text(item.Likes);
 
