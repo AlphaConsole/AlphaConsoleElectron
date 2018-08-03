@@ -1,7 +1,8 @@
 build
 .vscode
 .sass-cache
-/textures/
+/textures/*
+!/textures/packages.json
 config.json
 dist
 node_modules
