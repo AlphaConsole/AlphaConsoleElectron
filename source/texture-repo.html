@@ -703,6 +703,11 @@
         request("http://alphaconsole.net/textures/getLikes.php", { json: true }, (err2, res2, body2) => {
           if (err2) { RefreshPackageList(); return console.log(err2); }
 
+          if(body2.All == undefined || body2.Own == undefined){
+            RefreshPackageList();
+            alert("Unable to contact the ratings server!");
+          }
+
           for(var i = 0; i < AllPackages.length; i++){
 
             if(body2.All[AllPackages[i].id] != undefined){
