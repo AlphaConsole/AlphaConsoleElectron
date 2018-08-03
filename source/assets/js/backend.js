@@ -614,6 +614,8 @@ function GetTexturePackages() {
 
   }
 
+
+
   SaveMasterPackages(packs);
 
   return tps;
@@ -622,8 +624,8 @@ function GetTexturePackages() {
 function SaveMasterPackages(packages) {
   var fs = require('fs');
   try {
-    if (fs.existsSync(GetBasePath() + '/textures/packages.json')) // Let's first check if that textures folder & file exist. Otherwise just ignore.
-      fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
+    fs.mkdir(GetBasePath() + '/textures/');
+    fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
   } catch (e) {
     alert(e);
     alert('Failed to save the packages!');
