@@ -14,7 +14,7 @@
     "appId": "alphaconsole.beta",
     "productName": "AlphaConsole",
     "asarUnpack": [
-      "textures/",
+      "textures/packages.json",
       "items.json",
       "slotDictionary.json",
       "xapofx1_5.dll",
@@ -26,6 +26,11 @@
         "from": "app-update.yml",
         "to": "app-update.yml"
       }
+    ],
+    "files": [
+     "**/*",
+      "!textures/*",
+      "textures/packages.json"
     ]
   },
   "repository": {
