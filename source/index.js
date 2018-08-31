@@ -25,9 +25,9 @@ autoUpdater.on("error", function (err) {
 autoUpdater.on("download-progress", function (progressObj) {
     return log.info("Downloading update.");
 });
-autoUpdater.on("update-downloaded", function (_arg4) {
-    return log.info("Update downloaded.");
+autoUpdater.on("update-downloaded", function (_arg4) {    
     autoUpdater.quitAndInstall(); 
+    return log.info("Update downloaded.");
 }); 
 
  
