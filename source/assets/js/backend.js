@@ -222,6 +222,7 @@ function LoadConfiguration() {
   $("#minimize-to-tray").prop('checked', Config.GeneralOptions.MinimizeToTray);
   $("#run-on-startup").prop('checked', Config.GeneralOptions.RunOnStartup);
   $("#install-location").val(Config.GeneralOptions.InstallLocation);
+  $("#f5-menu").prop('checked', Config.GeneralOptions.F5Menu);
 
   $("#always-on-top").prop('checked', Config.AlwaysOnTop);
   
@@ -498,6 +499,7 @@ function GetConfigurationString() {
   GeneralOptions.RunOnStartup = $("#run-on-startup").prop('checked');
   GeneralOptions.InstallLocation = $("#install-location").val();
   GeneralOptions.EventBroadcast = $("#broadcast-enabled").prop('checked');
+  GeneralOptions.F5Menu = $("#f5-menu").prop('checked');
   GeneralOptions.SyncTeams = SyncTeams;
   Config.GeneralOptions = GeneralOptions;
 
