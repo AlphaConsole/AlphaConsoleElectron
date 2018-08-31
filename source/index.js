@@ -97,6 +97,11 @@ autoUpdater.on("update-downloaded", function (_arg4) {
     mainWindow.webContents.reloadIgnoringCache()
   });
 
+  ipcMain.on('check-for-updates', () => {
+    console.log("checking for updates");
+    autoUpdater.checkForUpdatesAndNotify();
+  });
+
   ipcMain.on('alwaystop', (event, arg) => {
       
     console.log(arg);

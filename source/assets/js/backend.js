@@ -22,6 +22,8 @@ function ToggleSyncTeams() {
 }
 
 
+
+
 function CopyFile(source, target) {
   var fs = require('fs');
   var rd = fs.createReadStream(source);
@@ -804,7 +806,7 @@ $("#preset-select").change(function () {
 });
 
 
-  const { ipcRenderer } = require('electron');
+const { ipcRenderer } = require('electron');
   
 $("#always-on-top").change(function () {
   
@@ -814,13 +816,23 @@ $("#always-on-top").change(function () {
 
 });
 
+$("#button-check-for-updates").on("click", function(){
+
+  ipcRenderer.send("check-for-updates");  
+  
+});
+
+
+
 $("#preset-name").on("input", function () {
   $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
 });
 
+
 $(document).ready(function () {
   $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
   $('.reset-input').on('click', function () {
+
     $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
   })
   $(".build-number").html("Beta Version " + require('electron').remote.app.getVersion());
