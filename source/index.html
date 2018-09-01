@@ -331,7 +331,7 @@
                             </select>
                           </td>
                         </tr>
-						
+
                         <!-- GOAL EXPLOSION -->
                         <tr>
                           <td class="alt-row">Goal Explosion</td>
@@ -461,8 +461,7 @@
                           </td>
                           <td class="alt-row">
                             <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
-                            <input id="primary-intensity-orange" class="acc-input" type="number" value="1"
-                            />
+                            <input id="primary-intensity-orange" class="acc-input" type="number" value="1" />
                           </td>
                           <td class="alt-row-strong">
                             <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
@@ -470,8 +469,7 @@
                           </td>
                           <td class="alt-row-strong">
                             <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
-                            <input id="accent-intensity-orange" class="acc-input" type="number" value="1"
-                            />
+                            <input id="accent-intensity-orange" class="acc-input" type="number" value="1" />
                           </td>
                           <td class="alt-row">
                             <label class="tick-container">
@@ -618,8 +616,8 @@
                           </td>
                         </tr>
 
-						
-						<!-- BOOST -->
+
+                        <!-- BOOST -->
                         <tr>
                           <td class="alt-row">Boost</td>
                           <td class="alt-row-strong">
@@ -732,11 +730,11 @@
               </div>
             </div>
 
-            <button class="accordion">CUSTOM PAINT COLOR</button>
+            <button class="accordion">CUSTOM COLORS</button>
             <div class="panel">
               <div class="row alt-row p-2">
                 <div class="col-11 font-quarcaL">
-                  Color all cars
+                  Color all cars (Primary and accent)
                 </div>
                 <div class="col-1">
                   <label class="tick-container">
@@ -776,6 +774,62 @@
                   <input id="field-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
                 </div>
               </div>
+
+              <div class="row alt-row p-2">
+                <div class="col-4 font-quarcaL">
+                  Blue Alpha Boost Color
+                </div>
+                <div class="col-4">
+                  <input id="alpha-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+                </div>
+                <div class="col-2 font-quarcaL">
+                  Intensity:
+                </div>
+                <div class="col-2">
+                  <input id="alpha-intensity-blue" class="acc-input w" type="number" value="1" />
+                </div>
+              </div>
+
+              <div class="row alt-row p-2">
+                <div class="col-4 font-quarcaL">
+                  Orange Alpha Boost Color
+                </div>
+                <div class="col-4">
+                  <input id="alpha-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+                </div>
+                <div class="col-2 font-quarcaL">
+                  Intensity:
+                </div>
+                <div class="col-2">
+                  <input id="alpha-intensity-orange" class="acc-input w" type="number" value="1" />
+                </div>
+              </div>
+
+              <div class="row alt-row p-2">
+                <div class="col-4 font-quarcaL">
+                  Enable Alpha Boost Colors
+                </div>
+                <div class="col-3 font-quarcaL">
+                  Blue Team:
+                </div>
+                <div class="col-1">
+                  <label class="tick-container">
+                    <input id="alpha-enabled-blue" type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-3 font-quarcaL">
+                  Orange Team:
+                </div>
+                <div class="col-1">
+                  <label class="tick-container">
+                    <input id="alpha-enabled-orange" type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+              </div>
+
 
             </div>
 
@@ -995,31 +1049,31 @@
                 <!-- ./End -->
 
                 <!-- ALWAYS ON TOP -->
-                 <div class="row p-2"> 
-                   <div class="col-11 font-quarcaL"> 
-                     Always on top 
-                   </div> 
-                   <div class="col-1"> 
-                     <label class="tick-container"> 
-                       <input id="always-on-top" type="checkbox"> 
-                       <span class="checkmark"></span> 
-                     </label> 
-                   </div> 
-                 </div>                
-                 
-                 
-                 
-                 <!-- CHECK FOR UPDATES -->
-                 <div class="row p-2"> 
-                   <div class="col-9 font-quarcaL"> 
-                     Check for updates
-                   </div> 
-                   <div class="col-3 pr-15">
-                     
+                <div class="row p-2">
+                  <div class="col-11 font-quarcaL">
+                    Always on top
+                  </div>
+                  <div class="col-1">
+                    <label class="tick-container">
+                      <input id="always-on-top" type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </div>
+
+
+
+                <!-- CHECK FOR UPDATES -->
+                <div class="row p-2">
+                  <div class="col-9 font-quarcaL">
+                    Check for updates
+                  </div>
+                  <div class="col-3 pr-15">
+
                     <button id="button-check-for-updates" style="color:#fff;" class="font-quarcaL btn w-100 btn-info">Update!</a>
                   </div>
-  
-                 </div> 
+
+                </div>
 
 
 
@@ -1258,7 +1312,7 @@
         <span id="closePrompt" class="close lnr lnr-cross pl-2 pr-2"></span>
       </div>
       <div class="modal-body">
-        
+
         <p id="promptContent" style="margin-bottom: 20px"></p>
 
       </div>
@@ -1277,7 +1331,7 @@
         <span id="closeChangeLogs" class="close lnr lnr-cross pl-2 pr-2"></span>
       </div>
       <div class="modal-body">
-        
+
         <p id="changelogsInfo" style="margin-bottom: 20px"></p>
 
       </div>

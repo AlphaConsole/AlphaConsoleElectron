@@ -441,6 +441,16 @@ function LoadPreset(ID) {
   $("#custom-color-enabled-orange").prop('checked', GlobalACConfig.Presets[ID].CustomColors.Orange.Enabled);
 
 
+  
+  $("#alpha-color-blue").val(GlobalACConfig.Presets[ID].CustomColors.BlueAlpha || "#000000");
+  $("#alpha-color-orange").val(GlobalACConfig.Presets[ID].CustomColors.OrangeAlpha || "#000000");
+  $("#alpha-intensity-blue").val(GlobalACConfig.Presets[ID].CustomColors.BlueAlphaIntensity || 1.0);
+  $("#alpha-intensity-orange").val(GlobalACConfig.Presets[ID].CustomColors.OrangeAlphaIntensity || 1.0);
+  
+  $("#alpha-enabled-blue").prop('checked', GlobalACConfig.Presets[ID].CustomColors.BlueAlphaEnabled || false);
+  $("#alpha-enabled-orange").prop('checked', GlobalACConfig.Presets[ID].CustomColors.OrangeAlphaEnabled || false);
+
+
 }
 
 
@@ -464,6 +474,14 @@ function GetConfigurationString() {
   Config.CustomColors.FieldOrange = $("#field-color-orange").val();
   
   Config.CustomColors.EnableFieldColors = $("#enable-field-color").prop('checked');
+
+  Config.CustomColors.BlueAlphaEnabled = $("#alpha-enabled-blue").prop('checked');
+  Config.CustomColors.OrangeAlphaEnabled = $("#alpha-enabled-orange").prop('checked');
+
+  Config.CustomColors.BlueAlpha = $("#alpha-color-blue").val();
+  Config.CustomColors.OrangeAlpha = $("#alpha-color-orange").val();
+  Config.CustomColors.BlueAlphaIntensity = $("#alpha-intensity-blue").val();
+  Config.CustomColors.OrangeAlphaIntensity = $("#alpha-intensity-orange").val();
 
   //Custom title options
   var CustomTitles = {};
