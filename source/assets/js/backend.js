@@ -202,6 +202,7 @@ function LoadConfiguration() {
   $("#display-mmr").prop('checked', Config.RankOptions.DisplayMMR);
   $("#enable-unranked-mmr").prop('checked', Config.RankOptions.UnrankedMMR);
   $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
+  $("#april-fools").prop('checked', Config.RankOptions.AprilFools || 0);
 
   //Discord rich presence options
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
@@ -420,7 +421,7 @@ function LoadPreset(ID) {
         var team = $(selects[j]).closest('tbody').attr("team");
         var valString = GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].ItemID + ":" + GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].PackageID +
           ":" + GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].PackageSubID;
-        $(selects[j]).val(valString);
+        $(selects[j]).val(valString).change();
         $(selects[j]).parent().next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
       }
     }
@@ -466,7 +467,7 @@ function GetConfigurationString() {
 
   //Custom title options
   var CustomTitles = {};
-  CustomTitles.EnableCustomTitles = $("#enable-custom-titles").prop('checked');
+  CustomTitles.EnableCustomTitles = $("#enable-custom-titles").prop('checked'); 
   CustomTitles.TitleFlashRate = parseFloat($("#title-flash-rate").val());
   Config.CustomTitles = CustomTitles;
 
@@ -477,6 +478,7 @@ function GetConfigurationString() {
   RankOptions.UnrankedMMR = $("#enable-unranked-mmr").prop('checked');
   RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
   RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
+  RankOptions.AprilFools = $("#april-fools").prop('checked');
   Config.RankOptions = RankOptions;
 
   //Discord rich presence options
@@ -711,8 +713,10 @@ for (var i = 0; i < slots.length; i++) {
       $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
         var newOp = $('<option>');
         newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
+        newOp.attr('paintable', items[j].Paintable);
         newOp.text(items[j].Name);
         $(this).append(newOp);
+
       });
     }
 
@@ -774,6 +778,22 @@ $("select[name='color-select']").on('change', function () {
 
 
 $("[class='row teams'] select").on('change', function () {
+
+
+  var id = $(this).val().split(":")[0];
+
+
+  var disableOther = false;
+  if($(this).find("option:selected").attr("Paintable") == "false"){
+    disableOther = true;
+    $(this).parent().next().find("select").prop('disabled', 'disabled');
+    $(this).parent().next().find("select").css("color", "#555");
+  } else {
+    $(this).parent().next().find("select").prop('disabled', false);
+    $(this).parent().next().find("select").css("color", "#fff");
+  }
+
+
   if (SyncTeams) {
 
     var selects = $("[class='row teams'] select");
@@ -783,6 +803,15 @@ $("[class='row teams'] select").on('change', function () {
       if ($(selects[k]).parent().parent().index() == $(this).parent().parent().index()
         && $(this).parent().index() == 1 && $(selects[k]).parent().index() == 1) {
         $(selects[k]).val(this.value);
+
+        if(disableOther){
+          $(selects[k]).parent().next().find("select").prop('disabled', 'disabled');
+          $(selects[k]).parent().next().find("select").css("color", "#555");
+        } else {
+          $(selects[k]).parent().next().find("select").prop('disabled', false);
+          $(selects[k]).parent().next().find("select").css("color", "#fff");
+        }
+
       }
     }
   }
