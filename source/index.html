@@ -11,9 +11,19 @@
   <link rel="stylesheet" href="assets/styles/css/framework.css">
   <link rel="stylesheet" href="assets/styles/css/alphaconsole.css">
 
+
+
+
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+  
+
+  <link rel="stylesheet" href="assets/js/plugin/jquery.gradientPicker.css" type="text/css" />
+	<link rel="stylesheet" href="assets/js/vendor/jqPlugins/colorpicker/css/colorpicker.css" type="text/css" />
+
+
 
   <style>
     @font-face {
@@ -59,6 +69,12 @@
       user-select: none;
       -o-user-select: none;
     }
+
+    .grad_ex {
+			width: 100%;
+			height: 30px;
+			margin-bottom: 30px;
+		}
   </style>
 </head>
 
@@ -96,7 +112,7 @@
 
 
   <!-- Header -->
-  <div class=" mt-5 pull-left container-fluid w-100">
+  <div class=" mt-4 pull-left container-fluid w-100">
     <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
       <div class="col">
         <p class="font-quarcaL p-2 w-100 heading-title">ALPHACONSOLE</p>
@@ -219,17 +235,95 @@
                       </thead>
                       <tbody team="Blue">
                         <!-- BODY -->
+
+
                         <tr>
                           <td class="alt-row">Body</td>
                           <td class="alt-row-strong">
 
                           </td>
                           <td class="alt-row">
-                            <select class="acc-input" name="color-select" special="body">
+                            <!-- <select class="acc-input" name="color-select" special="body">
                               <option value="-1">Unchanged</option>
-                            </select>
+                            </select> -->
+                            <button type="button" style="color:#fff; padding: 0.2rem 0rem;" class="font-quarcaL btn btn-acc w-100" data-toggle="modal"
+                              data-target="#bodyColor">EDIT</button>
+
+                            <div id="bodyColor" class="modal fade" role="dialog" style="z-index: 1000000">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header mt-2">
+                                    <!-- ITEM TYPE -->
+                                    <h4 class="modal-title font-quarcaL fs-22">BODY COLOR</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                  </div>
+                                  <div class="modal-body mb-2 mt-2">
+                                    <!-- UNCHANGED -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
+                                      class="radio-container">UNCHANGED
+                                      <input type="radio" checked="checked" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                 
+                                    <!-- LIST -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-list"
+                                      class="radio-container">LIST
+                                      <input type="radio" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                    <select style="margin-top:0px;" class="acc-input mb-3" name="color-select" special="body"></select>
+                                   
+                                    <!-- SOLID -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
+                                      class="radio-container">SOLID
+                                      <input type="radio" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                    <input id="body-color-solid" type="color" style="height:30px; padding:0px;" class="acc-input mb-3">
+
+                                    <!-- ANIMATED -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
+                                      class="radio-container">ANIMATED
+                                      <input type="radio" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                    
+                                    
+
+                                    <canvas id="myPrettyCanvas" width="300" height="300"></canvas>
+    <script type="text/javascript">
+      var canvasId = 'myPrettyCanvas',
+          canvas = document.getElementById(canvasId),
+          ctx = canvas.getContext('2d'),
+          grd;
+      
+      // Create gradient
+      grd = ctx.createLinearGradient(0.000, 150.000, 300.000, 150.000);
+      
+      // Add colors
+      grd.addColorStop(0.133, 'rgba(0, 0, 0, 1.000)');
+      grd.addColorStop(1.000, 'rgba(255, 255, 255, 1.000)');
+      
+      // Fill with gradient
+      ctx.fillStyle = grd;
+      ctx.fillRect(0, 0, 300.000, 300.000);
+    </script>
+
+
+
+                                  </div>
+                                  <div class="modal-footer p-2">
+                                    <button type="button" class="font-quarcaL btn btn-success w-25" data-dismiss="modal">SAVE</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </td>
                         </tr>
+
+
+
 
                         <!-- BANNER -->
                         <tr>
@@ -1201,7 +1295,7 @@
   <!-- background-color:#7b6d26; -->
   <!-- Save & Apply section -->
   <div class="save-wrapper">
-    <div class="mt-3 pull-left container-fluid w-100">
+    <div class="mt-4 pull-left container-fluid w-100">
       <div class="row m-0 w-100 pr-3">
         <div class="col-3 pr-0">
           <button style="border-radius:0px;" class="font-quarcaL btn btn-success w-100" onclick="SaveConfiguration()">SAVE & APPLY</button>
@@ -1220,8 +1314,6 @@
     </div>
   </div>
   <!-- Save & Apply End ./// -->
-
-  <!--  -->
 
   <!-- Footer -->
   <div class="footer-bar-wrapper affix">
@@ -1341,9 +1433,12 @@
 
   </div>
 
+
   <script src="assets/js/jquery-3.3.1.min.js"></script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+ 
   <script src="assets/js/tether.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -1351,7 +1446,53 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+   
+  
+    <script>
+        
+		$(function() {
+			// $(".grad_ex").gradientPicker({
+			// 	change: function(points, styles) {
 
+			// 	}
+			// });
+
+
+			var $left = $(".left");
+			var $right = $(".right");
+			var $bottom = $(".bottom");
+			$("#ex1").gradientPicker({
+				change: function(points, styles) {
+					for (i = 0; i < styles.length; ++i) {
+						$left.css("background-image", styles[i]);
+					}
+				},
+				fillDirection: "45deg",
+				controlPoints: ["green 0%", "yellow 50%", "green 100%"]
+			});
+
+			$("#ex2").gradientPicker({
+				change: function(points, styles) {
+					for (i = 0; i < styles.length; ++i) {
+						$right.css("background-image", styles[i]);
+					}
+				},
+				controlPoints: ["green 0%", "orange 100%"]
+			});
+
+			$("#ex3").gradientPicker({
+				type: "radial",
+				change: function(points, styles) {
+					for (i = 0; i < styles.length; ++i) {
+						$bottom.css("background-image", styles[i]);
+					}
+				},
+				controlPoints: ["blue 0%", "yellow 100%"]
+			});
+		});
+	
+      </script>
+    
 
   <script>
     let shell = require('electron').shell
@@ -1364,50 +1505,50 @@
     })
   </script>
   <script>
-      //DONT TOUCH
-      //this must stay in this file. 
+    //DONT TOUCH
+    //this must stay in this file. 
 
-      (function () {
-        // Retrieve remote BrowserWindow
-        const {
-          BrowserWindow
-        } = require('electron').remote
+    (function () {
+      // Retrieve remote BrowserWindow
+      const {
+        BrowserWindow
+      } = require('electron').remote
 
-        function init() {
-          // Minimize task
-          document.getElementById("min-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.minimize();
-          });
+      function init() {
+        // Minimize task
+        document.getElementById("min-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.minimize();
+        });
 
-          // Maximize window
-          document.getElementById("max-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            if (window.isMaximized()) {
-              window.unmaximize();
-            } else {
-              window.maximize();
-            }
-          });
-
-          // Close app
-          document.getElementById("close-btn").addEventListener("click", (e) => {
-            var window = BrowserWindow.getFocusedWindow();
-            window.close();
-          });
-
-          document.getElementById("detectInstall").addEventListener("click", (e) => {
-
-          });
-        };
-
-        document.onreadystatechange = () => {
-          if (document.readyState == "complete") {
-            init();
+        // Maximize window
+        document.getElementById("max-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          if (window.isMaximized()) {
+            window.unmaximize();
+          } else {
+            window.maximize();
           }
-        };
+        });
 
-      })();
+        // Close app
+        document.getElementById("close-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.close();
+        });
+
+        document.getElementById("detectInstall").addEventListener("click", (e) => {
+
+        });
+      };
+
+      document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+          init();
+        }
+      };
+
+    })();
   </script>
   <script src="./assets/js/backend.js"></script>
   <script src="./assets/js/UI.js"></script>
