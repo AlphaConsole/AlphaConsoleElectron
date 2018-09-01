@@ -93,8 +93,11 @@ autoUpdater.on("update-downloaded", function (_arg4) {
   })
 
   ipcMain.on('refreshwindow', () => {
-    //Refreshes window to load in new items
+    
+mainWindow.webContents.executeJavaScript("SaveConfiguration()");
+
     mainWindow.webContents.reloadIgnoringCache()
+
   });
 
   ipcMain.on('check-for-updates', () => {
