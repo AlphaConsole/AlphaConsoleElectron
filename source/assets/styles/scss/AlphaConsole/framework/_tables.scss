@@ -9,8 +9,8 @@
 
   th,
   td {
-    padding: $table-cell-padding;
-    vertical-align: top;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    vertical-align: middle;
     border-top: $table-border-width solid $table-border-color;
   }
 

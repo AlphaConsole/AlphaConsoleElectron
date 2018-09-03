@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
   
-
+  <link rel="stylesheet" href="assets/styles/css/grapick.min.css">
   <link rel="stylesheet" href="assets/js/plugin/jquery.gradientPicker.css" type="text/css" />
 	<link rel="stylesheet" href="assets/js/vendor/jqPlugins/colorpicker/css/colorpicker.css" type="text/css" />
 
@@ -70,11 +70,6 @@
       -o-user-select: none;
     }
 
-    .grad_ex {
-			width: 100%;
-			height: 30px;
-			margin-bottom: 30px;
-		}
   </style>
 </head>
 
@@ -288,28 +283,10 @@
                                       <input type="radio" name="radio">
                                       <span class="checkmark"></span>
                                     </label>
-                                    
+                                    <div class="mt-3 mb-5" id="gp"></div>
                                     
 
-                                    <canvas id="myPrettyCanvas" width="300" height="300"></canvas>
-    <script type="text/javascript">
-      var canvasId = 'myPrettyCanvas',
-          canvas = document.getElementById(canvasId),
-          ctx = canvas.getContext('2d'),
-          grd;
-      
-      // Create gradient
-      grd = ctx.createLinearGradient(0.000, 150.000, 300.000, 150.000);
-      
-      // Add colors
-      grd.addColorStop(0.133, 'rgba(0, 0, 0, 1.000)');
-      grd.addColorStop(1.000, 'rgba(255, 255, 255, 1.000)');
-      
-      // Fill with gradient
-      ctx.fillStyle = grd;
-      ctx.fillRect(0, 0, 300.000, 300.000);
-    </script>
-
+                                   
 
 
                                   </div>
@@ -1433,10 +1410,17 @@
 
   </div>
 
-
+ <!-- JQUERY -->
   <script src="assets/js/jquery-3.3.1.min.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+  <script src="assets/js/grapick.min.js"></script>
+
+
 
  
   <script src="assets/js/tether.min.js"></script>
@@ -1446,52 +1430,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-   
-  
-    <script>
-        
-		$(function() {
-			// $(".grad_ex").gradientPicker({
-			// 	change: function(points, styles) {
-
-			// 	}
-			// });
 
 
-			var $left = $(".left");
-			var $right = $(".right");
-			var $bottom = $(".bottom");
-			$("#ex1").gradientPicker({
-				change: function(points, styles) {
-					for (i = 0; i < styles.length; ++i) {
-						$left.css("background-image", styles[i]);
-					}
-				},
-				fillDirection: "45deg",
-				controlPoints: ["green 0%", "yellow 50%", "green 100%"]
-			});
-
-			$("#ex2").gradientPicker({
-				change: function(points, styles) {
-					for (i = 0; i < styles.length; ++i) {
-						$right.css("background-image", styles[i]);
-					}
-				},
-				controlPoints: ["green 0%", "orange 100%"]
-			});
-
-			$("#ex3").gradientPicker({
-				type: "radial",
-				change: function(points, styles) {
-					for (i = 0; i < styles.length; ++i) {
-						$bottom.css("background-image", styles[i]);
-					}
-				},
-				controlPoints: ["blue 0%", "yellow 100%"]
-			});
-		});
-	
-      </script>
+    <script type="text/javascript">
+      const gp = new Grapick({
+        el: '#gp',
+        colorEl: '<input id="colorpicker"/>' //Essential for color picker to work
+      });
+    
+      gp.setColorPicker(handler => {
+        const el = handler.getEl().querySelector('#colorpicker');
+            
+        $(el).spectrum({
+            color: handler.getColor(),
+            showAlpha: false,
+            change(color) {
+              handler.setColor(color.toRgbString());
+            },
+            move(color) {
+              handler.setColor(color.toRgbString(), 0);
+            }
+        });
+      });
+    </script>
     
 
   <script>

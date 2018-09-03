@@ -80,7 +80,7 @@ section {
   float: left;
   width: 100%;
   position: relative;
-  height: 620px;
+  height: 655px;
   background-image: url("../../img/ball-bg.png");
   background-position-y: -155px;
 }
@@ -369,6 +369,22 @@ select {
   font-size: 12px;
 }
 
+td.alt-row-strong > select {
+  width: 92%;
+  float: left;
+}
+
+td.alt-row > select {
+  width: 85%;
+  float: left;
+}
+
+.reset-input {
+  float: left;
+  position: relative;
+  margin-left: 10px;
+}
+
 input {
   display: none;
 }
@@ -565,7 +581,6 @@ div > div > div.modal-body.mb-2.mt-2 > span.reset-input {
 
 .grapick-cont {
   width: 100%;
-  height: 100px;
 }
 
 .grp-preview {

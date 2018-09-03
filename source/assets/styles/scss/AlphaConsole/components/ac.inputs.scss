@@ -9,3 +9,20 @@
     max-height: 30px;
     font-size: 12px;
 }
+
+td.alt-row-strong > select{
+    width: 92%;
+    float: left;
+}
+
+
+td.alt-row > select{
+    width: 85%; 
+    float: left;
+}
+
+.reset-input {
+    float: left;
+    position: relative;
+    margin-left:10px;
+}
