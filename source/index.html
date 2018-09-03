@@ -18,10 +18,10 @@
   <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
-  
+
   <link rel="stylesheet" href="assets/styles/css/grapick.min.css">
   <link rel="stylesheet" href="assets/js/plugin/jquery.gradientPicker.css" type="text/css" />
-	<link rel="stylesheet" href="assets/js/vendor/jqPlugins/colorpicker/css/colorpicker.css" type="text/css" />
+  <link rel="stylesheet" href="assets/js/vendor/jqPlugins/colorpicker/css/colorpicker.css" type="text/css" />
 
 
 
@@ -69,7 +69,6 @@
       user-select: none;
       -o-user-select: none;
     }
-
   </style>
 </head>
 
@@ -260,7 +259,7 @@
                                       <input type="radio" checked="checked" name="radio">
                                       <span class="checkmark"></span>
                                     </label>
-                                 
+
                                     <!-- LIST -->
                                     <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-list"
                                       class="radio-container">LIST
@@ -268,7 +267,7 @@
                                       <span class="checkmark"></span>
                                     </label>
                                     <select style="margin-top:0px;" class="acc-input mb-3" name="color-select" special="body"></select>
-                                   
+
                                     <!-- SOLID -->
                                     <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
                                       class="radio-container">SOLID
@@ -283,11 +282,18 @@
                                       <input type="radio" name="radio">
                                       <span class="checkmark"></span>
                                     </label>
-                                    <div class="mt-3 mb-5" id="gp"></div>
-                                    
-
-                                   
-
+                                    <div class="mb-4" id="loopduration">
+                                      <p>Loop Duration:</p>
+                                      <div class="row mt-2">
+                                        <div class="col-3">
+                                          <input id="body-loop-duration" class="acc-input" type="text"> </div>
+                                        <div class="col-9">
+                                          <p style="margin-left:-15px; margin-top:8px;">Seconds</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="mt-3 mb-5" id="body-gp"></div>
+                                    <div id="bodygradientvalue" style="display:block;"></div>
 
                                   </div>
                                   <div class="modal-footer p-2">
@@ -1410,7 +1416,7 @@
 
   </div>
 
- <!-- JQUERY -->
+  <!-- JQUERY -->
   <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -1422,7 +1428,7 @@
 
 
 
- 
+
   <script src="assets/js/tether.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -1432,28 +1438,43 @@
 
 
 
-    <script type="text/javascript">
-      const gp = new Grapick({
-        el: '#gp',
-        colorEl: '<input id="colorpicker"/>' //Essential for color picker to work
+  <script type="text/javascript">
+    const gp = new Grapick({
+      el: '#body-gp',
+      colorEl: '<input id="colorpicker"/>' //Essential for color picker to work
+    });
+
+
+    gp.setColorPicker(handler => {
+      const el = handler.getEl().querySelector('#colorpicker');
+
+      $(el).spectrum({
+        color: handler.getColor(),
+        showAlpha: false,
+        change(color) {
+          handler.setColor(color.toRgbString());
+
+        },
+        move(color) {
+          handler.setColor(color.toRgbString(), 0);
+        }
+
       });
-    
-      gp.setColorPicker(handler => {
-        const el = handler.getEl().querySelector('#colorpicker');
-            
-        $(el).spectrum({
-            color: handler.getColor(),
-            showAlpha: false,
-            change(color) {
-              handler.setColor(color.toRgbString());
-            },
-            move(color) {
-              handler.setColor(color.toRgbString(), 0);
-            }
-        });
-      });
-    </script>
-    
+
+    });
+
+    gp.on('change', complete => {
+      var gradientvalue = gp.getSafeValue();
+     
+     console.log(gradientvalue);
+
+  })
+
+    gp.on('change', complete => {
+    document.body.style.background = gp.getSafeValue();
+  })
+  </script>
+
 
   <script>
     let shell = require('electron').shell

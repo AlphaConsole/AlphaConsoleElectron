@@ -385,6 +385,10 @@ td.alt-row > select {
   margin-left: 10px;
 }
 
+#loopduration > div > div.col-3 > span {
+  display: none;
+}
+
 input {
   display: none;
 }

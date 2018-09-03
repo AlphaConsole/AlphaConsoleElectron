@@ -483,6 +483,9 @@ function GetConfigurationString() {
   Config.CustomColors.BlueAlphaIntensity = $("#alpha-intensity-blue").val();
   Config.CustomColors.OrangeAlphaIntensity = $("#alpha-intensity-orange").val();
 
+  Config.CustomColors.BodyGradientColor = $("#body-gp").val();
+  Config.CustomColors.BodyGradientLoopDuration = $("#body-loop-duration").val();
+
   //Custom title options
   var CustomTitles = {};
   CustomTitles.EnableCustomTitles = $("#enable-custom-titles").prop('checked'); 
