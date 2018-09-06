@@ -1464,15 +1464,12 @@
     });
 
     gp.on('change', complete => {
-      var gradientvalue = gp.getSafeValue();
-     
+      var gradientvalue = gp.getColorValue();
      console.log(gradientvalue);
 
   })
 
-    gp.on('change', complete => {
-    document.body.style.background = gp.getSafeValue();
-  })
+   
   </script>
 
 
