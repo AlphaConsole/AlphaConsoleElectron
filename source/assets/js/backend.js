@@ -201,7 +201,7 @@ function LoadConfiguration() {
   //Custom rank options
   $("#display-mmr").prop('checked', Config.RankOptions.DisplayMMR);
   $("#enable-unranked-mmr").prop('checked', Config.RankOptions.UnrankedMMR);
-  $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
+  // $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
   $("#april-fools").prop('checked', Config.RankOptions.AprilFools || 0);
 
   //Discord rich presence options
@@ -494,7 +494,7 @@ function GetConfigurationString() {
   var RankOptions = {};
   RankOptions.DisplayMMR = $("#display-mmr").prop('checked');
   RankOptions.UnrankedMMR = $("#enable-unranked-mmr").prop('checked');
-  RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
+  // RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
   RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
   RankOptions.AprilFools = $("#april-fools").prop('checked');
   Config.RankOptions = RankOptions;
