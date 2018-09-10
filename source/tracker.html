@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<!-- Not sure if this was on purpose or not but this was missing the closing > I'm not too familiar with html so /shrug -->
+
+<head>
+  <meta charset="UTF-8">
+  <title>AlphaConsole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <link rel="stylesheet" href="assets/styles/css/framework.css">
+  <link rel="stylesheet" href="assets/styles/css/alphaconsole.css">
+
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+
+
+  <link href="assets/styles/css/c3.min.css" rel="stylesheet">
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/c3/0.4.7/c3.min.js"></script>
+
+
+  <style>
+    @font-face {
+      font-family: BourgeoisLight;
+      src: url(assets/fonts/BourgeoisLight.otf);
+    }
+
+    @font-face {
+      font-family: BourgeoisMedium;
+      src: url(assets/fonts/BourgeoisMedium.otf);
+    }
+
+    @font-face {
+      font-family: QuarcaExtLight;
+      src: url(assets/fonts/QuarcaExtLightModified.otf);
+    }
+
+
+    .font-bourgL {
+      font-size: 22px;
+      font-family: BourgeoisLight;
+    }
+
+    .font-bourgM {
+      font-size: 16px;
+      font-family: BourgeoisMedium;
+    }
+
+    .font-quarcaL {
+      font-size: 16px;
+      font-family: QuarcaExtLight;
+    }
+
+    .font-quarcaM {
+      font-size: 16px;
+      font-family: QuarcaExtLight;
+    }
+
+    body {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -o-user-select: none;
+    }
+
+    .name {
+      color: white;
+    }
+
+    .value {
+      color: white;
+    }
+
+
+    .c3-tooltip tr:first-child {
+      display: none;
+    }
+
+    .c3-tooltip td {
+      background-color: #000;
+    }
+
+    .c3-legend-item {
+      fill: white;
+    }
+
+    .c3-axis {
+      fill: white;
+    }
+
+    .c3-axis-y text {
+      font-size: 12px;
+    }
+
+    .c3-axis-x text {
+      font-size: 0px;
+    }
+
+    .match-stats {
+
+      margin: 3px;
+      border: lightgray;
+      border-style: solid;
+      border-width: 1px
+
+    }
+
+    .match-stats th{
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+
+    .match-stats td {
+      border-right-style: dotted;
+      border-right-width: 1px;
+    }
+
+  </style>
+</head>
+
+
+<body style="min-height: 100%;">
+
+  <div class="title-bar-wrapper">
+    <!-- Title Bar : 
+    the bar is a seperate div to define a 100% draggable window 
+  -->
+    <div id="title-bar"></div>
+
+    <!-- Title Bar Buttons: 
+    The width of the wrapper for the buttons is relative to the buttons them self this way 
+    the buttons can not be used to drag the title bar and the title bar does not overlap the 
+    buttons 
+  -->
+    <div class="" id="title-bar-btns">
+      <!-- Minimize Button -->
+      <a class="title-bar-btn-wrapper" id="min-btn">
+        <img class="min-btn" src="https://png.icons8.com/small/64/ffffff/minimize-window.png">
+      </a>
+
+      <!-- Maximise Button : Disabled -->
+      <a style="display:none;" id="max-btn"></a>
+
+      <!-- Close Button -->
+      <a class="title-bar-btn-wrapper" id="close-btn">
+        <span class="close-btn lnr lnr-cross pl-2 pr-2"></span>
+      </a>
+    </div>
+    <!-- Title Bar End ./// -->
+  </div>
+
+
+
+  <!-- Header -->
+  <div class=" mt-5 pull-left container-fluid w-100">
+    <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
+      <div class="col">
+        <p class="font-quarcaL p-2 w-100 heading-title">MMR Tracker</p>
+      </div>
+    </div>
+  </div>
+  <!-- Header End ./// -->
+
+
+  <div class="pull-left container-fluid w-100 full-height">
+    <div class="row m-0 w-100">
+      <div class="col">
+        <main class="">
+
+          <div id="chart"></div>
+
+
+
+        </main>
+        <!-- ./End -->
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/js/tether.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      var $element = $('.title-bar-wrapper');
+      var $follow = $element.find('#title-bar');
+      var followHeight = $element.find('title-bar').outerHeight();
+      var height = $element.outerHeight();
+      var window_height = $(window).height();
+
+      $(window).scroll(function () {
+        var pos = $(window).scrollTop();
+        var top = $element.offset().top;
+
+        // Check if element totally above or totally below viewport
+        if (top + height - followHeight < pos || top > pos + window_height) {
+          return;
+        }
+
+        var offset = parseInt($(window).scrollTop() - top);
+
+        if (offset > 0) {
+          $follow.css('background', '#454545');
+          $("footer-bar-wrapper").hide;
+        }
+
+        if (offset < 0) {
+          $follow.css('background', 'transparent');
+        }
+
+      });
+    });
+
+  </script>
+
+  <script>
+    let shell = require('electron').shell
+
+    document.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+        event.preventDefault()
+        shell.openExternal(event.target.href)
+      }
+    })
+  </script>
+
+  <script>
+      (function () {
+        // Retrieve remote BrowserWindow
+        const {
+          BrowserWindow
+        } = require('electron').remote
+
+        function init() {
+          // Minimize task
+          document.getElementById("min-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.minimize();
+          });
+
+          // Maximize window
+          document.getElementById("max-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            if (window.isMaximized()) {
+              window.unmaximize();
+            } else {
+              window.maximize();
+            }
+          });
+
+          // Close app
+          document.getElementById("close-btn").addEventListener("click", (e) => {
+            var window = BrowserWindow.getFocusedWindow();
+            window.close();
+          });
+
+        };
+
+        document.onreadystatechange = () => {
+          if (document.readyState == "complete") {
+            init();
+          }
+        };
+
+      })();
+  </script>
+
+  <script>
+
+    function LoadFile(path) {
+      var fs = require("fs");
+      return fs.readFileSync(path, "utf8"); //y tho, without utf8 it is just an array of bytes
+    }
+
+    function GetBasePath() {
+
+      return require("path").dirname(__dirname).replace('app.asar', 'app.asar.unpacked');
+
+    }
+
+    function PlaylistIdToName(id) {
+      switch (id) {
+        case 10: return "1v1";
+        case 11: return "2v2";
+        case 12: return "Solo 3v3";
+        case 13: return "3v3";
+        default: return "Undefined"
+      }
+    }
+
+
+  </script>
+
+  <script type="text/javascript">
+
+
+    var Matches = [];
+
+    function LoadMatches() {
+
+      var matchesString = LoadFile(GetBasePath() + "/mmrTracker.txt");
+      matchesString.split("\n").slice(0, -1).map(x => Matches.push(JSON.parse(x)));
+      console.log(Matches);
+
+
+    }
+
+    function GenerateChart() {
+
+      var Lines = { "1v1": ["1v1"], "2v2": ["2v2"], "Solo 3v3": ["Solo 3v3"], "3v3": ["3v3"], "1v1x": ["1v1x"], "2v2x": ["2v2x"], "Solo 3v3x": ["Solo 3v3x"], "3v3x": ["3v3x"] };
+      var LinesArray = [];
+
+      for (var i = 0; i < Matches.length; i++) {
+        var playlist = PlaylistIdToName(Matches[i].playlist)
+        if (!Lines[playlist]) {
+          Lines[playlist] = [];
+          Lines[playlist].push(playlist);
+        }
+        Lines[playlist].push(Matches[i].skill);
+        Lines[playlist + "x"].push(i);
+
+      }
+
+      for (var p in Lines) {
+        LinesArray.push(Lines[p]);
+      }
+
+      console.log(LinesArray);
+
+      var chart = c3.generate({
+        bindto: "#chart",
+        data: {
+          xs: {
+            '1v1': '1v1x',
+            '2v2': '2v2x',
+            'Solo 3v3': 'Solo 3v3x',
+            '3v3': '3v3x',
+          },
+          columns: LinesArray,
+          types: {
+            "1v1": 'line',
+            "2v2": 'line',
+            "3v3": 'line',
+            "Solo 3v3": 'line'
+          }
+        }
+      });
+
+    }
+
+
+
+    LoadMatches();
+    GenerateChart();
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

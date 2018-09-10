@@ -1,0 +1,12 @@
+{"id": "76561198024575042","playlist": 11,"skill": 1486.09,"division": 3,"tier": 18,"matches_played": 157,"match_stats": {"score": 290,"goals": 1,"shots": 4,"saves": 0,"assists": 1} }
+{"id": "76561198024575042","playlist": 11,"skill": 1478.7,"division": 2,"tier": 18,"matches_played": 158,"match_stats": {"score": 455,"goals": 2,"shots": 2,"saves": 2,"assists": 0} }
+{"id": "76561198024575042","playlist": 11,"skill": 1469.96,"division": 2,"tier": 18,"matches_played": 159,"match_stats": {"score": 500,"goals": 2,"shots": 6,"saves": 2,"assists": 0} }
+{"id": "76561198024575042","playlist": 11,"skill": 1477.63,"division": 2,"tier": 18,"matches_played": 160,"match_stats": {"score": 385,"goals": 1,"shots": 5,"saves": 2,"assists": 1} }
+{"id": "76561198024575042","playlist": 11,"skill": 1486.35,"division": 3,"tier": 18,"matches_played": 161,"match_stats": {"score": 720,"goals": 3,"shots": 7,"saves": 1,"assists": 3} }
+{"id": "76561198024575042","playlist": 11,"skill": 1495.79,"division": 3,"tier": 18,"matches_played": 162,"match_stats": {"score": 330,"goals": 1,"shots": 7,"saves": 1,"assists": 0} }
+{"id": "76561198024575042","playlist": 11,"skill": 1503.76,"division": 3,"tier": 18,"matches_played": 163,"match_stats": {"score": 490,"goals": 1,"shots": 1,"saves": 3,"assists": 2} }
+{"id": "76561198024575042","playlist": 11,"skill": 1494.26,"division": 3,"tier": 18,"matches_played": 164,"match_stats": {"score": 475,"goals": 2,"shots": 5,"saves": 1,"assists": 1} }
+{"id": "76561198024575042","playlist": 11,"skill": 1503.8,"division": 3,"tier": 18,"matches_played": 165,"match_stats": {"score": 650,"goals": 3,"shots": 4,"saves": 2,"assists": 0} }
+{"id": "76561198024575042","playlist": 11,"skill": 1494.79,"division": 3,"tier": 18,"matches_played": 166,"match_stats": {"score": 50,"goals": 0,"shots": 1,"saves": 0,"assists": 0} }
+{"id": "76561198024575042","playlist": 11,"skill": 1502.51,"division": 3,"tier": 18,"matches_played": 167,"match_stats": {"score": 605,"goals": 3,"shots": 4,"saves": 2,"assists": 1} }
+{"id": "76561198024575042","playlist": 11,"skill": 1493.3,"division": 3,"tier": 18,"matches_played": 168,"match_stats": {"score": 245,"goals": 1,"shots": 1,"saves": 1,"assists": 0} }
