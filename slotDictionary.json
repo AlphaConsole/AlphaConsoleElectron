@@ -1,4 +1,5 @@
 {
+    "avatar-select" :"Avatar Border",
     "antenna-select": "Antenna",
     "banner-select": "Player Banner",
     "body-select": "Body",
@@ -36,5 +37,6 @@
     "Wheels": "wheel-select",
     "Ball": "ball-select",
     "MBDecal": "mb-decal-select",
-    "EngineTexture": "engine-texture-select"
+    "EngineTexture": "engine-texture-select",
+    "Avatar Border": "avatar-select"
 }
