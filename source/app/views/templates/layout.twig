@@ -196,7 +196,7 @@
     var fs = require('fs');
 
     packagesBeingDownloaded = {};
-    const { ipcRenderer } = require('electron');
+    
     function fisnihedDownload(packagedID, filename) {
       packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true
       for (var file in packagesBeingDownloaded[packagedID]['files']) {
@@ -204,7 +204,7 @@
           return;
         }
       }
-      var dir = GetBasePath() + "/textures/" + packagesBeingDownloaded[packagedID]['dir'] + '/'
+      var dir = GetBasePath() + "/../../textures/" + packagesBeingDownloaded[packagedID]['dir'] + '/'
       for (var file in packagesBeingDownloaded[packagedID]['files']) {
         ensureDirectoryExistence(dir + file);
         fs.rename(dir + 'tmp_' + file, dir + file, function (err) {
@@ -276,7 +276,7 @@
         Progress.total = 0;
         Progress.cur = 0;
 
-        var basedir = GetBasePath() + "/textures/" + Details[index].folder + '/'
+        var basedir = GetBasePath() + "/../../textures/" + Details[index].folder + '/'
         for (let item of body.items) {
 
           if (item.parameters != undefined)
