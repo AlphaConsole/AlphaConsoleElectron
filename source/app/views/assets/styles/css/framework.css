@@ -3481,7 +3481,10 @@ tbody.collapse.show {
 
 .nav-link {
   display: block;
-  padding: 0.5em 1em;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-family: BourgeoisMedium;
+  padding: 0.3em 0em;
 }
 .nav-link:focus {
   text-decoration: none;
@@ -3517,8 +3520,7 @@ tbody.collapse.show {
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #464a4c;
-  background-color: #fff;
-  border-color: #ddd #ddd #fff;
+  border-right: 6px solid #393939;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -3528,7 +3530,8 @@ tbody.collapse.show {
 .nav-pills .nav-item.show .nav-link {
   color: #fff;
   cursor: default;
-  background-color: #fff;
+  border-left: 4px solid #393939;
+  padding-left: 10px;
 }
 
 .nav-fill .nav-item {

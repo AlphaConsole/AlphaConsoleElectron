@@ -1,183 +1,207 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {% block head %}
-            <title>
-                {% block title %}{% endblock %} - ALPHACONSOLE
-            </title>
-            {% include '_metadata.twig' %}
 
-        {% endblock %}
-    </head>
-    <body style="min-height: 100%;">
-        <div class="title-bar-wrapper">
-            <!-- Title Bar : the bar is a seperate div to define a 100% draggable window -->
-            <div id="title-bar"></div>
+<head>
+  {% block head %}
+  <title>
+    {% block title %}{% endblock %} - ALPHACONSOLE
+  </title>
+  {% include '_metadata.twig' %} {% endblock %}
+</head>
 
-            <!-- Title Bar Buttons: The width of the wrapper for the buttons is relative to the buttons them self this way the buttons can not be used to drag the title bar and the title bar does not overlap the buttons -->
-            <div class="" id="title-bar-btns">
-                <!-- Minimize Button -->
-                <a class="title-bar-btn-wrapper" id="min-btn">
-                    <img class="min-btn" src="https://png.icons8.com/small/64/ffffff/minimize-window.png">
-                </a>
+<body>
+  <div class="title-bar-wrapper">
+    <!-- Title Bar : the bar is a seperate div to define a 100% draggable window -->
+    <div id="title-bar"></div>
 
-                <!-- Maximise Button : Disabled -->
-                <a style="display:none;" id="max-btn"></a>
+    <!-- Title Bar Buttons: The width of the wrapper for the buttons is relative to the buttons them self this way the buttons can not be used to drag the title bar and the title bar does not overlap the buttons -->
+    <div class="" id="title-bar-btns">
+      <!-- Minimize Button -->
+      <a class="title-bar-btn-wrapper" id="min-btn">
+        <img class="min-btn" src="https://png.icons8.com/small/64/ffffff/minimize-window.png">
+      </a>
 
-                <!-- Close Button -->
-                <a class="title-bar-btn-wrapper" id="close-btn">
-                    <span class="close-btn lnr lnr-cross pl-2 pr-2"></span>
-                </a>
-            </div>
-            <!-- Title Bar End ./// -->
+      <!-- Maximise Button : Disabled -->
+      <a style="display:none;" id="max-btn"></a>
+
+      <!-- Close Button -->
+      <a class="title-bar-btn-wrapper" id="close-btn">
+        <span class="close-btn lnr lnr-cross pl-2 pr-2"></span>
+      </a>
+    </div>
+    <!-- Title Bar End ./// -->
+  </div>
+
+
+  {#
+  <!-- Header -->
+  <div class=" mt-5 pull-left container-fluid w-100">
+    <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
+      <div class="col">
+        <p class="font-quarcaL p-2 w-100 heading-title">
+          {% block title %} {{ page_title|title }} {% endblock %}
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Header End ./// -->#}
+
+  <div class="pull-left container-fluid w-100 h-100">
+    <div class="row h-100">
+      <div class="col-md-2 col-sm-4 h-100">
+        {% include '../partials/sidebar.twig' %}
+      </div>
+      <div class="col-md-10 col-sm-8 h-100">
+      {% block content %} {% endblock %}
+      </div>
+    </div>
+  </div>
+  {% include '../partials/modals.twig' %} {% block footer %}
+  <!-- Footer -->
+  {#
+  <div class="footer-bar-wrapper affix">
+    <!-- Footer Bar -->
+    <div class="footer-bar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <small class="status-text">Status -
+              <span id="status-message" class="">
+            </small>
+            </small>
+          </div>
+          <div class="col-4">
+            <small class="build-number text-right">Beta Version</small>
+          </div>
         </div>
+      </div>
+    </div>
+  </div> #}
+  <!-- Footer End ./// -->
+  <!-- JQUERY -->
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-        <!-- Header -->
-        <div class=" mt-5 pull-left container-fluid w-100">
-            <div style="background:url('assets/img/logo_normal.png') no-repeat; background-position: 30px 19px;" class="row m-0 w-100">
-                <div class="col">
-                    <p class="font-quarcaL p-2 w-100 heading-title">
-                        {% block title %}
-                            {{ page_title|title }}
-                        {% endblock %}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- Header End ./// -->
+  {# VENDOR PACKAGES #}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+  <script src="assets/js/grapick.min.js"></script>
+  <script src="./assets/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
-        {% block content %}{% endblock %}
-        {% include '../partials/modals.twig' %}
-        {% block footer %}
-            <!-- Footer -->
-            <div class="footer-bar-wrapper affix">
-                <!-- Footer Bar -->
-                <div class="footer-bar">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-8">
-                                <small class="status-text">Status -
-                                    <span id="status-message" class=""></small>
-                                </small>
-                            </div>
-                            <div class="col-4">
-                                <small class="build-number text-right">Beta Version</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End ./// -->
-            <!-- JQUERY -->
-            <script src="./assets/js/jquery-3.3.1.min.js"></script>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  {# THE FOLLOWING MUST REMAIN INSIDE THE LAYOUT FILE - DO NO MOVE TO THE CONTROLLERS #}
+  <script type="text/javascript">
+   /* const gp = new Grapick({
+      el: '#body-gp',
+      colorEl: '<input id="colorpicker"/>' //Essential for color picker to work
+    });
 
-            {# VENDOR PACKAGES #}
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
-            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
-            <script src="assets/js/grapick.min.js"></script>
-            <script src="./assets/js/tether.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    gp.setColorPicker(handler => {
+      const el = handler.getEl().querySelector('#colorpicker');
 
-            {# THE FOLLOWING MUST REMAIN INSIDE THE LAYOUT FILE - DO NO MOVE TO THE CONTROLLERS #}
-            <script type="text/javascript">
-                const gp = new Grapick({
-                    el: '#body-gp', colorEl: '<input id="colorpicker"/>' //Essential for color picker to work
-                });
+      $(el).spectrum({
+        color: handler.getColor(),
+        showAlpha: false,
+        change(color) {
+          handler.setColor(color.toRgbString());
 
-                gp.setColorPicker(handler => {
-                    const el = handler.getEl().querySelector('#colorpicker');
+        },
+        move(color) {
+          handler.setColor(color.toRgbString(), 0);
+        }
 
-                    $(el).spectrum({
-                        color: handler.getColor(),
-                        showAlpha: false,
-                        change(color) {
-                            handler.setColor(color.toRgbString());
+      });
 
-                        },
-                        move(color) {
-                            handler.setColor(color.toRgbString(), 0);
-                        }
+    });
 
-                    });
+    gp.on('change', complete => {
+      var gradientvalue = gp.getSafeValue();
 
-                });
+      console.log(gradientvalue);
 
-                gp.on('change', complete => {
-                    var gradientvalue = gp.getSafeValue();
+    })
 
-                    console.log(gradientvalue);
+    gp.on('change', complete => {
+      document.body.style.background = gp.getSafeValue();
+    })*/
+  </script>
 
-                })
+  <script>
+    let shell = require('electron').shell
 
-                gp.on('change', complete => {
-                    document.body.style.background = gp.getSafeValue();
-                })
-            </script>
+    document.addEventListener('click', function (event) {
+      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+        event.preventDefault()
+        shell.openExternal(event.target.href)
+      }
+    })
+  </script>
+  <script>
+    //DONT TOUCH
+    //this must stay in this file.
 
-            <script>
-                let shell = require('electron').shell
+    (function () {
+      // Retrieve remote BrowserWindow
+      const {
+        BrowserWindow
+      } = require('electron').remote
 
-                document.addEventListener('click', function (event) {
-                    if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
-                        event.preventDefault()
-                        shell.openExternal(event.target.href)
-                    }
-                })
-            </script>
-            <script>
-                //DONT TOUCH
-                //this must stay in this file.
+      function init() {
+        // Minimize task
+        document.getElementById("min-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.minimize();
+        });
 
-                (function () {
-                    // Retrieve remote BrowserWindow
-                    const {BrowserWindow} = require('electron').remote
+        // Maximize window
+        document.getElementById("max-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          if (window.isMaximized()) {
+            window.unmaximize();
+          } else {
+            window.maximize();
+          }
+        });
 
-                    function init() {
-                        // Minimize task
-                        document.getElementById("min-btn").addEventListener("click", (e) => {
-                            var window = BrowserWindow.getFocusedWindow();
-                            window.minimize();
-                        });
+        // Close app
+        document.getElementById("close-btn").addEventListener("click", (e) => {
+          var window = BrowserWindow.getFocusedWindow();
+          window.close();
+        });
 
-                        // Maximize window
-                        document.getElementById("max-btn").addEventListener("click", (e) => {
-                            var window = BrowserWindow.getFocusedWindow();
-                            if (window.isMaximized()) {
-                                window.unmaximize();
-                            } else {
-                                window.maximize();
-                            }
-                        });
+        //UNUSED?????
+        //document.getElementById("detectInstall").addEventListener("click", (e) => {});
+      };
 
-                        // Close app
-                        document.getElementById("close-btn").addEventListener("click", (e) => {
-                            var window = BrowserWindow.getFocusedWindow();
-                            window.close();
-                        });
+      document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+          init();
+        }
+      };
 
-                        document.getElementById("detectInstall").addEventListener("click", (e) => {});
-                    };
+    })();
+  </script>
 
-                    document.onreadystatechange = () => {
-                        if (document.readyState == "complete") {
-                            init();
-                        }
-                    };
 
-                })();
-            </script>
+  <script src="../controllers/backend.js"></script>
+  <script src="../controllers/UI.js"></script>
 
-            
-            <script src="../controllers/backend.js"></script>
-            <script src="../controllers/UI.js"></script>
-
-<script>
+  <script>
     $(document).ready(function () {
       RequestPackages();
-      console.log("READY");
+
+ $("#close").click(function (d) {
+              d.collapse('hide');
+            });
+
+$("#progress-bar").hide();
+       $("#download-package").click(function (d) {
+              $("#progress-bar").show();
+       });
     });
 
     function GetBasePath() {
@@ -189,14 +213,14 @@
 
     var AllPackages;
     var PageNumber = 1;
-    var PackagesPerPage = 9;
+    var PackagesPerPage = 8;
     var NumberOfPages = 1;
 
     var path = require('path');
     var fs = require('fs');
 
     packagesBeingDownloaded = {};
-    
+
     function fisnihedDownload(packagedID, filename) {
       packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true
       for (var file in packagesBeingDownloaded[packagedID]['files']) {
@@ -253,7 +277,13 @@
     //TODO: Make sure package is downloaded before allowing closing the window.
     //TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
     function DownloadPackage() {
-      if (SelectedPackage === undefined) { return; }
+      if (SelectedPackage === undefined) {
+        return;
+      }
+
+$("#progress-bar").css("display", "block");
+ 
+      
 
       const notifier = require('node-notifier');
 
@@ -266,7 +296,9 @@
 
       const con = require('electron').remote.getGlobal('console');
 
-      request(baseurl + Details[index].folder + '/package.json?' + Math.random(), { json: true }, (err, res, body) => {
+      request(baseurl + Details[index].folder + '/package.json?' + Math.random(), {
+        json: true
+      }, (err, res, body) => {
         if (err) {
           return console.log(err);
         }
@@ -330,26 +362,39 @@
 
     }
 
-
-
-
+ 
+     
+ 
 
     function PopulateTexturePackList(packageList) { // packageList is a slice of body.packages from RequestPackages
 
+        var row = $('<div>');
+        row.addClass("row mt-4");
+
       $("#texture-pack-list").empty();
 
+      $("#texture-pack-list").append(row);
+
       var i = 0;
+
+      
       for (let item of packageList) {
 
         Details[i] = item;
 
+        var column = $('<div>');
+        column.addClass("col-md-3 col-xs-4 pull-left mb-2 texture-wrapper");
+
         var newPack = $('<div>');
         newPack.addClass("square");
-        newPack.css("background", "url(" + baseurl + item.folder + "/preview." + (item.previewExtension == null ? "png" : item.previewExtension) + ") no-repeat center center");
+        newPack.css("background", "url(" + baseurl + item.folder + "/preview." + (item.previewExtension == null ? "png" :
+          item.previewExtension) + ") no-repeat center center");
         newPack.css("background-size", "100% 100%");
         newPack.attr("details-row", Math.floor(i / 3));
         newPack.attr("details-index", i);
+
         var j = i;
+
         var para = $("<p>");
         para.addClass("bg-black author font-bourgM");
         para.text("by " + item.author);
@@ -360,21 +405,26 @@
 
 
         var likeDiv = $("<div>");
+
         var likeLink = $("<a>");
         likeLink.addClass("like-status");
+
         var likeImage = $('<i style="font-size:20px; color:#f5b; cursor:pointer;">');
+       
+
         var likeNumber = $('<p class="like-count like-status">')
         likeNumber.text(item.Likes);
 
         likeImage.addClass("fa");
-        likeImage.addClass(item.Liked? "fa-heart":"fa-heart-o");
+        likeImage.addClass(item.Liked ? "fa-heart" : "fa-heart-o");
 
-        likeImage.click(function(event){
+        likeImage.click(function (event) {
           event.stopPropagation();
+      
 
           LikedPackage = Details[$(this).closest('.square').attr("details-index")];
 
-          if(LikedPackage.Liked){
+          if (LikedPackage.Liked) {
             $(this).removeClass("fa-heart");
             $(this).addClass("fa-heart-o");
             LikedPackage.Likes--;
@@ -385,14 +435,16 @@
           }
 
           LikedPackage.Liked = !LikedPackage.Liked;
-          
+
           $(this).parent().next().text(LikedPackage.Likes);
 
           var request = require("request");
-          request('http://alphaconsole.net/textures/registerLike.php?PackID=' + LikedPackage.id + "&Status=" + LikedPackage.Liked, function (error, response, body) { 
-          });
+          request('http://alphaconsole.net/textures/registerLike.php?PackID=' + LikedPackage.id + "&Status=" +
+            LikedPackage.Liked,
+            function (error, response, body) {});
 
         });
+
 
         likeLink.append(likeImage);
         likeDiv.append(likeLink);
@@ -402,6 +454,8 @@
         newPack.append(para2);
         newPack.append(likeDiv);
 
+        
+        
 
         ////HIGHTLIGHT
         newPack.mouseenter(function () {
@@ -420,8 +474,8 @@
         ////DETAILS PANEL
         newPack.click(function () {
 
-            console.log($(this).prop("tagName"));
-    
+          console.log($(this).prop("tagName"));
+
 
           if (SelectedPackage != undefined) {
             SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
@@ -442,12 +496,33 @@
             var d = $("#details" + SelectedPackage.attr("details-row"));
             var index = SelectedPackage.attr("details-index");
 
-            d.find("#title").text(Details[index].name + " by " + Details[index].author);
+            d.find("#title").html(Details[index].name + " <small style='color:#999;'>by" + Details[index].author + "</small>");
+
+
+            var imgHtml =  baseurl + item.folder + "/preview." + (item.previewExtension == null ? "png" : item.previewExtension);
+            d.find("#image").html("<img style='width:300px; height:300px; border-radius:8px;' src="+ imgHtml +" >");
+
+
+            d.find("#closebutton").html("<button class='font-quarcaL btn btn-danger' id='close'>CLOSE</button>");
+
 
             var descHtml = Details[index].description || "No description found.<br><br>";
             d.find("#description").html(descHtml + "<div style='padding:10px'></div>");
 
             d.collapse('show');
+
+
+           
+
+            $("#close").click(function () {
+              d.collapse('hide');
+      
+            });
+
+            $("#download-package").click(function () {
+                console.log("clicked download");
+                    $("#progress-bar").css("display", "block");
+            });
 
 
           } else {
@@ -459,38 +534,64 @@
           $(".progress-bar").html("");
         });
         /////////////////
+        column.append(newPack);
 
-        $("#texture-pack-list").append(newPack);
+        $("#texture-pack-list").append(column);
 
 
-        if (i % 3 == 2 || i + 1 == packageList.length) {
+        if (i % 3 == 2 || i + 1 == packageList.length
+        ) {
           var separator = $('<div>');
           separator.addClass("bg-black separator collapse");
           separator.attr("id", "details" + Math.floor(i / 3));
 
-          var title = $("<p>");
-          title.addClass("details-title font-bourgM");
-          title.attr("id", "title");
+          var close = $('<div>');
+          close.addClass("close");
+          close.attr("id", "closebutton");
 
+          var image = $("<div>");
+          image.addClass("font-bourgM image m-3");
+          image.attr("id", "image");
+
+          var title = $("<p>");
+          title.addClass("details-title fs-32 text-uppercase ls-s font-bourgM mt-3");
+          title.attr("id", "title");
+          
           var desc = $("<div>");
-          desc.addClass("font-bourgM description");
+          desc.addClass("font-exo-lightL fs-16 text-uppercase description mt-2");
           desc.attr("id", "description");
 
-          var download = $("<button style=\"margin-bottom:30px\" onclick='DownloadPackage()'>Download</button>");
+          var download = $("<button id='download-package' style=\"margin-bottom:30px\" onclick='DownloadPackage()'>DOWNLOAD</button>");
           download.addClass("font-quarcaL btn btn-success download");
-          var progress = $("<div class=\"progress\"> <div class=\"progress-bar\" style=\"width:0%;background-color: #5cb85c;\">0%</div></div>");
+          var progress = $(
+            "<div style='position: absolute;bottom: 1px;float: left;width: 100%; display:none;' id='progress-bar' class=\"progress\"> <div class=\"progress-bar\" style=\"width:0%;background-color: #5cb85c;\">0%</div></div>"
+          );
 
 
 
           var divlevel = $("<div>");
-          divlevel.css("position", "relative");
+          divlevel.addClass("texture-details animated fadeInLeft");
+        
+           
+
+
+
+          divlevel.append(image);
+          divlevel.append(close);
           divlevel.append(title);
           divlevel.append(desc);
           divlevel.append(download);
           divlevel.append(progress);
           separator.append(divlevel);
 
-          $("#texture-pack-list").append(separator);
+
+        //var row = $('<div>');
+        //row.addClass("row mt-4");
+
+//      $("#texture-pack-list").append(row);
+
+
+          $("#v-pills-textures").prepend(separator);
 
         }
 
@@ -502,8 +603,12 @@
 
     function RequestPackages() {
       var request = require("request");
-      request(baseurl + 'packages.json?' + Math.random(), { json: true }, (err, res, body) => {
-        if (err) { return console.log(err); }
+      request(baseurl + 'packages.json?' + Math.random(), {
+        json: true
+      }, (err, res, body) => {
+        if (err) {
+          return console.log(err);
+        }
 
 
         AllPackages = body.packages;
@@ -511,23 +616,28 @@
         PageNumber = 1;
 
 
-        request("http://alphaconsole.net/textures/getLikes.php", { json: true }, (err2, res2, body2) => {
-          if (err2) { RefreshPackageList(); return console.log(err2); }
+        request("http://alphaconsole.net/textures/getLikes.php", {
+          json: true
+        }, (err2, res2, body2) => {
+          if (err2) {
+            RefreshPackageList();
+            return console.log(err2);
+          }
 
-          if(body2.All == undefined || body2.Own == undefined){
+          if (body2.All == undefined || body2.Own == undefined) {
             RefreshPackageList();
             alert("Unable to contact the ratings server!");
           }
 
-          for(var i = 0; i < AllPackages.length; i++){
+          for (var i = 0; i < AllPackages.length; i++) {
 
-            if(body2.All[AllPackages[i].id] != undefined){
+            if (body2.All[AllPackages[i].id] != undefined) {
               AllPackages[i].Likes = body2.All[AllPackages[i].id];
             } else {
               AllPackages[i].Likes = 0;
             }
 
-            if(body2.Own[AllPackages[i].id] != undefined){
+            if (body2.Own[AllPackages[i].id] != undefined) {
               AllPackages[i].Liked = true;
             } else {
               AllPackages[i].Liked = false;
@@ -586,8 +696,39 @@
       });
     }
 
-  </script>
-        {% endblock %}
 
-    </body>
+
+
+
+
+  function searchtextures() {
+
+    var txt = $('#search-criteria').val();
+    $('.texture-wrapper').each(function(){
+       if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+           $(this).show();
+       }
+       else{
+         $(this).hide();
+       }
+    });
+
+
+    }
+    
+
+
+      $(document).ready(function () {
+
+
+
+$("#progress-bar").hide();
+      
+    });
+
+  </script>
+  {% endblock %}
+
+</body>
+
 </html>

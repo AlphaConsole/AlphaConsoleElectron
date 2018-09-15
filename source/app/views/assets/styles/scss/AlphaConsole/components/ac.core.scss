@@ -6,9 +6,16 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: auto;
+html {
+    min-height: 100% !important;
+}
+
+html,body {
+    height: 100%;
+    padding:0;
+    margin:0;
+    // background-image: url("../../img/ball-bg.png");
+    // background-position-y: -155px;
 }
 
 h1 {
@@ -44,6 +51,27 @@ section {
     background-image: url("../../img/ball-bg.png");
     background-position-y: -155px;
 }
+
+.texture-details{
+    background-color: $ac-gray-dark;
+    border-top:1px solid $ac-gray;
+    border-left:1px solid $ac-gray;
+    border-right:1px solid $ac-gray;
+    border-bottom:1px solid $ac-gray;
+    z-index:9999999;
+    height: 655px;
+    position: absolute;
+    width: 100%;
+    background-image: url("../../img/ball-bg.png");
+    background-position-y: -155px;
+    background-repeat: no-repeat;
+    left: -22px;
+    max-height: 575px;
+    height:100%;
+    top: 80px;
+    background-position-x: 342px;
+}
+
 
 .panel {
     padding: 0 10px;
@@ -297,4 +325,16 @@ section {
   
         padding: 5px !important;
   
+      }
+
+      .ls-s{
+        letter-spacing: 3px;
+      }
+
+      .ls-m{
+        letter-spacing: 5px;
+      }
+
+      .ls-l{
+        letter-spacing: 8px;
       }

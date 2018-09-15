@@ -1,0 +1,27 @@
+{% extends "./templates/layout.twig" %}
+
+{% block title %}LANDING{% endblock %}
+{% block head %}
+    {{ parent() }}
+{% endblock %}
+{% block content %}
+    {# PAGE CONTENT HERE #}
+    <div style="background:transparent;" class="row h-100">
+        <div style="padding-top:40px" class="col-12 h-100">
+            <div class="main-content pl-2">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        {% include './sections/dashboard.twig' %}
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-items" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-textures" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        {% include './sections/texture-repo.twig' %}
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-options" role="tabpanel" aria-labelledby="v-pills-settings-tab">4...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

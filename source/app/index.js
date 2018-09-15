@@ -1,10 +1,11 @@
 const {app, BrowserWindow} = require('electron');
 const twig                 = require('electron-twig');
 const { ipcMain } = require('electron');
-const path = require('path')
-const url = require('url')
-const autoUpdater = require("electron-updater").autoUpdater
-var log = require("electron-log")
+const path = require('path');
+const url = require('url');
+const autoUpdater = require("electron-updater").autoUpdater;
+var log = require("electron-log");
+
 
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
@@ -39,10 +40,10 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       titleBarStyle: 'hidden',
       resizable: true, 
       frame: false, 
-      minWidth: 720,
-      maxWidth: 720,
-      width: 720,
-      height: 930,
+      minWidth: 540,
+      maxWidth: 1280,
+      width: 1280,
+      height: 720,
       webPreferences: {
         devTools: true
       },
@@ -51,7 +52,7 @@ autoUpdater.on("update-downloaded", function (_arg4) {
 
     // and load the index.html of the app.
     mainWindow.loadURL(url.format({
-      pathname: path.join(__dirname, '/views/index.twig'),
+      pathname: path.join(__dirname, '/views/landing.twig'),
       protocol: 'file:',
       slashes: true
     }))

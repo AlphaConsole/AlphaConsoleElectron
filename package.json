@@ -58,6 +58,7 @@
     "gulp": "^4.0.0"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "electron-log": "^2.2.17",
     "electron-twig": "^1.1.1",
     "electron-updater": "^2.12.0",

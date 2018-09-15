@@ -261,7 +261,7 @@ function LoadConfiguration() {
       const fs = require('fs');
 
       Config.LastVersion = require('electron').remote.app.getVersion();
-      fs.writeFileSync(GetBasePath() + '/config.json', JSON.stringify(Config, null, "\t"), 'utf-8');
+      fs.writeFileSync(GetBasePath() + '/../../config.json', JSON.stringify(Config, null, "\t"), 'utf-8');
     }
   })
 

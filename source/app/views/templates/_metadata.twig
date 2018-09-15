@@ -6,7 +6,11 @@
 <link rel="stylesheet" href="./assets/styles/css/framework.css">
 <link rel="stylesheet" href="./assets/styles/css/alphaconsole.css">
 
+{# EXTERNAL FONTS #}
+<link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
 {# VENDOR CSS #}
+<link href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
@@ -51,11 +55,176 @@
         font-family: QuarcaExtLight;
     }
 
-    body {
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -o-user-select: none;
+    
+    .font-exoL {
+        font-size: 22px;
+        font-weight:400;
+        letter-spacing:3px;
+        font-family: 'Exo 2', sans-serif;
     }
+
+    .font-exoM {
+        font-size: 16px;
+        font-weight:400;
+        letter-spacing:3px;
+        font-family: 'Exo 2', sans-serif;
+    }
+
+    .font-exo-lightL {
+        font-size: 22px;
+        font-weight:200;
+        letter-spacing:3px;
+        font-family: 'Exo 2', sans-serif;
+    }
+
+    .font-exo-lightM {
+        font-size: 16px;
+        font-weight:200;
+        letter-spacing:3px;
+        font-family: 'Exo 2', sans-serif;
+    }
+
+body {
+    overflow:hidden;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -o-user-select: none;
+        }
+
+        .square {
+            float:left;
+            width: 100%;
+            padding:6px;
+                height: 235px;
+            position:relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .separator {
+            float: left;
+            position: relative;
+            width: 100%;
+            margin-left: 1.66%;
+            margin-right: 1.66%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .author {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            text-align: right;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .pack-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .like-status {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 10px;
+            width: 100%;
+            z-index: 99999;
+        }
+
+        .like-count {
+            font-size: 13px;
+            color: #fff;
+            margin-left: 35px;
+            margin-bottom: 3px;
+            padding-left: 0;
+        }
+
+        .details-title {
+                position: absolute;
+                top: -21px;
+                right: -330px;
+                padding: 10px 15px 10px 10px;
+                width: 100%;
+                text-align: left;
+        }
+
+        .details-author {
+            padding-top: 40px;
+            padding-left: 10px;
+            max-height: 600px;
+            min-height: 200px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .description {
+           position: absolute;
+            top: 0;
+            left: 332px;
+            padding-top: 40px;
+            padding-left: 10px;
+            max-height: 600px;
+            min-height: 500px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-width: 670px;
+            width: 100%;
+        }
+
+        iframe {
+            padding-right: 10px;
+        }
+
+        li {
+            margin-left: 16px;
+        }
+
+        li ul {
+            margin-left: 32px;
+        }
+
+        .bg-black {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+.close {
+    
+    opacity: 1;
+        }
+
+        #close {
+               position: absolute;
+    margin: 30px;
+    bottom: 0;
+    right: 105px;
+    padding: 10px;
+    width: auto;
+    z-index: 999999999999999;
+    opacity: 1;
+        }
+
+        .download {
+            position: absolute;
+            margin: 10px;
+            bottom: 0;
+            right: 0;
+            padding: 10px;
+        }
+
+        .page-control {
+            color: #fff;
+            font-size: 21px !important;
+            text-align: center;
+            float: left;
+        }
 </style>
