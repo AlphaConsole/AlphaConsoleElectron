@@ -40,7 +40,7 @@ AllowCancelDuringInstall=no
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-;Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
 
