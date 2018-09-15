@@ -1,3 +1,32 @@
 {
-	"packages": []
+	"packages": [
+		{
+			"id": 1684,
+			"name": "AlphaConsole Animated",
+			"folder": "AC/AC_Decal_Animated",
+			"author": "Carsillas",
+			"description": "AC"
+		},
+		{
+			"id": 188888,
+			"name": "'16 Batmobile skinz",
+			"folder": "HurricaneModding/Batmobile",
+			"author": "HurricaneModding",
+			"description": "'16 Batmobile skins. Camo, thin/thick details and more. Recommend to use Glow-FX for the detail styles."
+		},
+		{
+			"id": 11,
+			"name": "Esport Decals",
+			"folder": "HurricaneModding/EsportsDecalsPack",
+			"author": "HurricaneModding",
+			"description": "<div style='width: 100%; height: 0px; position: relative; padding-bottom: 64.021%;'><iframe src='https://streamable.com/s/ixt0k/qrgs' frameborder='0' width='100%' height='100%' allowfullscreen style='width: 100%; height: 100%; position: absolute;'></iframe></div>"
+		},
+		{
+			"id": 18,
+			"name": "Hyper Beast",
+			"folder": "KernalPad/HyperBeastDecals",
+			"author": "KernelPad",
+			"description": "A Hyper Beast styled decal for the Octane."
+		}
+	]
 }

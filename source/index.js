@@ -41,7 +41,8 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       minWidth: 720,
       maxWidth: 720,
       width: 720,
-      height: 930,
+      height: 936,
+      maxHeight: 936,
       webPreferences: {
         devTools: true
       },
