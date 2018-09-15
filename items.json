@@ -2580,22 +2580,22 @@
                 {
                     "ItemID": 2952,
                     "Name": "Breakout: Nice Shot",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 2953,
                     "Name": "Dominus: Savage",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 2954,
                     "Name": "Octane: Nice Shot",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 2958,
                     "Name": "Breakout: What A Save!",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 2966,
@@ -2620,22 +2620,22 @@
                 {
                     "ItemID": 3021,
                     "Name": "Breakout: CRL Western",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 3022,
                     "Name": "Dominus: CRL Eastern",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 3023,
                     "Name": "Dominus: CRL Southern",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 3024,
                     "Name": "Octane: CRL Northern",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 3050,
@@ -2645,7 +2645,7 @@
                 {
                     "ItemID": 3094,
                     "Name": "Octane: Noooo!",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 3217,
@@ -3472,6 +3472,11 @@
                     "ItemID": 3211,
                     "Name": "Pyramidia",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3366,
+                    "Name": "Hot Hot Wheels",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Wheels",
