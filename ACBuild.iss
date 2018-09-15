@@ -40,7 +40,7 @@ AllowCancelDuringInstall=no
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
+;Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
 Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
 Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
 
@@ -58,6 +58,31 @@ Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\config.json"
 Type: dirifempty; Name: "{app}"
 
 [Code] 
+#ifdef UNICODE
+  #define AW "W"
+#else
+  #define AW "A"
+#endif
+const
+  OPEN_EXISTING = 3;  
+  GENERIC_READ = $80000000;
+  FILE_WRITE_ATTRIBUTES = $0100;
+  INVALID_HANDLE_VALUE = 4294967295;
+type 
+    FILETIME = record 
+      LowDateTime:  DWORD; 
+      HighDateTime: DWORD; 
+    end; 
+    SYSTEMTIME = record 
+      Year:         WORD; 
+      Month:        WORD; 
+      DayOfWeek:    WORD; 
+      Day:          WORD; 
+      Hour:         WORD; 
+      Minute:       WORD; 
+      Second:       WORD; 
+      Milliseconds: WORD; 
+    end; 
 var
   UserPage: TInputFileWizardPage;
   FileSelector: TInputFileWizardPage; 
@@ -84,7 +109,70 @@ begin
   FWMIService := Unassigned;
   FSWbemLocator := Unassigned;
 end;
-  
+
+function CreateFile(lpFileName: string; dwDesiredAccess, dwShareMode,
+  lpSecurityAttributes, dwCreationDisposition, dwFlagsAndAttributes: DWORD;
+  hTemplateFile: THandle): THandle; 
+  external 'CreateFile{#AW}@kernel32.dll stdcall';
+function CloseHandle(hObject: THandle): BOOL; 
+  external 'CloseHandle@kernel32.dll stdcall';
+function GetFileTime(hFile: THandle; out lpCreationTime, lpLastAccessTime, lpLastWriteTime: TFileTime): BOOL;
+  external 'GetFileTime@kernel32.dll stdcall';
+function SetFileTime(hFile: THandle; const lpCreationTime, lpLastAccessTime, lpLastWriteTime: TFileTime): BOOL; 
+  external 'SetFileTime@kernel32.dll stdcall';
+function FileTimeToSystemTime(FileTime: TFileTime; var SystemTime: SYSTEMTIME): Boolean; 
+external 'FileTimeToSystemTime@kernel32.dll stdcall'; 
+function SystemTimeToFileTime(SystemTime: SYSTEMTIME; var FileTime: TFileTime): Boolean; 
+external 'SystemTimeToFileTime@kernel32.dll stdcall';
+function GetSystemTime(var SystemTime: SYSTEMTIME): Boolean; 
+external 'GetSystemTime@kernel32.dll stdcall';    
+function IsValidRLPath(const Path: string): Boolean;
+var
+  folder: string;
+  rlexists: Boolean;
+  manifestexists: Boolean;
+  manifestTimeValid: Boolean;
+  manifestTimeLessThan7Days: Boolean;  
+  FileHandle: THandle;
+  CreationTime: TFileTime;
+  LastWriteTime: TFileTime;
+  LastAccessTime: TFileTime;
+  LastWriteTimeSys: SYSTEMTIME;
+  SystemTime: SYSTEMTIME;
+begin
+  Result := false;
+  manifestTimeLessThan7Days := false;
+  folder := ExtractFilePath(Path)
+  rlexists := FileExists(Path)
+  manifestexists :=  FileExists(folder +  '\..\..\..\..\appmanifest_252950.acf')
+  if manifestexists then begin
+    FileHandle := CreateFile(folder +  '\..\..\..\..\appmanifest_252950.acf', GENERIC_READ, 0, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0);
+    if FileHandle <> INVALID_HANDLE_VALUE then
+    try
+      manifestTimeValid := Boolean(GetFileTime(FileHandle, CreationTime, LastAccessTime, LastWriteTime));
+      if manifestTimeValid then       
+        GetSystemTime(SystemTime);
+        FileTimeToSystemTime(LastWriteTime,LastWriteTimeSys);
+        if (LastWriteTimeSys.Year <> SystemTime.Year) and (SystemTime.Year - LastWriteTimeSys.Year = 1) then begin
+          if (LastWriteTimeSys.Month = 12) and (SystemTime.Month = 1) and (LastWriteTimeSys.Day - SystemTime.Day > 24) then
+            manifestTimeLessThan7Days := true
+        end else begin
+          if (LastWriteTimeSys.Month <> SystemTime.Month) and (SystemTime.Month - LastWriteTimeSys.Month = 1) then begin
+            if (LastWriteTimeSys.Day - SystemTime.Day) > 24 then
+              manifestTimeLessThan7Days := true
+          end else begin
+            if SystemTime.Day - LastWriteTimeSys.Day  < 7 then
+              manifestTimeLessThan7Days := true
+          end;         
+        end;
+    finally
+      CloseHandle(FileHandle);
+    end;   
+  end;
+  Result := rlexists and manifestexists and manifestTimeLessThan7Days
+end;
+
+
 function FindRLUninstallKey(out ResultFolder: string) : Boolean;
 var
   InstallFolder : String;
@@ -115,8 +203,9 @@ begin
     RLIndex := Pos('\RocketLeague.exe', Path);    
     if RLIndex > 0 then begin
        Path := Copy(OPath, 0, RLIndex)
-    end      
-    if FileExists(Path + '\RocketLeague.exe') then begin
+    end;      
+    if IsValidRLPath(Path + '\RocketLeague.exe') then begin
+      Path := Path + '\'
       WizardForm.DirEdit.Text := ExtractFilePath(Path) + '\AlphaConsole';
     end else begin
       MsgBox('RocketLeague.exe is not located in the selected path.', mbError, MB_OK);
@@ -155,15 +244,15 @@ var
   originalInstallation : String;
 begin 
   if not(WizardForm.DirEdit.Text = 'C:\AlphaConsole') then begin
-     if not(FileExists(WizardForm.DirEdit.Text + '\..\RocketLeague.exe')) then
+     if not(IsValidRLPath(WizardForm.DirEdit.Text + '\..\RocketLeague.exe')) then
         WizardForm.DirEdit.Text := 'C:\AlphaConsole'
   end;
   if WizardForm.DirEdit.Text = 'C:\AlphaConsole' then begin
-    if FileExists('C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\RocketLeague.exe') then begin
+    if IsValidRLPath('C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\RocketLeague.exe') then begin
       WizardForm.DirEdit.Text := 'C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\AlphaConsole'
     end
     else begin
-      if FindRLUninstallKey(rlFolder) then
+      if FindRLUninstallKey(rlFolder) and IsValidRLPath(rlFolder + '\RocketLeague.exe') then
         WizardForm.DirEdit.Text := rlFolder 
       else begin
         UserPage := CreateInputFilePage(wpSelectDir, 'Select Rocket League Folder', 'Find RocketLeague.exe', 'The Setup could not find RocketLeague.exe. Please select it using the dialog below: ')
