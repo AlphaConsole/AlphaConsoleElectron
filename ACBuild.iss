@@ -178,7 +178,7 @@ var
   InstallFolder : String;
 begin
   if RegQueryStringValue(GetHKLM, 'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Steam App 252950', 'InstallLocation', InstallFolder) then begin
-    if FileExists(InstallFolder + '\Binaries\Win32\RocketLeague.exe') then begin       
+    if IsValidRLPath(InstallFolder + '\Binaries\Win32\RocketLeague.exe') then begin       
       ResultFolder := InstallFolder + '\Binaries\Win32\AlphaConsole'
       Result := true
       Exit end end;   
@@ -252,7 +252,7 @@ begin
       WizardForm.DirEdit.Text := 'C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\AlphaConsole'
     end
     else begin
-      if FindRLUninstallKey(rlFolder) and IsValidRLPath(rlFolder + '\RocketLeague.exe') then
+      if FindRLUninstallKey(rlFolder) then
         WizardForm.DirEdit.Text := rlFolder 
       else begin
         UserPage := CreateInputFilePage(wpSelectDir, 'Select Rocket League Folder', 'Find RocketLeague.exe', 'The Setup could not find RocketLeague.exe. Please select it using the dialog below: ')
