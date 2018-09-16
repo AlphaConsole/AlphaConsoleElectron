@@ -48,9 +48,14 @@ body {
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: auto;
+html {
+  min-height: 100% !important;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -83,6 +88,25 @@ section {
   height: 655px;
   background-image: url("../../img/ball-bg.png");
   background-position-y: -155px;
+}
+
+.texture-details {
+  background-color: #222222;
+  border-top: 1px solid #616161;
+  border-left: 1px solid #616161;
+  border-right: 1px solid #616161;
+  border-bottom: 1px solid #616161;
+  z-index: 9999999;
+  height: 655px;
+  position: absolute;
+  width: 100%;
+  background-image: url("../../img/ball-bg.png");
+  background-position-y: -155px;
+  background-repeat: no-repeat;
+  left: -22px;
+  max-height: 575px;
+  top: 80px;
+  background-position-x: 342px;
 }
 
 .panel {
@@ -318,9 +342,21 @@ select {
   padding: 5px !important;
 }
 
+.ls-s {
+  letter-spacing: 3px;
+}
+
+.ls-m {
+  letter-spacing: 5px;
+}
+
+.ls-l {
+  letter-spacing: 8px;
+}
+
 .heading-title {
   color: #fff;
-  font-size: 42px !important;
+  font-size: 28px !important;
   text-align: center;
   float: left;
 }
@@ -337,6 +373,16 @@ select {
   outline: none;
   border: 1px solid #454545;
   transition: 0.4s;
+}
+
+.sidebar-background {
+  background: #222222;
+}
+
+.sidebar-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -442,11 +488,6 @@ input:checked + label {
     padding: 15px;
   }
 }
-.active:after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f0d8";
-}
-
 .tick-container {
   display: block;
   position: relative;
@@ -595,6 +636,70 @@ div > div > div.modal-body.mb-2.mt-2 > span.reset-input {
   margin: 25px 0px 15px;
 }
 
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+  display: inline;
+  outline: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type=search] {
+  background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  border: solid 1px #ccc;
+  padding: 9px 15px 10px 31px;
+  width: 55px;
+  -webkit-border-radius: 10em;
+  -moz-border-radius: 10em;
+  border-radius: 10em;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  transition: all .5s;
+}
+
+input[type=search]:focus {
+  width: 130px;
+  background-color: #fff;
+  border-color: #66CC75;
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+
+/* Demo 2 */
+#demo-2 input[type=search] {
+  width: 22px;
+  padding-left: 0px;
+  color: transparent;
+  cursor: pointer;
+}
+
+#demo-2 input[type=search]:hover {
+  background-color: #fff;
+}
+
+#demo-2 input[type=search]:focus {
+  width: 130px;
+  padding-left: 32px;
+  color: #000;
+  background-color: #fff;
+  cursor: auto;
+}
+
+#demo-2 input:-moz-placeholder {
+  color: transparent;
+}
+
+#demo-2 input::-webkit-input-placeholder {
+  color: transparent;
+}
+
 .accordion {
   font-family: BourgeoisLight;
   font-size: 20px;
@@ -640,13 +745,20 @@ div > div > div.modal-body.mb-2.mt-2 > span.reset-input {
   background: #555;
 }
 
+.title-bar-btn-wrapper {
+  width: 35px;
+  height: 35px;
+  float: left;
+  padding: 2px;
+}
+
 #title-bar {
   -webkit-app-region: drag;
   height: 35px;
   text-align: left;
   line-height: 40px;
   vertical-align: middle;
-  background-color: #393939;
+  background-color: transparent;
   margin: 0 auto;
   width: 100%;
   position: fixed;
@@ -659,7 +771,6 @@ div > div > div.modal-body.mb-2.mt-2 > span.reset-input {
   float: right;
   position: fixed;
   -webkit-app-region: no-drag;
-  width: 10%;
   top: 0px;
   right: 0px;
   z-index: 99999;
@@ -671,13 +782,6 @@ div > div > div.modal-body.mb-2.mt-2 > span.reset-input {
 
 #title-bar-btns #close-btn:hover {
   background-color: #d9534f;
-}
-
-.title-bar-btn-wrapper {
-  width: 35px;
-  height: 35px;
-  float: left;
-  padding: 2px;
 }
 
 .min-btn {

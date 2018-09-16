@@ -12,6 +12,9 @@
 
 .nav-link {
   display: block;
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-family: BourgeoisMedium;
   padding: $nav-link-padding;
 
   @include hover-focus {
@@ -55,8 +58,7 @@
   .nav-link.active,
   .nav-item.show .nav-link {
     color: $nav-tabs-active-link-hover-color;
-    background-color: $nav-tabs-active-link-hover-bg;
-    border-color: $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-border-color $nav-tabs-active-link-hover-bg;
+    border-right: 6px solid $ac-gray-mid;
   }
 
   .dropdown-menu {
@@ -74,6 +76,7 @@
 
 .nav-pills {
   .nav-link {
+ 
     @include border-radius($nav-pills-border-radius);
   }
 
@@ -81,7 +84,8 @@
   .nav-item.show .nav-link {
     color: $nav-pills-active-link-color;
     cursor: default;
-    background-color: $nav-pills-active-link-bg;
+    border-left: 4px solid $ac-gray-mid;
+    padding-left: 10px;
   }
 }
 

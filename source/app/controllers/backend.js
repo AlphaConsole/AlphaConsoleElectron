@@ -52,8 +52,8 @@ function GetBasePath() {
 }
 
 function LoadItems() {
-  var contents = LoadFile(GetBasePath() + "/items.json");
-  var contents2 = LoadFile(GetBasePath() + "/slotDictionary.json");
+  var contents = LoadFile(GetBasePath() + "/../../items.json");
+  var contents2 = LoadFile(GetBasePath() + "/../../slotDictionary.json");
   var products = JSON.parse(contents);
   var lookup = JSON.parse(contents2);
   products.Lookup = lookup;
@@ -153,7 +153,7 @@ function PlaceFiles() {
       }
     }
 
-    CopyFile(GetBasePath() + "/config.json", document.getElementById("install-location").value + "/config.json");
+    CopyFile(GetBasePath() + "/../../config.json", document.getElementById("install-location").value + "/config.json");
 
     $('#status-message').text("Applied: Items & Options loaded successfully")
   } else {
@@ -172,7 +172,7 @@ function OpenColorPicker(button) {
 
 function LoadConfiguration() {
 
-  var Config = JSON.parse(LoadFile(GetBasePath() + "/config.json"));
+  var Config = JSON.parse(LoadFile(GetBasePath() + "/../../config.json"));
 
   GlobalACConfig = Config;
 
@@ -261,7 +261,7 @@ function LoadConfiguration() {
       const fs = require('fs');
 
       Config.LastVersion = require('electron').remote.app.getVersion();
-      fs.writeFileSync(GetBasePath() + '/config.json', JSON.stringify(Config, null, "\t"), 'utf-8');
+      fs.writeFileSync(GetBasePath() + '/../../config.json', JSON.stringify(Config, null, "\t"), 'utf-8');
     }
   })
 
@@ -542,7 +542,7 @@ function SaveConfiguration() {
   var fs = require('fs');
   try {
     $('#status-message').text("Applying...")
-    fs.writeFileSync(GetBasePath() + '/config.json', GetConfigurationString(), 'utf-8');
+    fs.writeFileSync(GetBasePath() + '/../../config.json', GetConfigurationString(), 'utf-8');
     $('#status-message').text("Applied: Items & Options loaded successfully!");
     //Add a copy to Win32 so that you can load prefs from local one? idk
     //PlaceFiles();
@@ -581,7 +581,7 @@ function ShowTexturesRepo() {
   win.loadURL(
     url.format(
       {
-        pathname: path.join(__dirname, 'texture-repo.html'),
+        pathname: path.join(__dirname, 'texture-repo.twig'),
         protocol: 'file:',
         slashes: true
       }
@@ -612,7 +612,7 @@ function GetTexturePackagePaths() {
     return filelist;
   }
 
-  return walkSync(GetBasePath() + "/textures/", []);
+  return walkSync(GetBasePath() + "/../../textures/", []);
 }
 
 function GetTexturePackages() {
@@ -631,7 +631,7 @@ function GetTexturePackages() {
     packs.packages[i] = {};
     packs.packages[i].id = tp.Package.id;
     packs.packages[i].name = tp.Package.name;
-    packs.packages[i].folder = path.dirname(paths[i].substring((GetBasePath() + "/textures/").length));
+    packs.packages[i].folder = path.dirname(paths[i].substring((GetBasePath() + "/../../textures/").length));
     packs.packages[i].author = tp.Package.author;
     packs.packages[i].description = tp.Package.description;
 
@@ -649,8 +649,8 @@ function GetTexturePackages() {
 function SaveMasterPackages(packages) {
   var fs = require('fs');
   try {
-    fs.mkdir(GetBasePath() + '/textures/');
-    fs.writeFileSync(GetBasePath() + '/textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
+    fs.mkdir(GetBasePath() + '/../../textures/');
+    fs.writeFileSync(GetBasePath() + '/../../textures/packages.json', JSON.stringify(packages, null, "\t"), 'utf-8');
   } catch (e) {
     alert(e);
     alert('Failed to save the packages!');

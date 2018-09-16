@@ -19,8 +19,8 @@ module.exports = function (grunt) {
         },
         files: { // Dictionary of files
           // 'destination': 'source'
-          'source/assets/styles/css/alphaconsole.css': 'source/assets/styles/scss/AlphaConsole/compile/ac.compile.scss',
-          'source/assets/styles/css/framework.css': 'source/assets/styles/scss/AlphaConsole/compile/framework_compile.scss',
+          'source/app/views/assets/styles/css/alphaconsole.css': 'source/app/views/assets/styles/scss/AlphaConsole/compile/ac.compile.scss',
+          'source/app/views/assets/styles/css/framework.css': 'source/app/views/assets/styles/scss/AlphaConsole/compile/framework_compile.scss',
         }
       }
     }
