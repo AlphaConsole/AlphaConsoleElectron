@@ -6,21 +6,22 @@
 {% endblock %}
 {% block content %}
     {# PAGE CONTENT HERE #}
-    <div style="background:transparent;" class="row h-100">
-        <div style="padding-top:40px" class="col-12 h-100">
-            <div class="main-content pl-2">
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-home-tab">
+    <div style="background:transparent;" class="row">
+        <div style="padding-top:40px" class="col-12">
+            <div class="main-content pl-3 pr-3">
+
+                <div class="tab-content pl-4 pr-4" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-dashboard" role="tabpanel" aria-labelledby="pills-home-tab">
                         {% include './sections/dashboard.twig' %}
                     </div>
-                    <div class="tab-pane fade" id="v-pills-items" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-
+                    <div class="tab-pane fade" id="pills-items" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        {% include './sections/items.twig' %}
                     </div>
-                    <div class="tab-pane fade" id="v-pills-textures" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="tab-pane fade" id="pills-textures" role="tabpanel" aria-labelledby="pills-contact-tab">
                         {% include './sections/texture-repo.twig' %}
                     </div>
-                    <div class="tab-pane fade" id="v-pills-options" role="tabpanel" aria-labelledby="v-pills-settings-tab">4...</div>
                 </div>
+
             </div>
         </div>
     </div>

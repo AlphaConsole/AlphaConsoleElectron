@@ -3530,8 +3530,16 @@ tbody.collapse.show {
 .nav-pills .nav-item.show .nav-link {
   color: #fff;
   cursor: default;
-  border-left: 4px solid #393939;
-  padding-left: 10px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#898989+11,565656+100&0+1,0.5+100 */
+  background: -moz-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00898989', endColorstr='#80565656',GradientType=0 );
+  /* IE6-9 */
+  transition: all 0.3s ease-in;
 }
 
 .nav-fill .nav-item {

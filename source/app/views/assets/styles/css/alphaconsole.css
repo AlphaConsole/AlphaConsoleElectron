@@ -36,7 +36,26 @@ html {
 body {
   height: 100%;
   color: #fff;
+  background: linear-gradient(to right, rgba(57, 57, 57, 0.8), rgba(34, 34, 34, 0.8));
+}
+
+.no-bg {
+  background: transparent;
+}
+.no-bg body {
   background: linear-gradient(#393939, #222222);
+}
+
+.dashboard-bg {
+  background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-bg {
+  background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*COMPONENTS ######################*/
@@ -105,6 +124,7 @@ section {
   background-repeat: no-repeat;
   left: -22px;
   max-height: 575px;
+  height: 100%;
   top: 80px;
   background-position-x: 342px;
 }
@@ -273,7 +293,7 @@ section {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background: linear-gradient(#393939, #222222);
+  background: linear-gradient(to right, rgba(57, 57, 57, 0.8), rgba(34, 34, 34, 0.8));
   margin: auto;
   padding: 0;
   width: 80%;
@@ -375,14 +395,23 @@ select {
   transition: 0.4s;
 }
 
-.sidebar-background {
-  background: #222222;
+.navbar-background {
+  background-color: rgba(34, 34, 34, 0.4);
+  height: 100px;
 }
 
 .sidebar-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -5px;
+}
+
+.nav-text-span {
+  margin-top: -25px;
+  float: left;
+  height: 52px;
+  position: relative;
 }
 
 .btn {

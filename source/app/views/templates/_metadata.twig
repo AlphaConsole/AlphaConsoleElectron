@@ -18,6 +18,15 @@
 <link rel="stylesheet" href="./assets/js/plugin/jquery.gradientPicker.css" type="text/css"/>
 <link rel="stylesheet" href="./assets/js/vendor/jqPlugins/colorpicker/css/colorpicker.css" type="text/css"/>
 
+
+  <link href="./assets/styles/css/c3.min.css" rel="stylesheet">
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/c3/0.4.7/c3.min.js"></script>
+
+
 {# OVVERIDE STYLING #}
 <style>
     @font-face {
@@ -227,4 +236,56 @@ body {
             text-align: center;
             float: left;
         }
+
+        .name {
+      color: white;
+    }
+
+    .value {
+      color: white;
+    }
+
+
+    .c3-tooltip tr:first-child {
+      display: none;
+    }
+
+    .c3-tooltip td {
+      background-color: #000;
+    }
+
+    .c3-legend-item {
+      fill: white;
+    }
+
+    .c3-axis {
+      fill: white;
+    }
+
+    .c3-axis-y text {
+      font-size: 12px;
+    }
+
+    .c3-axis-x text {
+      font-size: 0px;
+    }
+
+    .match-stats {
+
+      margin: 3px;
+      border: lightgray;
+      border-style: solid;
+      border-width: 1px
+
+    }
+
+    .match-stats th{
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+    }
+
+    .match-stats td {
+      border-right-style: dotted;
+      border-right-width: 1px;
+    }
 </style>

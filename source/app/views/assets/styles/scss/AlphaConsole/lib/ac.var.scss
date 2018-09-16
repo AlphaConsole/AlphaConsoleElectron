@@ -80,7 +80,8 @@ $input-border-focus:					 $brand-primary !default;
 /*-------------------------------------------------------------*/
 /*SCAFFOLDING*/
 /*                                      |*/
-$body-background:                       linear-gradient($ac-gray-mid, $ac-gray-dark);
+$body-background:                       linear-gradient(to right, rgba(57, 57, 57,0.8), rgba(34, 34, 34,0.8)); 
+$body-background-full:                  linear-gradient(rgb(57, 57, 57), rgb(34, 34, 34)); 
 $text-color:                             $gray-dark;
 
 

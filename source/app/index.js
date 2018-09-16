@@ -41,9 +41,9 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       resizable: true, 
       frame: false, 
       minWidth: 540,
-      maxWidth: 1280,
-      width: 1280,
-      height: 720,
+      maxWidth: 1600,
+      width: 1600,
+      height: 900,
       webPreferences: {
         devTools: true
       },
@@ -57,6 +57,8 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       slashes: true
     }))
 
+
+    
   
     // Open the DevTools.
     //mainWindow.webContents.openDevTools()
@@ -119,3 +121,12 @@ mainWindow.webContents.executeJavaScript("SaveConfiguration()");
   
   // In this file you can include the rest of your app's specific main process
   // code. You can also put them in separate files and require them here.
+
+
+  
+
+  // in main.js
+
+  ipcMain.on('resize-me-please', (event, arg) => {
+    mainWindow.setSize(1280,720)
+  })

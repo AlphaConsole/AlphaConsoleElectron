@@ -59,9 +59,10 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
+    "d3": "^3.5.17",
     "electron-log": "^2.2.17",
     "electron-twig": "^1.1.1",
-    "electron-updater": "^2.12.0",
+    "electron-updater": "^2.23.3",
     "modclean": "^2.1.2",
     "node-notifier": "^5.2.1",
     "request": "^2.88.0",

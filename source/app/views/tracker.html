@@ -70,57 +70,7 @@
       -o-user-select: none;
     }
 
-    .name {
-      color: white;
-    }
-
-    .value {
-      color: white;
-    }
-
-
-    .c3-tooltip tr:first-child {
-      display: none;
-    }
-
-    .c3-tooltip td {
-      background-color: #000;
-    }
-
-    .c3-legend-item {
-      fill: white;
-    }
-
-    .c3-axis {
-      fill: white;
-    }
-
-    .c3-axis-y text {
-      font-size: 12px;
-    }
-
-    .c3-axis-x text {
-      font-size: 0px;
-    }
-
-    .match-stats {
-
-      margin: 3px;
-      border: lightgray;
-      border-style: solid;
-      border-width: 1px
-
-    }
-
-    .match-stats th{
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
-    }
-
-    .match-stats td {
-      border-right-style: dotted;
-      border-right-width: 1px;
-    }
+    
 
   </style>
 </head>
@@ -312,7 +262,7 @@
 
     function LoadMatches() {
 
-      var matchesString = LoadFile(GetBasePath() + "/mmrTracker.txt");
+      var matchesString = LoadFile(GetBasePath() + "/../../mmrTracker.txt");
       matchesString.split("\n").slice(0, -1).map(x => Matches.push(JSON.parse(x)));
       console.log(Matches);
 

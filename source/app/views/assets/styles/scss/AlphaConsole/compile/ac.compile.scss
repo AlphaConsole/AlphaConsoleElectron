@@ -14,6 +14,31 @@ body {
     background: $body-background;
 }
 
+
+
+
+.no-bg {
+    background: transparent;
+    
+    body{
+        background: $body-background-full;
+    }
+}
+
+.dashboard-bg {
+    background-image: url('https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    
+}
+
+.profile-bg {
+    background-image: url('https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
 /*COMPONENTS ######################*/
 
 @import "../components/ac.core.scss"; 

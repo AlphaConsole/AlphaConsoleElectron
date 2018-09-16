@@ -1,9 +1,16 @@
-.sidebar-background {
-    background: $ac-gray-dark;
+.navbar-background {
+    background-color:rgba(34, 34, 34, 0.4);
+    height: 100px;
 }
 
 .sidebar-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top:-5px;
+}
+
+
+.nav-text-span{
+    margin-top: -25px; float: left; height: 52px; position: relative;
 }
