@@ -49,10 +49,10 @@
 
         <div class="pull-left container-fluid w-100 h-100">
             <div class="row">
-                <div class="col-md-12 col-sm-4">
+                <div class="col-12">
                     {% include '../partials/navigation.twig' %}
                 </div>
-                <div class="col-md-12 col-sm-8">
+                <div class="col-12">
                     {% block content %}{% endblock %}
                 </div>
             </div>
@@ -790,6 +790,50 @@
                     $("html").removeClass("profile-bg");
                     $('html').addClass('no-bg');
                 });
+
+                //NO BG
+                $('#pills-extras-tab').on('click', function () {
+                    $("html").removeClass("dashboard-bg");
+                    $("html").removeClass("profile-bg");
+                    $('html').addClass('no-bg');
+                });
+                
+                //NO BG
+                $('#pills-stats-tab').on('click', function () {
+                    $("html").removeClass("dashboard-bg");
+                    $("html").removeClass("profile-bg");
+                    $('html').addClass('no-bg');
+                });
+                
+                //NO BG
+                $('#pills-banner-tab').on('click', function () {
+                    $("html").removeClass("dashboard-bg");
+                    $("html").removeClass("profile-bg");
+                    $('html').addClass('no-bg');
+                });
+
+                //NO BG
+                $('#pills-title-tab').on('click', function () {
+                    $("html").removeClass("dashboard-bg");
+                    $("html").removeClass("profile-bg");
+                    $('html').addClass('no-bg');
+                });
+
+                //NO BG
+                $('#pills-profile-tab').on('click', function () {
+                    $("html").removeClass("dashboard-bg");
+                    $("html").addClass("profile-bg");
+                    $('html').removeClass('no-bg');
+                });
+
+                //NO BG
+                $('#pills-options-tab').on('click', function () {
+                    $("html").removeClass("dashboard-bg");
+                    $("html").removeClass("profile-bg");
+                    $('html').addClass('no-bg');
+                });
+
+
             </script>
 
         {% endblock %}

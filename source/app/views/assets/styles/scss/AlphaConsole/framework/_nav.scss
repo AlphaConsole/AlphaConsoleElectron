@@ -84,48 +84,76 @@
   .nav-item.show .nav-link {
     color: $nav-pills-active-link-color;
     cursor: default;
-   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#898989+11,565656+100&0+1,0.5+100 */
-background: -moz-linear-gradient(top, rgba(137,137,137,0) 1%, rgba(137,137,137,0.05) 11%, rgba(86,86,86,0.5) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(137,137,137,0) 1%,rgba(137,137,137,0.05) 11%,rgba(86,86,86,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(137,137,137,0) 1%,rgba(137,137,137,0.05) 11%,rgba(86,86,86,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00898989', endColorstr='#80565656',GradientType=0 ); /* IE6-9 */
- 
-transition: all 0.3s ease-in;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#898989+11,565656+100&0+1,0.5+100 */
+    background: -moz-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00898989', endColorstr='#80565656', GradientType=0);
+    /* IE6-9 */
 
-}
+    transition: all 2s ease-in;
 
-}
-
-
-//
-// Justified variants
-//
-
-.nav-fill {
-  .nav-item {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-}
-
-.nav-justified {
-  .nav-item {
-    flex: 1 1 100%;
-    text-align: center;
   }
 }
 
 
-// Tabbable tabs
-//
-// Hide tabbable panes to start, show them when `.active`
+  .nav-link:hover {
 
-.tab-content {
-  >.tab-pane {
-    display: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#898989+11,565656+100&0+1,0.5+100 */
+    background: -moz-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00898989', endColorstr='#80565656', GradientType=0);
+    /* IE6-9 */
+
+    transition: all 2s fadeInUp;
+
+    $red: #F37272;
+    $brown: #584E4A;
+    $whitey: #f0f0f0;
+    
+    $duration: .2s;
+    $distance: 8px;
+    $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+    
   }
 
-  >.active {
-    display: block;
+  //
+  // Justified variants
+  //
+
+  .nav-fill {
+    .nav-item {
+      flex: 1 1 auto;
+      text-align: center;
+    }
   }
-}
+
+  .nav-justified {
+    .nav-item {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+
+
+  // Tabbable tabs
+  //
+  // Hide tabbable panes to start, show them when `.active`
+
+  .tab-content {
+    >.tab-pane {
+      display: none;
+    }
+
+    >.active {
+      display: block;
+    }
+  }
