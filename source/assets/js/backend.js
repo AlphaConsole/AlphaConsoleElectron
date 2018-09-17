@@ -201,6 +201,8 @@ function LoadConfiguration() {
   //Custom rank options
   $("#display-mmr").prop('checked', Config.RankOptions.DisplayMMR);
   $("#enable-unranked-mmr").prop('checked', Config.RankOptions.UnrankedMMR);
+  $("#display-teamTotal").prop('checked',  Config.RankOptions.TeamTotal);
+  $("#display-teamMMR").prop('checked', Config.RankOptions.DisplayTeamMMR);
   $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
   $("#april-fools").prop('checked', Config.RankOptions.AprilFools || 0);
 
@@ -492,6 +494,7 @@ function GetConfigurationString() {
   RankOptions.UnrankedMMR = $("#enable-unranked-mmr").prop('checked');
   RankOptions.UploadMatchData = $("#upload-match-data").prop('checked');
   RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
+  RankOptions.DisplayTeamMMR = $("#display-teamMMR").prop('checked');
   RankOptions.AprilFools = $("#april-fools").prop('checked');
   Config.RankOptions = RankOptions;
 
