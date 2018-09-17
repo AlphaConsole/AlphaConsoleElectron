@@ -94,66 +94,63 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00898989', endColorstr='#80565656', GradientType=0);
     /* IE6-9 */
 
-    transition: all 2s ease-in;
+    border-bottom: 2px solid rgba(86, 86, 86, 1);
 
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
+    
   }
 }
 
 
-  .nav-link:hover {
+.nav-link:hover {
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#898989+11,565656+100&0+1,0.5+100 */
-    background: -moz-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00898989', endColorstr='#80565656', GradientType=0);
-    /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#898989+11,565656+100&0+1,0.5+100 */
+  background: -moz-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(137, 137, 137, 0) 1%, rgba(137, 137, 137, 0.05) 11%, rgba(86, 86, 86, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00898989', endColorstr='#80565656', GradientType=0);
+  /* IE6-9 */
 
-    transition: all 2s fadeInUp;
+  border-bottom: 2px solid rgba(86, 86, 86, 1);
 
-    $red: #F37272;
-    $brown: #584E4A;
-    $whitey: #f0f0f0;
-    
-    $duration: .2s;
-    $distance: 8px;
-    $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
 
-    
+}
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  >.tab-pane {
+    display: none;
   }
 
-  //
-  // Justified variants
-  //
-
-  .nav-fill {
-    .nav-item {
-      flex: 1 1 auto;
-      text-align: center;
-    }
+  >.active {
+    display: block;
   }
-
-  .nav-justified {
-    .nav-item {
-      flex: 1 1 100%;
-      text-align: center;
-    }
-  }
-
-
-  // Tabbable tabs
-  //
-  // Hide tabbable panes to start, show them when `.active`
-
-  .tab-content {
-    >.tab-pane {
-      display: none;
-    }
-
-    >.active {
-      display: block;
-    }
-  }
+}

@@ -39,199 +39,75 @@ body {
   background: linear-gradient(to right, rgba(57, 57, 57, 0.8), rgba(34, 34, 34, 0.8));
 }
 
+* {
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
+}
+
 .no-bg {
   background: transparent;
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
 }
 .no-bg body {
   background: linear-gradient(#393939, #222222);
+  transition: background 0.5s linear;
 }
 
 .dashboard-bg {
-  background-image: url("https://images.alphacoders.com/860/thumb-1920-860135.jpg");
+  background-image: url("https://images7.alphacoders.com/820/thumb-1920-820783.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
 }
 
 .profile-bg {
   background-image: url("https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
 }
 
-/*=== Trigger  ===*/
-.animate {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+.stats-bg {
+  background: url("https://cdn-images-1.medium.com/max/2000/1*qEzJ59vRB2ZcweOmb_wUEQ.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
 }
 
-/*=== Optional Delays, change values here  ===*/
-.one {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  animation-delay: 0.4s;
+.card-img-overlay {
+  background: linear-gradient(to right, rgba(57, 57, 57, 0.3), rgba(34, 34, 34, 0.8));
 }
 
-.two {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
+.card {
+  border: 2px solid #393939 !important;
+}
+.card:hover {
+  border: 2px solid #636c72 !important;
 }
 
-.three {
-  -webkit-animation-delay: 2.3s;
-  -moz-animation-delay: 2.3s;
-  animation-delay: 2.3s;
-}
-
-.four {
-  -webkit-animation-delay: 3.3s;
-  -moz-animation-delay: 3.3s;
-  animation-delay: 3.3s;
-}
-
-/*=== Animations start here  ===*/
-/*=== FADE IN  ===*/
-@-webkit-keyframes fadeIn {
-  from {
+@keyframes fade {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+.stats-info-bg {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background: url("https://cdn-images-1.medium.com/max/2000/1*qEzJ59vRB2ZcweOmb_wUEQ.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/*=== FADE IN DOWN ===*/
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-/*==== FADE IN UP ===*/
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-/*=== FADE IN LEFT ===*/
-@-webkit-keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-/*==== FADE IN RIGHT ===*/
-@-webkit-keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-.fadeInRight {
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
+.stats-info-wrapper {
+  background: linear-gradient(to right, rgba(57, 57, 57, 0.8), rgba(34, 34, 34, 0.9));
 }
 
 /*COMPONENTS ######################*/

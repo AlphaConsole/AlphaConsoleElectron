@@ -8,244 +8,116 @@ html {
     min-height: 100%;
     font-family: $font-stack;
 }
+
 body {
     height: 100%;
     color: #fff;
     background: $body-background;
 }
 
+* {
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
+}
 
 
 
 .no-bg {
     background: transparent;
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
 
-    body{
+    body {
         background: $body-background-full;
+        transition: background 0.5s linear;
     }
 }
 
 .dashboard-bg {
-    background-image: url('https://images.alphacoders.com/860/thumb-1920-860135.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-image: url('https://images7.alphacoders.com/820/thumb-1920-820783.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
 
-    
 }
 
 .profile-bg {
     background-image: url('https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
+}
+
+.stats-bg {
+    background: url('https://cdn-images-1.medium.com/max/2000/1*qEzJ59vRB2ZcweOmb_wUEQ.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
+}
+
+.card-img-overlay {
+    background: linear-gradient(to right, rgba(57, 57, 57, 0.3), rgba(34, 34, 34, 0.8));
+}
+
+.card {
+    border: 2px solid $ac-gray-mid !important;
+
+
+    &:hover{
+        border: 2px solid  $gray-light !important;
+    }
 }
 
 
-/*=== Trigger  ===*/
-.animate {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  
-  /*=== Optional Delays, change values here  ===*/
-  .one {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  }
-  
-  .two {
-  -webkit-animation-delay: 1.7s;
-  -moz-animation-delay: 1.7s;
-  animation-delay: 1.7s;
-  }
-  
-  .three {
-  -webkit-animation-delay: 2.3s;
-  -moz-animation-delay: 2.3s;
-  animation-delay: 2.3s;
-  }
-  
-  .four {
-  -webkit-animation-delay: 3.3s;
-  -moz-animation-delay: 3.3s;
-  animation-delay: 3.3s;
-  }
-  
-  /*=== Animations start here  ===*/
-  /*=== FADE IN  ===*/
-  @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
+@keyframes fade {
+    0% {
+        opacity: 0
     }
-  
-    to {
-      opacity: 1;
+
+    100% {
+        opacity: 1
     }
-  }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-  }
-  
-  
-  /*=== FADE IN DOWN ===*/
-  @-webkit-keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  .fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-  }
-  
-  /*==== FADE IN UP ===*/
-  @-webkit-keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  .fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-  }
-  
-  /*=== FADE IN LEFT ===*/
-  @-webkit-keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInLeft {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  .fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-  }
-  
-  
-  /*==== FADE IN RIGHT ===*/
-  @-webkit-keyframes fadeInRight {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  @keyframes fadeInRight {
-    from {
-      opacity: 0;
-      -webkit-transform: translate3d(100%, 0, 0);
-      transform: translate3d(100%, 0, 0);
-    }
-  
-    to {
-      opacity: 1;
-      -webkit-transform: none;
-      transform: none;
-    }
-  }
-  
-  .fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
-  }
-  
+}
+
+
+
+
+
+.stats-info-bg{
+    position: absolute;
+    top:2px;
+    left:0;
+ 
+    background: url('https://cdn-images-1.medium.com/max/2000/1*qEzJ59vRB2ZcweOmb_wUEQ.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.stats-info-wrapper{
+    background: linear-gradient(to right, rgba(57, 57, 57, 0.8), rgba(34, 34, 34, 0.9));
+
+}
+
+
+
+
+
+
+
 
 /*COMPONENTS ######################*/
 
-@import "../components/ac.core.scss"; 
-@import "../components/ac.headings.scss"; 
-@import "../components/ac.sidebar.scss"; 
-@import "../components/ac.buttons.scss"; 
-@import "../components/ac.inputs.scss"; 
-@import "../components/ac.forms.scss"; 
-@import "../components/ac.accordian.scss"; 
-@import "../components/ac.scrollbar.scss"; 
-@import "../components/ac.titlebar.scss"; 
-@import "../components/ac.footer.scss"; 
-
-   
-
+@import "../components/ac.core.scss";
+@import "../components/ac.headings.scss";
+@import "../components/ac.sidebar.scss";
+@import "../components/ac.buttons.scss";
+@import "../components/ac.inputs.scss";
+@import "../components/ac.forms.scss";
+@import "../components/ac.accordian.scss";
+@import "../components/ac.scrollbar.scss";
+@import "../components/ac.titlebar.scss";
+@import "../components/ac.footer.scss";
