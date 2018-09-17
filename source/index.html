@@ -163,7 +163,11 @@
 
             <div class="row teams">
               <div class="col">
-                <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                <button id="button-reset-all" class="font-quarcaL btn btn-warning" style="position:fixed; display:block; z-index:999999; bottom: 195px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                  data-toggle="tooltip" data-placement="right" title="Reset All Changes">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+				<button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
                   data-toggle="tooltip" data-placement="right" title="Apply changes to both teams">
                   <i class="fas fa-sync"></i>
                 </button>

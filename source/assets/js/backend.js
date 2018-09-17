@@ -9,8 +9,6 @@ var GlobalACConfig = {};
 function ToggleSyncTeams() {
 
   SyncTeams = !SyncTeams;
-
-  console.log(SyncTeams);
   if (SyncTeams) {
     $("#button-sync-teams").css("background-color", "");
     $("#button-sync-teams").css("border-color", "");
@@ -875,10 +873,31 @@ $("#preset-name").on("input", function () {
 
 $(document).ready(function () {
   $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
-  $('.reset-input').on('click', function () {
-
-    $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
+  $('.reset-input').on('click', function () {    
+    if(SyncTeams) {
+      $("select[name=" + $(this).parent().find('select').attr('name') + "] option:contains('Unchanged')").prop('selected', true);
+    }
+    else {
+      $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
+    }
   })
+  $('#button-reset-all').on('click', function () {        
+      $(".teams select option:contains('Unchanged')").prop('selected', true);
+      $(".teams select").prop('disabled', false).css("color", "#fff");
+      $("#custom-color-enabled-blue").prop('checked', false);
+      $("#custom-color-enabled-orange").prop('checked', false);      
+      $("#primary-color-blue").val("#000");
+      $("#primary-intensity-blue").val(1);
+      $("#accent-color-blue").val("#000");
+      $("#accent-intensity-blue").val(1);
+      $("#primary-color-orange").val("#000");
+      $("#primary-intensity-orange").val(1);
+      $("#accent-color-orange").val("#000");
+      $("#accent-intensity-orange").val(1);
+      
+      
+  })
+  
   $(".build-number").html("Beta Version " + require('electron').remote.app.getVersion());
    ipcRenderer.send('alwaystop', $("#always-on-top").prop('checked'));  
 });
