@@ -893,8 +893,7 @@ $(document).ready(function () {
       $("#primary-color-orange").val("#000");
       $("#primary-intensity-orange").val(1);
       $("#accent-color-orange").val("#000");
-      $("#accent-intensity-orange").val(1);
-      
+      $("#accent-intensity-orange").val(1);     
       
   })
   
