@@ -2,7 +2,7 @@ const con = require('electron').remote.getGlobal('console');
 
 
 
-var SyncTeams = false;
+var SyncTeams = true;
 
 var GlobalACConfig = {};
 
@@ -230,7 +230,7 @@ function LoadConfiguration() {
 
   $("#always-on-top").prop('checked', Config.AlwaysOnTop);
   
-  if (Config.GeneralOptions.SyncTeams) {
+  if (!Config.GeneralOptions.SyncTeams) {
     ToggleSyncTeams();
   }
 
