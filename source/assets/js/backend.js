@@ -391,6 +391,8 @@ function SavePreset(PresetID) {
 
 function LoadPreset(ID) {
 
+  var OldSync = SyncTeams;
+  SyncTeams = false;
   $("#preset-name").val(GlobalACConfig.Presets[ID].Name);
 
   if (ID == 0) {
@@ -447,7 +449,8 @@ function LoadPreset(ID) {
   
   $("#alpha-enabled-blue").prop('checked', GlobalACConfig.Presets[ID].CustomColors.BlueAlphaEnabled || false);
   $("#alpha-enabled-orange").prop('checked', GlobalACConfig.Presets[ID].CustomColors.OrangeAlphaEnabled || false);
-
+  
+  SyncTeams = OldSync;
 
 }
 
