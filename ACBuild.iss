@@ -45,7 +45,7 @@ Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{a
 Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
 
 [Icons]
-Name: "{commondesktop}\{#MyAppName} Beta"; Filename: "{app}\{#MyAppExeName}" 
+Name: "{commondesktop}\Alpha Console"; Filename: "{app}\{#MyAppExeName}" 
     
 [Dirs]
 Name: "{app}"; Permissions: users-full
