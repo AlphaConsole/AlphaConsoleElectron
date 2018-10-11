@@ -1,17 +1,674 @@
-
-{# HEADING #}
+{# HEADING BAR#}
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-5">
         <p class="font-quarcaL text-left w-100 heading-title">
             ITEMS
         </p>
-    </div>
-</div>
-{# SUB HEADING #}
-<div class="row">
-    <div class="col-md-12">
         <p class="font-quarcaM fs-12 font-italic text-left w-100 ls-s">
-            CUSTOMIZE YOUR CAR OR TEST LATEST ITEMS
+            CUSTOMIZE YOUR CAR OR TEST THE LATEST ITEMS
         </p>
     </div>
+    <div class="col-7">
+        <div class="row">
+            <p class="font-quarcaL text-right w-100 heading-title">
+                PRESET
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-4 col-md-3 pr-0">
+                <select style="max-height: 40px;" class="acc-input w-100 font-quarcaL text-uppercase ls-s" id="preset-select">
+                    <option value="0">Default</option>
+                </select>
+            </div>
+            <div class="col-3 col-md-3 pr-0">
+                <input style="max-height: 40px;" id="preset-name" class="acc-input font-quarcaL w-100" type="text"
+                    value="Default" placeholder="PRESET NAME" />
+            </div>
+            <div class="col-2 col-md-3 pr-0">
+                <button style="color:#fff;" class="font-quarcaL btn btn-success w-100 p-2" onclick="AddNewPreset()">ADD
+                    PRESET</button>
+            </div>
+            <div class="col-3 col-md-3 pr-0">
+                <button style="color:#fff;" class="font-quarcaL btn btn-danger w-100 p-2" onclick="DeletePreset()">DELETE
+                    PRESET</button>
+            </div>
+
+        </div>
+    </div>
 </div>
+
+ <button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="background-color:#f00; border-color:#f00; position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+                  data-toggle="tooltip" data-placement="right" title="Apply changes to both teams">
+                  <i class="fas fa-sync"></i>
+                </button>
+
+
+<div class="row mt-4">
+    <div class="col-md-6">
+
+                  <div class="table w-100">
+                    {# <table class="w-100 color-table">
+                      <thead>
+                        <tr class="alt-row">
+                          <td class="alt-row" colspan="2">Primary Paint Color</td>
+                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>
+                          <td class="alt-row-">Enabled</td>
+                        </tr>
+                      </thead>
+                      <tbody team="Blue">
+                        <!-- COLORS -->
+                        <tr>
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="primary-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="primary-intensity-blue" class="acc-input" type="number" value="1" />
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="accent-color-blue" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="accent-intensity-blue" class="acc-input" type="number" value="1" />
+                          </td>
+                          <td class="alt-row">
+                            <label class="tick-container">
+                              <input id="custom-color-enabled-blue" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                        </tr>
+                    </table> #}
+                      <p class="font-quarcaL text-left w-100 heading-title">
+                        BLUE TEAM
+                    </p>
+                    <table class="w-100 item-table">
+                      <thead>
+                        <tr class="alt-row">
+                          <td class="alt-row">Type</td>
+                          <td class="alt-row-strong">Item</td>
+                          <td class="alt-row">Color</td>
+                        </tr>
+                      </thead>
+                      <tbody team="Blue">
+                        <!-- BODY -->
+
+
+                        <tr>
+                          <td class="alt-row">Body</td>
+                          <td class="alt-row-strong">
+
+                          </td>
+                          <td class="alt-row">
+                            <!-- <select class="acc-input" name="color-select" special="body">
+                              <option value="-1">Unchanged</option>
+                            </select> -->
+                            <button type="button" style="color:#fff; padding: 0.2rem 0rem;" class="font-quarcaL btn btn-acc w-100" data-toggle="modal"
+                              data-target="#bodyColor">EDIT</button>
+
+                            <div id="bodyColor" class="modal fade" role="dialog" style="z-index: 1000000">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header mt-2">
+                                    <!-- ITEM TYPE -->
+                                    <h4 class="modal-title font-quarcaL fs-22">BODY COLOR</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                  </div>
+                                  <div class="modal-body mb-2 mt-2">
+                                    <!-- UNCHANGED -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
+                                      class="radio-container">UNCHANGED
+                                      <input type="radio" checked="checked" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+
+                                    <!-- LIST -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-list"
+                                      class="radio-container">LIST
+                                      <input type="radio" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                    <select style="margin-top:0px;" class="acc-input mb-3" name="color-select" special="body"></select>
+
+                                    <!-- SOLID -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
+                                      class="radio-container">SOLID
+                                      <input type="radio" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                    <input id="body-color-solid" type="color" style="height:30px; padding:0px;" class="acc-input mb-3">
+
+                                    <!-- ANIMATED -->
+                                    <label style="padding-left:35px; padding-top:0px; margin-top:-5px; text-align:left; border:none; background:none;" id="body-unchanged"
+                                      class="radio-container">ANIMATED
+                                      <input type="radio" name="radio">
+                                      <span class="checkmark"></span>
+                                    </label>
+                                    <div class="mb-4" id="loopduration">
+                                      <p>Loop Duration:</p>
+                                      <div class="row mt-2">
+                                        <div class="col-3">
+                                          <input id="body-loop-duration" class="acc-input" type="text"> </div>
+                                        <div class="col-9">
+                                          <p style="margin-left:-15px; margin-top:8px;">Seconds</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="mt-3 mb-5" id="body-gp"></div>
+                                    <div id="bodygradientvalue" style="display:block;"></div>
+
+                                  </div>
+                                  <div class="modal-footer p-2">
+                                    <button type="button" class="font-quarcaL btn btn-success w-25" data-dismiss="modal">SAVE</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+
+
+
+                        <!-- BANNER -->
+                        <tr>
+                          <td class="alt-row">Banner</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="banner-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- MAIN BODY DECAL -->
+                        <tr hidden>
+                          <td class="alt-row">Main Body Decal</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="mb-decal-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- ENGINE TEXTURE -->
+                        <tr hidden>
+                          <td class="alt-row">Engine Texture</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="engine-texture-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- DECAL -->
+                        <tr>
+                          <td class="alt-row">Decal</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input selDiv" name="decal-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- WHEELS -->
+                        <tr>
+                          <td class="alt-row">Wheels</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="wheel-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+
+
+                        <!-- ANTENNA -->
+                        <tr>
+                          <td class="alt-row">Antenna</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="antenna-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- TOPPER -->
+                        <tr>
+                          <td class="alt-row">Topper</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="topper-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- GOAL EXPLOSION -->
+                        <tr>
+                          <td class="alt-row">Goal Explosion</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="explosion-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- BOOST -->
+                        <tr>
+                          <td class="alt-row">Boost</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+
+                        <!-- BOOST SOUND -->
+                        <tr>
+                          <td class="alt-row">Boost Sound</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-sound-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- PAINT FINISH -->
+                        <tr>
+                          <td class="alt-row">Primary Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+                        <!-- ACCENT  PAINT FINISH -->
+                        <tr>
+                          <td class="alt-row">Accent Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="accent-paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- ENGINE AUDIO -->
+                        <tr>
+                          <td class="alt-row">Engine Sound</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="engine-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+
+                          </td>
+                        </tr>
+
+
+                        <!-- TRAIL -->
+                        <tr>
+                          <td class="alt-row">Trail</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="trail-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+
+                          </td>
+                        </tr>
+
+                        <!-- BALL -->
+                        <tr>
+                          <td class="alt-row">Ball</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="ball-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+              
+
+    </div>
+
+      <div class="col-md-6">
+
+
+<div class="table w-100">
+                    {# <table class="w-100 color-table">
+                      <thead>
+                        <tr class="alt-row">
+                          <td class="alt-row" colspan="2">Primary Paint Color</td>
+                          <td class="alt-row-strong" colspan="2">Accent Paint Color</td>
+                          <td class="alt-row-">Enabled</td>
+                        </tr>
+                      </thead>
+                      <tbody team="Orange">
+                        <!-- COLORS -->
+                        <tr>
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="primary-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="primary-intensity-orange" class="acc-input" type="number" value="1" />
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Color</div>
+                            <input id="accent-color-orange" type="color" style="height:30px; padding:0px;" class="acc-input">
+                          </td>
+                          <td class="alt-row-strong">
+                            <div style=" display: inline-block;  vertical-align: top;  margin-top: 3px;  margin-right: 5px;">Intensity</div>
+                            <input id="accent-intensity-orange" class="acc-input" type="number" value="1" />
+                          </td>
+                          <td class="alt-row">
+                            <label class="tick-container">
+                              <input id="custom-color-enabled-orange" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                        </tr>
+                    </table> #}
+                     <p class="font-quarcaL text-right w-100 heading-title">
+                        ORANGE TEAM
+                    </p>
+                    <table class="w-100 item-table">
+                      <thead>
+                        <tr class="alt-row">
+                          <td class="alt-row">Type</td>
+                          <td class="alt-row-strong">Item</td>
+                          <td class="alt-row">Color</td>
+                        </tr>
+                      </thead>
+                      <tbody team="Orange">
+
+                        <!-- BODY -->
+                        <tr>
+                          <td class="alt-row">Body</td>
+                          <td class="alt-row-strong">
+
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select" special="body">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- BANNER -->
+                        <tr>
+                          <td class="alt-row">Banner</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="banner-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- MAIN BODY DECAL -->
+                        <tr hidden>
+                          <td class="alt-row">Main Body Decal</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="mb-decal-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- ENGINE TEXTURE -->
+                        <tr hidden>
+                          <td class="alt-row">Engine Texture</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="engine-texture-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- DECAL -->
+                        <tr>
+                          <td class="alt-row">Decal</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="decal-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- WHEELS -->
+                        <tr>
+                          <td class="alt-row">Wheels</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="wheel-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- ANTENNA -->
+                        <tr>
+                          <td class="alt-row">Antenna</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="antenna-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- TOPPER -->
+                        <tr>
+                          <td class="alt-row">Topper</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="topper-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- GOAL EXPLOSION -->
+                        <tr>
+                          <td class="alt-row">Goal Explosion</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="explosion-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+
+                        <!-- BOOST -->
+                        <tr>
+                          <td class="alt-row">Boost</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                            <select class="acc-input" name="color-select">
+                              <option value="-1">Unchanged</option>
+                            </select>
+                          </td>
+                        </tr>
+
+                        <!-- BOOST SOUND -->
+                        <tr>
+                          <td class="alt-row">Boost Sound</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="boost-sound-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                        <!-- PAINT FINISH -->
+                        <tr>
+                          <td class="alt-row">Primary Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+                        <!-- ACCENT  PAINT FINISH -->
+                        <tr>
+                          <td class="alt-row">Accent Paint Finish</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="accent-paint-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+
+
+                        <!-- ENGINE AUDIO -->
+                        <tr>
+                          <td class="alt-row">Engine Sound</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="engine-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+
+                          </td>
+                        </tr>
+
+
+                        <!-- TRAIL -->
+                        <tr>
+                          <td class="alt-row">Trail</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="trail-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+
+                          </td>
+                        </tr>
+
+
+
+
+                        <!-- BALL -->
+                        <tr>
+                          <td class="alt-row">Ball</td>
+                          <td class="alt-row-strong">
+                            <select class="acc-input" name="ball-select">
+                              <option value="-1:-1:-1">Unchanged</option>
+                            </select>
+                          </td>
+                          <td class="alt-row">
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+
+       </div>
+
+</div>
+
+
+
+

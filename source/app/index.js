@@ -40,7 +40,7 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       titleBarStyle: 'hidden',
       resizable: true, 
       frame: false, 
-      minWidth: 540,
+      minWidth: 1280,
       maxWidth: 1600,
       width: 1600,
       height: 900,

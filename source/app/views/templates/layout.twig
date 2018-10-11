@@ -12,6 +12,11 @@
 </head>
 
 <body class="">
+    {# DO NOT MOVE ANY LOWER #}
+    <div id="BlueTeamShadow" class="" style="position:absolute; width:50%; top:0; height: 100%; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,  rgba(15,131,253,0.1)100%);"></div>
+    <div id="OrangeTeamShadow" class="" style="position:absolute; width:50%; top:0; right:0; height: 100%; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,  rgba(238,117,68,0.1)100%);"></div>
+    {# #################### #}
+
     <div class="title-bar-wrapper">
         <!-- Title Bar : the bar is a seperate div to define a 100% draggable window -->
         <div id="title-bar"></div>
@@ -84,6 +89,10 @@
     <script src="./assets/js/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="../controllers/backend.js"></script>
+    <script src="../controllers/UI.js"></script>
+
 
     {# VENDOR PACKAGES #}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
@@ -191,8 +200,6 @@
         })();
     </script>
 
-    <script src="../controllers/backend.js"></script>
-    <script src="../controllers/UI.js"></script>
 
     <script>
         $(document).ready(function () {
@@ -789,55 +796,76 @@
             $("html").removeClass("no-bg");
             $("html").removeClass("profile-bg");
             $("html").removeClass("stats-bg");
+             $("html").removeClass("items-bg");
             $('html').addClass('dashboard-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
         $('#pills-items-tab').on('click', function () {
+             $("html").removeClass("no-bg");
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("profile-bg");
             $("html").removeClass("stats-bg");
-            $('html').addClass('no-bg');
+            $('html').addClass('items-bg');
+            $('BlueTeamShadow').show();
+            $('OrangeTeamShadow').show();
         });
 
         //NO BG
         $('#pills-textures-tab').on('click', function () {
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("stats-bg");
+            $("html").removeClass("items-bg");
             $("html").removeClass("profile-bg");
             $('html').addClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
         $('#pills-extras-tab').on('click', function () {
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("profile-bg");
+            $("html").removeClass("items-bg");
             $("html").removeClass("stats-bg");
             $('html').addClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
         $('#pills-stats-tab').on('click', function () {
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("profile-bg");
+            $("html").removeClass("items-bg");
             $("html").removeClass("stats-bg");
             $('html').addClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
         $('#pills-banner-tab').on('click', function () {
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("profile-bg");
+            $("html").removeClass("items-bg");
             $("html").removeClass("stats-bg");
             $('html').addClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
         $('#pills-title-tab').on('click', function () {
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("profile-bg");
+            $("html").removeClass("items-bg");
             $("html").removeClass("stats-bg");
             $('html').addClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
@@ -845,36 +873,25 @@
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("stats-bg");
             $("html").addClass("profile-bg");
+            $("html").removeClass("items-bg");
             $('html').removeClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
         //NO BG
         $('#pills-options-tab').on('click', function () {
             $("html").removeClass("dashboard-bg");
             $("html").removeClass("profile-bg");
+            $("html").removeClass("items-bg");
             $("html").removeClass("stats-bg");
             $('html').addClass('no-bg');
+            $('BlueTeamShadow').hide();
+            $('OrangeTeamShadow').hide();
         });
 
 
 
-       //SHOW STATS
-        $('#showStatsInfo').on('click', function () {
-            $("html").removeClass("dashboard-bg");
-            $("html").removeClass("profile-bg");
-            $('html').removeClass('no-bg');
-            $('html').addClass('stats-bg');
-            $('#StatsInfo').toggle();
-        });
-
-         $('#hideStatsInfo').on('click', function () {
-            $("html").addClass("dashboard-bg");
-            $('html').removeClass('stats-bg');
-            $('#StatsInfo').toggle();
-        });
-    
-
-        
     </script>
 
     {% endblock %}

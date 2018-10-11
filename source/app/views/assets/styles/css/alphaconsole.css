@@ -39,11 +39,6 @@ body {
   background: linear-gradient(to right, rgba(57, 57, 57, 0.8), rgba(34, 34, 34, 0.8));
 }
 
-* {
-  animation: fade 0.3s linear;
-  transition: background 0.5s linear;
-}
-
 .no-bg {
   background: transparent;
   animation: fade 0.3s linear;
@@ -56,6 +51,14 @@ body {
 
 .dashboard-bg {
   background-image: url("https://images7.alphacoders.com/820/thumb-1920-820783.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fade 0.3s linear;
+  transition: background 0.5s linear;
+}
+
+.items-bg {
+  background-image: url("https://wallpaperset.com/w/full/3/8/c/395089.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   animation: fade 0.3s linear;

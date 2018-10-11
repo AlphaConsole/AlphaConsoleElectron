@@ -15,10 +15,6 @@ body {
     background: $body-background;
 }
 
-* {
-    animation: fade 0.3s linear;
-    transition: background 0.5s linear;
-}
 
 
 
@@ -42,6 +38,14 @@ body {
 
 }
 
+.items-bg {
+    background-image: url('https://wallpaperset.com/w/full/3/8/c/395089.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fade 0.3s linear;
+    transition: background 0.5s linear;
+
+}
 .profile-bg {
     background-image: url('https://ksassets.timeincuk.net/wp/uploads/sites/54/2018/07/Rocket-League-920x518.jpg');
     background-repeat: no-repeat;
