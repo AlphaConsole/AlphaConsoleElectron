@@ -322,6 +322,21 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2949,
+                    "Name": "Fast 4WD",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2950,
+                    "Name": "MR11",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2951,
+                    "Name": "Gazella GT",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3031,
                     "Name": "Cyclone",
                     "Paintable": "true"
@@ -355,6 +370,11 @@
                     "ItemID": 3316,
                     "Name": "Random Painted Item",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3451,
+                    "Name": "Nimbus",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Body",
@@ -2343,6 +2363,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2565,
+                    "Name": "Venom: Retro Sun",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2581,
                     "Name": "Jäger 619 RS: XVI",
                     "Paintable": "true"
@@ -2350,6 +2375,11 @@
                 {
                     "ItemID": 2588,
                     "Name": "Marauder: XVIII",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 2591,
+                    "Name": "Mantis: Megabat",
                     "Paintable": "true"
                 },
                 {
@@ -2578,6 +2608,11 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2948,
+                    "Name": "Twinzer: Muddy",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2952,
                     "Name": "Breakout: Nice Shot",
                     "Paintable": "true"
@@ -2648,6 +2683,26 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3104,
+                    "Name": "MR11: Diecast",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3115,
+                    "Name": "MR11: Hot Wheels Race Team",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3144,
+                    "Name": "Octane: Sticker Bomb",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3180,
+                    "Name": "MR11: 50th Anniversary",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3217,
                     "Name": "Cyclone: Whiteout",
                     "Paintable": "false"
@@ -2688,6 +2743,36 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3252,
+                    "Name": "Fast 4WD: 50th Anniversary",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3253,
+                    "Name": "Fast 4WD: Sleek",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3254,
+                    "Name": "Fast 4WD: Hot Wheels Race Team",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3257,
+                    "Name": "Fast 4WD: Diecast",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3259,
+                    "Name": "Octane: RC Rivals",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3260,
+                    "Name": "Dominus: RC Rivals",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3312,
                     "Name": "Stripe Racer",
                     "Paintable": "false"
@@ -2715,6 +2800,86 @@
                 {
                     "ItemID": 3322,
                     "Name": "Gale-Fire",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3332,
+                    "Name": "Gazella GT: 50th Anniversary",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3339,
+                    "Name": "Gazella GT: Sleek",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3395,
+                    "Name": "MR11: Sleek",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3398,
+                    "Name": "Gazella GT: Diecast",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3399,
+                    "Name": "Gazella GT: Hot Wheels Race Team",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3418,
+                    "Name": "Octane: Trick or Treat",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3428,
+                    "Name": "Breakout: Ghost Fever",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3456,
+                    "Name": "Arachnophobia",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3459,
+                    "Name": "Breakout: Ripped Comic",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3460,
+                    "Name": "Wet Paint",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3476,
+                    "Name": "Nimbus: Fornax",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3477,
+                    "Name": "Nimbus: Draft Racer",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3481,
+                    "Name": "Nimbus: Crispi",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3484,
+                    "Name": "Nimbus: Austromancer",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3489,
+                    "Name": "Nimbus: Windstripe",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3491,
+                    "Name": "Nimbus: Skyrider",
                     "Paintable": "false"
                 }
             ],
@@ -3159,6 +3324,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 1951,
+                    "Name": "Yamane",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 1975,
                     "Name": "Gaiden",
                     "Paintable": "true"
@@ -3359,11 +3529,6 @@
                     "Paintable": "true"
                 },
                 {
-                    "ItemID": 2926,
-                    "Name": "Mothership Pro",
-                    "Paintable": "false"
-                },
-                {
                     "ItemID": 2935,
                     "Name": "Santa Fe",
                     "Paintable": "true"
@@ -3474,8 +3639,53 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3256,
+                    "Name": "MR11",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3313,
+                    "Name": "Finny",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3323,
+                    "Name": "Fast 4WD",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3330,
+                    "Name": "Gazella GT",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3337,
+                    "Name": "Gernot",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 3366,
                     "Name": "Hot Hot Wheels",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3370,
+                    "Name": "Raijin",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3382,
+                    "Name": "Hot Wheels 50th",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3383,
+                    "Name": "Demon Disc",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3501,
+                    "Name": "Mothership Pro",
                     "Paintable": "false"
                 }
             ],
@@ -3895,6 +4105,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2327,
+                    "Name": "Night Terror",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2328,
                     "Name": "Scary Pumpkin",
                     "Paintable": "false"
@@ -4008,6 +4223,41 @@
                     "ItemID": 3263,
                     "Name": "Hot Rod",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3331,
+                    "Name": "Synthwave",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3384,
+                    "Name": "Season 8 - Bronze",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3385,
+                    "Name": "Season 8 - Diamond",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3386,
+                    "Name": "Season 8 - Gold",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3472,
+                    "Name": "Season 8 - Silver",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3473,
+                    "Name": "Season 8 - Champion",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3474,
+                    "Name": "Season 8 - Platinum",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Rocket Boost",
@@ -4344,6 +4594,10 @@
                     "Name": "Power-Shot"
                 },
                 {
+                    "ItemID": 2327,
+                    "Name": "Night Terror"
+                },
+                {
                     "ItemID": 2328,
                     "Name": "Scary Pumpkin"
                 },
@@ -4434,6 +4688,34 @@
                 {
                     "ItemID": 3263,
                     "Name": "Hot Rod"
+                },
+                {
+                    "ItemID": 3331,
+                    "Name": "Synthwave"
+                },
+                {
+                    "ItemID": 3384,
+                    "Name": "Season 8 - Bronze"
+                },
+                {
+                    "ItemID": 3385,
+                    "Name": "Season 8 - Diamond"
+                },
+                {
+                    "ItemID": 3386,
+                    "Name": "Season 8 - Gold"
+                },
+                {
+                    "ItemID": 3472,
+                    "Name": "Season 8 - Silver"
+                },
+                {
+                    "ItemID": 3473,
+                    "Name": "Season 8 - Champion"
+                },
+                {
+                    "ItemID": 3474,
+                    "Name": "Season 8 - Platinum"
                 }
             ],
             "Name": "BoostSound",
@@ -6885,6 +7167,56 @@
                     "ItemID": 3227,
                     "Name": "Mage Glass III",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3251,
+                    "Name": "Hot Wheels 50th",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3409,
+                    "Name": "Bossfight",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3410,
+                    "Name": "Darren Styles",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3411,
+                    "Name": "Dougal",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3412,
+                    "Name": "Gammer",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3413,
+                    "Name": "Infected Mushroom",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3414,
+                    "Name": "Muzzy",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3415,
+                    "Name": "Pixel Terror",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3416,
+                    "Name": "Sara Skinner",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3417,
+                    "Name": "Tokyo Machine",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Antenna",
@@ -7706,6 +8038,41 @@
                     "ItemID": 3137,
                     "Name": "Phoenix Wings III",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3308,
+                    "Name": "Hot Wheels Spider",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3309,
+                    "Name": "Hot Wheels Snake",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3364,
+                    "Name": "Hot Wheels Gorilla",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3375,
+                    "Name": "Hot Wheels RC Rivals",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3396,
+                    "Name": "Monstercat Uncaged",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3440,
+                    "Name": "Candy Jack",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3446,
+                    "Name": "Haunted House",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Topper",
@@ -7861,6 +8228,11 @@
                 {
                     "ItemID": 2748,
                     "Name": "'89 Batmobile",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2917,
+                    "Name": "Dino",
                     "Paintable": "false"
                 },
                 {
@@ -8400,6 +8772,16 @@
                     "ItemID": 3262,
                     "Name": "Crate - Zephyr",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3457,
+                    "Name": "Crate - Elevation",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3468,
+                    "Name": "Golden Pumpkin",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Crates",
@@ -8550,6 +8932,11 @@
                 {
                     "ItemID": 2748,
                     "Name": "'89 Batmobile",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2917,
+                    "Name": "Dino",
                     "Paintable": "false"
                 },
                 {
@@ -8892,6 +9279,26 @@
                     "ItemID": 3091,
                     "Name": "Cyclone",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3400,
+                    "Name": "Fast 4WD",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3401,
+                    "Name": "MR11",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3402,
+                    "Name": "Gazella GT",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3452,
+                    "Name": "Nimbus",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Engine Audio",
@@ -9037,6 +9444,11 @@
                 {
                     "ItemID": 3224,
                     "Name": "Laser Wave III",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3342,
+                    "Name": "Discotheque",
                     "Paintable": "true"
                 }
             ],
@@ -9199,6 +9611,16 @@
                     "ItemID": 3131,
                     "Name": "Supernova III",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3324,
+                    "Name": "Hot Wheels",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3453,
+                    "Name": "Solar Flare",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Goal Explosion",
@@ -9217,8 +9639,18 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2409,
+                    "Name": "Bob's Ramen",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2410,
                     "Name": "Calculated",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2411,
+                    "Name": "Lucky Stars",
                     "Paintable": "false"
                 },
                 {
@@ -9764,6 +10196,36 @@
                 {
                     "ItemID": 3305,
                     "Name": "Trash It!",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3325,
+                    "Name": "Hot Wheels 50th",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3431,
+                    "Name": "CRL Eastern",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3432,
+                    "Name": "CRL Northern",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3433,
+                    "Name": "CRL Southern",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3434,
+                    "Name": "CRL Western",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3447,
+                    "Name": "Ghost Story",
                     "Paintable": "false"
                 }
             ],
