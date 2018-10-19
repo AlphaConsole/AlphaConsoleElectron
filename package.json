@@ -1,6 +1,6 @@
 {
   "name": "AlphaConsole",
-  "version": "9.8.0",
+  "version": "9.8.1",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
       }
     ],
     "files": [
-     "**/*",
+      "**/*",
       "!textures/*",
       "textures/packages.json"
     ]
