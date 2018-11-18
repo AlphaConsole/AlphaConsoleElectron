@@ -194,6 +194,7 @@ function LoadConfiguration() {
 
   //Custom title options
   $("#enable-custom-titles").prop('checked', Config.CustomTitles.EnableCustomTitles);
+  $("#enable-custom-banners").prop('checked', Config.CustomTitles.EnableCustomBanners);
   $("#title-flash-rate").val(Config.CustomTitles.TitleFlashRate);
 
   //Custom rank options
@@ -485,6 +486,7 @@ function GetConfigurationString() {
   //Custom title options
   var CustomTitles = {};
   CustomTitles.EnableCustomTitles = $("#enable-custom-titles").prop('checked'); 
+  CustomTitles.EnableCustomBanners = $("#enable-custom-banners").prop('checked'); 
   CustomTitles.TitleFlashRate = parseFloat($("#title-flash-rate").val());
   Config.CustomTitles = CustomTitles;
 
