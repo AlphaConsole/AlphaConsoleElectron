@@ -883,7 +883,7 @@ $(document).ready(function () {
 
     $(this).parent().find('select option:contains("Unchanged")').prop('selected', true);
   })
-  $(".build-number").html("Beta Version " + require('electron').remote.app.getVersion());
+  $(".build-number").html("Version " + require('electron').remote.app.getVersion());
    ipcRenderer.send('alwaystop', $("#always-on-top").prop('checked'));  
 });
 
