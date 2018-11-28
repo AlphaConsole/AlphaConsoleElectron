@@ -12,7 +12,7 @@
     "watch": "grunt watch"
   },
   "build": {
-    "appId": "alphaconsole.beta",
+    "appId": "alphaconsole",
     "productName": "AlphaConsole",
     "asarUnpack": [
       "textures/packages.json",
