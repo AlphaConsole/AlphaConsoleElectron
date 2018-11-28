@@ -231,7 +231,7 @@ begin
   ShellExec('open','tskill.exe',' {#MyAppName}','',SW_HIDE,ewNoWait,ErrorCode);
   Result := True;
   while IsAppRunning('RocketLeague.exe') do begin
-    MsgResult := MsgBox('Rocket League is running. Please close it before continuing.', mbError, MB_OKCANCEL);         
+    MsgResult := MsgBox('AlphaConsole is trying to update but Rocket League is running. Please close it before continuing.', mbError, MB_OKCANCEL);         
     if MsgResult = IDCANCEL then begin
        Result := False
        Break;
@@ -287,7 +287,7 @@ var
 begin
    Result := True;
    while IsAppRunning('RocketLeague.exe') do begin
-      MsgResult := MsgBox('Rocket League is running. Please close it before continuing.', mbError, MB_OKCANCEL);         
+      MsgResult := MsgBox('AlphaConsole is trying to update but Rocket League is running. Please close it before continuing.', mbError, MB_OKCANCEL);         
       if MsgResult = IDCANCEL then begin
         Result := False
         Break;
