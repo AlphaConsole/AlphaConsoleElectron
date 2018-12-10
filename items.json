@@ -362,6 +362,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3265,
+                    "Name": "McLaren 570s",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3315,
                     "Name": "Random Certified Item",
                     "Paintable": "false"
@@ -374,6 +379,21 @@
                 {
                     "ItemID": 3451,
                     "Name": "Nimbus",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3594,
+                    "Name": "Artemis G1",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3614,
+                    "Name": "Artemis",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3622,
+                    "Name": "Artemis GXT",
                     "Paintable": "true"
                 }
             ],
@@ -1025,6 +1045,11 @@
                 {
                     "ItemID": 1123,
                     "Name": "Dominus: Dot Matrix",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 1129,
+                    "Name": "Dominus: Demagogue",
                     "Paintable": "false"
                 },
                 {
@@ -2158,6 +2183,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2342,
+                    "Name": "Dominus: Oryx",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2345,
                     "Name": "Octane ZSR: Mechaceph",
                     "Paintable": "true"
@@ -2398,6 +2428,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2601,
+                    "Name": "Marauder: Alley Cat",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2605,
                     "Name": "X-Devil: Devil's Advocate",
                     "Paintable": "true"
@@ -2445,6 +2480,11 @@
                 {
                     "ItemID": 2657,
                     "Name": "Octane: Dune Racer",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 2658,
+                    "Name": "Road Hog: Quick Fix",
                     "Paintable": "true"
                 },
                 {
@@ -2673,6 +2713,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3025,
+                    "Name": "Octane: Watermelon",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3050,
                     "Name": "Partly Cloudy",
                     "Paintable": "false"
@@ -2693,8 +2738,18 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 3141,
+                    "Name": "Breakout: Sticker Bomb",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 3144,
                     "Name": "Octane: Sticker Bomb",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3145,
+                    "Name": "Octane: Deep Challenger",
                     "Paintable": "true"
                 },
                 {
@@ -2873,6 +2928,11 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 3488,
+                    "Name": "Future Shock",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 3489,
                     "Name": "Nimbus: Windstripe",
                     "Paintable": "false"
@@ -2880,6 +2940,56 @@
                 {
                     "ItemID": 3491,
                     "Name": "Nimbus: Skyrider",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3492,
+                    "Name": "Breakout: Nitro Circus",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3570,
+                    "Name": "Octane: Jetstream",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3574,
+                    "Name": "Unobtainium",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3602,
+                    "Name": "Stripes",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3603,
+                    "Name": "Pegasus",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3616,
+                    "Name": "Cadevco",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3617,
+                    "Name": "Huntress",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3618,
+                    "Name": "Leto Lines",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3619,
+                    "Name": "Streak Wave",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3623,
+                    "Name": "Splat",
                     "Paintable": "false"
                 }
             ],
@@ -3344,6 +3454,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2005,
+                    "Name": "Moko",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2022,
                     "Name": "Decennium Pro",
                     "Paintable": "false"
@@ -3519,6 +3634,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2851,
+                    "Name": "ZT-19 GS",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2896,
                     "Name": "WWE",
                     "Paintable": "false"
@@ -3527,6 +3647,11 @@
                     "ItemID": 2918,
                     "Name": "Cruxe",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 2926,
+                    "Name": "Mothership Pro",
+                    "Paintable": "false"
                 },
                 {
                     "ItemID": 2935,
@@ -3614,6 +3739,16 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3151,
+                    "Name": "Madness I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3152,
+                    "Name": "Madness II",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 3158,
                     "Name": "Capacitor I",
                     "Paintable": "true"
@@ -3637,6 +3772,11 @@
                     "ItemID": 3211,
                     "Name": "Pyramidia",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3215,
+                    "Name": "Polychrome",
+                    "Paintable": "false"
                 },
                 {
                     "ItemID": 3256,
@@ -3664,9 +3804,19 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 3365,
+                    "Name": "Sprocket",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 3366,
                     "Name": "Hot Hot Wheels",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3369,
+                    "Name": "Gripstride HX",
+                    "Paintable": "true"
                 },
                 {
                     "ItemID": 3370,
@@ -3684,9 +3834,64 @@
                     "Paintable": "true"
                 },
                 {
-                    "ItemID": 3501,
-                    "Name": "Mothership Pro",
+                    "ItemID": 3442,
+                    "Name": "Aero Mage Pro",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3443,
+                    "Name": "McLaren 570s",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3495,
+                    "Name": "Vanemail 482",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3496,
+                    "Name": "Vanemail 633",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3497,
+                    "Name": "ZT-19",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3501,
+                    "Name": "Mothership",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3530,
+                    "Name": "Plasmatic",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3578,
+                    "Name": "Rocket Forge I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3585,
+                    "Name": "Glo-Rabbet",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3599,
+                    "Name": "Teller",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3620,
+                    "Name": "Rocket Forge II",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3696,
+                    "Name": "Daemon-Kelpie",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Wheels",
@@ -4170,6 +4375,11 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2820,
+                    "Name": "Pickle",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2837,
                     "Name": "Comet",
                     "Paintable": "true"
@@ -4258,6 +4468,21 @@
                     "ItemID": 3474,
                     "Name": "Season 8 - Platinum",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3548,
+                    "Name": "Super Manga-Bolt I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3549,
+                    "Name": "Super Manga-Bolt II",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3550,
+                    "Name": "Super Manga-Bolt III",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Rocket Boost",
@@ -4646,6 +4871,10 @@
                     "Name": "Speed Force"
                 },
                 {
+                    "ItemID": 2820,
+                    "Name": "Pickle"
+                },
+                {
                     "ItemID": 2837,
                     "Name": "Comet"
                 },
@@ -4716,6 +4945,18 @@
                 {
                     "ItemID": 3474,
                     "Name": "Season 8 - Platinum"
+                },
+                {
+                    "ItemID": 3548,
+                    "Name": "Super Manga-Bolt I"
+                },
+                {
+                    "ItemID": 3549,
+                    "Name": "Super Manga-Bolt II"
+                },
+                {
+                    "ItemID": 3550,
+                    "Name": "Super Manga-Bolt III"
                 }
             ],
             "Name": "BoostSound",
@@ -7049,6 +7290,11 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2901,
+                    "Name": "Peggy Panda",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2903,
                     "Name": "Bubble Wand",
                     "Paintable": "true"
@@ -7116,6 +7362,11 @@
                 {
                     "ItemID": 2992,
                     "Name": "Duumu",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2994,
+                    "Name": "Rootkit",
                     "Paintable": "false"
                 },
                 {
@@ -7216,6 +7467,81 @@
                 {
                     "ItemID": 3417,
                     "Name": "Tokyo Machine",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3424,
+                    "Name": "Speedy",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3427,
+                    "Name": "Extra Life",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3462,
+                    "Name": "Kinda Funny",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3479,
+                    "Name": "Nitro Circus",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3480,
+                    "Name": "McLaren 570s",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3546,
+                    "Name": "ZagPET",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3601,
+                    "Name": "Electron I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3611,
+                    "Name": "Electron II",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3612,
+                    "Name": "Electron III",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3706,
+                    "Name": "CloudNone",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3707,
+                    "Name": "Grant",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3708,
+                    "Name": "Hyper Potions",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3709,
+                    "Name": "Nokae",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3710,
+                    "Name": "Rogue",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3711,
+                    "Name": "SMLE",
                     "Paintable": "false"
                 }
             ],
@@ -7715,6 +8041,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2032,
+                    "Name": "Udder",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2033,
                     "Name": "Succulents",
                     "Paintable": "true"
@@ -7925,6 +8256,16 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2584,
+                    "Name": "Camera",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2587,
+                    "Name": "Alarm Clock",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2608,
                     "Name": "Goldfish",
                     "Paintable": "true"
@@ -7982,6 +8323,11 @@
                 {
                     "ItemID": 2838,
                     "Name": "Sand Castle",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 2883,
+                    "Name": "Snail",
                     "Paintable": "true"
                 },
                 {
@@ -8055,6 +8401,11 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 3374,
+                    "Name": "Juice Box",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3375,
                     "Name": "Hot Wheels RC Rivals",
                     "Paintable": "false"
@@ -8062,6 +8413,11 @@
                 {
                     "ItemID": 3396,
                     "Name": "Monstercat Uncaged",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3420,
+                    "Name": "Mad Bomber",
                     "Paintable": "false"
                 },
                 {
@@ -8073,6 +8429,36 @@
                     "ItemID": 3446,
                     "Name": "Haunted House",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3547,
+                    "Name": "Showman",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3567,
+                    "Name": "Tellus Core I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3568,
+                    "Name": "Tellus Core II",
+                    "Paintable": "true"
+                },
+                {
+                    "ItemID": 3590,
+                    "Name": "Drone I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3591,
+                    "Name": "Drone II",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3592,
+                    "Name": "Drone III",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Topper",
@@ -8248,6 +8634,21 @@
                 {
                     "ItemID": 3221,
                     "Name": "Metallic Flake",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3526,
+                    "Name": "McLaren Custom",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3527,
+                    "Name": "McLaren Custom",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3630,
+                    "Name": "Medallion",
                     "Paintable": "false"
                 }
             ],
@@ -8782,6 +9183,11 @@
                     "ItemID": 3468,
                     "Name": "Golden Pumpkin",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3646,
+                    "Name": "Golden Gift",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Crates",
@@ -8952,6 +9358,21 @@
                 {
                     "ItemID": 3221,
                     "Name": "Metallic Flake",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3526,
+                    "Name": "McLaren Custom",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3527,
+                    "Name": "McLaren Custom",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3630,
+                    "Name": "Medallion",
                     "Paintable": "false"
                 }
             ],
@@ -9296,8 +9717,33 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 3444,
+                    "Name": "McLaren 570s",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 3452,
                     "Name": "Nimbus",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3461,
+                    "Name": "Locomotive",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3465,
+                    "Name": "Rat Rod",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3475,
+                    "Name": "Artemis",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3485,
+                    "Name": "R/C",
                     "Paintable": "false"
                 }
             ],
@@ -9450,6 +9896,21 @@
                     "ItemID": 3342,
                     "Name": "Discotheque",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3575,
+                    "Name": "Tachyon I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3576,
+                    "Name": "Tachyon II",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3577,
+                    "Name": "Tachyon III",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Trail",
@@ -9550,7 +10011,7 @@
                 {
                     "ItemID": 2702,
                     "Name": "Toon",
-                    "Paintable": "true"
+                    "Paintable": "false"
                 },
                 {
                     "ItemID": 2791,
@@ -9621,6 +10082,21 @@
                     "ItemID": 3453,
                     "Name": "Solar Flare",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3523,
+                    "Name": "Quasar I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3524,
+                    "Name": "Quasar II",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3525,
+                    "Name": "Quasar III",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Goal Explosion",
@@ -9666,6 +10142,11 @@
                 {
                     "ItemID": 2415,
                     "Name": "Sharp Flames",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2416,
+                    "Name": "Pizza Pie",
                     "Paintable": "false"
                 },
                 {
@@ -9734,6 +10215,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2433,
+                    "Name": "Ika-San",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2434,
                     "Name": "Sticker Bomb",
                     "Paintable": "false"
@@ -9769,6 +10255,11 @@
                     "Paintable": "false"
                 },
                 {
+                    "ItemID": 2450,
+                    "Name": "Gamer Pad",
+                    "Paintable": "false"
+                },
+                {
                     "ItemID": 2451,
                     "Name": "Hexed",
                     "Paintable": "false"
@@ -9786,6 +10277,11 @@
                 {
                     "ItemID": 2455,
                     "Name": "Taxi",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2456,
+                    "Name": "Tread Heavily",
                     "Paintable": "false"
                 },
                 {
@@ -9859,6 +10355,11 @@
                     "Paintable": "true"
                 },
                 {
+                    "ItemID": 2515,
+                    "Name": "Reiko",
+                    "Paintable": "true"
+                },
+                {
                     "ItemID": 2517,
                     "Name": "Camo",
                     "Paintable": "false"
@@ -9866,6 +10367,16 @@
                 {
                     "ItemID": 2519,
                     "Name": "Rockat",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2520,
+                    "Name": "Gold-Plated",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2525,
+                    "Name": "Abstract",
                     "Paintable": "false"
                 },
                 {
@@ -9887,6 +10398,11 @@
                     "ItemID": 2529,
                     "Name": "Starbase ARC",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 2530,
+                    "Name": "Rocket Ball",
+                    "Paintable": "false"
                 },
                 {
                     "ItemID": 2533,
@@ -9911,6 +10427,11 @@
                 {
                     "ItemID": 2555,
                     "Name": "Migraine",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 2556,
+                    "Name": "Cyberglyph",
                     "Paintable": "false"
                 },
                 {
@@ -10227,6 +10748,21 @@
                     "ItemID": 3447,
                     "Name": "Ghost Story",
                     "Paintable": "false"
+                },
+                {
+                    "ItemID": 3542,
+                    "Name": "McLaren I",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3543,
+                    "Name": "McLaren II",
+                    "Paintable": "false"
+                },
+                {
+                    "ItemID": 3586,
+                    "Name": "Zag Toys",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Player Banner",
@@ -10258,6 +10794,11 @@
                     "ItemID": 3177,
                     "Name": "Free Ride",
                     "Paintable": "true"
+                },
+                {
+                    "ItemID": 3178,
+                    "Name": "Twinkle Box",
+                    "Paintable": "false"
                 },
                 {
                     "ItemID": 3240,
