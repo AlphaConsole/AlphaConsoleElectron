@@ -353,6 +353,7 @@ function SavePreset(PresetID) {
         }
 
         Items[slotID][team].Color = parseInt($(selects[j]).parent().next("td").find("select").val()) || -1;
+		Items[slotID][team].SpecialEdition = $(selects[j]).parent().parent().find("input").prop('checked') ? 1 :  -1;
       }
     }
   }
@@ -426,6 +427,8 @@ function LoadPreset(ID) {
           ":" + GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].PackageSubID;
         $(selects[j]).val(valString).change();
         $(selects[j]).parent().next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
+		$(selects[j]).parent().parent().find("input").prop('checked', GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].SpecialEdition == -1 ? false : true);
+		
       }
     }
   }
@@ -734,7 +737,8 @@ for (var i = 0; i < slots.length; i++) {
         var newOp = $('<option>');
         newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
         newOp.attr('paintable', items[j].Paintable);
-        newOp.text(items[j].Name);
+        newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
+		newOp.text(items[j].Name);
         $(this).append(newOp);
 
       });
@@ -795,6 +799,15 @@ $("select[name='color-select']").on('change', function () {
     }
   }
 });
+$("input[name='special-wheel-input']").on('change', function () {  
+  if (SyncTeams) {
+    var selects = $("input[name='special-wheel-input']");
+    for (var k = 0; k < selects.length; k++) {
+        
+		$(selects[k]).prop('checked', $(this).prop('checked'));      
+    }
+	}
+});
 
 
 $("[class='row teams'] select").on('change', function () {
@@ -803,16 +816,24 @@ $("[class='row teams'] select").on('change', function () {
   var id = $(this).val().split(":")[0];
 
 
-  var disableOther = false;
-  if($(this).find("option:selected").attr("Paintable") == "false"){
-    disableOther = true;
+  var disableOtherPaintable = false;
+  if($(this).find("option:selected").attr("Paintable") == "false"){    
+	disableOtherPaintable = true;
     $(this).parent().next().find("select").prop('disabled', 'disabled');
     $(this).parent().next().find("select").css("color", "#555");
   } else {
     $(this).parent().next().find("select").prop('disabled', false);
     $(this).parent().next().find("select").css("color", "#fff");
   }
-
+  var disableOtherSpecial = false;
+  if($(this).find("option:selected").attr("HasSpecialEditions") == "false"){
+    disableOtherSpecial = true;
+    $(this).parent().parent().find("input").prop('disabled', 'disabled');
+    $(this).parent().parent().find("input").parent().find("span").css("background-color", "#3D3D3D");
+  } else {
+    $(this).parent().parent().find("input").prop('disabled', false);
+    $(this).parent().parent().find("input").parent().find("span").css("background-color", "#616161");
+  }
 
   if (SyncTeams) {
 
@@ -824,14 +845,20 @@ $("[class='row teams'] select").on('change', function () {
         && $(this).parent().index() == 1 && $(selects[k]).parent().index() == 1) {
         $(selects[k]).val(this.value);
 
-        if(disableOther){
+        if(disableOtherPaintable){
           $(selects[k]).parent().next().find("select").prop('disabled', 'disabled');
           $(selects[k]).parent().next().find("select").css("color", "#555");
         } else {
           $(selects[k]).parent().next().find("select").prop('disabled', false);
           $(selects[k]).parent().next().find("select").css("color", "#fff");
         }
-
+		if(disableOtherSpecial){
+			$(selects[k]).parent().parent().find("input").prop('disabled', 'disabled');
+			$(selects[k]).parent().parent().find("input").parent().find("span").css("background-color", "#3D3D3D");
+		} else {
+			$(selects[k]).parent().parent().find("input").prop('disabled', false);
+			$(selects[k]).parent().parent().find("input").parent().find("span").css("background-color", "#616161");
+        }
       }
     }
   }
@@ -899,7 +926,8 @@ $(document).ready(function () {
       $("#primary-intensity-orange").val(1);
       $("#accent-color-orange").val("#000");
       $("#accent-intensity-orange").val(1);     
-      
+      $("#special-wheel-blue").prop('checked', false);
+      $("#special-wheel-orange").prop('checked', false);      
   })
   
   $(".build-number").html("Version " + require('electron').remote.app.getVersion());
