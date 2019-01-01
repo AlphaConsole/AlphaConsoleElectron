@@ -1,15 +1,14 @@
-const {app, BrowserWindow} = require('electron');
-const twig                 = require('electron-twig');
-const { ipcMain } = require('electron');
-const path = require('path');
-const url = require('url');
-const autoUpdater = require("electron-updater").autoUpdater;
-var log = require("electron-log");
+const {app, BrowserWindow, ipcMain} = require('electron');
+const twig                          = require('electron-twig');
+const path                          = require('path');
+const url                           = require('url');
+const autoUpdater                   = require("electron-updater").autoUpdater;
+var   log                           = require("electron-log");
 
 
   // Keep a global reference of the window object, if you don't, the window will
   // be closed automatically when the JavaScript object is garbage collected.
-  let mainWindow
+let mainWindow
 autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = "info"
 autoUpdater.on("checking-for-update", function (_arg1) {
@@ -47,7 +46,8 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       webPreferences: {
         devTools: true
       },
-      icon: path.join(__dirname, '/views/assets/img/logo_normal.png')
+      icon: path.join(__dirname, '/views/assets/img/logo_normal.png'),
+      show: false // don't show the main window
     })
 
     // and load the index.html of the app.
@@ -57,12 +57,17 @@ autoUpdater.on("update-downloaded", function (_arg4) {
       slashes: true
     }))
 
+    /** Open the DevTools on start
+    This should no longer be needed as the ui doesnt cover the DevTools window
+      [ mainWindow.webContents.openDevTools() ]
+    */
 
-    
-  
-    // Open the DevTools.
-    //mainWindow.webContents.openDevTools()
- 
+    // if main window is ready to show, then destroy the splash window and show up the main window
+    mainWindow.once('ready-to-show', () => {
+      splash.destroy();
+      mainWindow.show();
+    });
+
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
       // Dereference the window object, usually you would store windows
@@ -75,7 +80,27 @@ autoUpdater.on("update-downloaded", function (_arg4) {
   // This method will be called when Electron has finished
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
-  app.on('ready', createWindow)
+
+  app.on('ready', () => {
+  
+    // create a new `splash`-Window 
+    splash = new BrowserWindow({width: 150, height: 150, transparent: true, frame: false, alwaysOnTop: true, center:true, icon: path.join(__dirname, '/views/assets/img/logo_normal.png')});
+    // and load the splash.twig of the app.
+    splash.loadURL(url.format({
+      pathname: path.join(__dirname, '/views/splash-screen.twig'),
+      protocol: 'file:',
+      slashes: true
+    }))
+
+    //initilize the main window process
+    createWindow();
+
+  });
+
+
+
+
+  // app.on('ready', createWindow)
   app.on("ready", function () {
     autoUpdater.checkForUpdatesAndNotify();
   });
