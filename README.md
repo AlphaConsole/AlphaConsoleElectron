@@ -5,6 +5,7 @@
 This is the AlphaConsole UI. Originally written in c#.net but now moved to Electron where we can get a more custom UI.
 This project contains only the electron code and not the DLL code that does the actual magic.
 
+NOTE: MASTER BRANCH IS WIP FOR WORKING UI USE THE "Public" Branch
 
 ## Initial setup
 
