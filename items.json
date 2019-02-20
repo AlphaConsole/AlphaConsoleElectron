@@ -421,7 +421,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3265,
-                    "Name": "McLaren 570s",
+                    "Name": "McLaren 570S",
                     "Paintable": "false"
                 },
                 {
@@ -3379,37 +3379,37 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3312,
-                    "Name": "Stripe Racer",
+                    "Name": "Maverick: Stripe Racer",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3318,
-                    "Name": "Jetstream",
+                    "Name": "Maverick: Jetstream",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3319,
-                    "Name": "Block Trim",
+                    "Name": "Maverick: Block Trim",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3320,
-                    "Name": "Circuit Pro",
+                    "Name": "Maverick: Circuit Pro",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3321,
-                    "Name": "Baller",
+                    "Name": "Maverick: Baller",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3322,
-                    "Name": "Gale-Fire",
+                    "Name": "Maverick: Gale-Fire",
                     "Paintable": "false"
                 },
                 {
@@ -3456,6 +3456,24 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3435,
+                    "Name": "Octane: Sweater Fest",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3437,
+                    "Name": "Breakout: Nisse",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3441,
+                    "Name": "Dominus: Winter Waddle",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3456,
                     "Name": "Arachnophobia",
                     "Paintable": "false"
@@ -3471,6 +3489,12 @@
                     "ItemID": 3460,
                     "Name": "Wet Paint",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3467,
+                    "Name": "Snowstorm",
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -3535,31 +3559,31 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3602,
-                    "Name": "Stripes",
+                    "Name": "Artemis: Stripes",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3603,
-                    "Name": "Pegasus",
+                    "Name": "Artemis: Pegasus",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3616,
-                    "Name": "Cadevco",
+                    "Name": "Artemis: Cadevco",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3617,
-                    "Name": "Huntress",
+                    "Name": "Artemis: Huntress",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3618,
-                    "Name": "Leto Lines",
+                    "Name": "Artemis: Leto Lines",
                     "Paintable": "false"
                 },
                 {
@@ -3571,7 +3595,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3623,
-                    "Name": "Splat",
+                    "Name": "Artemis: Splat",
                     "Paintable": "false"
                 }
             ],
@@ -4597,7 +4621,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3443,
-                    "Name": "McLaren 570s",
+                    "Name": "McLaren 570S",
                     "Paintable": "false"
                 },
                 {
@@ -4632,6 +4656,48 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3541,
+                    "Name": "Holiday Hearth",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3554,
+                    "Name": "Season 9 - Bronze",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3558,
+                    "Name": "Season 9 - Silver",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3559,
+                    "Name": "Season 9 - Gold",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3560,
+                    "Name": "Season 9 - Platinum",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3562,
+                    "Name": "Season 9 - Diamond",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3563,
+                    "Name": "Season 9 - Champion",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3578,
                     "Name": "Rocket Forge I",
                     "Paintable": "false"
@@ -4661,6 +4727,24 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3696,
                     "Name": "Daemon-Kelpie",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3897,
+                    "Name": "Sprocket",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3898,
+                    "Name": "Rocket Forge II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3900,
+                    "Name": "Gripstride HX",
                     "Paintable": "true"
                 }
             ],
@@ -5355,6 +5439,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3528,
+                    "Name": "Fireworks",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3548,
                     "Name": "Super Manga-Bolt I",
                     "Paintable": "false"
@@ -5832,6 +5922,10 @@
                 {
                     "ItemID": 3474,
                     "Name": "Season 8 - Platinum"
+                },
+                {
+                    "ItemID": 3528,
+                    "Name": "Fireworks"
                 },
                 {
                     "ItemID": 3548,
@@ -8884,13 +8978,19 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3480,
-                    "Name": "McLaren 570s",
+                    "Name": "McLaren 570S",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3546,
                     "Name": "ZagPET",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3600,
+                    "Name": "Dreidel",
                     "Paintable": "false"
                 },
                 {
@@ -10011,6 +10111,18 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3486,
+                    "Name": "Christmas Cocoa",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3514,
+                    "Name": "Sleigh-Bailed",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3547,
                     "Name": "Showman",
                     "Paintable": "false"
@@ -10903,6 +11015,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3458,
+                    "Name": "Crate - Ferocity",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3468,
                     "Name": "Golden Pumpkin",
                     "Paintable": "false"
@@ -11546,7 +11664,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3444,
-                    "Name": "McLaren 570s",
+                    "Name": "McLaren 570S",
                     "Paintable": "false"
                 },
                 {
@@ -11758,6 +11876,12 @@
                     "ItemID": 3342,
                     "Name": "Discotheque",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3561,
+                    "Name": "Winter Storm",
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -12795,6 +12919,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3586,
                     "Name": "Zag Toys",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3593,
+                    "Name": "Frostline",
                     "Paintable": "false"
                 }
             ],
