@@ -438,6 +438,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3426,
+                    "Name": "Diestro",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3451,
                     "Name": "Nimbus",
                     "Paintable": "true"
@@ -2880,6 +2886,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2592,
+                    "Name": "Breakout: Taniwha",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2595,
                     "Name": "Dominus: Templar",
                     "Paintable": "true"
@@ -3188,6 +3200,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2958,
                     "Name": "Breakout: What A Save!",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2963,
+                    "Name": "Twinzer: Good Shape",
                     "Paintable": "true"
                 },
                 {
@@ -3546,6 +3564,42 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3532,
+                    "Name": "Diestro: Old Flame",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3533,
+                    "Name": "Diestro: Lozano",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3534,
+                    "Name": "Diestro: Sooo Fly",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3535,
+                    "Name": "Diestro: Stripes",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3536,
+                    "Name": "Diestro: Stuntman",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3537,
+                    "Name": "Diestro: Chitchat",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3570,
                     "Name": "Octane: Jetstream",
                     "Paintable": "false"
@@ -3596,6 +3650,36 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3623,
                     "Name": "Artemis: Splat",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3800,
+                    "Name": "Intrudium",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3847,
+                    "Name": "Octane: Tumbling Blocks",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3852,
+                    "Name": "Octane: Gale-Fire",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3854,
+                    "Name": "Hex Tide",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3890,
+                    "Name": "Octane: Windblast",
                     "Paintable": "false"
                 }
             ],
@@ -4350,6 +4434,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2784,
+                    "Name": "Jayvyn",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2796,
                     "Name": "The Flash",
                     "Paintable": "false"
@@ -4448,6 +4538,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3001,
                     "Name": "Libertine",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3012,
+                    "Name": "Pyrrhos",
                     "Paintable": "true"
                 },
                 {
@@ -4553,6 +4649,15 @@
                     "Paintable": "true"
                 },
                 {
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 3314,
+                    "Name": "Zowie",
+                    "Paintable": "true"
+                },
+                {
                     "HasSpecialEditions": "false",
                     "ItemID": 3323,
                     "Name": "Fast 4WD",
@@ -4568,6 +4673,15 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3337,
                     "Name": "Gernot",
+                    "Paintable": "true"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 3338,
+                    "Name": "Asik",
                     "Paintable": "true"
                 },
                 {
@@ -4743,8 +4857,20 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3899,
+                    "Name": "Asik",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3900,
                     "Name": "Gripstride HX",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3901,
+                    "Name": "Zowie",
                     "Paintable": "true"
                 }
             ],
@@ -5460,6 +5586,12 @@
                     "ItemID": 3550,
                     "Name": "Super Manga-Bolt III",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3808,
+                    "Name": "Glitch",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Rocket Boost",
@@ -5938,6 +6070,10 @@
                 {
                     "ItemID": 3550,
                     "Name": "Super Manga-Bolt III"
+                },
+                {
+                    "ItemID": 3808,
+                    "Name": "Glitch"
                 }
             ],
             "Name": "BoostSound",
@@ -10383,6 +10519,12 @@
                     "ItemID": 3630,
                     "Name": "Medallion",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3747,
+                    "Name": "Straight-Line",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Paint Finish",
@@ -11252,6 +11394,12 @@
                     "ItemID": 3630,
                     "Name": "Medallion",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3747,
+                    "Name": "Straight-Line",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Accent Paint Finish",
@@ -11659,6 +11807,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3402,
                     "Name": "Gazella GT",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3436,
+                    "Name": "Diestro",
                     "Paintable": "false"
                 },
                 {
@@ -12428,6 +12582,12 @@
                     "ItemID": 2512,
                     "Name": "Lift-Off",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2514,
+                    "Name": "Hat Trick",
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
