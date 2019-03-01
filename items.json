@@ -4846,31 +4846,31 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3897,
-                    "Name": "Sprocket",
+                    "Name": "Sprocket: Infinite",
                     "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3898,
-                    "Name": "Rocket Forge II",
+                    "Name": "Rocket Forge II: Holographic",
                     "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3899,
-                    "Name": "Asik",
+                    "Name": "Asik: Infinite",
                     "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3900,
-                    "Name": "Gripstride HX",
+                    "Name": "Gripstride HX: Inverted",
                     "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 3901,
-                    "Name": "Zowie",
+                    "Name": "Zowie: Infinite",
                     "Paintable": "true"
                 }
             ],
