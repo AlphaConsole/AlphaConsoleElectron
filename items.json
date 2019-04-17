@@ -465,6 +465,24 @@
                     "ItemID": 3622,
                     "Name": "Artemis GXT",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3875,
+                    "Name": "Guardian GXT",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3879,
+                    "Name": "Guardian",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3880,
+                    "Name": "Guardian G1",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Body",
@@ -3006,6 +3024,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2683,
+                    "Name": "X-Devil: Disco Monster",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2687,
                     "Name": "Paladin: ShapeRacer",
                     "Paintable": "true"
@@ -3462,6 +3486,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3404,
+                    "Name": "Octane: Quetzalcoatl",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3418,
                     "Name": "Octane: Trick or Treat",
                     "Paintable": "false"
@@ -3564,6 +3594,18 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3516,
+                    "Name": "Breakout: Easter Bunny",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3517,
+                    "Name": "Breakout: Spring Chicken",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3532,
                     "Name": "Diestro: Old Flame",
                     "Paintable": "false"
@@ -3612,6 +3654,18 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3584,
+                    "Name": "Mainliner",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3589,
+                    "Name": "Fireworks",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3602,
                     "Name": "Artemis: Stripes",
                     "Paintable": "false"
@@ -3654,8 +3708,56 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3627,
+                    "Name": "Plosion",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3635,
+                    "Name": "Three-play",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3636,
+                    "Name": "Percussion",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3638,
+                    "Name": "Shield Glitch",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3649,
+                    "Name": "Octane: Abducted",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3800,
                     "Name": "Intrudium",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3831,
+                    "Name": "Dominus: Skewered",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3842,
+                    "Name": "Octane: G2 Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3846,
+                    "Name": "Dominus: G2 Esports",
                     "Paintable": "false"
                 },
                 {
@@ -3678,9 +3780,183 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3882,
+                    "Name": "Guardian: Stripes",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3883,
+                    "Name": "Octane: Cloud9",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3890,
                     "Name": "Octane: Windblast",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3968,
+                    "Name": "Guardian: O.H.W.",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3969,
+                    "Name": "Guardian: Intake",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3970,
+                    "Name": "Guardian: Vigilance",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3971,
+                    "Name": "Guardian: Skiver",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3972,
+                    "Name": "Guardian: Thunderbolt",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3989,
+                    "Name": "Octane: Dignitas",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3990,
+                    "Name": "Dominus: Dignitas",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3991,
+                    "Name": "Dominus: Evil Geniuses",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3992,
+                    "Name": "Dominus: NRG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3993,
+                    "Name": "Octane: Evil Geniuses",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3994,
+                    "Name": "Octane: NRG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4006,
+                    "Name": "Dominus: PSG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4007,
+                    "Name": "Dominus: Rogue",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4009,
+                    "Name": "Octane: PSG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4010,
+                    "Name": "Octane: Rogue",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4023,
+                    "Name": "Dominus: Splyce",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4026,
+                    "Name": "Octane: Splyce",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4027,
+                    "Name": "Dominus: Mousesports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4030,
+                    "Name": "Octane: Mousesports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4051,
+                    "Name": "Dominus: Team Vitality",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4052,
+                    "Name": "Octane: Team Vitality",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4054,
+                    "Name": "Dominus: Team SoloMid",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4055,
+                    "Name": "Octane: Team SoloMid",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4060,
+                    "Name": "Dominus: Ghost Gaming",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4061,
+                    "Name": "Octane: Ghost Gaming",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4070,
+                    "Name": "Octane: Shazam!",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4130,
+                    "Name": "Dominus: Cloud9",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Decal",
@@ -4176,6 +4452,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 1918,
+                    "Name": "M8",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 1929,
                     "Name": "Turbine",
                     "Paintable": "true"
@@ -4236,8 +4518,20 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2002,
+                    "Name": "Decenium",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2005,
                     "Name": "Moko",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2013,
+                    "Name": "MainStreet",
                     "Paintable": "true"
                 },
                 {
@@ -4644,6 +4938,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3307,
+                    "Name": "Generator I",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3313,
                     "Name": "Finny",
                     "Paintable": "true"
@@ -4655,6 +4955,15 @@
                     "HasSpecialEditions": "true",
                     "ItemID": 3314,
                     "Name": "Zowie",
+                    "Paintable": "true"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        3
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 3317,
+                    "Name": "Metalwork",
                     "Paintable": "true"
                 },
                 {
@@ -4685,6 +4994,12 @@
                     "Paintable": "true"
                 },
                 {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3343,
+                    "Name": "Tungsten",
+                    "Paintable": "true"
+                },
+                {
                     "AvailableSpecialEditions": [
                         2
                     ],
@@ -4697,6 +5012,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3366,
                     "Name": "Hot Hot Wheels",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3368,
+                    "Name": "Celestial I",
                     "Paintable": "false"
                 },
                 {
@@ -4724,6 +5045,15 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3383,
                     "Name": "Demon Disc",
+                    "Paintable": "true"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        1
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 3438,
+                    "Name": "Galvan",
                     "Paintable": "true"
                 },
                 {
@@ -4761,6 +5091,12 @@
                     "ItemID": 3501,
                     "Name": "Mothership",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3512,
+                    "Name": "Visionary",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -4839,8 +5175,20 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3629,
+                    "Name": "Ulterior",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3696,
                     "Name": "Daemon-Kelpie",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3843,
+                    "Name": "Ved-ava I",
                     "Paintable": "true"
                 },
                 {
@@ -4871,6 +5219,99 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3901,
                     "Name": "Zowie: Infinite",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3906,
+                    "Name": "ARMR",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3925,
+                    "Name": "Bionic",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3986,
+                    "Name": "Emerald",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3995,
+                    "Name": "Generator II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4000,
+                    "Name": "Metalwork: Inverted",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4001,
+                    "Name": "Galvan: Holographic",
+                    "Paintable": "true"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        5
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 4032,
+                    "Name": "Polaris",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4065,
+                    "Name": "Ved-ava II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4071,
+                    "Name": "Celestial II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4074,
+                    "Name": "Shazam!",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4112,
+                    "Name": "Polaris: Remix",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4116,
+                    "Name": "Usurper",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4122,
+                    "Name": "Apex",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4124,
+                    "Name": "Zomba",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4128,
+                    "Name": "Usurper",
                     "Paintable": "true"
                 }
             ],
@@ -5589,8 +6030,38 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3796,
+                    "Name": "Baseball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3808,
                     "Name": "Glitch",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3957,
+                    "Name": "Slash Beam I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3958,
+                    "Name": "Slash Beam II",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3959,
+                    "Name": "Slash Beam III",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4053,
+                    "Name": "Cold Fusion",
                     "Paintable": "true"
                 }
             ],
@@ -6072,8 +6543,28 @@
                     "Name": "Super Manga-Bolt III"
                 },
                 {
+                    "ItemID": 3796,
+                    "Name": "Baseball"
+                },
+                {
                     "ItemID": 3808,
                     "Name": "Glitch"
+                },
+                {
+                    "ItemID": 3957,
+                    "Name": "Slash Beam I"
+                },
+                {
+                    "ItemID": 3958,
+                    "Name": "Slash Beam II"
+                },
+                {
+                    "ItemID": 3959,
+                    "Name": "Slash Beam III"
+                },
+                {
+                    "ItemID": 4053,
+                    "Name": "Cold Fusion"
                 }
             ],
             "Name": "BoostSound",
@@ -6623,12 +7114,6 @@
                 },
                 {
                     "HasSpecialEditions": "false",
-                    "ItemID": 198,
-                    "Name": "Chinese Taipei",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
                     "ItemID": 199,
                     "Name": "Thailand",
                     "Paintable": "false"
@@ -6762,7 +7247,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 265,
-                    "Name": "Country Flags",
+                    "Name": "International Flags",
                     "Paintable": "false"
                 },
                 {
@@ -7687,12 +8172,6 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 595,
                     "Name": "Fuzzy Vamp",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "ItemID": 608,
-                    "Name": "Polaris",
                     "Paintable": "false"
                 },
                 {
@@ -9149,6 +9628,156 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3639,
+                    "Name": "Fortune Fan",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3658,
+                    "Name": "Arizona Diamondbacks",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3659,
+                    "Name": "Atlanta Braves",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3660,
+                    "Name": "Baltimore Orioles",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3661,
+                    "Name": "Boston Red Sox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3664,
+                    "Name": "Cincinnati Reds",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3665,
+                    "Name": "Cleveland Indians",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3666,
+                    "Name": "Colorado Rockies",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3667,
+                    "Name": "Detroit Tigers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3668,
+                    "Name": "Houston Astros",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3669,
+                    "Name": "Kansas City Royals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3672,
+                    "Name": "Miami Marlins",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3673,
+                    "Name": "Milwaukee Brewers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3674,
+                    "Name": "Minnesota Twins",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3676,
+                    "Name": "Oakland Athletics",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3677,
+                    "Name": "Philadelphia Phillies",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3678,
+                    "Name": "Pittsburgh Pirates",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3679,
+                    "Name": "San Diego Padres",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3680,
+                    "Name": "Seattle Mariners",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3681,
+                    "Name": "San Francisco Giants",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3682,
+                    "Name": "St. Louis Cardinals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3683,
+                    "Name": "Tampa Bay Rays",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3684,
+                    "Name": "Texas Rangers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3685,
+                    "Name": "Toronto Blue Jays",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3686,
+                    "Name": "Washington Nationals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3706,
                     "Name": "CloudNone",
                     "Paintable": "false"
@@ -9181,6 +9810,90 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3711,
                     "Name": "SMLE",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3857,
+                    "Name": "Sparkler III",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3926,
+                    "Name": "Major League Baseball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3928,
+                    "Name": "Chicago Cubs",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3929,
+                    "Name": "Chicago White Sox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3930,
+                    "Name": "Los Angeles Angels",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3931,
+                    "Name": "Los Angeles Dodgers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3932,
+                    "Name": "New York Mets",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3933,
+                    "Name": "New York Yankees",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3934,
+                    "Name": "Major League Baseball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4120,
+                    "Name": "Sparkler I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4121,
+                    "Name": "Sparkler II",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4156,
+                    "Name": "FWLR",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4157,
+                    "Name": "Notaker",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4167,
+                    "Name": "Chinese Taipei",
                     "Paintable": "false"
                 }
             ],
@@ -10031,6 +10744,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2516,
+                    "Name": "Battle Axe",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2559,
                     "Name": "Mr. Pineapple",
                     "Paintable": "false"
@@ -10051,6 +10770,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2608,
                     "Name": "Goldfish",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2615,
+                    "Name": "Turtle Shell",
                     "Paintable": "true"
                 },
                 {
@@ -10111,6 +10836,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2824,
                     "Name": "Great White",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2829,
+                    "Name": "Hammerhead",
                     "Paintable": "false"
                 },
                 {
@@ -10223,6 +10954,18 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3376,
+                    "Name": "Salty",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3379,
+                    "Name": "Snare Drum",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3396,
                     "Name": "Monstercat Uncaged",
                     "Paintable": "false"
@@ -10292,6 +11035,216 @@
                     "ItemID": 3592,
                     "Name": "Drone III",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3712,
+                    "Name": "Arizona Diamondbacks",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3713,
+                    "Name": "Atlanta Braves",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3714,
+                    "Name": "Baltimore Orioles",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3715,
+                    "Name": "Boston Red Sox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3717,
+                    "Name": "Cincinnati Reds",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3718,
+                    "Name": "Cleveland Indians",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3719,
+                    "Name": "Colorado Rockies",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3721,
+                    "Name": "Detroit Tigers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3722,
+                    "Name": "Miami Marlins",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3723,
+                    "Name": "Houston Astros",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3724,
+                    "Name": "Kansas City Royals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3727,
+                    "Name": "Milwaukee Brewers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3728,
+                    "Name": "Minnesota Twins",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3731,
+                    "Name": "Oakland Athletics",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3732,
+                    "Name": "Philadelphia Phillies",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3733,
+                    "Name": "Pittsburgh Pirates",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3734,
+                    "Name": "San Diego Padres",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3735,
+                    "Name": "Seattle Mariners",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3736,
+                    "Name": "San Francisco Giants",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3737,
+                    "Name": "St. Louis Cardinals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3738,
+                    "Name": "Tampa Bay Rays",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3739,
+                    "Name": "Texas Rangers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3740,
+                    "Name": "Toronto Blue Jays",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3745,
+                    "Name": "Washington Nationals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3757,
+                    "Name": "Periscope",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3805,
+                    "Name": "Shamrock",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3907,
+                    "Name": "UFO I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3908,
+                    "Name": "UFO II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3935,
+                    "Name": "Chicago Cubs",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3936,
+                    "Name": "Chicago White Sox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3937,
+                    "Name": "Los Angeles Angels",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3938,
+                    "Name": "Los Angeles Dodgers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3939,
+                    "Name": "New York Mets",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3940,
+                    "Name": "New York Yankees",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3942,
+                    "Name": "Major League Baseball",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Topper",
@@ -10524,6 +11477,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3747,
                     "Name": "Straight-Line",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3749,
+                    "Name": "Glitter",
                     "Paintable": "false"
                 }
             ],
@@ -11172,6 +12131,12 @@
                     "ItemID": 3646,
                     "Name": "Golden Gift",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4049,
+                    "Name": "Premium",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Crates",
@@ -11399,6 +12364,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3747,
                     "Name": "Straight-Line",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3749,
+                    "Name": "Glitter",
                     "Paintable": "false"
                 }
             ],
@@ -11850,6 +12821,30 @@
                     "ItemID": 3485,
                     "Name": "R/C",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4075,
+                    "Name": "Electric Saw",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4076,
+                    "Name": "String Trimmer",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4117,
+                    "Name": "Guardian",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4129,
+                    "Name": "Helicopter",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Engine Audio",
@@ -11969,7 +12964,7 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2704,
                     "Name": "EQ",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -12054,6 +13049,24 @@
                     "ItemID": 3577,
                     "Name": "Tachyon III",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3954,
+                    "Name": "Hack Swerve III",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4011,
+                    "Name": "Hack Swerve I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4012,
+                    "Name": "Hack Swerve II",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Trail",
@@ -12179,7 +13192,7 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2791,
                     "Name": "Ballistic",
-                    "Paintable": "false"
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -12275,6 +13288,24 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3525,
                     "Name": "Quasar III",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3951,
+                    "Name": "Poof",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3974,
+                    "Name": "Force Razor I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3975,
+                    "Name": "Force Razor II",
                     "Paintable": "true"
                 }
             ],
@@ -12603,6 +13634,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2518,
+                    "Name": "Sticker Shock",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2519,
                     "Name": "Rockat",
                     "Paintable": "false"
@@ -12611,6 +13648,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2520,
                     "Name": "Gold-Plated",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2524,
+                    "Name": "Blueprint II",
                     "Paintable": "false"
                 },
                 {
@@ -12761,6 +13804,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2585,
                     "Name": "Holiday Gifts",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2607,
+                    "Name": "Aloha",
                     "Paintable": "false"
                 },
                 {
@@ -12987,6 +14036,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3167,
+                    "Name": "Ink Wash",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3188,
                     "Name": "Birthday Bash",
                     "Paintable": "false"
@@ -13085,6 +14140,306 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3593,
                     "Name": "Frostline",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3631,
+                    "Name": "Mister Monsoon",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3633,
+                    "Name": "Ripped Comic",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3650,
+                    "Name": "Geometry X",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3651,
+                    "Name": "Hydrographic",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3764,
+                    "Name": "Major League Baseball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3765,
+                    "Name": "Atlanta Braves",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3766,
+                    "Name": "Arizona Diamondbacks",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3767,
+                    "Name": "Baltimore Orioles",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3768,
+                    "Name": "Boston Red Sox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3770,
+                    "Name": "Cincinnati Reds",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3771,
+                    "Name": "Cleveland Indians",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3772,
+                    "Name": "Colorado Rockies",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3774,
+                    "Name": "Detroit Tigers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3775,
+                    "Name": "Houston Astros",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3776,
+                    "Name": "Kansas City Royals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3779,
+                    "Name": "Miami Marlins",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3780,
+                    "Name": "Milwaukee Brewers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3781,
+                    "Name": "Minnesota Twins",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3784,
+                    "Name": "Oakland Athletics",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3785,
+                    "Name": "Philadelphia Phillies",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3786,
+                    "Name": "Pittsburgh Pirates",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3787,
+                    "Name": "San Diego Padres",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3788,
+                    "Name": "Seattle Mariners",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3789,
+                    "Name": "San Francisco Giants",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3790,
+                    "Name": "St. Louis Cardinals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3791,
+                    "Name": "Tampa Bay Rays",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3792,
+                    "Name": "Texas Rangers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3793,
+                    "Name": "Toronto Blue Jays",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3794,
+                    "Name": "Washington Nationals",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3943,
+                    "Name": "Los Angeles Angels",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3944,
+                    "Name": "Los Angeles Dodgers",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3945,
+                    "Name": "New York Mets",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3946,
+                    "Name": "New York Yankees",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3947,
+                    "Name": "Major League Baseball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3948,
+                    "Name": "Chicago Cubs",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3949,
+                    "Name": "Chicago White Sox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4004,
+                    "Name": "Fighter Junk",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4005,
+                    "Name": "Retro Fresh",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4080,
+                    "Name": "Cloud9",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4081,
+                    "Name": "Dignitas",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4082,
+                    "Name": "Evil Geniuses",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4085,
+                    "Name": "G2 Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4086,
+                    "Name": "Ghost Gaming",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4087,
+                    "Name": "Mousesports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4088,
+                    "Name": "NRG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4089,
+                    "Name": "PSG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4091,
+                    "Name": "Rogue",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4092,
+                    "Name": "Splyce",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4093,
+                    "Name": "Team SoloMid",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4094,
+                    "Name": "Team Vitality",
                     "Paintable": "false"
                 }
             ],
@@ -13389,6 +14744,24 @@
                     "ItemID": 3298,
                     "Name": "XP Level 1800",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3864,
+                    "Name": "Fire Main",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4002,
+                    "Name": "Crown",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4003,
+                    "Name": "Damaged",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Avatar Border",
@@ -13405,6 +14778,84 @@
             ],
             "Name": "Player Title",
             "SlotID": 21
+        },
+        {
+            "Items": [
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4097,
+                    "Name": "Cloud9",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4098,
+                    "Name": "Dignitas",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4099,
+                    "Name": "Evil Geniuses",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4102,
+                    "Name": "G2 Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4103,
+                    "Name": "Ghost Gaming",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4104,
+                    "Name": "Mousesports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4105,
+                    "Name": "NRG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4106,
+                    "Name": "PSG Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4108,
+                    "Name": "Team Vitality",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4110,
+                    "Name": "Splyce",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4114,
+                    "Name": "Rogue",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4115,
+                    "Name": "Team SoloMid",
+                    "Paintable": "false"
+                }
+            ],
+            "Name": "ESportsTeam",
+            "SlotID": 22
         },
         {
             "Items": [],
@@ -13434,6 +14885,10 @@
         {
             "ID": 3,
             "Name": "Inverted"
+        },
+        {
+            "ID": 5,
+            "Name": "Remixed"
         }
     ]
 }
