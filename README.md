@@ -1,5 +1,10 @@
 # AlphaConsoleElectron
 
+
+# MASTER BRANCH INACTIVE DO NOT CREATE A PULL REQUEST
+The UI is currently under redevelopment using Electron, React & Typescript. A PSA will be sent out when the ui is available for public contribution. 
+
+
 ## About 
 
 This is the AlphaConsole UI. Originally written in c#.net but now moved to Electron where we can get a more custom UI.
