@@ -338,7 +338,7 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 2268,
                     "Name": "'70 Dodge Charger R/T",
-                    "Paintable": "true"
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -3925,13 +3925,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 4054,
-                    "Name": "Dominus: Team SoloMid",
+                    "Name": "Dominus: TSM",
                     "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 4055,
-                    "Name": "Octane: Team SoloMid",
+                    "Name": "Octane: TSM",
                     "Paintable": "false"
                 },
                 {
@@ -3950,7 +3950,7 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4070,
                     "Name": "Octane: Shazam!",
-                    "Paintable": "true"
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -4355,7 +4355,10 @@
                     "Paintable": "false"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        1
+                    ],
+                    "HasSpecialEditions": "true",
                     "ItemID": 1661,
                     "Name": "Draco",
                     "Paintable": "true"
@@ -4453,7 +4456,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 1918,
-                    "Name": "M8",
+                    "Name": "Sovereign",
                     "Paintable": "true"
                 },
                 {
@@ -5191,7 +5194,7 @@
                     "Name": "Ved-ava I",
                     "Paintable": "true"
                 },
-                {
+				{
                     "HasSpecialEditions": "false",
                     "ItemID": 3897,
                     "Name": "Sprocket: Infinite",
@@ -5234,7 +5237,10 @@
                     "Paintable": "true"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
                     "ItemID": 3986,
                     "Name": "Emerald",
                     "Paintable": "true"
@@ -6061,7 +6067,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 4053,
-                    "Name": "Cold Fusion",
+                    "Name": "Fusion",
                     "Paintable": "true"
                 }
             ],
@@ -6564,7 +6570,7 @@
                 },
                 {
                     "ItemID": 4053,
-                    "Name": "Cold Fusion"
+                    "Name": "Fusion"
                 }
             ],
             "Name": "BoostSound",
@@ -9895,6 +9901,24 @@
                     "ItemID": 4167,
                     "Name": "Chinese Taipei",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4205,
+                    "Name": "Julian Calor",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4206,
+                    "Name": "Snavs",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4207,
+                    "Name": "Xilent",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Antenna",
@@ -12137,6 +12161,18 @@
                     "ItemID": 4049,
                     "Name": "Premium",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4263,
+                    "Name": "Crate - Totally Awesome",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4299,
+                    "Name": "Golden Egg",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Crates",
@@ -13298,6 +13334,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3952,
+                    "Name": "Season 10 - Bronze",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3974,
                     "Name": "Force Razor I",
                     "Paintable": "false"
@@ -13307,6 +13349,42 @@
                     "ItemID": 3975,
                     "Name": "Force Razor II",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3976,
+                    "Name": "Season 10 - Silver",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3977,
+                    "Name": "Season 10 - Gold",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3978,
+                    "Name": "Season 10 - Platinum",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3979,
+                    "Name": "Season 10 - Diamond",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3980,
+                    "Name": "Season 10 - Champion",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4158,
+                    "Name": "Season 10 - Grand Champion",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Goal Explosion",
@@ -14433,7 +14511,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 4093,
-                    "Name": "Team SoloMid",
+                    "Name": "TSM",
                     "Paintable": "false"
                 },
                 {
@@ -14850,7 +14928,7 @@
                 {
                     "HasSpecialEditions": "false",
                     "ItemID": 4115,
-                    "Name": "Team SoloMid",
+                    "Name": "TSM",
                     "Paintable": "false"
                 }
             ],
