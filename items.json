@@ -501,6 +501,24 @@
                     "ItemID": 4284,
                     "Name": "Fennec",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4318,
+                    "Name": "Mudcat",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4319,
+                    "Name": "Mudcat G1",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4320,
+                    "Name": "Mudcat GXT",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Body",
@@ -3516,6 +3534,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3405,
+                    "Name": "Octane: Edge Star",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3418,
                     "Name": "Octane: Trick or Treat",
                     "Paintable": "false"
@@ -3567,6 +3591,12 @@
                     "ItemID": 3467,
                     "Name": "Snowstorm",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3469,
+                    "Name": "Formation",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -3663,6 +3693,12 @@
                     "ItemID": 3537,
                     "Name": "Diestro: Chitchat",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3556,
+                    "Name": "Octane: Killer Griller",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -3768,6 +3804,18 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3828,
+                    "Name": "Dominus: Funky Medusa",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3830,
+                    "Name": "Dominus: Nightmare Fuel",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3831,
                     "Name": "Dominus: Skewered",
                     "Paintable": "true"
@@ -3812,7 +3860,7 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3883,
                     "Name": "Octane: Cloud9",
-                    "Paintable": "true"
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -3828,8 +3876,26 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3918,
+                    "Name": "Dominus: Whitewash",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3922,
                     "Name": "Octane: Vaporwave",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3923,
+                    "Name": "Octane: Conundrum",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3924,
+                    "Name": "Octane: Bleep-Bleep",
                     "Paintable": "true"
                 },
                 {
@@ -3861,6 +3927,12 @@
                     "ItemID": 3972,
                     "Name": "Guardian: Thunderbolt",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3981,
+                    "Name": "Hydro Paint",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -3912,6 +3984,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4008,
+                    "Name": "Octane: Metarudia",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4009,
                     "Name": "Octane: PSG Esports",
                     "Paintable": "false"
@@ -3924,9 +4002,21 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4015,
+                    "Name": "Breakout: Bomb Out",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4023,
                     "Name": "Dominus: Splyce",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4024,
+                    "Name": "Octane: Cannon Baller",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -4038,6 +4128,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4227,
+                    "Name": "Flash Freeze",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4285,
                     "Name": "Fennec: Nitty-Gritty",
                     "Paintable": "false"
@@ -4076,6 +4172,78 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4301,
                     "Name": "Octane: Ultimate Warrior",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4321,
+                    "Name": "Mudcat: Wide Stripe",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4322,
+                    "Name": "Mudcat: Blockout",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4323,
+                    "Name": "Mudcat: Stripes",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4325,
+                    "Name": "Mudcat: Winner's Circle",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4329,
+                    "Name": "Mudcat: Racing Bolt",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4332,
+                    "Name": "Mudcat: Drifter",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4364,
+                    "Name": "Upstream",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4445,
+                    "Name": "Mudcat: RL Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4446,
+                    "Name": "Dominus: RL Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4447,
+                    "Name": "Octane: RL Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4457,
+                    "Name": "Breakout: RL Esports",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4462,
+                    "Name": "Octane: Kana",
                     "Paintable": "false"
                 }
             ],
@@ -4737,6 +4905,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2647,
+                    "Name": "FLT",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2661,
                     "Name": "The Flash",
                     "Paintable": "false"
@@ -5061,6 +5235,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3299,
+                    "Name": "Shutterbug",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3307,
                     "Name": "Generator I",
                     "Paintable": "true"
@@ -5226,6 +5406,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3505,
+                    "Name": "Zhou GFP",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3512,
                     "Name": "Visionary",
                     "Paintable": "true"
@@ -5235,6 +5421,12 @@
                     "ItemID": 3530,
                     "Name": "Plasmatic",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3538,
+                    "Name": "High Poly",
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -5325,6 +5517,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3877,
+                    "Name": "Cephalo",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3887,
                     "Name": "Blender",
                     "Paintable": "true"
@@ -5369,6 +5567,24 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3925,
                     "Name": "Bionic",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3960,
+                    "Name": "Philoscope I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3961,
+                    "Name": "Philoscope II",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3962,
+                    "Name": "Philoscope III",
                     "Paintable": "true"
                 },
                 {
@@ -5418,6 +5634,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4050,
+                    "Name": "Gyre",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4065,
                     "Name": "Ved-ava II",
                     "Paintable": "true"
@@ -5430,6 +5652,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4073,
+                    "Name": "MetalStar",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4074,
                     "Name": "Shazam!",
                     "Paintable": "false"
@@ -5438,6 +5666,15 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4112,
                     "Name": "Polaris: Remix",
+                    "Paintable": "true"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 4113,
+                    "Name": "DRN",
                     "Paintable": "true"
                 },
                 {
@@ -5454,14 +5691,14 @@
                 },
                 {
                     "HasSpecialEditions": "false",
-                    "ItemID": 4124,
-                    "Name": "Zomba",
+                    "ItemID": 4128,
+                    "Name": "Usurper",
                     "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
-                    "ItemID": 4128,
-                    "Name": "Usurper",
+                    "ItemID": 4131,
+                    "Name": "Patriarch",
                     "Paintable": "true"
                 },
                 {
@@ -5484,6 +5721,27 @@
                     "ItemID": 4176,
                     "Name": "E.T.",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4185,
+                    "Name": "Collateral",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4200,
+                    "Name": "Mendoza",
+                    "Paintable": "true"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        3
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 4201,
+                    "Name": "Camo",
+                    "Paintable": "true"
                 },
                 {
                     "AvailableSpecialEditions": [
@@ -5525,15 +5783,57 @@
                     "Paintable": "false"
                 },
                 {
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 4269,
+                    "Name": "Irradiator",
+                    "Paintable": "true"
+                },
+                {
                     "HasSpecialEditions": "false",
                     "ItemID": 4280,
                     "Name": "Sunset 1986",
                     "Paintable": "false"
                 },
                 {
+                    "AvailableSpecialEditions": [
+                        3
+                    ],
+                    "HasSpecialEditions": "true",
+                    "ItemID": 4313,
+                    "Name": "Automaton",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4314,
+                    "Name": "Automaton: Inverted",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4326,
+                    "Name": "Irradiator: Infinite",
+                    "Paintable": "true"
+                },
+                {
                     "HasSpecialEditions": "false",
                     "ItemID": 4339,
                     "Name": "Emerald Pro",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4347,
+                    "Name": "DRN: Infinite",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4370,
+                    "Name": "Camo: Inverted",
                     "Paintable": "true"
                 }
             ],
@@ -6156,6 +6456,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3053,
+                    "Name": "Watermelon",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3114,
                     "Name": "Virtual Wave",
                     "Paintable": "true"
@@ -6306,6 +6612,48 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4160,
+                    "Name": "Season 11 - Bronze",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4161,
+                    "Name": "Season 11 - Silver",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4162,
+                    "Name": "Season 11 - Gold",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4163,
+                    "Name": "Season 11 - Platinum",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4164,
+                    "Name": "Season 11 - Diamond",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4165,
+                    "Name": "Season 11 - Champion",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4166,
+                    "Name": "Season 11 - Grand Champion",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4188,
                     "Name": "K.I.T.T.",
                     "Paintable": "false"
@@ -6318,9 +6666,27 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4298,
+                    "Name": "Fiber Optic II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4330,
                     "Name": "Vaporwave",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4340,
+                    "Name": "Racer Flames",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4452,
+                    "Name": "Fiber Optic I",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Rocket Boost",
@@ -6737,6 +7103,10 @@
                     "Name": "Cirrus"
                 },
                 {
+                    "ItemID": 3053,
+                    "Name": "Watermelon"
+                },
+                {
                     "ItemID": 3114,
                     "Name": "Virtual Wave"
                 },
@@ -6837,6 +7207,34 @@
                     "Name": "Krackle"
                 },
                 {
+                    "ItemID": 4160,
+                    "Name": "Season 11 - Bronze"
+                },
+                {
+                    "ItemID": 4161,
+                    "Name": "Season 11 - Silver"
+                },
+                {
+                    "ItemID": 4162,
+                    "Name": "Season 11 - Gold"
+                },
+                {
+                    "ItemID": 4163,
+                    "Name": "Season 11 - Platinum"
+                },
+                {
+                    "ItemID": 4164,
+                    "Name": "Season 11 - Diamond"
+                },
+                {
+                    "ItemID": 4165,
+                    "Name": "Season 11 - Champion"
+                },
+                {
+                    "ItemID": 4166,
+                    "Name": "Season 11 - Grand Champion"
+                },
+                {
                     "ItemID": 4188,
                     "Name": "K.I.T.T."
                 },
@@ -6845,8 +7243,20 @@
                     "Name": "Voltron"
                 },
                 {
+                    "ItemID": 4298,
+                    "Name": "Fiber Optic II"
+                },
+                {
                     "ItemID": 4330,
                     "Name": "Vaporwave"
+                },
+                {
+                    "ItemID": 4340,
+                    "Name": "Racer Flames"
+                },
+                {
+                    "ItemID": 4452,
+                    "Name": "Fiber Optic I"
                 }
             ],
             "Name": "BoostSound",
@@ -10102,6 +10512,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3911,
+                    "Name": "Floppy Disk",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3926,
                     "Name": "Major League Baseball",
                     "Paintable": "false"
@@ -10146,6 +10562,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3934,
                     "Name": "Major League Baseball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4058,
+                    "Name": "Bell",
                     "Paintable": "false"
                 },
                 {
@@ -10204,6 +10626,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4349,
+                    "Name": "DESERT STAR",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4350,
                     "Name": "Ephixa & Heartful",
                     "Paintable": "false"
@@ -10231,6 +10659,30 @@
                     "ItemID": 4354,
                     "Name": "WRLD",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4362,
+                    "Name": "Victory Hand",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4368,
+                    "Name": "Big Checker",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4450,
+                    "Name": "Fenrir I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4451,
+                    "Name": "Fenrir II",
+                    "Paintable": "true"
                 }
             ],
             "Name": "Antenna",
@@ -11164,6 +11616,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2814,
+                    "Name": "Silent Panda",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2816,
                     "Name": "Buzzer",
                     "Paintable": "false"
@@ -11191,6 +11649,12 @@
                     "ItemID": 2883,
                     "Name": "Snail",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 2929,
+                    "Name": "Sea Turtle",
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -11374,6 +11838,18 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3688,
+                    "Name": "Flying Carpet",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3697,
+                    "Name": "Lunchbox",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3712,
                     "Name": "Arizona Diamondbacks",
                     "Paintable": "false"
@@ -11512,6 +11988,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3741,
+                    "Name": "S'more",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3745,
                     "Name": "Washington Nationals",
                     "Paintable": "false"
@@ -11527,6 +12009,18 @@
                     "ItemID": 3805,
                     "Name": "Shamrock",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3807,
+                    "Name": "Flower - Lotus",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3810,
+                    "Name": "Starfish",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -11614,6 +12108,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4059,
+                    "Name": "Dayne's Cake",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4069,
                     "Name": "K.I.T.T. Gullwing",
                     "Paintable": "false"
@@ -11676,6 +12176,24 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4308,
                     "Name": "Voltron",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4343,
+                    "Name": "Qilin Horns II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4355,
+                    "Name": "Roof Rack",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4453,
+                    "Name": "Qilin Horns I",
                     "Paintable": "false"
                 }
             ],
@@ -11921,6 +12439,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4127,
                     "Name": "Anodized Pearl",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4391,
+                    "Name": "Obsidian",
                     "Paintable": "false"
                 }
             ],
@@ -12587,6 +13111,12 @@
                     "ItemID": 4299,
                     "Name": "Golden Egg",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4460,
+                    "Name": "Crate - Vindicator",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Crates",
@@ -12826,6 +13356,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4127,
                     "Name": "Anodized Pearl",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4391,
+                    "Name": "Obsidian",
                     "Paintable": "false"
                 }
             ],
@@ -13310,6 +13846,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 4267,
+                    "Name": "Mudcat",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 4295,
                     "Name": "Fennec",
                     "Paintable": "false"
@@ -13318,6 +13860,24 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4324,
                     "Name": "K.I.T.T.",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4327,
+                    "Name": "Dirt Bike",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4359,
+                    "Name": "Rally",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4416,
+                    "Name": "UTV",
                     "Paintable": "false"
                 }
             ],
@@ -13442,6 +14002,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 2724,
+                    "Name": "Flowers",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 2737,
                     "Name": "Rainbow",
                     "Paintable": "false"
@@ -13540,6 +14106,18 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4012,
                     "Name": "Hack Swerve II",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4229,
+                    "Name": "Rally Tracks II",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4338,
+                    "Name": "Rally Tracks I",
                     "Paintable": "false"
                 }
             ],
@@ -13784,6 +14362,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3953,
+                    "Name": "Big Splash",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3974,
                     "Name": "Force Razor I",
                     "Paintable": "false"
@@ -13840,6 +14424,24 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 4179,
                     "Name": "Voxel",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4218,
+                    "Name": "Dust Cloud",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4377,
+                    "Name": "Wall Breaker I",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4378,
+                    "Name": "Wall Breaker II",
                     "Paintable": "true"
                 }
             ],
@@ -15017,6 +15619,66 @@
                     "ItemID": 4388,
                     "Name": "Vaporwave",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4417,
+                    "Name": "Broken Glass",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4418,
+                    "Name": "Checkered Flag",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4419,
+                    "Name": "Copper Crisis",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4420,
+                    "Name": "Good Piston",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4421,
+                    "Name": "Scratched",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4422,
+                    "Name": "Venom Ride",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4423,
+                    "Name": "Racing Star",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4424,
+                    "Name": "Sunstruck",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4429,
+                    "Name": "Avant-Garde",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 4438,
+                    "Name": "Neon Runner",
+                    "Paintable": "false"
                 }
             ],
             "Name": "Player Banner",
@@ -15043,6 +15705,12 @@
                     "HasSpecialEditions": "false",
                     "ItemID": 3085,
                     "Name": "Default",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "ItemID": 3176,
+                    "Name": "Flame",
                     "Paintable": "false"
                 },
                 {
@@ -15323,6 +15991,12 @@
                 },
                 {
                     "HasSpecialEditions": "false",
+                    "ItemID": 3350,
+                    "Name": "Paladin",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
                     "ItemID": 3864,
                     "Name": "Fire Main",
                     "Paintable": "false"
@@ -15447,6 +16121,16 @@
         },
         {
             "Items": [],
+            "Name": "Archived Items",
+            "SlotID": 23
+        },
+        {
+            "Items": [],
+            "Name": "All",
+            "SlotID": 0
+        },
+        {
+            "Items": [],
             "Name": "Ball",
             "SlotID": -2
         },
@@ -15477,6 +16161,10 @@
         {
             "ID": 5,
             "Name": "Remixed"
+        },
+        {
+            "ID": 6,
+            "Name": "Color Match"
         }
     ]
 }
