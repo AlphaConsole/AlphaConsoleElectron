@@ -2,6 +2,7 @@ const {app, BrowserWindow} = require('electron');
 const { ipcMain } = require('electron');
 const path = require('path')
 const url = require('url')
+const isDev = require('electron-is-dev');
 const autoUpdater = require("electron-updater").autoUpdater
 var log = require("electron-log")
 
@@ -10,22 +11,29 @@ var log = require("electron-log")
   let mainWindow
 autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = "info"
+if (isDev) {
+  autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
+}
 autoUpdater.on("checking-for-update", function (_arg1) {
     return log.info("Checking for update...");
 });
 autoUpdater.on("update-available", function (_arg2) {
+    mainWindow.webContents.send("check-for-updates-response-updating");
     return log.info("Update available.");
 });
 autoUpdater.on("update-not-available", function (_arg3) {
+    mainWindow.webContents.send("check-for-updates-response-none");
     return log.info("Update not available.");
 });
 autoUpdater.on("error", function (err) {
     return log.info("Error in auto-updater. " + err);
 });
 autoUpdater.on("download-progress", function (progressObj) {
+    mainWindow.webContents.send("check-for-updates-response-updating");
     return log.info("Downloading update.");
 });
 autoUpdater.on("update-downloaded", function (_arg4) {    
+    mainWindow.webContents.send("check-for-updates-response-updating");
     autoUpdater.quitAndInstall(); 
     return log.info("Update downloaded.");
 }); 
@@ -74,7 +82,7 @@ autoUpdater.on("update-downloaded", function (_arg4) {
   // Some APIs can only be used after this event occurs.
   app.on('ready', createWindow)
   app.on("ready", function () {
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.checkForUpdates();
   });
   // Quit when all windows are closed.
   app.on('window-all-closed', () => {
@@ -103,7 +111,8 @@ mainWindow.webContents.executeJavaScript("SaveConfiguration()");
 
   ipcMain.on('check-for-updates', () => {
     console.log("checking for updates");
-    autoUpdater.checkForUpdatesAndNotify();
+    mainWindow.webContents.send("check-for-updates-response-checking");
+    autoUpdater.checkForUpdates();
   });
 
   ipcMain.on('alwaystop', (event, arg) => {

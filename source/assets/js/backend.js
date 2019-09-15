@@ -897,13 +897,30 @@ $("#button-check-for-updates").on("click", function(){
 });
 
 
-
 $("#preset-name").on("input", function () {
   $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
 });
 
 
 $(document).ready(function () {
+  ipcRenderer.on("check-for-updates-response-none", function() {
+    console.log("renderer on check none");
+    $("#button-check-for-updates").text("No Updates!");
+    setTimeout(function() {
+      $("#button-check-for-updates").text("Update!");
+    }, 2000);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-updating", function() {
+    console.log("renderer on check updating");
+    $("#button-check-for-updates").text("Updating...");
+  });
+  
+  ipcRenderer.on("check-for-updates-response-checking", function() {
+    console.log("renderer on check search");
+    $("#button-check-for-updates").text("Searching...");
+  });
+  
   $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
   $('.reset-input').on('click', function () {    
     if(SyncTeams) {
