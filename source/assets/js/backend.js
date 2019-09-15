@@ -904,20 +904,21 @@ $("#preset-name").on("input", function () {
 
 $(document).ready(function () {
   ipcRenderer.on("check-for-updates-response-none", function() {
-    console.log("renderer on check none");
     $("#button-check-for-updates").text("No Updates!");
     setTimeout(function() {
       $("#button-check-for-updates").text("Update!");
     }, 2000);
   });
   
-  ipcRenderer.on("check-for-updates-response-updating", function() {
-    console.log("renderer on check updating");
-    $("#button-check-for-updates").text("Updating...");
+  ipcRenderer.on("check-for-updates-response-download", function(event, downloadPercentage) {
+    $("#button-check-for-updates").text(`${downloadPercentage} downloaded`);
+  });
+
+  ipcRenderer.on("check-for-updates-response-downloaded", function() {
+    $("#button-check-for-updates").text(`Installing...`);
   });
   
   ipcRenderer.on("check-for-updates-response-checking", function() {
-    console.log("renderer on check search");
     $("#button-check-for-updates").text("Searching...");
   });
   
