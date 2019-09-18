@@ -592,7 +592,8 @@
 		"DisplayMMR": true,
 		"UnrankedMMR": true,
 		"UploadMatchData": true,
-		"TeamTotal": false
+		"TeamTotal": false,
+		"DisplayTotalMMRChange": true
 	},
 	"DiscordOptions": {
 		"RichPresenceLevel": null
