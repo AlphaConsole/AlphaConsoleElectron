@@ -780,7 +780,8 @@
 		"UploadMatchData": true,
 		"TeamTotal": false,
 		"DisplayTeamMMR": true,
-		"AprilFools": false
+		"AprilFools": false,
+		"DisplayTotalMMRChange": true
 	},
 	"DiscordOptions": {
 		"RichPresenceLevel": 2
