@@ -355,12 +355,13 @@ function SavePreset(PresetID) {
         }
 
         // Get the current item if it has a special edition change
-        var isUpdatingSpecialEdition = $(selects[j]).parent().parent().find("input").prop('checked');
-        var item = isUpdatingSpecialEdition ? Products.Slots[i].Items.filter(function (item) { return item.ItemID === parseInt(iid[0]); }) : null;
+        var items = Products.Slots[i].Items.filter(function (item) { return item.ItemID === parseInt(iid[0]); });
 
-        Items[slotID][team].Color = parseInt($(selects[j]).parent().next("td").find("select").val()) || -1;
+        // Color ID 0 is falsy, so use isNaN check
+        var parsedColor = parseInt($(selects[j]).parent().next("td").find("select").val(), 10);
+        Items[slotID][team].Color = isNaN(parsedColor) ? -1 : parsedColor;
         Items[slotID][team].TeamEdition = parseInt($(selects[j]).parent().next("td").next("td").find("select").val()) || -1;
-        Items[slotID][team].SpecialEdition = isUpdatingSpecialEdition ? item.AvailableSpecialEditions[0] : -1;
+        Items[slotID][team].SpecialEdition = items.length > 0 && items[0].HasSpecialEditions === "true" ? items[0].AvailableSpecialEditions[0] : -1;
       }
     }
   }
@@ -422,9 +423,9 @@ function LoadPreset(ID) {
       if (slots[i].Name == "Body") {
         $("select[name='color-select']").each((index, value) => {
           var team = $(value).closest('tbody').attr("team");
-          $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']").val(GlobalACConfig.Presets[ID].Items[
-            slots[i].SlotID][team].Color);
-        })
+          $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']")
+            .val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
+        });
       }
 
       var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
@@ -434,6 +435,7 @@ function LoadPreset(ID) {
           ":" + GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].PackageSubID;
         $(selects[j]).val(valString).change();
         $(selects[j]).parent().next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
+        $(selects[j]).parent().next("td").next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].TeamEdition);
 		$(selects[j]).parent().parent().find("input").prop('checked', GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].SpecialEdition == -1 ? false : true);
 		
       }
@@ -540,8 +542,6 @@ function GetConfigurationString() {
 
   //Miscellaneous
   Config.ACPath = GetBasePath();
-
-  console.log(Config);
 
   return JSON.stringify(Config, null, "\t");
 }
@@ -950,8 +950,6 @@ const { ipcRenderer } = require('electron');
   
 $("#always-on-top").change(function () {
   
-  console.log($(this).prop('checked'));
-
   ipcRenderer.send('alwaystop', $(this).prop('checked'));  
 
 });

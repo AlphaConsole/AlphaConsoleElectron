@@ -18745,11 +18745,6 @@
         },
         {
             "Items": [],
-            "Name": "All",
-            "SlotID": 0
-        },
-        {
-            "Items": [],
             "Name": "Ball",
             "SlotID": -2
         },
