@@ -899,13 +899,31 @@ $("#button-check-for-updates").on("click", function(){
 });
 
 
-
 $("#preset-name").on("input", function () {
   $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
 });
 
 
 $(document).ready(function () {
+  ipcRenderer.on("check-for-updates-response-none", function() {
+    $("#button-check-for-updates").text("No Updates!");
+    setTimeout(function() {
+      $("#button-check-for-updates").text("Update!");
+    }, 2000);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-download", function(event, downloadPercentage) {
+    $("#button-check-for-updates").text(`${downloadPercentage} downloaded`);
+  });
+
+  ipcRenderer.on("check-for-updates-response-downloaded", function() {
+    $("#button-check-for-updates").text(`Installing...`);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-checking", function() {
+    $("#button-check-for-updates").text("Searching...");
+  });
+  
   $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
   $('.reset-input').on('click', function () {    
     if(SyncTeams) {
