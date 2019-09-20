@@ -753,6 +753,15 @@ for (var i = 0; i < slots.length; i++) {
     var items = slots[i].Items;
     items.sort(compareValues('Name'));
 
+    var itemSpecialEditions = {};
+    for (var item of items) {
+      if (item.HasSpecialEditions === "true") {
+        var editions = Products.SpecialEditions.filter(function (specialEdition) { return item.AvailableSpecialEditions.indexOf(specialEdition.ID) !== -1 });
+        var editionName = editions[0].Name;
+        itemSpecialEditions[item.Name] = editionName;
+      }
+    }
+
 
     //VANILLA ITEMS
     for (var j = 0; j < items.length; j++) {
@@ -765,14 +774,14 @@ for (var i = 0; i < slots.length; i++) {
         newOp.attr('hasTeamEditions', items[j].HasTeamEditions);
 
         var itemName = items[j].Name;
+
         // Parse Special Edition
-        if (items[j].HasSpecialEditions == "true") {
-          var editions = Products.SpecialEditions.filter(function (specialEdition) { return items[j].AvailableSpecialEditions.indexOf(specialEdition.ID) !== -1 });
-          itemName += `: ${editions[0].Name}`;
+        if (items[j].HasSpecialEditions === "false" && !!itemSpecialEditions[items[j].Name]) {
+          itemName += `: ${itemSpecialEditions[items[j].Name]}`;
         }
 
         // Parse Team Edition
-        if (items[j].HasTeamEditions == "true") {
+        if (items[j].HasTeamEditions === "true") {
           itemName += ': Team Edition';
         }
 
