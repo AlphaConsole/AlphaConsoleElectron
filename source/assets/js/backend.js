@@ -325,12 +325,13 @@ function SavePreset(PresetID) {
       if (slots[i].Name == "Body") {
         $("select[name='color-select'][special='body']").each((index, value) => {
           var team = $(value).closest('tbody').attr("team");
+          var customSelection = $(value).parent().prev().children().val();
           Items[slotID][team] = {};
-          Items[slotID][team].ItemID = -1
-          Items[slotID][team].PackageID = -1;
-          Items[slotID][team].PackageSubID = -1;
+          Items[slotID][team].ItemID = customSelection[0];
+          Items[slotID][team].PackageID = customSelection[1];
+          Items[slotID][team].PackageSubID = customSelection[2];
           Items[slotID][team].Color = parseInt($(value).val()) || -1;
-        })
+        });
       }
 
       var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
@@ -729,19 +730,21 @@ for (var i = 0; i < slots.length; i++) {
     var items = slots[i].Items;
     items.sort(compareValues('Name'));
 
+    // Ignore vanilla bodies
+    if (slots[i].Name !== "Body") {
+      //VANILLA ITEMS
+      for (var j = 0; j < items.length; j++) {
+        //Will .each fuck this up because of async?
+        $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
+          var newOp = $('<option>');
+          newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
+          newOp.attr('paintable', items[j].Paintable);
+          newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
+      newOp.text(items[j].Name);
+          $(this).append(newOp);
 
-    //VANILLA ITEMS
-    for (var j = 0; j < items.length; j++) {
-      //Will .each fuck this up because of async?
-      $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
-        var newOp = $('<option>');
-        newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
-        newOp.attr('paintable', items[j].Paintable);
-        newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
-		newOp.text(items[j].Name);
-        $(this).append(newOp);
-
-      });
+        });
+      }
     }
 
     //CUSTOM ITEMS
@@ -754,7 +757,7 @@ for (var i = 0; i < slots.length; i++) {
         newOp.attr('value', '-2:-2:-2');
         newOp.text("-----------------------------------------------------------------");   
         newOp.attr("disabled", "disabled");      
-        $(this).children(":first").after(newOp);
+        if (slots[i].Name !== "Body") $(this).children(":first").after(newOp);
       });
      
       for (var k = customitems.length-1; k >=0; k--) {         
@@ -773,7 +776,7 @@ for (var i = 0; i < slots.length; i++) {
         newOp.attr('value', '-2:-2:-2');
         newOp.text("Custom");   
         newOp.attr("disabled", "disabled");      
-        $(this).children(":first").after(newOp);
+        if (slots[i].Name !== "Body") $(this).children(":first").after(newOp);
       });
       
     }
@@ -811,11 +814,6 @@ $("input[name='special-wheel-input']").on('change', function () {
 
 
 $("[class='row teams'] select").on('change', function () {
-
-
-  var id = $(this).val().split(":")[0];
-
-
   var disableOtherPaintable = false;
   if($(this).find("option:selected").attr("Paintable") == "false"){    
 	disableOtherPaintable = true;
