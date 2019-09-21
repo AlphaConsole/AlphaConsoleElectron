@@ -435,9 +435,7 @@ function LoadPreset(ID) {
           ":" + GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].PackageSubID;
         $(selects[j]).val(valString).change();
         $(selects[j]).parent().next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
-
-        var teamEdition = GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].TeamEdition;
-        $(selects[j]).parent().next("td").next("td").find("select").val(!!teamEdition ? teamEdition : -1);
+        $(selects[j]).parent().next("td").next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].TeamEdition);
 		$(selects[j]).parent().parent().find("input").prop('checked', GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].SpecialEdition == -1 ? false : true);
 		
       }
