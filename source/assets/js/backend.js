@@ -204,7 +204,6 @@ function LoadConfiguration() {
   $("#display-teamMMR").prop('checked', Config.RankOptions.DisplayTeamMMR);
   $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
   $("#april-fools").prop('checked', Config.RankOptions.AprilFools || 0);
-  $("#display-total-mmr-change").prop('checked', Config.RankOptions.DisplayTotalMMRChange || true);
 
   //Discord rich presence options
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
@@ -514,7 +513,6 @@ function GetConfigurationString() {
   RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
   RankOptions.DisplayTeamMMR = $("#display-teamMMR").prop('checked');
   RankOptions.AprilFools = $("#april-fools").prop('checked');
-  RankOptions.DisplayTotalMMRChange = $("#display-total-mmr-change").prop('checked');
   Config.RankOptions = RankOptions;
 
   //Discord rich presence options
