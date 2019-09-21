@@ -766,32 +766,34 @@ for (var i = 0; i < slots.length; i++) {
     }
 
 
-    //VANILLA ITEMS
-    for (var j = 0; j < items.length; j++) {
-      //Will .each fuck this up because of async?
-      $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
-        var newOp = $('<option>');
-        newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
-        newOp.attr('paintable', items[j].Paintable);
-        newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
-        newOp.attr('hasTeamEditions', items[j].HasTeamEditions);
+    if (slots[i].Name !== "Body") {
+      //VANILLA ITEMS
+      for (var j = 0; j < items.length; j++) {
+        //Will .each fuck this up because of async?
+        $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
+          var newOp = $('<option>');
+          newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
+          newOp.attr('paintable', items[j].Paintable);
+          newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
+          newOp.attr('hasTeamEditions', items[j].HasTeamEditions);
 
-        var itemName = items[j].Name;
+          var itemName = items[j].Name;
 
-        // Parse Special Edition
-        if (items[j].HasSpecialEditions === "false" && !!itemSpecialEditions[items[j].Name]) {
-          itemName += `: ${itemSpecialEditions[items[j].Name]}`;
-        }
+          // Parse Special Edition
+          if (items[j].HasSpecialEditions === "false" && !!itemSpecialEditions[items[j].Name]) {
+            itemName += `: ${itemSpecialEditions[items[j].Name]}`;
+          }
 
-        // Parse Team Edition
-        if (items[j].HasTeamEditions === "true") {
-          itemName += ': Team Edition';
-        }
+          // Parse Team Edition
+          if (items[j].HasTeamEditions === "true") {
+            itemName += ': Team Edition';
+          }
 
-		    newOp.text(itemName);
-        $(this).append(newOp);
+          newOp.text(itemName);
+          $(this).append(newOp);
 
-      });
+        });
+      }
     }
 
     //CUSTOM ITEMS
