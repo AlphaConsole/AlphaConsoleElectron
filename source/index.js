@@ -18,7 +18,7 @@ autoUpdater.on("checking-for-update", function (_arg1) {
     return log.info("Checking for update...");
 });
 autoUpdater.on("update-available", function (_arg2) {
-    mainWindow.webContents.send("check-for-updates-response-download", "0%");
+    mainWindow.webContents.send("check-for-updates-response-updating");
     return log.info("Update available.");
 });
 autoUpdater.on("update-not-available", function (_arg3) {
@@ -29,11 +29,11 @@ autoUpdater.on("error", function (err) {
     return log.info("Error in auto-updater. " + err);
 });
 autoUpdater.on("download-progress", function (progressObj) {
-    mainWindow.webContents.send("check-for-updates-response-download", `${progressObj.percent.toFixed(0)}%`);
+    mainWindow.webContents.send("check-for-updates-response-updating");
     return log.info("Downloading update.");
 });
 autoUpdater.on("update-downloaded", function (_arg4) {    
-    mainWindow.webContents.send("check-for-updates-response-downloaded");
+    mainWindow.webContents.send("check-for-updates-response-updating");
     autoUpdater.quitAndInstall(); 
     return log.info("Update downloaded.");
 }); 
