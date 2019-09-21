@@ -312,7 +312,7 @@ section {
 .table th,
 .table td {
   border-top: none;
-  padding: 2px 0.25rem;
+  padding: 2px 0.75rem;
 }
 
 .table {
@@ -373,10 +373,7 @@ select {
   max-height: 30px;
   font-size: 12px;
 }
-.item-table .acc-input {
-  width: 100%;
-}
-.item-table tr td:nth-child(2) .acc-input {
+.alt-row-strong > .acc-input {
 	width: 94%;
 }
 .alt-row span,
@@ -647,7 +644,7 @@ input:checked + label {
 	border-bottom: solid 5px #616161;
 }
 .teams .item-table .alt-row:first-child {
-	width: 130px;
+	width: 150px;
 }
 .teams table thead {
 	font-weight: bold;
