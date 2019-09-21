@@ -204,6 +204,7 @@ function LoadConfiguration() {
   $("#display-teamMMR").prop('checked', Config.RankOptions.DisplayTeamMMR);
   $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
   $("#april-fools").prop('checked', Config.RankOptions.AprilFools || 0);
+  $("#display-total-mmr-change").prop('checked', Config.RankOptions.DisplayTotalMMRChange || true);
 
   //Discord rich presence options
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
@@ -513,6 +514,7 @@ function GetConfigurationString() {
   RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
   RankOptions.DisplayTeamMMR = $("#display-teamMMR").prop('checked');
   RankOptions.AprilFools = $("#april-fools").prop('checked');
+  RankOptions.DisplayTotalMMRChange = $("#display-total-mmr-change").prop('checked');
   Config.RankOptions = RankOptions;
 
   //Discord rich presence options
@@ -972,7 +974,6 @@ $("#button-check-for-updates").on("click", function(){
 });
 
 
-
 $("#preset-name").on("input", function () {
   $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
 });
@@ -980,6 +981,27 @@ $("#preset-name").on("input", function () {
 
 $(document).ready(function () {
   $(".teams .item-table tr td:nth-child(2) .acc-input").after("<span class='reset-input'> ✗</span>");
+  ipcRenderer.on("check-for-updates-response-none", function() {
+    $("#button-check-for-updates").text("No Updates!");
+    setTimeout(function() {
+      $("#button-check-for-updates").text("Update!");
+    }, 2000);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-download", function(event, downloadPercentage) {
+    $("#button-check-for-updates").text(`${downloadPercentage} downloaded`);
+  });
+
+  ipcRenderer.on("check-for-updates-response-downloaded", function() {
+    $("#button-check-for-updates").text(`Installing...`);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-checking", function() {
+    $("#button-check-for-updates").text("Searching...");
+  });
+  
+  $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
+
   $('.reset-input').on('click', function () {    
     if(SyncTeams) {
       $("select[name=" + $(this).parent().find('select').attr('name') + "] option:contains('Unchanged')").prop('selected', true);

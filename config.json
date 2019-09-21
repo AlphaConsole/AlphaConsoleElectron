@@ -781,6 +781,7 @@
 		"TeamTotal": false,
 		"DisplayTeamMMR": true,
 		"AprilFools": false
+		"DisplayTotalMMRChange": true
 	},
 	"DiscordOptions": {
 		"RichPresenceLevel": 2
