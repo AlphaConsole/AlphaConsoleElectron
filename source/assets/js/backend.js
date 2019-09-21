@@ -204,6 +204,7 @@ function LoadConfiguration() {
   $("#display-teamMMR").prop('checked', Config.RankOptions.DisplayTeamMMR);
   $("#upload-match-data").prop('checked', Config.RankOptions.UploadMatchData);
   $("#april-fools").prop('checked', Config.RankOptions.AprilFools || 0);
+  $("#display-total-mmr-change").prop('checked', Config.RankOptions.DisplayTotalMMRChange || true);
 
   //Discord rich presence options
   $("[name='discord'][value=" + Config.DiscordOptions.RichPresenceLevel + "]").prop("checked", true);
@@ -325,12 +326,15 @@ function SavePreset(PresetID) {
       if (slots[i].Name == "Body") {
         $("select[name='color-select'][special='body']").each((index, value) => {
           var team = $(value).closest('tbody').attr("team");
+          var customSelection = $(value).parent().prev().children().val();
           Items[slotID][team] = {};
-          Items[slotID][team].ItemID = -1
-          Items[slotID][team].PackageID = -1;
-          Items[slotID][team].PackageSubID = -1;
+          Items[slotID][team].ItemID = customSelection[0];
+          Items[slotID][team].PackageID = customSelection[1];
+          Items[slotID][team].PackageSubID = customSelection[2];
+          Items[slotID][team].SpecialEdition = -1;
+          Items[slotID][team].TeamEdition = -1;
           Items[slotID][team].Color = parseInt($(value).val()) || -1;
-        })
+        });
       }
 
       var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
@@ -352,8 +356,14 @@ function SavePreset(PresetID) {
           Items[slotID][team].PackageSubID = -1;
         }
 
-        Items[slotID][team].Color = parseInt($(selects[j]).parent().next("td").find("select").val()) || -1;
-		Items[slotID][team].SpecialEdition = $(selects[j]).parent().parent().find("input").prop('checked') ? 1 :  -1;
+        // Get the current item if it has a special edition change
+        var items = Products.Slots[i].Items.filter(function (item) { return item.ItemID === parseInt(iid[0]); });
+
+        // Color ID 0 is falsy, so use isNaN check
+        var parsedColor = parseInt($(selects[j]).parent().next("td").find("select").val(), 10);
+        Items[slotID][team].Color = isNaN(parsedColor) ? -1 : parsedColor;
+        Items[slotID][team].TeamEdition = parseInt($(selects[j]).parent().next("td").next("td").find("select").val()) || -1;
+        Items[slotID][team].SpecialEdition = items.length > 0 && items[0].HasSpecialEditions === "true" ? items[0].AvailableSpecialEditions[0] : -1;
       }
     }
   }
@@ -415,9 +425,9 @@ function LoadPreset(ID) {
       if (slots[i].Name == "Body") {
         $("select[name='color-select']").each((index, value) => {
           var team = $(value).closest('tbody').attr("team");
-          $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']").val(GlobalACConfig.Presets[ID].Items[
-            slots[i].SlotID][team].Color);
-        })
+          $("tbody[team='" + team + "']").find("select[name='color-select'][special='body']")
+            .val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
+        });
       }
 
       var selects = $('select[name="' + Products.Lookup[slots[i].Name] + '"]');
@@ -427,6 +437,9 @@ function LoadPreset(ID) {
           ":" + GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].PackageSubID;
         $(selects[j]).val(valString).change();
         $(selects[j]).parent().next("td").find("select").val(GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].Color);
+
+        var teamEdition = GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].TeamEdition;
+        $(selects[j]).parent().next("td").next("td").find("select").val(!!teamEdition ? teamEdition : -1);
 		$(selects[j]).parent().parent().find("input").prop('checked', GlobalACConfig.Presets[ID].Items[slots[i].SlotID][team].SpecialEdition == -1 ? false : true);
 		
       }
@@ -502,6 +515,7 @@ function GetConfigurationString() {
   RankOptions.TeamTotal = $("#display-teamTotal").prop('checked');
   RankOptions.DisplayTeamMMR = $("#display-teamMMR").prop('checked');
   RankOptions.AprilFools = $("#april-fools").prop('checked');
+  RankOptions.DisplayTotalMMRChange = $("#display-total-mmr-change").prop('checked');
   Config.RankOptions = RankOptions;
 
   //Discord rich presence options
@@ -533,8 +547,6 @@ function GetConfigurationString() {
 
   //Miscellaneous
   Config.ACPath = GetBasePath();
-
-  console.log(Config);
 
   return JSON.stringify(Config, null, "\t");
 }
@@ -705,6 +717,21 @@ $("select[name='color-select']").each(function (index, value) {
 
 });
 
+var teams = Products.TeamEditions;
+teams.sort(compareValues('Name'));
+$("select[name='team-select']").each(function (index, value) {
+
+  for (var i = 0; i < teams.length; i++) {
+
+    var newOp = $('<option>');
+    newOp.attr('value', teams[i].ID);
+    newOp.text(teams[i].Name);
+
+    $(this).append(newOp);
+  }
+
+});
+
 var slots = Products.Slots;
 var customItems = {}
 
@@ -729,19 +756,44 @@ for (var i = 0; i < slots.length; i++) {
     var items = slots[i].Items;
     items.sort(compareValues('Name'));
 
+    var itemSpecialEditions = {};
+    for (var item of items) {
+      if (item.HasSpecialEditions === "true") {
+        var editions = Products.SpecialEditions.filter(function (specialEdition) { return item.AvailableSpecialEditions.indexOf(specialEdition.ID) !== -1 });
+        var editionName = editions[0].Name;
+        itemSpecialEditions[item.Name] = editionName;
+      }
+    }
 
-    //VANILLA ITEMS
-    for (var j = 0; j < items.length; j++) {
-      //Will .each fuck this up because of async?
-      $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
-        var newOp = $('<option>');
-        newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
-        newOp.attr('paintable', items[j].Paintable);
-        newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
-		newOp.text(items[j].Name);
-        $(this).append(newOp);
 
-      });
+    if (slots[i].Name !== "Body") {
+      //VANILLA ITEMS
+      for (var j = 0; j < items.length; j++) {
+        //Will .each fuck this up because of async?
+        $('select[name="' + Products.Lookup[slots[i].Name] + '"]').each(function (index, value) {
+          var newOp = $('<option>');
+          newOp.attr('value', items[j].ItemID + ":" + -1 + ":" + -1);
+          newOp.attr('paintable', items[j].Paintable);
+          newOp.attr('hasSpecialEditions', items[j].HasSpecialEditions);
+          newOp.attr('hasTeamEditions', items[j].HasTeamEditions);
+
+          var itemName = items[j].Name;
+
+          // Parse Special Edition
+          if (items[j].HasSpecialEditions === "false" && !!itemSpecialEditions[items[j].Name]) {
+            itemName += `: ${itemSpecialEditions[items[j].Name]}`;
+          }
+
+          // Parse Team Edition
+          if (items[j].HasTeamEditions === "true") {
+            itemName += ': Team Edition';
+          }
+
+          newOp.text(itemName);
+          $(this).append(newOp);
+
+        });
+      }
     }
 
     //CUSTOM ITEMS
@@ -754,7 +806,7 @@ for (var i = 0; i < slots.length; i++) {
         newOp.attr('value', '-2:-2:-2');
         newOp.text("-----------------------------------------------------------------");   
         newOp.attr("disabled", "disabled");      
-        $(this).children(":first").after(newOp);
+        if (slots[i].Name !== "Body") $(this).children(":first").after(newOp);
       });
      
       for (var k = customitems.length-1; k >=0; k--) {         
@@ -773,7 +825,7 @@ for (var i = 0; i < slots.length; i++) {
         newOp.attr('value', '-2:-2:-2');
         newOp.text("Custom");   
         newOp.attr("disabled", "disabled");      
-        $(this).children(":first").after(newOp);
+        if (slots[i].Name !== "Body") $(this).children(":first").after(newOp);
       });
       
     }
@@ -799,6 +851,18 @@ $("select[name='color-select']").on('change', function () {
     }
   }
 });
+$("select[name='team-select']").on('change', function () {
+  if (SyncTeams) {
+
+    var selects = $("select[name='team-select']");
+    for (var k = 0; k < selects.length; k++) {
+
+      if ($(selects[k]).parent().parent().index() == $(this).parent().parent().index()) {
+        $(selects[k]).val(this.value);
+      }
+    }
+  }
+});
 $("input[name='special-wheel-input']").on('change', function () {  
   if (SyncTeams) {
     var selects = $("input[name='special-wheel-input']");
@@ -811,11 +875,6 @@ $("input[name='special-wheel-input']").on('change', function () {
 
 
 $("[class='row teams'] select").on('change', function () {
-
-
-  var id = $(this).val().split(":")[0];
-
-
   var disableOtherPaintable = false;
   if($(this).find("option:selected").attr("Paintable") == "false"){    
 	disableOtherPaintable = true;
@@ -825,6 +884,7 @@ $("[class='row teams'] select").on('change', function () {
     $(this).parent().next().find("select").prop('disabled', false);
     $(this).parent().next().find("select").css("color", "#fff");
   }
+
   var disableOtherSpecial = false;
   if($(this).find("option:selected").attr("HasSpecialEditions") == "false"){
     disableOtherSpecial = true;
@@ -835,6 +895,15 @@ $("[class='row teams'] select").on('change', function () {
     $(this).parent().parent().find("input").parent().find("span").css("background-color", "#616161");
   }
 
+  var disableOtherTeam = false;
+  if($(this).find("option:selected").attr("HasTeamEditions") == "false"){
+    disableOtherTeam = true;
+    $(this).parent().next().next().find("select").prop('disabled', 'disabled');
+    $(this).parent().next().next().find("select").css("color", "#555");
+  } else {
+    $(this).parent().next().next().find("select").prop('disabled', false);
+    $(this).parent().next().next().find("select").css("color", "#fff");
+  }
   if (SyncTeams) {
 
     var selects = $("[class='row teams'] select");
@@ -852,15 +921,23 @@ $("[class='row teams'] select").on('change', function () {
           $(selects[k]).parent().next().find("select").prop('disabled', false);
           $(selects[k]).parent().next().find("select").css("color", "#fff");
         }
-		if(disableOtherSpecial){
-			$(selects[k]).parent().parent().find("input").prop('disabled', 'disabled');
-			$(selects[k]).parent().parent().find("input").parent().find("span").css("background-color", "#3D3D3D");
-		} else {
-			$(selects[k]).parent().parent().find("input").prop('disabled', false);
-			$(selects[k]).parent().parent().find("input").parent().find("span").css("background-color", "#616161");
+        if(disableOtherSpecial){
+          $(selects[k]).parent().parent().find("input").prop('disabled', 'disabled');
+          $(selects[k]).parent().parent().find("input").parent().find("span").css("background-color", "#3D3D3D");
+        } else {
+          $(selects[k]).parent().parent().find("input").prop('disabled', false);
+          $(selects[k]).parent().parent().find("input").parent().find("span").css("background-color", "#616161");
+        }
+        if(disableOtherTeam){
+          $(selects[k]).parent().next().next().find("select").prop('disabled', 'disabled');
+          $(selects[k]).parent().next().next().find("select").css("color", "#555");
+        } else {
+          $(selects[k]).parent().next().next().find("select").prop('disabled', false);
+          $(selects[k]).parent().next().next().find("select").css("color", "#fff");
         }
       }
     }
+        
   }
 });
 
@@ -884,8 +961,6 @@ const { ipcRenderer } = require('electron');
   
 $("#always-on-top").change(function () {
   
-  console.log($(this).prop('checked'));
-
   ipcRenderer.send('alwaystop', $(this).prop('checked'));  
 
 });
@@ -897,14 +972,32 @@ $("#button-check-for-updates").on("click", function(){
 });
 
 
-
 $("#preset-name").on("input", function () {
   $('#preset-select option[value=' + $("#preset-select").val() + ']').text(this.value);
 });
 
 
 $(document).ready(function () {
-  $(".teams .item-table .acc-input").after("<span class='reset-input'> ✗</span>");
+  ipcRenderer.on("check-for-updates-response-none", function() {
+    $("#button-check-for-updates").text("No Updates!");
+    setTimeout(function() {
+      $("#button-check-for-updates").text("Update!");
+    }, 2000);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-download", function(event, downloadPercentage) {
+    $("#button-check-for-updates").text(`${downloadPercentage} downloaded`);
+  });
+
+  ipcRenderer.on("check-for-updates-response-downloaded", function() {
+    $("#button-check-for-updates").text(`Installing...`);
+  });
+  
+  ipcRenderer.on("check-for-updates-response-checking", function() {
+    $("#button-check-for-updates").text("Searching...");
+  });
+  
+  $(".teams .item-table tr td:nth-child(2) .acc-input").after("<span class='reset-input'> ✗</span>");
   $('.reset-input').on('click', function () {    
     if(SyncTeams) {
       $("select[name=" + $(this).parent().find('select').attr('name') + "] option:contains('Unchanged')").prop('selected', true);
