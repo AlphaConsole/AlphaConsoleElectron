@@ -48,7 +48,7 @@
     "electron": "^1.8.2",
     "electron-builder": "19.37.0",
     "electron-installer-windows": "^0.2.0",
-    "electron-packager": "^14.0.6",
+    "electron-packager": "^11.1.0",
     "electron-winstaller": "^2.6.4",
     "grunt": "^1.0.2",
     "grunt-contrib-sass": "^1.0.0",
@@ -58,7 +58,6 @@
     "gulp": "^4.0.0"
   },
   "dependencies": {
-    "electron-is-dev": "^1.1.0",
     "electron-log": "^2.2.14",
     "electron-updater": "2.12.0",
     "modclean": "^2.1.2",
