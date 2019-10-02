@@ -331,6 +331,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 1689,
+                    "Name": "Nemesis",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 1691,
                     "Name": "Mantis",
                     "Paintable": "true"
@@ -2717,6 +2724,48 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 1829,
+                    "Name": "Nemesis: Flames",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1830,
+                    "Name": "Nemesis: Lightning",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1831,
+                    "Name": "Nemesis: Rocket Ball",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1832,
+                    "Name": "Nemesis: Stripes",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1833,
+                    "Name": "Nemesis: Wings",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1852,
+                    "Name": "Nemesis: Full Speed",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 1867,
                     "Name": "Takumi RX-T: Chusho",
                     "Paintable": "true"
@@ -4778,6 +4827,13 @@
                     "ItemID": 4189,
                     "Name": "Breakout: TV Time",
                     "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4213,
+                    "Name": "Nemesis: Snakeskin",
+                    "Paintable": "false"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -14474,543 +14530,6 @@
             "SlotID": 7
         },
         {
-            "Items": [
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 70,
-                    "Name": "Jester",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 71,
-                    "Name": "Rex",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 72,
-                    "Name": "Beast",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 73,
-                    "Name": "Swabbie",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 74,
-                    "Name": "C-Block",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 75,
-                    "Name": "Heater",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 76,
-                    "Name": "Caveman",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 77,
-                    "Name": "Cougar",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 78,
-                    "Name": "Wolfman",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 79,
-                    "Name": "Buzz",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 80,
-                    "Name": "Slider",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 81,
-                    "Name": "Dude",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 82,
-                    "Name": "Stinger",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 83,
-                    "Name": "Gerwin",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 84,
-                    "Name": "Centice",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 85,
-                    "Name": "Maverick",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 86,
-                    "Name": "Sabretooth",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 87,
-                    "Name": "Fury",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 88,
-                    "Name": "Bandit",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 89,
-                    "Name": "Merlin",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 90,
-                    "Name": "Imp",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 91,
-                    "Name": "Casper",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 92,
-                    "Name": "Marley",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 93,
-                    "Name": "Poncho",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 94,
-                    "Name": "Hound",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 95,
-                    "Name": "Boomer",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 96,
-                    "Name": "Hollywood",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 97,
-                    "Name": "Middy",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 98,
-                    "Name": "Mountain",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 99,
-                    "Name": "Goose",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 100,
-                    "Name": "Outlaw",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 101,
-                    "Name": "Sundown",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 102,
-                    "Name": "Raja",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 103,
-                    "Name": "Rainmaker",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 104,
-                    "Name": "Chipper",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 105,
-                    "Name": "Roundhouse",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 106,
-                    "Name": "Scout",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 107,
-                    "Name": "Shepard",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 108,
-                    "Name": "Khan",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 109,
-                    "Name": "Tex",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 110,
-                    "Name": "Sultan",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 111,
-                    "Name": "Storm",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 112,
-                    "Name": "Myrtle",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 113,
-                    "Name": "Squall",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 114,
-                    "Name": "Iceman",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 115,
-                    "Name": "Sticks",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 116,
-                    "Name": "Armstrong",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 117,
-                    "Name": "Samara",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 118,
-                    "Name": "Tusk",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 119,
-                    "Name": "Viper",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 120,
-                    "Name": "Saltie",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 121,
-                    "Name": "Junker",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 122,
-                    "Name": "Yuri",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 123,
-                    "Name": "Foamer",
-                    "Paintable": "false"
-                }
-            ],
-            "Name": "Bot",
-            "SlotID": 8
-        },
-        {
-            "Items": [
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2223,
-                    "Name": "Barracudas",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2224,
-                    "Name": "Guardians",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2225,
-                    "Name": "Cyclones",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2226,
-                    "Name": "Dragons",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2227,
-                    "Name": "Monarchs",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2228,
-                    "Name": "Seekers",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2229,
-                    "Name": "Express",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2230,
-                    "Name": "Rovers",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2231,
-                    "Name": "Rebels",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2232,
-                    "Name": "Blacklight",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2233,
-                    "Name": "Pharaohs",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2234,
-                    "Name": "Mammoths",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2235,
-                    "Name": "Wolves",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2236,
-                    "Name": "Kodiaks",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2237,
-                    "Name": "Bombers",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2238,
-                    "Name": "Destroyers",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2239,
-                    "Name": "Knights",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2240,
-                    "Name": "Phantoms",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2241,
-                    "Name": "Ravagers",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2242,
-                    "Name": "Scorpions",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2243,
-                    "Name": "Skyhawks",
-                    "Paintable": "false"
-                }
-            ],
-            "Name": "Logo",
-            "SlotID": 9
-        },
-        {
             "Items": [],
             "Name": "UnderGlow",
             "SlotID": 10
@@ -15811,6 +15330,13 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1824,
                     "Name": "X-Devil Mk2 v2",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1825,
+                    "Name": "Nemesis",
                     "Paintable": "false"
                 },
                 {
@@ -18238,11 +17764,6 @@
         },
         {
             "Items": [],
-            "Name": "GarageComplexRow",
-            "SlotID": 17
-        },
-        {
-            "Items": [],
             "Name": "Goal Stinger",
             "SlotID": 18
         },
@@ -18647,96 +18168,6 @@
             ],
             "Name": "Player Title",
             "SlotID": 21
-        },
-        {
-            "Items": [
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4097,
-                    "Name": "Cloud9",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4098,
-                    "Name": "Dignitas",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4099,
-                    "Name": "Evil Geniuses",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4102,
-                    "Name": "G2 Esports",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4103,
-                    "Name": "Ghost Gaming",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4104,
-                    "Name": "Mousesports",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4105,
-                    "Name": "NRG Esports",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4106,
-                    "Name": "PSG Esports",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4108,
-                    "Name": "Team Vitality",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4110,
-                    "Name": "Splyce",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4114,
-                    "Name": "Rogue",
-                    "Paintable": "false"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 4115,
-                    "Name": "TSM",
-                    "Paintable": "false"
-                }
-            ],
-            "Name": "ESportsTeam",
-            "SlotID": 22
         },
         {
             "Items": [],
