@@ -21,7 +21,7 @@ Running a simple dev version of the app. Navigate to the root of the project usi
 npm run test
 ```
 
-Preferably open a second cmd window and navigate to the root of the project again but run 
+Preferably open a second cmd window and navigate to the root of the project again but run
 
 ```bash
 npm run watch
@@ -53,7 +53,7 @@ Create the GitHub release, and then upload both the `latest.yml` and the `.exe` 
 
 ## Compile Styles
 
-If you make any changes to the styles you will need to run 
+If you make any changes to the styles you will need to run
 
 ```bash
 grunt sass
@@ -61,7 +61,7 @@ grunt sass
 
 This will auto build all the style files, make sure the gruntfile is pointing to the correct files you want to compile & if you have any issues make sure you have Ruby installed on your PC.
 
-To install sass on your computer globally then follow the steps [here](https://sass-lang.com/install) 
+To install sass on your computer globally then follow the steps [here](https://sass-lang.com/install)
 
 ---
 
