@@ -33,6 +33,12 @@ Now everytime you modify the any scss files it will auto compile the files and y
 
 To build a release version, you should first ensure you have Inno Setup Compiler installed on your PC. YOu can install it from [here](http://www.jrsoftware.org/download.php/is.exe)
 
+Run the following to create the required files for Inno Setup Compiler
+
+```bash
+npm run pack
+```
+
 Open `ACBuild.iss` in Inno Setup Compiler and Choose `Build > Compile`. This will compile an exe named `AlphaConsole_Setup_version.exe` such as `AlphaConsole_Setup_9.12.0.0.exe` (the extra .0 is important).
 
 You should now create a `latest.yml` file. You will create this in the following format:

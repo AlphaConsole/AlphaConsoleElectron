@@ -576,6 +576,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4268,
+                    "Name": "Sentinel",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4284,
                     "Name": "Fennec",
                     "Paintable": "true"
@@ -4474,6 +4481,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3825,
+                    "Name": "Dominus: OR-AISE",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3828,
                     "Name": "Dominus: Funky Medusa",
                     "Paintable": "true"
@@ -4817,6 +4831,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4159,
+                    "Name": "Octane: Abtruse",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4184,
                     "Name": "Octane: Cobra Kai",
                     "Paintable": "false"
@@ -4861,6 +4882,13 @@
                     "HasTeamEditions": "false",
                     "ItemID": 4227,
                     "Name": "Flash Freeze",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4244,
+                    "Name": "Glorifier",
                     "Paintable": "false"
                 },
                 {
@@ -4959,6 +4987,55 @@
                     "HasTeamEditions": "false",
                     "ItemID": 4364,
                     "Name": "Upstream",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4369,
+                    "Name": "Fennec: Edge Burst",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4403,
+                    "Name": "Sentinel: Stripes",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4404,
+                    "Name": "Sentinel: Lightning",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4405,
+                    "Name": "Sentinel: Wings",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4407,
+                    "Name": "Sentinel: MangaTec",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4408,
+                    "Name": "Sentinel: Sideline",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4409,
+                    "Name": "Sentinel: Flames",
                     "Paintable": "false"
                 },
                 {
@@ -6479,6 +6556,16 @@
                     "Paintable": "true"
                 },
                 {
+                    "AvailableSpecialEditions": [
+                        1
+                    ],
+                    "HasSpecialEditions": "true",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3878,
+                    "Name": "Picket",
+                    "Paintable": "true"
+                },
+                {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
                     "ItemID": 3887,
@@ -6777,6 +6864,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4173,
+                    "Name": "NeYoYo",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4176,
                     "Name": "E.T.",
                     "Paintable": "false"
@@ -6846,6 +6940,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4249,
+                    "Name": "Clodhopper",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4253,
                     "Name": "Low-Poly",
                     "Paintable": "false"
@@ -6866,6 +6967,13 @@
                     "ItemID": 4280,
                     "Name": "Sunset 1986",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4297,
+                    "Name": "Truncheon",
+                    "Paintable": "true"
                 },
                 {
                     "AvailableSpecialEditions": [
@@ -6892,6 +7000,16 @@
                     "Paintable": "true"
                 },
                 {
+                    "AvailableSpecialEditions": [
+                        3
+                    ],
+                    "HasSpecialEditions": "true",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4335,
+                    "Name": "Apparatus",
+                    "Paintable": "true"
+                },
+                {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
                     "ItemID": 4339,
@@ -6908,8 +7026,29 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4358,
+                    "Name": "Apparatus",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4370,
                     "Name": "Camo",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4371,
+                    "Name": "Picket",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4384,
+                    "Name": "Creeper",
                     "Paintable": "true"
                 }
             ],
@@ -7880,6 +8019,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4282,
+                    "Name": "Ninja Star",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4298,
                     "Name": "Fiber Optic II",
                     "Paintable": "true"
@@ -8458,6 +8604,10 @@
                 {
                     "ItemID": 4242,
                     "Name": "Voltron"
+                },
+                {
+                    "ItemID": 4282,
+                    "Name": "Ninja Star"
                 },
                 {
                     "ItemID": 4298,
@@ -15657,6 +15807,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4396,
+                    "Name": "Sentinel",
+                    "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4416,
                     "Name": "UTV",
                     "Paintable": "false"
@@ -16285,6 +16442,13 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4118,
+                    "Name": "Neuro-Agitator",
+                    "Paintable": "true"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4158,
                     "Name": "Season 10 - Grand Champion",
                     "Paintable": "false"
@@ -16413,6 +16577,13 @@
                     "ItemID": 2421,
                     "Name": "Hearts",
                     "Paintable": "false"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2423,
+                    "Name": "Ouchie",
+                    "Paintable": "true"
                 },
                 {
                     "HasSpecialEditions": "false",
