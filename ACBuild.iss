@@ -36,6 +36,9 @@ DisableReadyPage=yes
 DisableFinishedPage=yes 
 AllowCancelDuringInstall=no
 
+[InstallDelete]
+Type: files; Name: "{userdesktop}\Alpha Console.lnk"
+
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
@@ -56,6 +59,7 @@ Type: files; Name: "{app}\..\discord-rpc.dll"
 Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
 Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\config.json"
 Type: dirifempty; Name: "{app}"
+Type: files; Name: "{userdesktop}\Alpha Console.lnk"
 
 [Code] 
 #ifdef UNICODE
