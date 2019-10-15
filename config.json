@@ -798,7 +798,8 @@
 		"RunOnStartup": true,
 		"InstallLocation": "",
 		"F5Menu": true,
-		"SyncTeams": false
+		"SyncTeams": false,
+		"UseDefaultMenu": false
 	},
 	"LastVersion": "1.8.2",
 	"AlwaysOnTop": false,
