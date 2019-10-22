@@ -17157,7 +17157,328 @@
             "SlotID": 11
         },
         {
-            "Items": [],
+            "Items": [
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 266,
+                    "Name": "Brushed Metal",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 268,
+                    "Name": "Corroded Metal",
+                    "Paintable": "false",
+                    "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 270,
+                    "Name": "Glossy",
+                    "Paintable": "false",
+                    "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 271,
+                    "Name": "Furry",
+                    "Paintable": "false",
+                    "Quality": "Import"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 272,
+                    "Name": "Carbon Fiber",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 273,
+                    "Name": "Matte",
+                    "Paintable": "false",
+                    "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 274,
+                    "Name": "Metallic",
+                    "Paintable": "false",
+                    "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 275,
+                    "Name": "Metallic Pearl",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 276,
+                    "Name": "Pearlescent",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 277,
+                    "Name": "Semigloss",
+                    "Paintable": "false",
+                    "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 279,
+                    "Name": "Toon Glossy",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 280,
+                    "Name": "Toon Wood",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 281,
+                    "Name": "Toon Matte",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 283,
+                    "Name": "Wood",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 541,
+                    "Name": "Camo",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 542,
+                    "Name": "Sun-Damaged",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 623,
+                    "Name": "Stainless Steel",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1681,
+                    "Name": "Circuit Board",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1688,
+                    "Name": "Moon Rock",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1700,
+                    "Name": "Cookie Dough",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1707,
+                    "Name": "Knitted Yarn",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1710,
+                    "Name": "Burlap",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1712,
+                    "Name": "Zebra",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1978,
+                    "Name": "Glossy Block",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 1980,
+                    "Name": "Pearlescent (Matte)",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2066,
+                    "Name": "Metallic (Smooth)",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2067,
+                    "Name": "Metallic Pearl (Smooth)",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2275,
+                    "Name": "Anodized",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2748,
+                    "Name": "'89 Batmobile",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2917,
+                    "Name": "Dino",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2973,
+                    "Name": "Canvas",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 2974,
+                    "Name": "Metallic (Rough)",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3221,
+                    "Name": "Metallic Flake",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3526,
+                    "Name": "McLaren Custom",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3527,
+                    "Name": "McLaren Custom",
+                    "Paintable": "false",
+                    "Quality": "Premium"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3630,
+                    "Name": "Medallion",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3747,
+                    "Name": "Straight-Line",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3749,
+                    "Name": "Glitter",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4127,
+                    "Name": "Anodized Pearl",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4391,
+                    "Name": "Obsidian",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                }
+            ],
             "Name": "Accent Paint Finish",
             "SlotID": 12
         },
