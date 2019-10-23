@@ -5597,6 +5597,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4273,
+                    "Name": "Nemesis: Crisis",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4285,
                     "Name": "Fennec: Nitty-Gritty",
                     "Paintable": "false",
@@ -8121,6 +8129,14 @@
                     "Name": "Creeper",
                     "Paintable": "true",
                     "Quality": "Exotic"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4395,
+                    "Name": "TP19",
+                    "Paintable": "false",
+                    "Quality": "Limited"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -18139,6 +18155,14 @@
                     "Name": "Fennec",
                     "Paintable": "false",
                     "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4315,
+                    "Name": "Drude",
+                    "Paintable": "false",
+                    "Quality": "Limited"
                 },
                 {
                     "HasSpecialEditions": "false",
