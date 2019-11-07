@@ -5725,6 +5725,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4389,
+                    "Name": "Luster",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4403,
                     "Name": "Sentinel: Stripes",
                     "Paintable": "false",
@@ -9299,6 +9307,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4372,
+                    "Name": "Streamer",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4412,
                     "Name": "Autumn",
                     "Paintable": "false",
@@ -9318,6 +9334,14 @@
                     "ItemID": 4539,
                     "Name": "Stranger Things",
                     "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4570,
+                    "Name": "Beat Saber",
+                    "Paintable": "true",
                     "Quality": "Limited"
                 }
             ],
@@ -9891,6 +9915,10 @@
                     "Name": "Racer Flames"
                 },
                 {
+                    "ItemID": 4372,
+                    "Name": "Streamer"
+                },
+                {
                     "ItemID": 4412,
                     "Name": "Autumn"
                 },
@@ -9901,6 +9929,10 @@
                 {
                     "ItemID": 4539,
                     "Name": "Stranger Things"
+                },
+                {
+                    "ItemID": 4570,
+                    "Name": "Beat Saber"
                 }
             ],
             "Name": "BoostSound",
@@ -16533,6 +16565,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4380,
+                    "Name": "Webcam",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4436,
                     "Name": "Leaf Litter",
                     "Paintable": "false",
@@ -16551,6 +16591,14 @@
                     "HasTeamEditions": "false",
                     "ItemID": 4540,
                     "Name": "Camp Know Where",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4557,
+                    "Name": "Beat Saber",
                     "Paintable": "false",
                     "Quality": "Limited"
                 }
