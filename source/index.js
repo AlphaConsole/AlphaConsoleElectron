@@ -82,7 +82,9 @@ autoUpdater.on("update-downloaded", function (_arg4) {
   // Some APIs can only be used after this event occurs.
   app.on('ready', createWindow)
   app.on("ready", function () {
-    autoUpdater.checkForUpdates();
+    if (!isDev) {
+      autoUpdater.checkForUpdates();
+    }
   });
   // Quit when all windows are closed.
   app.on('window-all-closed', () => {

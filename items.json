@@ -169,7 +169,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 403,
                     "Name": "Dominus",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Premium"
                 },
                 {
@@ -683,6 +683,14 @@
                     "Name": "Mudcat GXT",
                     "Paintable": "true",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4770,
+                    "Name": "Dominus",
+                    "Paintable": "true",
+                    "Quality": "Import"
                 }
             ],
             "Name": "Body",
@@ -1304,7 +1312,7 @@
                     "ItemID": 504,
                     "Name": "Dominus: Flames",
                     "Paintable": "false",
-                    "Quality": "Premium"
+                    "Quality": "Common"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -1312,7 +1320,7 @@
                     "ItemID": 506,
                     "Name": "Dominus: Scorpions",
                     "Paintable": "false",
-                    "Quality": "Premium"
+                    "Quality": "Common"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -1320,7 +1328,7 @@
                     "ItemID": 507,
                     "Name": "Dominus: Skulls",
                     "Paintable": "false",
-                    "Quality": "Premium"
+                    "Quality": "Common"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -1328,7 +1336,7 @@
                     "ItemID": 508,
                     "Name": "Dominus: Stripes",
                     "Paintable": "false",
-                    "Quality": "Premium"
+                    "Quality": "Common"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -1336,7 +1344,7 @@
                     "ItemID": 509,
                     "Name": "Dominus: Tats",
                     "Paintable": "false",
-                    "Quality": "Premium"
+                    "Quality": "Common"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -1344,7 +1352,7 @@
                     "ItemID": 510,
                     "Name": "Dominus: Wings",
                     "Paintable": "false",
-                    "Quality": "Premium"
+                    "Quality": "Common"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -1623,7 +1631,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1059,
                     "Name": "Octane: Dragon Lord",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Rare"
                 },
                 {
@@ -2239,7 +2247,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1438,
                     "Name": "Slipstream",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -2279,7 +2287,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1453,
                     "Name": "Dominus: Arcana",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Rare"
                 },
                 {
@@ -2295,7 +2303,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1456,
                     "Name": "Breakout: Shibuya",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Rare"
                 },
                 {
@@ -2423,7 +2431,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1522,
                     "Name": "Octane: MG-88",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "VeryRare"
                 },
                 {
@@ -2431,7 +2439,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1527,
                     "Name": "Dominus: Mondo",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Rare"
                 },
                 {
@@ -2551,7 +2559,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1578,
                     "Name": "Hexed",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -2863,7 +2871,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1684,
                     "Name": "20XX",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -4183,7 +4191,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 2736,
                     "Name": "Trigon",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -6081,11 +6089,14 @@
                     "Quality": "Common"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
                     "HasTeamEditions": "false",
                     "ItemID": 386,
                     "Name": "Cristiano",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Premium"
                 },
                 {
@@ -6093,7 +6104,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 388,
                     "Name": "Spinner",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Premium"
                 },
                 {
@@ -6305,7 +6316,10 @@
                     "Quality": "Rare"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        7
+                    ],
+                    "HasSpecialEditions": "true",
                     "HasTeamEditions": "false",
                     "ItemID": 1564,
                     "Name": "FSL",
@@ -6313,7 +6327,10 @@
                     "Quality": "Import"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        7
+                    ],
+                    "HasSpecialEditions": "true",
                     "HasTeamEditions": "false",
                     "ItemID": 1565,
                     "Name": "Spiralis",
@@ -6548,7 +6565,10 @@
                     "Quality": "Exotic"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
                     "HasTeamEditions": "false",
                     "ItemID": 1931,
                     "Name": "Hikari P5",
@@ -6668,7 +6688,10 @@
                     "Quality": "VeryRare"
                 },
                 {
-                    "HasSpecialEditions": "false",
+                    "AvailableSpecialEditions": [
+                        3
+                    ],
+                    "HasSpecialEditions": "true",
                     "HasTeamEditions": "false",
                     "ItemID": 2254,
                     "Name": "Saptarishi",
@@ -8169,6 +8192,73 @@
                     "Name": "Starcourt",
                     "Paintable": "false",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4598,
+                    "Name": "Turntable MC",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4599,
+                    "Name": "Hikari P5",
+                    "Paintable": "true",
+                    "Quality": "Exotic"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4627,
+                    "Name": "Saptarishi",
+                    "Paintable": "true",
+                    "Quality": "Import"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4646,
+                    "Name": "FSL-B",
+                    "Paintable": "true",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4712,
+                    "Name": "Cristiano",
+                    "Paintable": "true",
+                    "Quality": "Import"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4717,
+                    "Name": "Spiralis R2",
+                    "Paintable": "true",
+                    "Quality": "Import"
+                },
+                {
+                    "AvailableSpecialEditions": [
+                        2
+                    ],
+                    "HasSpecialEditions": "true",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4777,
+                    "Name": "Cristiano",
+                    "Paintable": "true",
+                    "Quality": "Import"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4778,
+                    "Name": "Spinner",
+                    "Paintable": "true",
+                    "Quality": "Import"
                 }
             ],
             "Name": "Wheels",
@@ -8485,7 +8575,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 387,
                     "Name": "Burnout",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Premium"
                 },
                 {
@@ -8573,7 +8663,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 664,
                     "Name": "Sandstorm",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Premium"
                 },
                 {
@@ -8605,7 +8695,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1092,
                     "Name": "Pixel Fire",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Import"
                 },
                 {
@@ -8773,7 +8863,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1584,
                     "Name": "Proton",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "Import"
                 },
                 {
@@ -9343,6 +9433,22 @@
                     "Name": "Beat Saber",
                     "Paintable": "true",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4773,
+                    "Name": "Burnout",
+                    "Paintable": "true",
+                    "Quality": "Import"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4774,
+                    "Name": "Sandstorm",
+                    "Paintable": "true",
+                    "Quality": "Import"
                 }
             ],
             "Name": "Rocket Boost",
@@ -9933,6 +10039,14 @@
                 {
                     "ItemID": 4570,
                     "Name": "Beat Saber"
+                },
+                {
+                    "ItemID": 4773,
+                    "Name": "Burnout"
+                },
+                {
+                    "ItemID": 4774,
+                    "Name": "Sandstorm"
                 }
             ],
             "Name": "BoostSound",
@@ -14555,6 +14669,46 @@
                     "Name": "Slushii",
                     "Paintable": "false",
                     "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4704,
+                    "Name": "iam8bit",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4705,
+                    "Name": "MC Instinct",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4706,
+                    "Name": "MC Uncaged",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4767,
+                    "Name": "Direct",
+                    "Paintable": "false",
+                    "Quality": "Common"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4768,
+                    "Name": "Kayzo",
+                    "Paintable": "false",
+                    "Quality": "Common"
                 }
             ],
             "Name": "Antenna",
@@ -16601,6 +16755,30 @@
                     "Name": "Beat Saber",
                     "Paintable": "false",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4699,
+                    "Name": "Vinyl Box MC",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4775,
+                    "Name": "Pixelated Shades",
+                    "Paintable": "true",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4776,
+                    "Name": "Mohawk",
+                    "Paintable": "true",
+                    "Quality": "VeryRare"
                 }
             ],
             "Name": "Topper",
@@ -16947,82 +17125,10 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
-                    "ItemID": 1009,
-                    "Name": "Crate - Champion 1",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
                     "ItemID": 1353,
                     "Name": "Key",
                     "Paintable": "false",
                     "Quality": "Premium"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1429,
-                    "Name": "Crate - Champion 2",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1523,
-                    "Name": "Crate - Champion 3",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1553,
-                    "Name": "Crate - Champion 4",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1631,
-                    "Name": "Crate - Turbo",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1632,
-                    "Name": "Crate - Player's Choice",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1843,
-                    "Name": "Crate - Nitro",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 1872,
-                    "Name": "Crate - Overdrive",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2444,
-                    "Name": "Crate - Haunted Hallows",
-                    "Paintable": "false",
-                    "Quality": "Rare"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -17043,30 +17149,6 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
-                    "ItemID": 2486,
-                    "Name": "Crate - Velocity",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2487,
-                    "Name": "Crate - Accelerator",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2521,
-                    "Name": "Crate - Secret Santa",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
                     "ItemID": 2522,
                     "Name": "Crate - Secret Santa (Unlocked)",
                     "Paintable": "false",
@@ -17075,48 +17157,8 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
-                    "ItemID": 2697,
-                    "Name": "Crate - Victory",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2730,
-                    "Name": "Crate - Spring Fever",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
                     "ItemID": 2731,
                     "Name": "Crate - Spring Fever (Unlocked)",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 2897,
-                    "Name": "Crate - Triumph",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 3009,
-                    "Name": "Crate - Impact",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 3010,
-                    "Name": "Crate - RL Beach Blast",
                     "Paintable": "false",
                     "Quality": "Rare"
                 },
@@ -17133,30 +17175,6 @@
                     "HasTeamEditions": "false",
                     "ItemID": 3049,
                     "Name": "Golden Egg",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 3262,
-                    "Name": "Crate - Zephyr",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 3457,
-                    "Name": "Crate - Elevation",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
-                    "ItemID": 3458,
-                    "Name": "Crate - Ferocity",
                     "Paintable": "false",
                     "Quality": "Rare"
                 },
@@ -17187,14 +17205,6 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
-                    "ItemID": 4263,
-                    "Name": "Crate - Totally Awesome",
-                    "Paintable": "false",
-                    "Quality": "Rare"
-                },
-                {
-                    "HasSpecialEditions": "false",
-                    "HasTeamEditions": "false",
                     "ItemID": 4299,
                     "Name": "Golden Egg",
                     "Paintable": "false",
@@ -17203,16 +17213,16 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
-                    "ItemID": 4460,
-                    "Name": "Crate - Vindicator",
+                    "ItemID": 4593,
+                    "Name": "Golden Pumpkin '19",
                     "Paintable": "false",
                     "Quality": "Rare"
                 },
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
-                    "ItemID": 4593,
-                    "Name": "Golden Pumpkin '19",
+                    "ItemID": 4722,
+                    "Name": "Bonus Gift",
                     "Paintable": "false",
                     "Quality": "Rare"
                 }
@@ -18263,7 +18273,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 1898,
                     "Name": "Lightspeed",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "VeryRare"
                 },
                 {
@@ -18383,7 +18393,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 2359,
                     "Name": "Zigzag",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "VeryRare"
                 },
                 {
@@ -18725,7 +18735,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 2702,
                     "Name": "Toon",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -18741,7 +18751,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 2817,
                     "Name": "Atomizer",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -20693,6 +20703,46 @@
                     "Name": "Scoops Ahoy",
                     "Paintable": "false",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4668,
+                    "Name": "RLXMC Vol. 3",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4675,
+                    "Name": "RLXMC Vol. 1",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4676,
+                    "Name": "RLXMC Vol. 2",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4677,
+                    "Name": "RLXMC Vol. 4",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4678,
+                    "Name": "RLXMC Vol. 5",
+                    "Paintable": "false",
+                    "Quality": "Limited"
                 }
             ],
             "Name": "Player Banner",
@@ -21175,6 +21225,21 @@
         },
         {
             "Items": [],
+            "Name": "Blueprint",
+            "SlotID": 24
+        },
+        {
+            "Items": [],
+            "Name": "Currency",
+            "SlotID": 26
+        },
+        {
+            "Items": [],
+            "Name": "Gift Pack",
+            "SlotID": 11
+        },
+        {
+            "Items": [],
             "Name": "Ball",
             "SlotID": -2
         },
@@ -21209,6 +21274,10 @@
         {
             "ID": 6,
             "Name": "Color Match"
+        },
+        {
+            "ID": 7,
+            "Name": "Flare"
         }
     ],
     "TeamEditions": [
