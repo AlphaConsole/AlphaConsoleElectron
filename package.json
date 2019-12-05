@@ -1,6 +1,6 @@
 {
   "name": "AlphaConsole",
-  "version": "9.15.1",
+  "version": "9.15.3",
   "description": "Electron version of AlphaConsole",
   "main": "source/index.js",
   "scripts": {
@@ -36,14 +36,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HaydenMeloche/AlphaConsoleElectron.git"
+    "url": "git+https://github.com/AlphaConsole/AlphaConsoleElectron.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HaydenMeloche/AlphaConsoleElectron/issues"
+    "url": "https://github.com/AlphaConsole/AlphaConsoleElectron/issues"
   },
-  "homepage": "https://github.com/HaydenMeloche/AlphaConsoleElectron#readme",
+  "homepage": "https://github.com/AlphaConsole/AlphaConsoleElectron#readme",
   "devDependencies": {
     "electron": "^1.8.2",
     "electron-builder": "19.37.0",
