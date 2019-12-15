@@ -4,6 +4,7 @@ const path = require('path')
 const url = require('url')
 const isDev = require('electron-is-dev');
 const autoUpdater = require("electron-updater").autoUpdater
+let triggerUpdate = false;
 var log = require("electron-log")
 
   // Keep a global reference of the window object, if you don't, the window will
@@ -14,17 +15,20 @@ autoUpdater.logger.transports.file.level = "info"
 if (isDev) {
   autoUpdater.updateConfigPath = path.join(__dirname, 'dev-app-update.yml');
 }
-autoUpdater.on("checking-for-update", function (_arg1) {
-    return log.info("Checking for update...");
-});
-autoUpdater.on("update-available", function (_arg2) {
-    mainWindow.webContents.send("check-for-updates-response-download", "0%");
-    return log.info("Update available.");
-});
-autoUpdater.on("update-not-available", function (_arg3) {
-    mainWindow.webContents.send("check-for-updates-response-none");
-    return log.info("Update not available.");
-});
+if (!triggerUpdate) {
+  autoUpdater.on("checking-for-update", function (_arg1) {
+      return log.info("Checking for update...");
+  });
+  autoUpdater.on("update-available", function (_arg2) {
+      mainWindow.webContents.send("check-for-updates-response-download", "0%");
+      triggerUpdate = true;
+      return log.info("Update available.");
+  });
+  autoUpdater.on("update-not-available", function (_arg3) {
+      mainWindow.webContents.send("check-for-updates-response-none");
+      return log.info("Update not available.");
+  });
+}
 autoUpdater.on("error", function (err) {
     return log.info("Error in auto-updater. " + err);
 });
