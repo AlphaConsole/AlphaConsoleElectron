@@ -31,7 +31,7 @@ Now everytime you modify the any scss files it will auto compile the files and y
 
 ## Build an .exe
 
-To build a release version, you should first ensure you have Inno Setup Compiler installed on your PC. YOu can install it from [here](http://www.jrsoftware.org/download.php/is.exe)
+To build a release version, you should first ensure you have Inno Setup Compiler installed on your PC. You can install it from [here](http://www.jrsoftware.org/download.php/is.exe)
 
 Run the following to create the required files for Inno Setup Compiler
 

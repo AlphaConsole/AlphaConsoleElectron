@@ -714,7 +714,7 @@
                     "ItemID": 4770,
                     "Name": "Dominus",
                     "Paintable": "true",
-                    "Quality": "Import"
+                    "Quality": "Exotic"
                 }
             ],
             "Name": "Body",
@@ -4981,6 +4981,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3522,
+                    "Name": "Octane: Sleet Creeps",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3532,
                     "Name": "Diestro: Old Flame",
                     "Paintable": "false",
@@ -5645,6 +5653,22 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4191,
+                    "Name": "Breakout: Snow Devil",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4196,
+                    "Name": "Dominus: Arboreal Nightmare",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4213,
                     "Name": "Nemesis: Snakeskin",
                     "Paintable": "false",
@@ -5969,6 +5993,22 @@
                     "Name": "Octane: Kana",
                     "Paintable": "false",
                     "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4478,
+                    "Name": "Xmas Lights Decal",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4479,
+                    "Name": "Gift Storm",
+                    "Paintable": "false",
+                    "Quality": "Limited"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -8527,6 +8567,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4494,
+                    "Name": "Mistletoe",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4495,
                     "Name": "MetalStar Pro",
                     "Paintable": "false",
@@ -9824,6 +9872,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4503,
+                    "Name": "Xmas Lights Boost",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4539,
                     "Name": "Stranger Things",
                     "Paintable": "false",
@@ -10458,6 +10514,10 @@
                 {
                     "ItemID": 4498,
                     "Name": "Radiant Gush"
+                },
+                {
+                    "ItemID": 4503,
+                    "Name": "Xmas Lights Boost"
                 },
                 {
                     "ItemID": 4539,
@@ -15036,6 +15096,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4376,
+                    "Name": "Boba Drink",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4435,
                     "Name": "Naginata",
                     "Paintable": "false",
@@ -16674,6 +16742,22 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3498,
+                    "Name": "Gingerbread House",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3508,
+                    "Name": "Happy New Year",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3514,
                     "Name": "Sleigh-Bailed",
                     "Paintable": "false",
@@ -17746,6 +17830,14 @@
                     "HasTeamEditions": "false",
                     "ItemID": 4299,
                     "Name": "Golden Egg",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4592,
+                    "Name": "Golden Gift '19",
                     "Paintable": "false",
                     "Quality": "Rare"
                 },
@@ -19170,6 +19262,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4480,
+                    "Name": "Xmas Lights Trail",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4507,
                     "Name": "Vaporstream",
                     "Paintable": "true",
@@ -19282,7 +19382,7 @@
                     "HasTeamEditions": "false",
                     "ItemID": 2044,
                     "Name": "Dueling Dragons",
-                    "Paintable": "false",
+                    "Paintable": "true",
                     "Quality": "BlackMarket"
                 },
                 {
@@ -19610,6 +19710,14 @@
                     "HasTeamEditions": "false",
                     "ItemID": 4328,
                     "Name": "Kablooey",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4373,
+                    "Name": "Tactical Nuke",
                     "Paintable": "true",
                     "Quality": "Limited"
                 },
@@ -21318,6 +21426,22 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4532,
+                    "Name": "Xmas Lights Banner",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4538,
+                    "Name": "Sushi Board",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4561,
                     "Name": "Demogorgon",
                     "Paintable": "false",
@@ -21849,6 +21973,22 @@
                     "ItemID": 3350,
                     "Name": "Paladin",
                     "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3814,
+                    "Name": "Happy Holidays",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3816,
+                    "Name": "Snowman",
+                    "Paintable": "false",
                     "Quality": "Limited"
                 },
                 {
