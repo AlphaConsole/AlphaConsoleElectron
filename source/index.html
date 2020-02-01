@@ -148,10 +148,10 @@
                 />
               </div>
               <div class="col-3 pl-0 pr-1" style="max-width: 18%;">
-                <button style="color:#fff; padding:4px" class="font-quarcaL btn btn-acc w-100 fs-14 h-100" onclick="AddNewPreset()">ADD PRESET</button>
+                <button id="add-preset" style="color:#fff; padding:4px" class="font-quarcaL btn btn-acc w-100 fs-14 h-100">ADD PRESET</button>
               </div>
               <div class="col-3 pl-0 pr-1" style="max-width: 19%;">
-                <button style="color:#fff; padding: 4px; margin-left: 5px" class="font-quarcaL fs-14 h-100 btn btn-acc w-100" onclick="DeletePreset()">DELETE PRESET</button>
+                <button id="delete-preset" style="color:#fff; padding: 4px; margin-left: 5px" class="font-quarcaL fs-14 h-100 btn btn-acc w-100">DELETE PRESET</button>
               </div>
             </div>
             <!-- END PRESETS -->
@@ -162,14 +162,13 @@
                   data-toggle="tooltip" data-placement="right" title="Reset All Changes">
                   <i class="fas fa-trash-alt"></i>
                 </button>
-				<button id="button-sync-teams" onclick="ToggleSyncTeams()" class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
+				<button id="button-sync-teams" class="font-quarcaL btn btn-success" style="position:fixed; display:block; z-index:999999; bottom: 135px; right:60px; border-radius:50%; width:50px !important;  height:50px; color:#fff;"
                   data-toggle="tooltip" data-placement="right" title="Apply changes to both teams">
                   <i class="fas fa-sync"></i>
                 </button>
 
-
-                <button class="tablink font-quarcaL" onclick="openPage('blueteamitems', this, '#5698EB')" id="defaultOpen">BLUE TEAM</button>
-                <button class="tablink font-quarcaL" onclick="openPage('orangeteamitems', this, '#D09B4F')">ORANGE TEAM</button>
+                <button class="tablink font-quarcaL" id="defaultOpen">BLUE TEAM</button>
+                <button id="orange-team" class="tablink font-quarcaL">ORANGE TEAM</button>
 
                 <div id="blueteamitems" class="tabcontent">
                   <div class="table w-100">
@@ -1349,7 +1348,7 @@
                         <input id="install-location" class="acc-input font-quarcaL" type="text" value="" readonly/>
                       </div>
                       <div class="col-3">
-                        <button style="max-height: 30px;" id="detectInstall" class="font-quarcaL btn btn-acc w-100" onclick="DetectInstallLocation()">Auto-detect</button>
+                        <button style="max-height: 30px;" id="detectInstall" class="font-quarcaL btn btn-acc w-100">Auto-detect</button>
                       </div>
                       <div class="col-1">
                         <button style="max-height: 30px;" type="button" class="font-quarcaL btn btn-acc w-100" data-toggle="tooltip" data-placement="left"
@@ -1405,11 +1404,11 @@
     <div class="mt-3 pull-left container-fluid w-100">
       <div class="row m-0 w-100 pr-3">
         <div class="col-3 pr-0">
-          <button style="border-radius:0px;" class="font-quarcaL btn btn-success w-100" onclick="SaveConfiguration()">SAVE & APPLY</button>
+          <button id="save-apply" style="border-radius:0px;" class="font-quarcaL btn btn-success w-100">SAVE & APPLY</button>
         </div>
         <div class="col-3 pr-0">
           <!-- <a href="http://discord.gg/alphaconsole" style="color:#fff;" class="font-quarcaL btn btn-acc">DISCORD</a> -->
-          <button style="color:#fff;" class="font-quarcaL btn btn-info w-100" onclick="ShowTexturesRepo()">GET TEXTURES</a>
+          <button id="get-textures" style="color:#fff;" class="font-quarcaL btn btn-info w-100">GET TEXTURES</a>
         </div>
         <div class="col-3 pr-0">
           <a href="https://www.paypal.me/AlphaConsole" style="color:#fff;" class="font-quarcaL btn btn-acc w-100">DONATE</a>
@@ -1540,70 +1539,20 @@
 
   </div>
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/tether.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
   <script>
-    let shell = require('electron').shell
-
-    document.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
-        event.preventDefault()
-        shell.openExternal(event.target.href)
-      }
-    })
+    const $ = require('jquery');
   </script>
   <script>
-      //DONT TOUCH
-      //this must stay in this file. 
-
-      (() => {
-        // Retrieve remote BrowserWindow
-        const { BrowserWindow} = require('electron').remote
-
-        function init() {
-          const window = BrowserWindow.getFocusedWindow();
-
-          // Minimize task
-          document.getElementById('min-btn').addEventListener('click', (e) => {
-            window.minimize();
-          });
-
-          // Maximize window
-          document.getElementById('max-btn').addEventListener('click', (e) => {
-            if (window.isMaximized()) {
-              window.unmaximize();
-            } else {
-              window.maximize();
-            }
-          });
-
-          // Close app
-          document.getElementById('close-btn').addEventListener('click', (e) => {
-            window.close();
-          });
-
-          document.getElementById('detectInstall').addEventListener('click', (e) => {
-
-          });
-        };
-
-        document.onreadystatechange = () => {
-          if (document.readyState == 'complete') {
-            init();
-          }
-        };
-
-      })();
+    require('popper.js');
   </script>
-  <script src="./assets/js/backend.js"></script>
-  <script src="./assets/js/UI.js"></script>
+  <script>
+    require('bootstrap');
+  </script>
+  <script>
+    require('./assets/js/backend.js');
+  </script>
+  <script>
+    require('./assets/js/UI.js');
+  </script>
 </body>
 </html>

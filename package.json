@@ -45,26 +45,29 @@
   },
   "homepage": "https://github.com/AlphaConsole/AlphaConsoleElectron#readme",
   "devDependencies": {
-    "electron": "^1.8.2",
-    "electron-builder": "19.37.0",
-    "electron-installer-windows": "^0.2.0",
-    "electron-packager": "^14.0.6",
-    "electron-winstaller": "^2.6.4",
-    "grunt": "^1.0.2",
+    "electron": "^7.1.11",
+    "electron-builder": "22.3.2",
+    "electron-installer-windows": "^3.0.0",
+    "electron-packager": "^14.2.0",
+    "electron-winstaller": "^4.0.0",
+    "grunt": "^1.0.4",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-electron": "^8.0.0",
-    "grunt-sass": "^2.1.0",
-    "gulp": "^4.0.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-electron": "^11.0.0",
+    "grunt-sass": "^3.1.0",
+    "gulp": "^4.0.2"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "electron-is-dev": "^1.1.0",
-    "electron-log": "^2.2.14",
-    "electron-updater": "2.12.0",
-    "modclean": "^2.1.2",
-    "node-notifier": "^5.2.1",
-    "request": "^2.83.0",
+    "electron-log": "^4.0.4",
+    "electron-updater": "^4.2.0",
+    "jquery": "^3.4.1",
+    "modclean": "^3.0.0-beta.1",
+    "node-notifier": "^6.0.0",
+    "popper.js": "^1.16.1",
+    "request": "^2.88.0",
     "squirrel": "^1.0.0",
-    "tmp": "^0.0.33"
+    "tmp": "^0.1.0"
   }
 }

@@ -1,5 +1,5 @@
 {
-	"Preset": "0",
+	"Preset": "35915",
 	"Items": {
 		"0": {
 			"SlotName": "Body",
@@ -7,17 +7,17 @@
 				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
-				"SpecialEdition": -1,
+				"Color": -1,
 				"TeamEdition": -1,
-				"Color": -1
+				"SpecialEdition": -1
 			},
 			"Orange": {
 				"ItemID": -1,
 				"PackageID": -1,
 				"PackageSubID": -1,
-				"SpecialEdition": -1,
+				"Color": -1,
 				"TeamEdition": -1,
-				"Color": -1
+				"SpecialEdition": -1
 			}
 		},
 		"1": {
@@ -137,17 +137,11 @@
 				"SpecialEdition": -1
 			}
 		},
-		"8": {
-			"SlotName": "Bot"
-		},
-		"9": {
-			"SlotName": "Logo"
-		},
 		"10": {
 			"SlotName": "UnderGlow"
 		},
 		"11": {
-			"SlotName": "Crates"
+			"SlotName": "Gift Pack"
 		},
 		"12": {
 			"SlotName": "Accent Paint Finish",
@@ -244,9 +238,6 @@
 				"SpecialEdition": -1
 			}
 		},
-		"17": {
-			"SlotName": "GarageComplexRow"
-		},
 		"18": {
 			"SlotName": "Goal Stinger"
 		},
@@ -275,11 +266,14 @@
 		"21": {
 			"SlotName": "Player Title"
 		},
-		"22": {
-			"SlotName": "ESportsTeam"
-		},
 		"23": {
 			"SlotName": "Archived Items"
+		},
+		"24": {
+			"SlotName": "Blueprint"
+		},
+		"26": {
+			"SlotName": "Currency"
 		},
 		"-1": {
 			"SlotName": "BoostSound",
@@ -367,17 +361,17 @@
 						"ItemID": -1,
 						"PackageID": -1,
 						"PackageSubID": -1,
-						"SpecialEdition": -1,
+						"Color": -1,
 						"TeamEdition": -1,
-						"Color": -1
+						"SpecialEdition": -1
 					},
 					"Orange": {
 						"ItemID": -1,
 						"PackageID": -1,
 						"PackageSubID": -1,
-						"SpecialEdition": -1,
+						"Color": -1,
 						"TeamEdition": -1,
-						"Color": -1
+						"SpecialEdition": -1
 					}
 				},
 				"1": {
@@ -497,17 +491,11 @@
 						"SpecialEdition": -1
 					}
 				},
-				"8": {
-					"SlotName": "Bot"
-				},
-				"9": {
-					"SlotName": "Logo"
-				},
 				"10": {
 					"SlotName": "UnderGlow"
 				},
 				"11": {
-					"SlotName": "Crates"
+					"SlotName": "Gift Pack"
 				},
 				"12": {
 					"SlotName": "Accent Paint Finish",
@@ -604,9 +592,6 @@
 						"SpecialEdition": -1
 					}
 				},
-				"17": {
-					"SlotName": "GarageComplexRow"
-				},
 				"18": {
 					"SlotName": "Goal Stinger"
 				},
@@ -635,11 +620,14 @@
 				"21": {
 					"SlotName": "Player Title"
 				},
-				"22": {
-					"SlotName": "ESportsTeam"
-				},
 				"23": {
 					"SlotName": "Archived Items"
+				},
+				"24": {
+					"SlotName": "Blueprint"
+				},
+				"26": {
+					"SlotName": "Currency"
 				},
 				"-1": {
 					"SlotName": "BoostSound",
@@ -732,6 +720,377 @@
 					"PrimaryIntensity": 1,
 					"AccentIntensity": 1,
 					"Enabled": false
+				}
+			},
+			"Name": "Default"
+		},
+		"35915": {
+			"Items": {
+				"0": {
+					"SlotName": "Body",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"1": {
+					"SlotName": "Decal",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"2": {
+					"SlotName": "Wheels",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"3": {
+					"SlotName": "Rocket Boost",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"4": {
+					"SlotName": "Antenna",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"5": {
+					"SlotName": "Topper",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"6": {
+					"SlotName": "Bumper"
+				},
+				"7": {
+					"SlotName": "Paint Finish",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"10": {
+					"SlotName": "UnderGlow"
+				},
+				"11": {
+					"SlotName": "Gift Pack"
+				},
+				"12": {
+					"SlotName": "Accent Paint Finish",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"13": {
+					"SlotName": "Engine Audio",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"14": {
+					"SlotName": "Trail",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"15": {
+					"SlotName": "Goal Explosion",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"16": {
+					"SlotName": "Player Banner",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"18": {
+					"SlotName": "Goal Stinger"
+				},
+				"19": {
+					"SlotName": "Player Avatar"
+				},
+				"20": {
+					"SlotName": "Avatar Border",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"21": {
+					"SlotName": "Player Title"
+				},
+				"23": {
+					"SlotName": "Archived Items"
+				},
+				"24": {
+					"SlotName": "Blueprint"
+				},
+				"26": {
+					"SlotName": "Currency"
+				},
+				"-1": {
+					"SlotName": "BoostSound",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"-2": {
+					"SlotName": "Ball",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"-3": {
+					"SlotName": "MBDecal",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				},
+				"-4": {
+					"SlotName": "EngineTexture",
+					"Blue": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					},
+					"Orange": {
+						"ItemID": -1,
+						"PackageID": -1,
+						"PackageSubID": -1,
+						"Color": -1,
+						"TeamEdition": -1,
+						"SpecialEdition": -1
+					}
+				}
+			},
+			"CustomColors": {
+				"Blue": {
+					"PrimaryColor": "#000000",
+					"AccentColor": "#000000",
+					"PrimaryIntensity": 1,
+					"AccentIntensity": 1,
+					"Enabled": false
+				},
+				"Orange": {
+					"PrimaryColor": "#000000",
+					"AccentColor": "#000000",
+					"PrimaryIntensity": 3,
+					"AccentIntensity": 1,
+					"Enabled": false
 				},
 				"ColorAllCars": false,
 				"FieldBlue": "#000000",
@@ -742,7 +1101,7 @@
 				"BlueAlpha": "#000000",
 				"OrangeAlpha": "#000000"
 			},
-			"Name": "Default"
+			"Name": "New preset"
 		}
 	},
 	"CustomColors": {
@@ -756,7 +1115,7 @@
 		"Orange": {
 			"PrimaryColor": "#000000",
 			"AccentColor": "#000000",
-			"PrimaryIntensity": 1,
+			"PrimaryIntensity": 3,
 			"AccentIntensity": 1,
 			"Enabled": false
 		},
@@ -798,10 +1157,10 @@
 		"RunOnStartup": true,
 		"InstallLocation": "",
 		"F5Menu": true,
-		"SyncTeams": false,
-		"UseDefaultMenu": false
+		"UseDefaultMenu": false,
+		"SyncTeams": true
 	},
-	"LastVersion": "1.8.2",
+	"LastVersion": "7.1.11",
 	"AlwaysOnTop": false,
-	"ACPath": "G:\\Development\\AlphaConsole\\AlphaConsoleElectron"
+	"ACPath": "C:\\dev\\alphaconsole\\"
 }
