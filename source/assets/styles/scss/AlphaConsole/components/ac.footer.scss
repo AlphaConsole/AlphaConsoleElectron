@@ -1,13 +1,7 @@
-.footer-bar-wrapper{
-    float: left;
-    width: 100%;
-    position:fixed;
-    bottom:0px;
-    height:25px;
-}
-
-.footer-bar{
-  
-    background: $footer-bar;
-    height:25px;
+.footer-bar-wrapper {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: .5rem 0;
+	background: $footer-bar;
 }

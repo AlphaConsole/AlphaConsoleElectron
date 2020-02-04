@@ -1082,7 +1082,7 @@
 					"PrimaryColor": "#000000",
 					"AccentColor": "#000000",
 					"PrimaryIntensity": 1,
-					"AccentIntensity": 1,
+					"AccentIntensity": 0,
 					"Enabled": false
 				},
 				"Orange": {
@@ -1101,7 +1101,7 @@
 				"BlueAlpha": "#000000",
 				"OrangeAlpha": "#000000"
 			},
-			"Name": "New preset"
+			"Name": "ddddd"
 		}
 	},
 	"CustomColors": {
@@ -1109,7 +1109,7 @@
 			"PrimaryColor": "#000000",
 			"AccentColor": "#000000",
 			"PrimaryIntensity": 1,
-			"AccentIntensity": 1,
+			"AccentIntensity": 0,
 			"Enabled": false
 		},
 		"Orange": {
@@ -1160,7 +1160,7 @@
 		"UseDefaultMenu": false,
 		"SyncTeams": true
 	},
-	"LastVersion": "7.1.11",
+	"LastVersion": "9.15.5",
 	"AlwaysOnTop": false,
 	"ACPath": "C:\\dev\\alphaconsole\\"
 }

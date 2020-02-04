@@ -1,3 +1,9 @@
+const processorsFn = () => {
+    return [
+        require('cssnano')
+    ];
+};
+
 module.exports = (grunt) => {
 
   // Project configuration.
@@ -12,24 +18,32 @@ module.exports = (grunt) => {
         },
       },
     },
-    sass: { // Task
-      dist: { // Target
-        options: { // Target options
-          style: 'expanded'
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded',
         },
-        files: { // Dictionary of files
-          // 'destination': 'source'
-          'source/assets/styles/css/alphaconsole.css': 'source/assets/styles/scss/AlphaConsole/compile/ac.compile.scss',
-          'source/assets/styles/css/framework.css': 'source/assets/styles/scss/AlphaConsole/compile/framework_compile.scss',
+        files: {
+          'source/assets/styles/css/alphaconsole.css': 'source/assets/styles/scss/AlphaConsole/ac.scss',
         }
+      }
+    },
+    postcss: {
+      dist: {
+        options: {
+          processors: processorsFn,
+        },
+        src: 'source/assets/styles/css/alphaconsole.css',
+        dest: 'source/assets/styles/css/alphaconsole.min.css'
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('@lodder/grunt-postcss');
 
   //Task(s). 
-  grunt.registerTask('default', ['sass']);
+  grunt.registerTask('default', ['sass', 'postcss']);
 
 };

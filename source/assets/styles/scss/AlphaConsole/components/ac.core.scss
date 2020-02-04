@@ -1,14 +1,11 @@
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+	font-size: 14px;
+	height: 100%;
 }
 
-html,
 body {
-    height: auto;
+    background: $body-background;
+	min-height: 100%;
 }
 
 h1 {
@@ -16,18 +13,6 @@ h1 {
     font-weight: 400;
     text-align: center;
 }
-
-main {
-    width: 100%;
-    margin: 0 auto;
-    background: transparent;
-    margin-top:10px;
-    height: 100%;
-    float: left;
-    position: relative;
-}
-
-
 
 section {
     margin-left: -1px;
@@ -37,10 +22,7 @@ section {
     border-left:1px solid $ac-gray;
     border-right:1px solid $ac-gray;
     border-bottom:1px solid $ac-gray;
-    float: left;
-    width: 100%;
-    position: relative;
-    height: 620px;
+    height: 650px;
     background-image: url("../../img/ball-bg.png");
     background-position-y: -155px;
 }
@@ -53,6 +35,14 @@ section {
     color: #fff;
     transition: max-height 0.2s ease-out;
 }
+
+.table {
+	th,
+	td {
+		vertical-align: middle;
+		font-size: .9rem;
+	}
+}
  
 .alt-row-h {
     background-color: rgba(57, 57, 57, 0.5) !important;
@@ -64,6 +54,7 @@ section {
 
 .alt-row {
     background-color: rgba(57, 57, 57, 0.3) !important;
+    white-space: nowrap;
 }
 
 .alt-row-strong {
@@ -98,14 +89,6 @@ section {
 
 .pull-left{
     float: left !important;
-}
-
-.save-wrapper{
-    float: left;
-    width: 100%;
-    position:relative;
-    bottom:0px;
-    margin-bottom: 40px;
 }
 
 // =====================================

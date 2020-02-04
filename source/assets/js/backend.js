@@ -959,7 +959,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $("#button-check-for-updates").text("Searching...");
   });
   
-  $(".teams .item-table tr td:nth-child(2) .acc-input").after("<span class='reset-input'> ✗</span>");
+  $(".teams .item-table tr td:nth-child(2) .acc-input").after("<span class='reset-input'>✗</span>");
   $('.reset-input').on('click', function () {    
     if(SyncTeams) {
       $(`select[name=${$(this).parent().find('select').attr('name')}] option:contains('Unchanged')`).prop('selected', true);
