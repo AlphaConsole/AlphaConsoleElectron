@@ -5181,6 +5181,30 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3692,
+                    "Name": "Octane: Dragon",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3698,
+                    "Name": "Breakout: Yaojing",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3699,
+                    "Name": "Dominus: Yaojing",
+                    "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3800,
                     "Name": "Intrudium",
                     "Paintable": "false",
@@ -6177,6 +6201,86 @@
                     "Name": "Octane: Huntress",
                     "Paintable": "false",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4852,
+                    "Name": "Octane: Pittsburgh Knights",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4853,
+                    "Name": "Octane: Veloce",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4855,
+                    "Name": "Dominus: Veloce",
+                    "Paintable": "true",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4856,
+                    "Name": "Dominus: Pittsburgh Knights",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4857,
+                    "Name": "Dominus: Reciprocity",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4858,
+                    "Name": "Octane: Reciprocity",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4863,
+                    "Name": "Octane: eUnited",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4874,
+                    "Name": "Dominus: eUnited",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4878,
+                    "Name": "Dominus: NRG Esports",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4881,
+                    "Name": "Octane: NRG Esports",
+                    "Paintable": "false",
+                    "Quality": "VeryRare"
                 }
             ],
             "Name": "Decal",
@@ -7845,6 +7949,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3598,
+                    "Name": "Fortune",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3599,
                     "Name": "Teller",
                     "Paintable": "true",
@@ -7968,7 +8080,12 @@
                         18,
                         19,
                         20,
-                        21
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26
                     ],
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "true",
@@ -7993,7 +8110,12 @@
                         18,
                         19,
                         20,
-                        21
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26
                     ],
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "true",
@@ -8235,7 +8357,12 @@
                         18,
                         19,
                         20,
-                        21
+                        21,
+                        22,
+                        23,
+                        24,
+                        25,
+                        26
                     ],
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "true",
@@ -9664,6 +9791,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3742,
+                    "Name": "Red Envelopes",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3796,
                     "Name": "Baseball",
                     "Paintable": "false",
@@ -10410,6 +10545,10 @@
                 {
                     "ItemID": 3550,
                     "Name": "Super Manga-Bolt III"
+                },
+                {
+                    "ItemID": 3742,
+                    "Name": "Red Envelopes"
                 },
                 {
                     "ItemID": 3796,
@@ -14608,6 +14747,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3604,
+                    "Name": "Paper Dragon",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3611,
                     "Name": "Electron II",
                     "Paintable": "false",
@@ -14626,6 +14773,14 @@
                     "HasTeamEditions": "false",
                     "ItemID": 3639,
                     "Name": "Fortune Fan",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3647,
+                    "Name": "Celebration Kite",
                     "Paintable": "false",
                     "Quality": "Limited"
                 },
@@ -16814,6 +16969,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3621,
+                    "Name": "Paper Dragon",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3688,
                     "Name": "Flying Carpet",
                     "Paintable": "false",
@@ -17032,6 +17195,14 @@
                     "HasTeamEditions": "false",
                     "ItemID": 3750,
                     "Name": "Tee Time",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3756,
+                    "Name": "Lantern Fest",
                     "Paintable": "false",
                     "Quality": "Limited"
                 },
@@ -17361,6 +17532,14 @@
                     "ItemID": 4583,
                     "Name": "Bike Rack",
                     "Paintable": "true",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4595,
+                    "Name": "Richie Rat",
+                    "Paintable": "false",
                     "Quality": "Limited"
                 },
                 {
@@ -17814,6 +17993,14 @@
                     "HasTeamEditions": "false",
                     "ItemID": 3646,
                     "Name": "Golden Gift '18",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3849,
+                    "Name": "Golden Lantern",
                     "Paintable": "false",
                     "Quality": "Rare"
                 },
@@ -19222,6 +19409,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3743,
+                    "Name": "Ruckus",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 3954,
                     "Name": "Hack Swerve III",
                     "Paintable": "true",
@@ -19576,6 +19771,14 @@
                     "Name": "Quasar III",
                     "Paintable": "true",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 3645,
+                    "Name": "Lantern Lift",
+                    "Paintable": "false",
+                    "Quality": "BlackMarket"
                 },
                 {
                     "HasSpecialEditions": "false",
@@ -21554,6 +21757,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 4707,
+                    "Name": "Goodbye Nian",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4709,
                     "Name": "Power Surge",
                     "Paintable": "false",
@@ -21566,6 +21777,46 @@
                     "Name": "Valorous",
                     "Paintable": "false",
                     "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4896,
+                    "Name": "eUnited",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4898,
+                    "Name": "NRG Esports",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4900,
+                    "Name": "Pittsburgh Knights",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4901,
+                    "Name": "Reciprocity",
+                    "Paintable": "false",
+                    "Quality": "Rare"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
+                    "ItemID": 4902,
+                    "Name": "Veloce",
+                    "Paintable": "false",
+                    "Quality": "Rare"
                 }
             ],
             "Name": "Player Banner",
@@ -22002,6 +22253,14 @@
                 {
                     "HasSpecialEditions": "false",
                     "HasTeamEditions": "false",
+                    "ItemID": 3865,
+                    "Name": "Spring Pagoda",
+                    "Paintable": "false",
+                    "Quality": "Limited"
+                },
+                {
+                    "HasSpecialEditions": "false",
+                    "HasTeamEditions": "false",
                     "ItemID": 4002,
                     "Name": "Crown",
                     "Paintable": "true",
@@ -22187,6 +22446,26 @@
         {
             "ID": 21,
             "Name": "FCBarcelona"
+        },
+        {
+            "ID": 22,
+            "Name": "Pittsburgh Knights"
+        },
+        {
+            "ID": 23,
+            "Name": "Reciprocity"
+        },
+        {
+            "ID": 24,
+            "Name": "Veloce"
+        },
+        {
+            "ID": 25,
+            "Name": "eUnited"
+        },
+        {
+            "ID": 26,
+            "Name": "NRG Esports"
         }
     ]
 }
