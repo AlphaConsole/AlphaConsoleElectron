@@ -8857,7 +8857,7 @@ section {
   border-left: 1px solid #616161;
   border-right: 1px solid #616161;
   border-bottom: 1px solid #616161;
-  height: 620px;
+  height: 650px;
   background-image: url("../../img/ball-bg.png");
   background-position-y: -155px;
 }
@@ -9315,6 +9315,9 @@ input:checked + label {
 }
 
 .footer-bar-wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   padding: .5rem 0;
   background: #1d1d1d;
 }
@@ -9348,6 +9351,7 @@ input:checked + label {
   text-align: right;
   padding: 10px;
   width: 100%;
+  margin-bottom: 0;
 }
 
 .pack-title {

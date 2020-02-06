@@ -1160,7 +1160,7 @@
 		"UseDefaultMenu": false,
 		"SyncTeams": true
 	},
-	"LastVersion": "9.15.5",
+	"LastVersion": "7.1.11",
 	"AlwaysOnTop": false,
 	"ACPath": "C:\\dev\\alphaconsole\\"
 }

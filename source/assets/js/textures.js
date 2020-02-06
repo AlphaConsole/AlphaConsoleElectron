@@ -207,27 +207,28 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 	const likeNumber = $('<p class="like-count like-status">');
 	likeNumber.text(item.Likes);
 
-	likeImage.addClass("fa");
-	likeImage.addClass(item.Liked? "fa-heart":"fa-heart-o");
+	likeImage.addClass("fa-heart");
+	likeImage.addClass(item.Liked ? "fas" : "far");
 
 	likeImage.click(function(event){
 	  event.stopPropagation();
+	  const self = $(this);
 
-	  LikedPackage = Details[$(this).closest('.square').attr("details-index")];
+	  LikedPackage = Details[self.closest('.square').attr("details-index")];
 
 	  if(LikedPackage.Liked){
-		$(this).removeClass("fa-heart");
-		$(this).addClass("fa-heart-o");
+		self.removeClass("fas");
+		self.addClass("far");
 		LikedPackage.Likes--;
 	  } else {
-		$(this).removeClass("fa-heart-o");
-		$(this).addClass("fa-heart");
+		self.removeClass("far");
+		self.addClass("fas");
 		LikedPackage.Likes++;
 	  }
 
 	  LikedPackage.Liked = !LikedPackage.Liked;
 	  
-	  $(this).parent().next().text(LikedPackage.Likes);
+	  self.parent().next().text(LikedPackage.Likes);
 
 	  request(`http://alphaconsole.net/textures/registerLike.php?PackID=${LikedPackage.id}&Status=${LikedPackage.Liked}`, (error, response, body) => { 
 	  });
@@ -248,10 +249,11 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 	  $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
 	});
 	newPack.mouseleave(function () {
-	  if (SelectedPackage === undefined || $(this)[0] != SelectedPackage[0]) {
-		$(this).css("box-shadow", "0 0 0 0 #8D661B");
+	  const self = $(this);
+	  if (SelectedPackage === undefined || self[0] != SelectedPackage[0]) {
+		self.css("box-shadow", "0 0 0 0 #8D661B");
 	  } else {
-		$(this).css("box-shadow", "0 0 3pt 2pt #2E8C58");
+		self.css("box-shadow", "0 0 3pt 2pt #2E8C58");
 	  }
 	});
 	//////////////
