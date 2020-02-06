@@ -29,58 +29,8 @@ const init = () => {
 
 // TAB CONTROL TOGGLES
 document.addEventListener('DOMContentLoaded', () => {
+
   document.getElementById('status-message').innerText = 'Enabled: Items & Options loaded successfully';
-  
-  // Get the modal
-  const modal = document.getElementById('helpModal');
-  const changelogs = document.getElementById('changelogsModal');
-  const prompt = document.getElementById('prompt');
-  
-  // Get the button that opens the modal
-  const btn = document.getElementById('helpBtn');
-  const changelogsBtn = document.getElementById('ChangelogsBtn');
-  
-  // Get the <span> element that closes the modal
-  const span = document.getElementsByClassName('close')[0];
-  const changelogsSpan = document.getElementById('closeChangeLogs');
-  const promptSpan = document.getElementById('closePrompt');
-  
-  // When the user clicks the button, open the modal 
-  btn.addEventListener('click', () => {
-    modal.style.display = 'block';
-  });
-  
-  changelogsBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    changelogs.style.display = 'block';
-  });
-  
-  // When the user clicks on <span> (x), close the modal
-  span.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
-  
-  changelogsSpan.addEventListener('click', () => {
-    changelogs.style.display = 'none';
-  });
-  
-  promptSpan.addEventListener('click', () => {
-    prompt.style.display = 'none';
-  });
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.addEventListener('click', ({target}) => {
-    if (target == modal) {
-      modal.style.display = 'none';
-    }
-    if (target == changelogs) {
-      changelogs.style.display = 'none';
-    }
-  
-    if (target == prompt) {
-      prompt.style.display = 'none';
-    }
-  });
 
   const fileInput = document.getElementById('trade-log-location');
   const divInput = document.getElementById('trade-log-location-template');

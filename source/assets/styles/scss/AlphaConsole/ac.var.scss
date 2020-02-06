@@ -1,3 +1,5 @@
+$enable-rounded: false;
+
 /*-------------------------------------------------------------*/
 /*COLOURS*/
 /*                         |*/
@@ -10,14 +12,14 @@ $teal:                      #5bc0de !default;
 $pink:                      #ff5b77 !default;
 $purple:                    #613d7c !default;
 
-$ac-primary: #fff !default;
-$ac-secondary: #fff !default;
+$ac-primary: $white !default;
+$ac-secondary: $white !default;
 
 $ac-gray-dark: #222222 !default;
 $ac-gray-alt: #3F3F3F !default;
 $ac-gray-mid: #393939 !default;
 $ac-gray: #616161 !default;
-$ac-gray-light: #fff !default;
+$ac-gray-light: $white !default;
 
 $footer-bar: #1d1d1d !default;
 
@@ -59,13 +61,12 @@ $font-size-base:                         1rem;
 /*INPUTS*/
 /*                                      |*/   
 $input-border-width:                     2px;
-$block-textarea-resize:                  true;
 
 
 /*-------------------------------------------------------------*/
 /*TABLE*/
 /*                                      |*/   
-$table-color:                     #fff;
+$table-color:                     $white;
 
 
 /*-------------------------------------------------------------*/
@@ -82,19 +83,11 @@ $hamburgur-border:						 $brand-primary !important;
 $hamburgur-colour:						 $white !important;
 
 
+
 /*-------------------------------------------------------------*/
-/*OPTIONS*/
-/*                                      |*/
-$enable-rounded:                        false;
-$enable-shadows:                        false;
-$enable-gradients:                      false;
-$enable-transitions:                    true !default;
-$enable-hover-media-query:              true !default;
-$enable-grid-classes:                   true !default;
-$enable-print-styles:                   true !default;
-$block-textarea-resize:                 true;
-$cta-hover:                             true;
-$card-hover:                            false;
-$header-shadow:							false;
-$footer-shadow:							false;
-$block-backgound:						true;
+/*MODAL*/
+/*                                      |*/   
+$modal-content-bg:                    $ac-gray-dark;
+$modal-content-box-shadow-xs:         0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+$modal-header-border-width:           0;
+$modal-footer-border-width:           0;

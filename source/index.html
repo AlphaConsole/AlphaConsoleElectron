@@ -1260,7 +1260,7 @@
 				<a href="https://www.paypal.me/AlphaConsole" class="font-quarcaL btn btn-block btn-acc">DONATE</a>
 			</div>
 			<div class="col-3">
-				<button id="helpBtn" class="font-quarcaL btn btn-block btn-acc" data-toggle="tooltip">HELP/INFO</button>
+				<button id="helpBtn" class="font-quarcaL btn btn-block btn-acc" data-toggle="modal" data-target="#helpModal" data-toggle="tooltip">HELP/INFO</button>
 			</div>
 		</div>
 	</div>
@@ -1282,84 +1282,90 @@
 
 	<!-- Help Modal -->
 	<div id="helpModal" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<div class="modal-header">
-				<p class="font-quarcaL p-2 w-100 heading-title">HELP/INFO</p>
-				<button id="closeChangeLogs" type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22"><path fill="#fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
-				</button>
-			</div>
-			<div class="modal-body">
-				<p>Welcome to AlphaConsole!</p>
-				<br>
-				<p>First we need to go over a few basic points.</p>
-				<ol class="pl-5">
-					<li>
-						<strong>The App:</strong> Now this is the most important part! You no longer need AlphaConsole on for your item changes to take effect.... magic ...... Just set it up once and you're good to go, unless you want to make changes! IKR how neat is that! If you want to disable AC without having to uninstall then just head over to the settings tab and UnCheck "Enable AlphaConsole", hit save and BOOM no more ac.
-					</li>
-					<!--
-						<li><strong>Rocket League:</strong> For the above to work then the app needs to know where Rocket League is installed. This helps with alot of AC related functions.
-						If you go to the settings tab you will see an option called "Rocket League install location". IF you have Rocket League setup in the default location (Program Files)
-						that steam puts RL then just hit Auto-Detect and AC will find it for you. However, if you have moved the RL install path onto a different drive or path etc then you will
-						be propmted to find the install path manually, you go to where you have RL installed open "Binaries\Win32" and double click on "RocketLeague.exe"! YAY, you should now have
-						have AlphaConsole pointing at Rocket League.</li>
-						-->
-					<li>
-						<strong>Bugs:</strong> We know not everything will be perfect ;)! But if you have crashes, issues, bugs, non loaded textures etc then please report them to the #help channel in the Discord. If you have any other issues after that then contact support. Please only escalate an issue to a Dev or Admin if it is critical and can't be resolved by a member of support
-					</li>
-				</ol>
-				<br>
-				<p>Most of all, Have fun and play nice! Try to give us as much feedback as possible, both good and bad!</p>
-				<div class="row m-0 mt-3 mb-3 w-100 p-0">
-					<div class="col-3 pl-0 pr-0">
-						<a href="http://discord.gg/alphaconsole" class="font-quarcaL btn btn-acc">DISCORD</a>
-					</div>
-					<div class="col-3 pr-0">
-						<a href="https://www.paypal.me/AlphaConsole" class="font-quarcaL btn btn-acc w-100">DONATE</a>
-					</div>
-					<div class="col-3 pr-0">
-						<a href="http://www.alphaconsole.net" class="font-quarcaL btn btn-acc w-100">WEBSITE</a>
-					</div>
-					<div class="col-3 pr-0">
-						<a id="ChangelogsBtn" href="#" class="font-quarcaL btn btn-acc w-100">CHANGELOGS</a>
+		<div class="modal-dialog" role="document">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<p class="font-quarcaL p-2 w-100 heading-title">HELP/INFO</p>
+					<button id="closeChangeLogs" type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22"><path fill="#fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Welcome to AlphaConsole!</p>
+					<br>
+					<p>First we need to go over a few basic points.</p>
+					<ol class="pl-5">
+						<li>
+							<strong>The App:</strong> Now this is the most important part! You no longer need AlphaConsole on for your item changes to take effect.... magic ...... Just set it up once and you're good to go, unless you want to make changes! IKR how neat is that! If you want to disable AC without having to uninstall then just head over to the settings tab and UnCheck "Enable AlphaConsole", hit save and BOOM no more ac.
+						</li>
+						<!--
+							<li><strong>Rocket League:</strong> For the above to work then the app needs to know where Rocket League is installed. This helps with alot of AC related functions.
+							If you go to the settings tab you will see an option called "Rocket League install location". IF you have Rocket League setup in the default location (Program Files)
+							that steam puts RL then just hit Auto-Detect and AC will find it for you. However, if you have moved the RL install path onto a different drive or path etc then you will
+							be propmted to find the install path manually, you go to where you have RL installed open "Binaries\Win32" and double click on "RocketLeague.exe"! YAY, you should now have
+							have AlphaConsole pointing at Rocket League.</li>
+							-->
+						<li>
+							<strong>Bugs:</strong> We know not everything will be perfect ;)! But if you have crashes, issues, bugs, non loaded textures etc then please report them to the #help channel in the Discord. If you have any other issues after that then contact support. Please only escalate an issue to a Dev or Admin if it is critical and can't be resolved by a member of support
+						</li>
+					</ol>
+					<br>
+					<p>Most of all, Have fun and play nice! Try to give us as much feedback as possible, both good and bad!</p>
+					<div class="d-flex justify-content-between my-3">
+						<div>
+							<a href="http://discord.gg/alphaconsole" class="font-quarcaL btn btn-acc">DISCORD</a>
+						</div>
+						<div>
+							<a href="https://www.paypal.me/AlphaConsole" class="font-quarcaL btn btn-acc w-100">DONATE</a>
+						</div>
+						<div>
+							<a href="http://www.alphaconsole.net" class="font-quarcaL btn btn-acc w-100">WEBSITE</a>
+						</div>
+						<div>
+							<a id="ChangelogsBtn" data-toggle="modal" data-target="#changelogsModal" data-dismiss="modal" href="#" class="font-quarcaL btn btn-acc w-100">CHANGELOG</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="modal-footer">
+				<div class="modal-footer">
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<div id="prompt" class="modal">
-		<!-- Modal content -->
-		<div class="modal-content">
-			<div class="modal-header">
-				<p class="font-quarcaL p-2 w-100 heading-title" id="promptTitle"></p>
-				<button id="closePrompt" type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22"><path fill="#fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
-				</button>
+		<div class="modal-dialog" role="document">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<p class="font-quarcaL p-2 w-100 heading-title" id="promptTitle"></p>
+					<button id="closePrompt" type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22"><path fill="#fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p id="promptContent" class="mb-2"></p>
+				</div>
+				<div class="modal-footer"></div>
 			</div>
-			<div class="modal-body">
-				<p id="promptContent" class="mb-2"></p>
-			</div>
-			<div class="modal-footer"></div>
 		</div>
 	</div>
 
 	<div id="changelogsModal" class="modal">
+		<div class="modal-dialog" role="document">
 		<!-- Modal content -->
-		<div class="modal-content">
-			<div class="modal-header">
-				<p class="font-quarcaL p-2 w-100 heading-title">CHANGELOG</p>
-				<button id="closeChangeLogs" type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22"><path fill="#fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
-				</button>
+			<div class="modal-content">
+				<div class="modal-header">
+					<p class="font-quarcaL p-2 w-100 heading-title">CHANGELOG</p>
+					<button id="closeChangeLogs" type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="22" height="22"><path fill="#fff" d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/></svg>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p id="changelogsInfo" class="mb-2"></p>
+				</div>
+				<div class="modal-footer"></div>
 			</div>
-			<div class="modal-body">
-				<p id="changelogsInfo" class="mb-2"></p>
-			</div>
-			<div class="modal-footer"></div>
 		</div>
 	</div>
 

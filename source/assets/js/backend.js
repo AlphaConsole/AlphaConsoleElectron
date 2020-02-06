@@ -239,7 +239,7 @@ function LoadConfiguration() {
 
       $("#promptTitle").html("New Update Installed");
       $("#promptContent").html(changelogs);
-      $("#prompt").css("display", "block");
+	  $('#prompt').modal('show')
 
       Config.LastVersion = remote.app.getVersion();
       fs.writeFileSync(`${GetBasePath()}/config.json`, JSON.stringify(Config, null, "\t"), 'utf-8');
