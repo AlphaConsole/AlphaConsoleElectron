@@ -322,8 +322,9 @@ function SavePreset(PresetID) {
         const team = $(selects[j]).closest('tbody').attr("team");
 
         Items[slotID][team] = {};
+        let iid;
         if ($(selects[j]).val()) {
-          var iid = $(selects[j]).val().split(":");
+          iid = $(selects[j]).val().split(":");
 
           Items[slotID][team].ItemID = parseInt(iid[0]);
           Items[slotID][team].PackageID = parseInt(iid[1]);
@@ -698,21 +699,21 @@ $("select[name='team-select']").each(function (index, value) {
 });
 
 const slots = Products.Slots;
-const customItems = {};
+let customItems = {};
 
-for (var j = 0; j < TexturePackages.length; j++) {
-  
-  var customitems = TexturePackages[j].Package.items;
+TexturePackages.forEach((item) => {
+  customitems = item.Package.items;
   customitems.sort(compareValues(name));
-  for (var k = 0; k < customitems.length; k++) {
-    const v = slots.findIndex(({SlotID}) => SlotID==customitems[k].slot);
-    if(v > -1){
+
+  customitems.forEach((customitem) => {
+    const v = slots.findIndex(({SlotID}) => SlotID == customitem.slot);
+    if (v > -1) {
       if(!slots[v].customItems) slots[v].customItems = []
-      customitems[k].packageid = TexturePackages[j].Package.id;
-      slots[v].customItems.push(customitems[k]); 
+      customitem.packageid = item.Package.id;
+      slots[v].customItems.push(customitem); 
     }    
-  }
-}
+  });
+});
 
 for (let i = 0; i < slots.length; i++) {
 

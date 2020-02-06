@@ -36,7 +36,7 @@ const init = () => {
 };
 
 function GetBasePath() {
-  return path.dirname(__dirname).replace('app.asar', 'app.asar.unpacked');
+  return path.join(__dirname, '../../../').replace('app.asar', 'app.asar.unpacked');
 }
 
 let SelectedPackage;
@@ -49,16 +49,19 @@ let NumberOfPages = 1;
 
 packagesBeingDownloaded = {};
 function fisnihedDownload(packagedID, filename) {
-  packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true
-  for (var file in packagesBeingDownloaded[packagedID]['files']) {
+  let file;
+  packagesBeingDownloaded[packagedID]['files'][filename]['done'] = true;
+  for (file in packagesBeingDownloaded[packagedID]['files']) {
 	if (!packagesBeingDownloaded[packagedID]['files'][file]['done']) {
 	  return;
 	}
   }
+
+  let file2;
   const dir = `${GetBasePath()}/textures/${packagesBeingDownloaded[packagedID]['dir']}/`;
-  for (var file in packagesBeingDownloaded[packagedID]['files']) {
-	ensureDirectoryExistence(dir + file);
-	fs.rename(`${dir}tmp_${file}`, dir + file, err => {
+  for (file2 in packagesBeingDownloaded[packagedID]['files']) {
+	ensureDirectoryExistence(dir + file2);
+	fs.rename(`${dir}tmp_${file2}`, dir + file2, err => {
 	  if (err) {
 		return console.log(err);
 	  }
@@ -78,19 +81,21 @@ function ensureDirectoryExistence(filePath) {
 }
 
 function DownloadSingleImage(basedir, url, imageName, index, Progress) {
-  console.log(`Downloading ${basedir}tmp_${imageName}`)
   ensureDirectoryExistence(`${basedir}tmp_${imageName}`);
 
   packagesBeingDownloaded[index]['files'][imageName] = {}
-  packagesBeingDownloaded[index]['files'][imageName]['done'] = false
+  packagesBeingDownloaded[index]['files'][imageName]['done'] = false;
+
+  const progressBar = document.querySelector('.progress-bar');
   request(url).on('response', ({headers}) => {
 	const len = parseInt(headers['content-length'], 10);
 	Progress.total += len;
   }).on('data', ({length}) => {
 	Progress.cur += length;
 	// compressed data as it is received
-	$(".progress-bar").width(`${(100.0 * Progress.cur / Progress.total).toFixed(2)}%`);
-	$(".progress-bar").html(`${(100.0 * Progress.cur / Progress.total).toFixed(0)}%`);
+	const progress = (100.0 * Progress.cur / Progress.total).toFixed(0);
+	progressBar.style.width = `${progress}%`;
+	progressBar.innerText = `${progress}%`;
   }).pipe(fs.createWriteStream(`${basedir}tmp_${imageName}`).on('finish', () => {
 	fisnihedDownload(index, imageName);
   }));
@@ -101,9 +106,11 @@ const baseurl = 'http://alphaconsole.net/cdn/';
 //TODO: Make sure package is downloaded before allowing closing the window.
 //TODO: Don't allow package redownloading.. Maybe add remove package button and only allow download if package doesn't exist
 function DownloadPackage() {
-  if (SelectedPackage === undefined) { return; }
+  if (SelectedPackage === undefined) {
+    return;
+  }
 
-  const index = SelectedPackage.attr("details-index");
+  const index = SelectedPackage.attr('details-index');
   packagesBeingDownloaded[index] = {}
   packagesBeingDownloaded[index]['dir'] = Details[index].folder
   packagesBeingDownloaded[index]['files'] = {}
@@ -120,17 +127,20 @@ function DownloadPackage() {
 
 	const basedir = `${GetBasePath()}/textures/${Details[index].folder}/`;
 	for (let item of items) {
+	  let url;
+	  let imageName;
+	  let imageIndex;
 
 	  if (item.parameters != undefined) {
 		for (let image of item.parameters) {
 		  if (image.animated != undefined && image.animated == true) {
-			for (var imageIndex = 0; imageIndex < image.frames; imageIndex++) {
-			  var imageName = `${image.image + imageIndex}.png`;
-			  var url = `${baseurl + Details[index].folder}/${imageName}`;
+			for (imageIndex = 0; imageIndex < image.frames; imageIndex++) {
+			  imageName = `${image.image + imageIndex}.png`;
+			  url = `${baseurl + Details[index].folder}/${imageName}`;
 			  DownloadSingleImage(basedir, url, imageName, index, Progress);
 			}
 		  } else {
-			var url = `${baseurl + Details[index].folder}/${image.image}`;
+			url = `${baseurl + Details[index].folder}/${image.image}`;
 			DownloadSingleImage(basedir, url, image.image, index, Progress);
 		  }
 		}
@@ -139,23 +149,25 @@ function DownloadPackage() {
 	  if (item.textures != undefined) {
 		for (let image of item.textures) {
 		  if (image.animated != undefined && image.animated == true) {
-			for (var imageIndex = 0; imageIndex < image.frames; imageIndex++) {
-			  var imageName = `${image.image + imageIndex}.png`;
-			  var url = `${baseurl + Details[index].folder}/${imageName}`;
+			for (imageIndex = 0; imageIndex < image.frames; imageIndex++) {
+			  imageName = `${image.image + imageIndex}.png`;
+			  url = `${baseurl + Details[index].folder}/${imageName}`;
 			  DownloadSingleImage(basedir, url, imageName, index, Progress);
 			}
 		  } else {
-			var url = `${baseurl + Details[index].folder}/${image.image}`;
+			url = `${baseurl + Details[index].folder}/${image.image}`;
 			DownloadSingleImage(basedir, url, image.image, index, Progress);
 		  }
 		}
 	  }
 	}
 
-	var url = `${baseurl + Details[index].folder}/package.json?${Math.random()}`;
+	url = `${baseurl + Details[index].folder}/package.json?${Math.random()}`;
 	packagesBeingDownloaded[index]['files']['package.json'] = {}
 	packagesBeingDownloaded[index]['files']['package.json']['done'] = false
 	ensureDirectoryExistence(`${basedir}tmp_package.json`);
+
+	const progressBar = document.querySelector('.progress-bar');
 	request(url).on('response', ({headers}) => {
 	  const len = parseInt(headers['content-length'], 10);
 	  Progress.total += len;
@@ -163,8 +175,9 @@ function DownloadPackage() {
 	}).on('data', ({length}) => {
 	  Progress.cur += length;
 	  // compressed data as it is received
-	  $(".progress-bar").width(`${(100.0 * Progress.cur / Progress.total).toFixed(2)}%`);
-	  $(".progress-bar").html(`${(100.0 * Progress.cur / Progress.total).toFixed(0)}%`);
+	  const progress = (100.0 * Progress.cur / Progress.total).toFixed(0);
+	  progressBar.style.width = `${progress}%`;
+	  progressBar.innerText = `${progress}%`;
 	}).pipe(fs.createWriteStream(`${basedir}tmp_package.json`).on('finish', () => {
 	  fisnihedDownload(index, 'package.json');
 	}))
@@ -198,7 +211,6 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 	const para2 = $("<p>");
 	para2.addClass("bg-black pack-title font-bourgM");
 	para2.text(item.name);
-
 
 	const likeDiv = $("<div>");
 	const likeLink = $("<a>");
@@ -243,7 +255,6 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 	newPack.append(para2);
 	newPack.append(likeDiv);
 
-
 	////HIGHTLIGHT
 	newPack.mouseenter(function () {
 	  $(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
@@ -260,13 +271,14 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 
 
 	////DETAILS PANEL
-	newPack.click(function () {
-      console.log($(this).prop("tagName"));
+	newPack.on('click', function () {
+	  let d;
+	  let index;
 	  if (SelectedPackage != undefined) {
 		SelectedPackage.css("box-shadow", "0 0 0 0 #2E8C58");
 
-		var d = $(`#details${SelectedPackage.attr("details-row")}`);
-		var index = SelectedPackage.attr("details-index");
+		d = $(`#details${SelectedPackage.attr("details-row")}`);
+		index = SelectedPackage.attr("details-index");
 
 		if (SelectedPackage.attr("details-row") != $(this).attr("details-row")) {
 		  d.collapse('hide');
@@ -278,8 +290,8 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 		SelectedPackage = $(this);
 		SelectedPackage.css("box-shadow", "0 0 3pt 2pt #2E8C58");
 
-		var d = $(`#details${SelectedPackage.attr("details-row")}`);
-		var index = SelectedPackage.attr("details-index");
+		d = $(`#details${SelectedPackage.attr("details-row")}`);
+		index = SelectedPackage.attr("details-index");
 
 		d.find("#title").text(`${Details[index].name} by ${Details[index].author}`);
 
@@ -288,19 +300,19 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 
 		d.collapse('show');
 
-
 	  } else {
 		$(this).css("box-shadow", "0 0 3pt 2pt #8D661B");
 		$(`#details${$(this).attr("details-row")}`).collapse('hide');
 		SelectedPackage = undefined;
 	  }
-	  $(".progress-bar").width(0);
-	  $(".progress-bar").html("");
+	  
+	  const progressBar = document.querySelector('.progress-bar');
+	  progressBar.style.width = 0;
+	  progressBar.style.innerText = '';
 	});
 	/////////////////
 
 	$("#texture-pack-list").append(newPack);
-
 
 	if (i % 3 == 2 || i + 1 == packageList.length) {
 	  const separator = $('<div>');
@@ -317,9 +329,7 @@ function PopulateTexturePackList(packageList) { // packageList is a slice of bod
 
 	  const download = $("<button class=\"download-package\" style=\"margin-bottom:30px\">Download</button>");
 	  download.addClass("font-quarcaL btn btn-success download");
-	  const progress = $("<div class=\"progress\"> <div class=\"progress-bar\" style=\"width:0%;background-color: #5cb85c;\">0%</div></div>");
-
-
+	  const progress = $("<div class=\"progress\"> <div class=\"progress-bar bg-success\">0%</div></div>");
 
 	  const divlevel = $("<div>");
 	  divlevel.css("position", "relative");
@@ -352,13 +362,12 @@ function RequestPackages() {
 	request("http://alphaconsole.net/textures/getLikes.php", { json: true }, (err2, res2, {All, Own}) => {
 	  if (err2) { RefreshPackageList(); return console.log(err2); }
 
-	  if(All == undefined || Own == undefined){
+	  if (All == undefined || Own == undefined) {
 		RefreshPackageList();
 		alert("Unable to contact the ratings server!");
 	  }
 
-	  for(let i = 0; i < AllPackages.length; i++){
-
+	  for (let i = 0; i < AllPackages.length; i++){
 		if(All[AllPackages[i].id] != undefined){
 		  AllPackages[i].Likes = All[AllPackages[i].id];
 		} else {
@@ -370,7 +379,6 @@ function RequestPackages() {
 		} else {
 		  AllPackages[i].Liked = false;
 		}
-
 	  }
 
 	  AllPackages.sort((a, b) => {
@@ -380,8 +388,6 @@ function RequestPackages() {
 	  console.log(AllPackages);
 
 	  RefreshPackageList();
-
-
 	});
 
   });
@@ -413,6 +419,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
 	  event.preventDefault();
 	  shell.openExternal(event.target.href)
+    }
+
+    if (event.target.classList.contains('download-package')) {
+	  DownloadPackage();
     }
   });
 
@@ -453,13 +463,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('button-next-page').addEventListener('click', () => {
 	NextPage();
-  });
-
-  // Click event listener for `download-package` buttons
-  document.querySelectorAll('.download-package').forEach((item) => {
-    item.addEventListener('click', (event) => {
-      DownloadPackage();
-    });
   });
 
   // Interate over `accordion` class
