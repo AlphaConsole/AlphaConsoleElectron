@@ -6,7 +6,7 @@
 #define MyAppPublisher "AlphaConsole"
 #define MyAppURL "http://www.alphaconsole.net"
 #define MyAppExeName "AlphaConsole.exe"
-#define SourceFiles "dist\win-ia32-unpacked"
+#define SourceFiles "dist\dedac"
 #define MyAppVersion GetFileVersion(SourceFiles + "\" + MyAppExeName)
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -37,6 +37,8 @@ DisableFinishedPage=yes
 AllowCancelDuringInstall=no
 
 [InstallDelete]
+Type: files; Name: "{app}\*.*"
+Type: dirifempty; Name: "{app}"
 Type: files; Name: "{userdesktop}\Alpha Console.lnk"
 
 [Languages]
@@ -44,20 +46,17 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 Source: "{#SourceFiles}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs
-Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
-Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
+//Source: "{#SourceFiles}\resources\app.asar.unpacked\xapofx1_5.dll"; DestDir: "{app}\.."; Flags: ignoreversion
+//Source: "{#SourceFiles}\resources\app.asar.unpacked\discord-rpc.dll"; DestDir: "{app}\.."; Flags: ignoreversion   
 
-[Icons]
-Name: "{commondesktop}\Alpha Console"; Filename: "{app}\{#MyAppExeName}" 
+//[Icons]
+//Name: "{commondesktop}\Alpha Console"; Filename: "{app}\{#MyAppExeName}" 
     
 [Dirs]
 Name: "{app}"; Permissions: users-full
 
 [UninstallDelete] 
-Type: files; Name: "{app}\..\xapofx1_5.dll"
-Type: files; Name: "{app}\..\discord-rpc.dll"
-Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\textures"
-Type: filesandordirs; Name: "{app}\resources\app.asar.unpacked\config.json"
+Type: files; Name: "{app}\*.*"
 Type: dirifempty; Name: "{app}"
 Type: files; Name: "{userdesktop}\Alpha Console.lnk"
 
