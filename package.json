@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/AlphaConsole/AlphaConsoleElectron#readme",
   "devDependencies": {
-    "electron": "^1.8.2",
+    "electron": "^1.8.8",
     "electron-builder": "19.37.0",
     "electron-installer-windows": "^0.2.0",
     "electron-packager": "^14.0.6",
