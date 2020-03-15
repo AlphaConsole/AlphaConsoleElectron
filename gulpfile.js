@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var inno = require('gulp-inno');
+const gulp = require('gulp');
+const inno = require('gulp-inno');
 
 gulp.src('.\ACBuild.iss').pipe(inno());
 

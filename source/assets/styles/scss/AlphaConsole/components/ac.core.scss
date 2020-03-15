@@ -1,14 +1,11 @@
-*,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+	font-size: 14px;
+	height: 100%;
 }
 
-html,
 body {
-    height: auto;
+    background: $body-background;
+	min-height: 100%;
 }
 
 h1 {
@@ -16,18 +13,6 @@ h1 {
     font-weight: 400;
     text-align: center;
 }
-
-main {
-    width: 100%;
-    margin: 0 auto;
-    background: transparent;
-    margin-top:10px;
-    height: 100%;
-    float: left;
-    position: relative;
-}
-
-
 
 section {
     margin-left: -1px;
@@ -37,10 +22,7 @@ section {
     border-left:1px solid $ac-gray;
     border-right:1px solid $ac-gray;
     border-bottom:1px solid $ac-gray;
-    float: left;
-    width: 100%;
-    position: relative;
-    height: 620px;
+    height: 650px;
     background-image: url("../../img/ball-bg.png");
     background-position-y: -155px;
 }
@@ -53,6 +35,15 @@ section {
     color: #fff;
     transition: max-height 0.2s ease-out;
 }
+
+.table {
+	th,
+	td {
+		border-top: none;
+		vertical-align: middle;
+		font-size: .9rem;
+	}
+}
  
 .alt-row-h {
     background-color: rgba(57, 57, 57, 0.5) !important;
@@ -64,6 +55,7 @@ section {
 
 .alt-row {
     background-color: rgba(57, 57, 57, 0.3) !important;
+    white-space: nowrap;
 }
 
 .alt-row-strong {
@@ -98,14 +90,6 @@ section {
 
 .pull-left{
     float: left !important;
-}
-
-.save-wrapper{
-    float: left;
-    width: 100%;
-    position:relative;
-    bottom:0px;
-    margin-bottom: 40px;
 }
 
 // =====================================
@@ -164,137 +148,31 @@ section {
   
 
 
-  
+/* Style tab links */
+.tablink {
+	background-color: #555;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 50%;
+  }
 
+  .tablink:hover {
+	background-color: #777;
+  }
 
+  /* Style the tab content (and add height:100% for full page content) */
 
+  .tabcontent {
+	color: white;
+	display: none;
+	height: 100%;
+  }
 
-
-
-
-
-
-
-
-
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Header */
-.modal-header {
-    padding: 2px 16px;
-    background-color: transparent;
-    color: white;
-    border:none;
-}
-
-/* Modal Body */
-.modal-body {padding: 2px 16px; border:none;}
-
-/* Modal Footer */
-.modal-footer {
-    padding: 2px 16px;
-    background-color: transparent;
-    color: white;
-    border:none;
-}
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background: $body-background;
-    margin: auto;
-    padding: 0;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    border:none;
-}
-
-/* Add Animation */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-
-/* The Close Button */
-.close {
-    color: #fff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* Style tab links */
-
-    .tablink {
-        background-color: #555;
-        color: white;
-        float: left;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        padding: 14px 16px;
-        font-size: 17px;
-        width: 50%;
-      }
-  
-      .tablink:hover {
-        background-color: #777;
-      }
-  
-      /* Style the tab content (and add height:100% for full page content) */
-  
-      .tabcontent {
-        color: white;
-        display: none;
-        height: 100%;
-      }
-  
-      .table th,
-      .table td {
-  
-        border-top: none;
-      }
-  
-  
-      select {
-  
-        padding: 5px !important;
-  
-      }
+  select {
+	padding: 5px !important;
+  }

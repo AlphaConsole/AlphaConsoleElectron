@@ -1,172 +1,173 @@
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+const {shell, remote, BrowserWindow} = require('electron');
 
-  $('#status-message').text("Enabled: Items & Options loaded successfully");
+const init = () => {
+  const win = remote.BrowserWindow.getFocusedWindow();
 
-    // Get the modal
-    var modal = document.getElementById('helpModal');
-    var changelogs = document.getElementById('changelogsModal');
-    var prompt = document.getElementById('prompt')
+  // Minimize task
+  document.getElementById('min-btn').addEventListener('click', () => {
+	win.minimize();
+  });
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("helpBtn");
-    var changelogsBtn = document.getElementById("ChangelogsBtn");
+  // Maximize window
+  document.getElementById('max-btn').addEventListener('click', () => {
+	if (win.isMaximized()) {
+	  win.unmaximize();
+	} else {
+	  win.maximize();
+	}
+  });
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    var changelogsSpan = document.getElementById("closeChangeLogs");
-    var promptSpan = document.getElementById("closePrompt");
+  // Close app
+  document.getElementById('close-btn').addEventListener('click', () => {
+	win.close();
+  });
 
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-      modal.style.display = "block";
+  document.getElementById('detectInstall').addEventListener('click', () => {
+    // code here
+  });
+};
+
+// TAB CONTROL TOGGLES
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.getElementById('status-message').innerText = 'Enabled: Items & Options loaded successfully';
+
+  const fileInput = document.getElementById('trade-log-location');
+  const divInput = document.getElementById('trade-log-location-template');
+  const textInput = document.getElementById('trade-log-location-text');
+  const clearInput = document.getElementById('trade-log-location-x');
+  
+  // On file location change check if the value is valid.
+  fileInput.addEventListener('change', () => {
+    if (!(fileInput.files[0].name.endsWith('.txt') || fileInput.files[0].name.endsWith('.log'))) {
+      return fileInput.value = '';
     }
+  
+    fileInput.style.display = 'none';
+    textInput.value = fileInput.files[0].path;
+    divInput.style.display = 'block';
+  });
 
-    changelogsBtn.onclick = function () {
-      modal.style.display = "none";
-      changelogs.style.display = "block";
+  clearInput.addEventListener('click', () => {
+    textInput.value = '';
+    fileInput.value = '';
+  
+    fileInput.style.display = 'block';
+    divInput.style.display = 'none';
+  });
+
+  init();
+
+  document.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A' && event.target.href.startsWith('http')) {
+	  event.preventDefault();
+	  shell.openExternal(event.target.href)
     }
+  });
 
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
+  $('[data-toggle="tooltip"]').tooltip()
 
-    changelogsSpan.onclick = function () {
-      changelogs.style.display = "none";
-    }
+  const itemcontrols = document.getElementById('itemcontrols');
+  const extracontrols = document.getElementById('extracontrols');
+  const settingcontrols = document.getElementById('settingcontrols');
 
-    promptSpan.onclick = function() {
-      prompt.style.display = "none";
-    }
+  if (itemcontrols) {
+    itemcontrols.style.display = 'block';
+  }
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+  if (extracontrols) {
+    extracontrols.style.display = 'none';
+  }
+
+  if (settingcontrols) {
+    settingcontrols.style.display = 'none';
+  }
+
+  // Show the first tab by default
+  $('.tabs-stage div').hide();
+  $('.tabs-stage div:first').show();
+  $('.tabs-nav li:first').addClass('tab-active');
+
+  // Change tab class and display content
+  $('.tabs-nav a').on('click', (event) => {
+    event.preventDefault();
+    $('.tabs-nav li').removeClass('tab-active');
+    $(this).parent().addClass('tab-active');
+    $('.tabs-stage div').hide();
+    $($(this).attr('href')).show();
+  });
+
+  document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+    radio.addEventListener('click', (event) => {
+      const self = event.target;
+
+      // ITEMS TAB CONTROLS
+      if (itemcontrols) {
+        if (self.getAttribute('id') === 'tab1') {
+          itemcontrols.style.display = 'block';
+        } else {
+         itemcontrols.style.display = 'none';
+        }
       }
-      if (event.target == changelogs) {
-        changelogs.style.display = "none";
+
+      // EXTRAS TAB CONTROLS
+      if (extracontrols) {
+        if (self.getAttribute('id') === 'tab2') {
+          extracontrols.style.display = 'block';
+        } else {
+          extracontrols.style.display = 'none';
+        }
       }
 
-      if (event.target == prompt) {
-        prompt.style.display = "none";
+      // SETTIGNS TAB CONTROLS
+      if (settingcontrols) {
+        if (self.getAttribute('id') === 'tab3') {
+          settingcontrols.style.display = 'block';
+        } else {
+          settingcontrols.style.display = 'none';
+        }
       }
+    });
+  });
+
+  const titleBarWrapper = document.getElementById('title-bar-wrapper');
+  const titleBarWrapperHeight = titleBarWrapper.offsetHeight;
+  const titleBar = document.getElementById('title-bar');
+  const titleBarHeight = titleBar.offsetHeight;
+  const windowHeight = window.innerHeight;
+
+  window.addEventListener('scroll', (event) => {
+    const pos = window.pageYOffset;
+    const top = titleBarWrapper.getBoundingClientRect().top;
+
+    // Check if element totally above or totally below viewport
+    if (top + titleBarWrapperHeight - titleBarHeight < pos || top > pos + windowHeight) {
+      return;
     }
 
-    var fileInput = document.getElementById("trade-log-location");
-    var divInput = document.getElementById("trade-log-location-template");
-    var textInput = document.getElementById("trade-log-location-text");
-    var clearInput = document.getElementById("trade-log-location-x");
+    const offset = parseInt(window.pageYOffset - top);
 
-    //On file location change check if the value is valid.
-    fileInput.onchange = function() {
-      if (!(fileInput.files[0].name.endsWith(".txt") || fileInput.files[0].name.endsWith(".log")))
-        return fileInput.value = "";
-
-      fileInput.style.display = "none";
-      textInput.value = fileInput.files[0].path;
-      divInput.style.display = "block";
-    }
-    clearInput.onclick = function() {
-      textInput.value = "";
-      fileInput.value = "";
-
-      fileInput.style.display = "block";
-      divInput.style.display = "none";
+    if (offset > 0) {
+      titleBar.style.background = '#454545';
+      document.getElementById('footer-bar-wrapper').style.display = 'none';
     }
 
-    $(document).ready(function () {
-        var $element = $('.title-bar-wrapper');
-        var $follow = $element.find('#title-bar');
-        var followHeight = $element.find('title-bar').outerHeight();
-        var height = $element.outerHeight();
-        var window_height = $(window).height();
+    if (offset < 0) {
+      titleBar.style.background = 'transparent';
+    }
+  });
   
-        $(window).scroll(function () {
-          var pos = $(window).scrollTop();
-          var top = $element.offset().top;
-  
-  
-  
-          // Check if element totally above or totally below viewport
-          if (top + height - followHeight < pos || top > pos + window_height) {
-            return;
-          }
-  
-  
-          var offset = parseInt($(window).scrollTop() - top);
-  
-          if (offset > 0) {
-            $follow.css('background', '#454545');
-            $("footer-bar-wrapper").hide;
-          }
-  
-          if (offset < 0) {
-            $follow.css('background', 'transparent');
-          }
-  
-        });
-      });
-
-
-
-       //TAB CONTROL TOGGLES
-    $(document).ready(function () {
-        $('#itemcontrols').show();
-        $('#extracontrols').hide();
-        $('#settingcontrols').hide();
-  
-  
-        // Show the first tab by default
-        $('.tabs-stage div').hide();
-        $('.tabs-stage div:first').show();
-        $('.tabs-nav li:first').addClass('tab-active');
-  
-        // Change tab class and display content
-        $('.tabs-nav a').on('click', function (event) {
-          event.preventDefault();
-          $('.tabs-nav li').removeClass('tab-active');
-          $(this).parent().addClass('tab-active');
-          $('.tabs-stage div').hide();
-          $($(this).attr('href')).show();
-        });
-  
-  
-        $('input[type="radio"]').click(function () {
-          //ITEMS TAB CONTROLS
-          if ($(this).attr('id') == 'tab1') {
-            $('#itemcontrols').show();
-          } else {
-            $('#itemcontrols').hide();
-          }
-          //EXTRAS TAB CONTROLS
-          if ($(this).attr('id') == 'tab2') {
-            $('#extracontrols').show();
-          } else {
-            $('#extracontrols').hide();
-          }
-          //SETTIGNS TAB CONTROLS
-          if ($(this).attr('id') == 'tab3') {
-            $('#settingcontrols').show();
-          } else {
-            $('#settingcontrols').hide();
-          }
-        });
-      });
-  
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-  
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
+  // Interate over `accordion` class
+  document.querySelectorAll('.accordion').forEach((item) => {
+    item.addEventListener('click', (event) => {
+      event.currentTarget.classList.toggle('active');
+      const panel = event.currentTarget.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = `${panel.scrollHeight}px`;
       }
+    });
+  });
+
+});

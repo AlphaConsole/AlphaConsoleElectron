@@ -1,0 +1,93 @@
+$enable-rounded: false;
+
+/*-------------------------------------------------------------*/
+/*COLOURS*/
+/*                         |*/
+$red:                       #d9534f !default;
+$orange:                    #f0ad4e !default;
+$yellow:                    #ffd500 !default;
+$green:                     #5cb85c !default;
+$blue:                      #0275d8 !default;
+$teal:                      #5bc0de !default;
+$pink:                      #ff5b77 !default;
+$purple:                    #613d7c !default;
+
+$ac-primary: $white !default;
+$ac-secondary: $white !default;
+
+$ac-gray-dark: #222222 !default;
+$ac-gray-alt: #3F3F3F !default;
+$ac-gray-mid: #393939 !default;
+$ac-gray: #616161 !default;
+$ac-gray-light: $white !default;
+
+$footer-bar: #1d1d1d !default;
+
+/*-------------------------------------------------------------*/
+/*GRAY SCALE*/
+/*                         |*/
+$gray-dark:                 #292b2c !default;
+$gray:                      #464a4c !default;
+$gray-light:                #636c72 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+$gray-ccc:                  #ccc !default;
+$gray-999:                  #999 !default;
+$gray-666:                  #666 !default;
+/*-------------------------------------------------------------*/
+/*BRAND COLOURS*/
+/*                         |*/
+$brand-primary:             $ac-primary !default;
+/*--------*/
+$brand-secondary:           $ac-secondary !default;
+
+$brand-highcontrast:        $white !default;
+$brand-lowcontrast:         $white !default;
+/*--------*/
+$brand-success:             $green !default;
+$brand-info:                $teal !default;
+$brand-warning:             $orange !default;
+$brand-danger:              $red !default;
+$brand-inverse:             $gray-dark !default;
+/*--------*/
+
+/*-------------------------------------------------------------*/
+/*TYPOGRAPHY*/
+/*                                      |*/
+$font-family-base:                       'Lato', sans-serif  !important;
+$font-size-base:                         1rem;
+
+/*-------------------------------------------------------------*/
+/*INPUTS*/
+/*                                      |*/   
+$input-border-width:                     2px;
+
+
+/*-------------------------------------------------------------*/
+/*TABLE*/
+/*                                      |*/   
+$table-color:                     $white;
+
+
+/*-------------------------------------------------------------*/
+/*SCAFFOLDING*/
+/*                                      |*/
+$body-background:                       linear-gradient($ac-gray-mid, $ac-gray-dark);
+$text-color:                             $gray-dark;
+$body-color:                             $white;
+
+
+
+$hamburgur-background:                   $brand-primary !important;
+$hamburgur-border:						 $brand-primary !important;
+$hamburgur-colour:						 $white !important;
+
+
+
+/*-------------------------------------------------------------*/
+/*MODAL*/
+/*                                      |*/   
+$modal-content-bg:                    $ac-gray-dark;
+$modal-content-box-shadow-xs:         0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+$modal-header-border-width:           0;
+$modal-footer-border-width:           0;

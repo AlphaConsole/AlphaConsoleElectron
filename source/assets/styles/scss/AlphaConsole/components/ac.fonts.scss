@@ -1,19 +1,30 @@
 @font-face {
     font-family: BourgeoisLight;
-    src: url(../fonts/BourgeoisLight.otf);
+    src: url(../../fonts/BourgeoisLight.woff2) format("woff2");
 }
 
 @font-face {
     font-family: BourgeoisMedium;
-    src: url(../fonts/BourgeoisMedium.otf);
+    src: url(../../fonts/BourgeoisMedium.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: QuarcaExtLight;
+    src: url(../../fonts/QuarcaExtLightModified.woff2) format("woff2");
 }
 
 .font-bourgL {
-    font-size: 22px;
-    font-family: BourgeoisLight;
+	font-family: BourgeoisLight;
 }
 
 .font-bourgM {
-    font-size: 16px;
-    font-family: BourgeoisMedium;
+	font-family: BourgeoisMedium;
+}
+
+.font-quarcaL {
+	font-family: QuarcaExtLight;
+}
+
+.font-quarcaM {
+	font-family: QuarcaExtLight;
 }
